@@ -8,9 +8,10 @@ import QuoteModal from "@/components/ui/QuoteModal";
 import ProductDetailModal from "@/components/ui/ProductDetailModal";
 import SectionHeading from "@/components/ui/SectionHeading";
 import ProductCard from "@/components/sections/ProductCard";
-import { PRODUCTS_DATA } from "@/data/euroconData";
+import { PRODUCTS_DATA, CORE_EUROCON_NAV_PRODUCTS } from "@/data/euroconData";
 import { Product } from "@/types";
-import { ArrowRight, SlidersHorizontal, Download } from "lucide-react";
+import { ArrowRight, SlidersHorizontal, Download, Sparkles, ChevronRight, Layers, Droplets, Fan, Box, Wind } from "lucide-react";
+import Link from "next/link";
 
 export default function ProductsPage() {
   const [isQuoteOpen, setIsQuoteOpen] = useState(false);
@@ -24,10 +25,10 @@ export default function ProductsPage() {
 
   const categories = [
     "All",
+    "Air Handling Solutions",
     "Air Management Systems",
     "Smoke Exhaust Systems",
     "Air Distribution",
-    "Air Handling Solutions",
   ];
 
   const filteredProducts = PRODUCTS_DATA.filter((p) => {
@@ -43,6 +44,14 @@ export default function ProductsPage() {
   const handleQuote = (productName?: string) => {
     setQuoteInitialProduct(productName || "");
     setIsQuoteOpen(true);
+  };
+
+  const coreIcons: Record<string, React.ReactNode> = {
+    ahu: <Layers className="w-4 h-4 text-sky-500" />,
+    airwashers: <Droplets className="w-4 h-4 text-cyan-500" />,
+    "fan-section": <Fan className="w-4 h-4 text-blue-500" />,
+    "cabinet-exhaust-unit": <Box className="w-4 h-4 text-amber-500" />,
+    fcu: <Wind className="w-4 h-4 text-teal-500" />
   };
 
   return (
@@ -71,7 +80,7 @@ export default function ProductsPage() {
                   AIR MANAGEMENT & HVAC SOLUTIONS
                 </h1>
                 <p className="text-base sm:text-lg text-slate-600 font-light">
-                  Industrial centrifugal fans, high-volume axial systems, impulse jet fans, certified emergency smoke extractors, SMACNA pre-fabricated ducts, and industrial scrubbers.
+                  Engineered Double Skin AHUs, Industrial Airwashers, Plug Fan Sections, Acoustic Cabinet Exhaust Blowers, FCUs, High-Volume Axials, and Pre-Fabricated Duct Systems.
                 </p>
               </div>
 
@@ -82,6 +91,49 @@ export default function ProductsPage() {
                 <span>REQUEST SPEC QUOTE (RFQ)</span>
                 <ArrowRight className="w-4 h-4 text-sky-400" />
               </button>
+            </div>
+
+            {/* Featured Eurocon Core Products Quick Access Strip */}
+            <div className="mt-10 pt-8 border-t border-slate-200">
+              <div className="flex items-center justify-between mb-3">
+                <span className="text-xs font-mono font-bold text-slate-500 uppercase tracking-wider">
+                  QUICK ACCESS: 5 CORE EUROCON PRODUCT LINES
+                </span>
+                <span className="text-[11px] font-mono text-sky-600">CLICK TO VIEW DEDICATED SPEC SHEET</span>
+              </div>
+
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+                {CORE_EUROCON_NAV_PRODUCTS.map((prod) => (
+                  <Link
+                    key={prod.slug}
+                    href={prod.href}
+                    className="p-3.5 rounded-xl bg-white border border-slate-200 hover:border-sky-400 shadow-xs hover:shadow-md transition-all group flex flex-col justify-between"
+                  >
+                    <div className="flex items-center justify-between mb-2">
+                      <div className="w-7 h-7 rounded-lg bg-slate-50 group-hover:bg-sky-50 flex items-center justify-center border border-slate-100 transition-colors">
+                        {coreIcons[prod.slug] || <Wind className="w-4 h-4 text-sky-600" />}
+                      </div>
+                      <span className="text-[9px] font-mono font-bold text-sky-600 bg-sky-50 px-1.5 py-0.5 rounded">
+                        {prod.badge}
+                      </span>
+                    </div>
+
+                    <div>
+                      <h4 className="font-extrabold text-xs text-slate-900 group-hover:text-sky-600 transition-colors truncate">
+                        {prod.name}
+                      </h4>
+                      <span className="text-[10px] text-slate-500 line-clamp-1 mt-0.5 block">
+                        {prod.category}
+                      </span>
+                    </div>
+
+                    <div className="pt-2 mt-2 border-t border-slate-100 flex items-center justify-between text-[10px] font-bold text-sky-600">
+                      <span>View Page</span>
+                      <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
         </section>

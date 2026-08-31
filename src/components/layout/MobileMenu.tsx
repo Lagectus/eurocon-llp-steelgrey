@@ -3,8 +3,8 @@
 import React from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ArrowRight, Phone, Mail, Wind } from "lucide-react";
-import { COMPANY_INFO } from "@/data/euroconData";
+import { X, ArrowRight, Phone, Mail, Wind, ChevronRight, Layers, Droplets, Fan, Box } from "lucide-react";
+import { COMPANY_INFO, CORE_EUROCON_NAV_PRODUCTS } from "@/data/euroconData";
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -20,7 +20,6 @@ export default function MobileMenu({
   const links = [
     { name: "Home", href: "/" },
     { name: "About Eurocon", href: "/about" },
-    { name: "Solutions & Products", href: "/products" },
     { name: "Industries Served", href: "/industries" },
     { name: "Engineering & CFD", href: "/engineering" },
     { name: "Quality Assurance", href: "/quality" },
@@ -75,18 +74,52 @@ export default function MobileMenu({
             </div>
 
             {/* Navigation Links */}
-            <div className="p-6 overflow-y-auto flex-1 space-y-1 text-slate-800">
-              {links.map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  onClick={onClose}
-                  className="flex items-center justify-between py-3 px-3 rounded-xl font-bold text-base text-slate-800 hover:bg-sky-50 hover:text-sky-600 transition-colors"
-                >
-                  <span>{link.name}</span>
-                  <ArrowRight className="w-4 h-4 text-slate-300" />
-                </Link>
-              ))}
+            <div className="p-5 overflow-y-auto flex-1 space-y-4 text-slate-800">
+              {/* Core Products Sub-menu */}
+              <div className="bg-slate-50 p-3.5 rounded-2xl border border-slate-200/80 space-y-2">
+                <div className="flex items-center justify-between px-1.5 pb-1">
+                  <span className="text-[11px] font-mono font-bold tracking-wider uppercase text-slate-500">
+                    PRODUCTS & SOLUTIONS
+                  </span>
+                  <Link
+                    href="/products"
+                    onClick={onClose}
+                    className="text-[11px] font-bold text-sky-600 hover:text-sky-700 flex items-center gap-0.5"
+                  >
+                    <span>All (12+)</span>
+                    <ChevronRight className="w-3 h-3" />
+                  </Link>
+                </div>
+
+                <div className="space-y-1">
+                  {CORE_EUROCON_NAV_PRODUCTS.map((prod) => (
+                    <Link
+                      key={prod.slug}
+                      href={prod.href}
+                      onClick={onClose}
+                      className="flex items-center justify-between py-2 px-2.5 rounded-xl text-xs font-bold text-slate-800 hover:bg-white hover:text-sky-600 hover:shadow-xs transition-all border border-transparent hover:border-slate-200"
+                    >
+                      <span className="truncate">{prod.name}</span>
+                      <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              {/* Main Links */}
+              <div className="space-y-1">
+                {links.map((link) => (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    onClick={onClose}
+                    className="flex items-center justify-between py-2.5 px-3 rounded-xl font-bold text-sm text-slate-800 hover:bg-sky-50 hover:text-sky-600 transition-colors"
+                  >
+                    <span>{link.name}</span>
+                    <ArrowRight className="w-4 h-4 text-slate-300" />
+                  </Link>
+                ))}
+              </div>
             </div>
 
             {/* Drawer Footer */}

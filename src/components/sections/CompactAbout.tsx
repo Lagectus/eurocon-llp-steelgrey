@@ -91,15 +91,15 @@ export default function CompactAbout() {
               transition={{ duration: 0.8 }}
               className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-200 bg-slate-900 group"
             >
-              <div className="relative h-72 sm:h-96 w-full overflow-hidden">
+              <div className="relative h-72 sm:h-96 w-full overflow-hidden bg-slate-950">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80"
-                  alt="Eurocon High-Precision Manufacturing and Engineering"
-                  className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700 filter brightness-95"
+                  src="/images/facility.jpg"
+                  alt="Eurocon High-Precision Manufacturing and Engineering Plant"
+                  className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
 
-                <div className="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-slate-950/90 backdrop-blur-md border border-slate-800 text-white flex items-center justify-between">
+                <div className="absolute bottom-4 left-4 right-4 p-3.5 rounded-xl bg-slate-950/90 backdrop-blur-md border border-slate-800 text-white flex items-center justify-between shadow-xl">
                   <div className="space-y-0.5">
                     <span className="text-[10px] font-mono text-sky-400 uppercase font-bold">
                       MANUFACTURING FACILITY

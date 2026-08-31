@@ -59,8 +59,292 @@ export const METRIC_HIGHLIGHTS: MetricHighlight[] = [
 
 export const PRODUCTS_DATA: Product[] = [
   {
+    id: "prod-ahu",
+    slug: "ahu",
+    aliases: ["air-handling-unit", "air-handling-units", "modular-ahu", "double-skin-ahu"],
+    name: "AHU (Air Handling Unit)",
+    category: "Air Handling Solutions",
+    subCategory: "Modular Double-Skin Series",
+    tagline: "Custom modular & thermal-break double-skin AHUs with Eurovent/AHRI certified coils and plug fan efficiency.",
+    shortDescription: "Engineered modular Double-Skin Air Handling Units (AHUs) with thermal-break extruded aluminum profiles, EU4 to HEPA multi-stage filtration, and high-efficiency direct-drive EC/Plug fans.",
+    fullDescription: "EUROCON Double Skin Air Handling Units (AHUs) are engineered to deliver conditioned, filtered, and precisely balanced air across large commercial complexes, cleanroom facilities, pharmaceutical labs, data centers, and industrial facilities. Built with 25mm / 50mm injected PUF insulation (40 kg/m³ density) in thermal-break extruded aluminum profiles, Eurocon AHUs eliminate condensation and thermal bridging while ensuring whisper-quiet acoustic damping and Class L1/L2 casing air leakage compliance.",
+    heroBadge: "AHRI 410 & EN 1886 Thermal Break",
+    image: "/images/products/ahu.jpg",
+    cfdImage: "/images/products/cfd-ahu.jpg",
+    schematicSvgType: "ahu",
+    specs: {
+      airflowRange: "1,000 to 75,000 CFM (1,700 to 127,500 m³/h)",
+      staticPressure: "Up to 2,000 Pa (8.0 in. wg)",
+      coolingCapacity: "3.0 TR to 180 TR (Chilled Water / DX Direct Expansion)",
+      casingConstruction: "25mm / 50mm Double-Skin PUF Injected (40 kg/m³) with Thermal Break Profile",
+      filtration: "EU4 Pre-Filter + EU7/EU9 Microvee + HEPA H13/H14 Optional",
+      coilSpecs: "AHRI 410 Certified Copper Tubes with Hydrophilic Blue/Gold Aluminum Fins",
+      driveType: "Direct-Drive EC Motor / Backward Curved Plug Fan / V-Belt Centrifugal",
+      motorRating: "1.5 kW to 90 kW (IE3 / IE4 / EC Brushless)",
+      operatingTemp: "-15°C to +65°C Continuous",
+      standards: ["AHRI 410", "EN 1886:2007 (D1/L1/T2/TB2)", "AMCA 210", "ISO 9001:2015", "Eurovent"]
+    },
+    keyFeatures: [
+      "Thermal Break extruded aluminum profile framework preventing exterior surface condensation",
+      "25mm / 50mm CFC-free injected Polyurethane Foam (PUF) insulation with 40 kg/m³ density",
+      "Direct-drive high efficiency Backward Curved Plug Fan / EC Motor eliminating belt dust and maintenance",
+      "Multi-stage modular filtration tracks accommodating EU4 Pre, EU7/EU9 Fine, and Terminal HEPA filters",
+      "Sloped SS304 stainless steel drain pan with dual-sided drainage preventing microbial buildup",
+      "Modular sectional design allowing easy on-site rigging, plant room transit, and custom assembly"
+    ],
+    applications: [
+      "Pharmaceutical Manufacturing & Sterile Cleanrooms (ISO Class 5-8)",
+      "Commercial IT Parks, Corporate Headquarters & High-Rise Towers",
+      "Hospitals, Operation Theaters (OT) & Healthcare Plenums",
+      "Data Centers & Mission-Critical Thermal Management",
+      "Shopping Malls, Airports & Large Convention Halls"
+    ],
+    aerodynamicHighlights: [
+      {
+        title: "Thermal-Break Profile (TB2 Class)",
+        description: "Special polyamide thermal barrier prevents conductive heat transfer between inner and outer casing panels, eliminating condensation."
+      },
+      {
+        title: "Direct-Drive Plug Fan Aerodynamics",
+        description: "Aerofoil backward-curved impellers ensure uniform static pressure distribution across coil banks with up to 20% energy reduction over belt drives."
+      }
+    ],
+    customOptions: [
+      { title: "Single / Double Skin", description: "Choice of 25mm or 50mm PUF insulation thickness with thermal break polyamide strips.", badge: "Thermal Break" },
+      { title: "Cooling Medium", description: "Chilled Water (CHW), Direct Expansion (DX) with R410a/R32, or Hot Water Coils.", badge: "AHRI Certified" },
+      { title: "Fan Technology", description: "Direct-drive EC Brushless Fans with 0-10V BMS modulation or DIDW centrifugal blowers.", badge: "EC Direct Drive" },
+      { title: "Filtration Levels", description: "Pre-filters (EU4), Microvee (EU7/EU9), Carbon filters, and Terminal H13/H14 HEPA banks.", badge: "Cleanroom Grade" }
+    ]
+  },
+  {
+    id: "prod-airwashers",
+    slug: "airwashers",
+    aliases: ["air-washers", "airwasher", "evaporative-air-washer", "industrial-air-washer"],
+    name: "Airwashers (Industrial Evaporative Cooling)",
+    category: "Air Handling Solutions",
+    subCategory: "Evaporative Cooling Series",
+    tagline: "High-saturation two-stage & single-stage evaporative cooling systems for industrial climate control.",
+    shortDescription: "Industrial Air Washer units equipped with Celdek 5090/7090 cross-fluted cellulose evaporative pads, high-pressure PVC mist eliminators, and heavy-gauge SS304 sump tanks, delivering up to 90% saturation efficiency.",
+    fullDescription: "EUROCON Air Washer Units provide high-volume evaporative cooling and continuous humidification/air cleaning for massive industrial shop floors, textile mills, printing facilities, packaging units, and power plants. Engineered with durable Celdek pads or spray-bank technology, coupled with backward curved or aerofoil centrifugal blowers, Eurocon Airwashers lower ambient temperatures economically with a fraction of the power consumption of conventional DX refrigeration.",
+    heroBadge: "Up to 90% Saturation Efficiency",
+    image: "/images/products/airwashers.jpg",
+    cfdImage: "/images/products/cfd-airwashers.jpg",
+    schematicSvgType: "airwasher",
+    specs: {
+      airflowRange: "3,000 to 140,000 CFM (5,100 to 238,000 m³/h)",
+      staticPressure: "Up to 1,500 Pa (6.0 in. wg)",
+      casingConstruction: "Double-Skin PUF / Heavy Gauge Galvanized Sheet with Anti-Corrosive Epoxy Coat",
+      filtration: "Washable Metallic Pre-Filters (EU2/EU4) + Celdek 5090/7090 Media Bank",
+      driveType: "Direct Drive / V-Belt Heavy Duty Centrifugal or Plug Blower",
+      motorRating: "2.2 kW to 110 kW (IE3/IE4 Energy Efficient Motors)",
+      operatingTemp: "Ambient operation up to +55°C",
+      standards: ["AMCA 210", "IS 277 Zinc Coating", "ASHRAE Standard 111", "ISO 9001:2015"]
+    },
+    keyFeatures: [
+      "High-efficiency imported Celdek 5090 / 7090 cross-fluted cellulose evaporative cooling media",
+      "Heavy-gauge Stainless Steel (SS304) or hot-dip galvanized water tank sump with anti-algae coating",
+      "High-pressure clog-resistant PVC water distribution manifold with quick-clean brass/nylon spray nozzles",
+      "Aerodynamic 4-bend / 6-bend PVC moisture mist eliminators ensuring dry, saturated airflow delivery",
+      "Centrifugal monoblock submersible or horizontal recirculation water pumps with dual-filter suction strainer",
+      "Optional double-skin insulated casing (25mm/50mm PUF) for low radiated noise and zero casing sweating"
+    ],
+    applications: [
+      "Textile Spinning, Weaving & Garment Manufacturing Mills",
+      "Automotive Assembly Lines & Heavy Engineering Workshops",
+      "Printing, Paper, Corrugation & Packaging Facilities",
+      "Food Processing, Sugar Plants & Bakeries",
+      "Turbine Intake Air Cooling & Power Generation Plants"
+    ],
+    aerodynamicHighlights: [
+      {
+        title: "Cross-Fluted Pad Geometry",
+        description: "Optimized 45°/15° flute angle forces intimate air-water contact with minimum static pressure drop, achieving up to 90% saturation efficiency."
+      },
+      {
+        title: "Engineered Mist Elimination",
+        description: "Proprietary aerodynamic chevron profiles trap 99.8% of entrained water droplets, preventing downstream duct moisture damage."
+      }
+    ],
+    customOptions: [
+      { title: "Cooling Media Bank", description: "Celdek 5090 / 7090 Cellulose Pads or Dual-Bank High Pressure Water Spray Washer.", badge: "High Efficiency" },
+      { title: "Sump Construction", description: "SS304 Stainless Steel or Heavy Gauge Galvanized Steel with Epoxy/FRP Lining.", badge: "Corrosion Proof" },
+      { title: "Airflow Configuration", description: "Single-Stage Evaporative Cooling or Two-Stage Indirect-Direct Evaporative System (IDEC).", badge: "IDEC Available" },
+      { title: "Blower Arrangement", description: "DIDW Centrifugal Forward/Backward curved or Direct-drive Plug Fan.", badge: "AMCA Tested" }
+    ]
+  },
+  {
+    id: "prod-fan-section",
+    slug: "fan-section",
+    aliases: ["fansection", "fan-sections", "plug-fan-section", "blower-section", "modular-fan-section"],
+    name: "Fan Section (Plug & Centrifugal Blower Section)",
+    category: "Air Management Systems",
+    subCategory: "Modular Plenum & Blower Series",
+    tagline: "Precision-engineered modular fan plenums with plug fan and DIDW blower assemblies.",
+    shortDescription: "Modular Fan Sections housing direct-drive plug fans or DIDW backward curved blowers on vibration-isolated sub-bases, optimized for AHU retrofits, fresh air intake, and process exhaust.",
+    fullDescription: "EUROCON Fan Sections are self-contained aerodynamic supply and exhaust modules designed for seamless integration into built-up HVAC air systems, custom plenums, and industrial processes. Featuring aerodynamically profiled aluminum or high-strength steel impellers dynamically balanced to ISO 1940 Grade G2.5, spring-isolated floating inertia bases, and acoustic double-skin panels.",
+    heroBadge: "ISO 1940 Grade G2.5 Dynamic Balancing",
+    image: "/images/products/fan-section.jpg",
+    cfdImage: "/images/products/cfd-fan-section.jpg",
+    schematicSvgType: "fansection",
+    specs: {
+      airflowRange: "1,500 to 110,000 CFM (2,550 to 187,000 m³/h)",
+      staticPressure: "Up to 3,000 Pa (12.0 in. wg)",
+      impellerDiameter: "280 mm to 1,600 mm",
+      casingConstruction: "Acoustic Double-Skin 25mm / 50mm PUF Casing with Quick-Access Doors",
+      driveType: "Direct-Drive Unhoused Plug Fan / Belt-Drive DIDW Centrifugal / EC Motor",
+      motorRating: "0.75 kW to 132 kW (IE3/IE4/EC Brushless Motor with VFD Integration)",
+      operatingTemp: "-20°C to +80°C (High-temperature rated options up to 250°C)",
+      standards: ["AMCA 210", "AMCA 300 Sound Tested", "ISO 1940 Grade G2.5", "ISO 5801"]
+    },
+    keyFeatures: [
+      "Unhoused direct-drive plug fans with backward-curved 3D aerofoil blades for maximum static efficiency",
+      "Double-skin 25mm/50mm acoustic insulated casing lined with acoustic glass wool / high-density PUF",
+      "Heavy-duty spring anti-vibration mounts (AVMs) with 95%+ vibration isolation efficiency",
+      "Flexible neoprene/canvas connection sleeves preventing mechanical vibration transmission into ductwork",
+      "Quick-release hinged access doors with double-cam latches and acrylic inspection viewing ports",
+      "Factory-installed airflow piezometer rings for real-time CFM monitoring and VFD modulation"
+    ],
+    applications: [
+      "Custom AHU Supply & Return Air Modular Plenums",
+      "Cleanroom Auxiliary Air Recirculation & Pressurization",
+      "Industrial Factory Fresh Air Supply & General Ventilation",
+      "Commercial Building Ventilation & Air Filtration Plenums",
+      "Process Exhaust & Fume Extraction Booster Stations"
+    ],
+    aerodynamicHighlights: [
+      {
+        title: "Bellmouth Inlet Optimization",
+        description: "Spun aluminum inlet cone creates smooth laminar flow transition into the impeller eye, minimizing entry losses and noise."
+      },
+      {
+        title: "Plug Fan Free Discharge",
+        description: "Pressurizes the entire plenum chamber evenly, reducing downstream system effect and eliminating duct transition losses."
+      }
+    ],
+    customOptions: [
+      { title: "Impeller Type", description: "Backward curved plug fan, aerofoil centrifugal, or forward curved double inlet blower.", badge: "Plug / DIDW" },
+      { title: "Motor Technology", description: "IE3 / IE4 Premium Efficiency induction motors or EC Brushless synchronous motors.", badge: "IE4 / EC" },
+      { title: "Access Layout", description: "Left-hand or Right-hand quick-access inspection door with viewing window and marine light.", badge: "Custom Access" },
+      { title: "Mounting Isolation", description: "Internal spring isolators with seismic restraints or external rubber-in-shear mounts.", badge: "Vibration Free" }
+    ]
+  },
+  {
+    id: "prod-cabinet-exhaust",
+    slug: "cabinet-exhaust-unit",
+    aliases: ["cabnet-exhaust-unit", "cabinet-exhaust", "cabnet-exhaust", "cabinet-exhaust-fan", "cabinet-fans", "inline-cabinet-unit"],
+    name: "Cabinet Exhaust Unit",
+    category: "Smoke Exhaust Systems",
+    subCategory: "Acoustic In-Line Box Series",
+    tagline: "Sound-attenuated in-line double-skin cabinet exhaust units for commercial and industrial ventilation.",
+    shortDescription: "Heavy-duty acoustic cabinet exhaust fans engineered with double-inlet centrifugal DIDW wheels, internal sound-absorbing acoustic lining, and multi-position inlet/outlet spigots.",
+    fullDescription: "EUROCON Cabinet Exhaust Units are ultra-quiet, enclosed in-line extraction systems tailored for commercial kitchen hood exhaust, laboratory fume clearance, multi-story bathroom exhaust, and factory ventilation. Fabricated with a robust extruded aluminum pentapost frame and double-skin acoustic panels lined with high-density rockwool / PUF insulation.",
+    heroBadge: "Acoustic Double Skin & Low Noise",
+    image: "/images/products/cabinet-exhaust.jpg",
+    cfdImage: "/images/products/cfd-cabinet-exhaust.jpg",
+    schematicSvgType: "cabinetexhaust",
+    specs: {
+      airflowRange: "500 to 38,000 CFM (850 to 64,500 m³/h)",
+      staticPressure: "Up to 1,400 Pa (5.6 in. wg)",
+      noiseLevel: "34 dBA to 56 dBA @ 1.5m",
+      casingConstruction: "Double Skin Galvanized Steel (25mm Acoustic Thermal Insulation)",
+      driveType: "Direct Drive External Rotor / Belt-Driven Forward & Backward DIDW Blower",
+      motorRating: "0.25 kW to 30 kW (Class F/H Insulation, IP55)",
+      operatingTemp: "-20°C to +70°C (Fire-rated 250°C / 2hr option available)",
+      standards: ["AMCA 210", "AMCA 300 Noise", "BS 7346-2", "ISO 9001:2015"]
+    },
+    keyFeatures: [
+      "Acoustic double-wall galvanized steel cabinet lined with 25mm high-density sound-absorbing fiberglass/PUF",
+      "High-efficiency forward or backward curved double inlet centrifugal impellers dynamically balanced to ISO 1940",
+      "Flexible duct connection with rectangular and circular slip-fit companion flanges",
+      "Easily removable side service panels allowing 360-degree motor and drive maintenance without disturbing ductwork",
+      "Outdoor weatherproof configuration available with rain cowl, canopy, and drain plugs",
+      "Available with grease-resistant motors and drain points for commercial kitchen hood extraction"
+    ],
+    applications: [
+      "Commercial Kitchen Exhaust Hoods & Restaurant Extract",
+      "Multi-Story Restroom & Bathroom Central Exhaust",
+      "Hospital Isolation Rooms & Laboratory Fume Extraction",
+      "Basement & Car Park Auxiliary Ventilation",
+      "Industrial Enclosure & Machine Room Heat Extraction"
+    ],
+    aerodynamicHighlights: [
+      {
+        title: "Acoustically Tuned Enclosure",
+        description: "Cabinet internal geometry and acoustic baffles attenuate low and high frequency blower harmonics, achieving silent operation."
+      },
+      {
+        title: "Multi-Discharge Flexibility",
+        description: "Modular panel interchangeability permits inline straight-through, top vertical, or side 90-degree discharge orientation."
+      }
+    ],
+    customOptions: [
+      { title: "Drive Configuration", description: "Direct Drive external rotor for ultra-compact spaces or V-Belt Drive for heavy duty.", badge: "Direct / Belt" },
+      { title: "Duty Rating", description: "Standard comfort ventilation or High-Temperature 250°C / 2-Hour fire exhaust.", badge: "Fire Rated" },
+      { title: "Weatherproofing", description: "Indoor ceiling suspended or Outdoor rooftop weather cowl with rain canopy.", badge: "Outdoor Canopy" },
+      { title: "Filtration Section", description: "Optional add-on filter box with G4 / F7 washable pre-filters.", badge: "Optional Filter" }
+    ]
+  },
+  {
+    id: "prod-fcu",
+    slug: "fcu",
+    aliases: ["fan-coil-unit", "fan-coil-units", "ceiling-fcu", "concealed-fcu", "cassette-fcu"],
+    name: "FCU (Fan Coil Unit)",
+    category: "Air Distribution",
+    subCategory: "Ceiling Concealed & Cassette Series",
+    tagline: "Ultra-slim, whisper-quiet ceiling concealed chilled water & DX fan coil units.",
+    shortDescription: "Low-profile ceiling-concealed and cassette Fan Coil Units (FCU) engineered with multi-speed or EC brushless motors, hydrophilic-finned copper coils, and sloped condensation drain trays.",
+    fullDescription: "EUROCON Fan Coil Units (FCU) are precision-engineered for zonal climate control in commercial offices, luxury hotels, hospital patient rooms, and residential towers. Featuring an ultra-slim chassis (as low as 220mm height) that easily fits tight ceiling voids, low-noise dynamically balanced multi-blade blowers, and high-efficiency copper tube heat exchangers with hydrophilic coated fins.",
+    heroBadge: "Ultra-Slim 220mm Profile & 28 dBA",
+    image: "/images/products/fcu.jpg",
+    cfdImage: "/images/products/cfd-fcu.jpg",
+    schematicSvgType: "fcu",
+    specs: {
+      airflowRange: "200 to 3,000 CFM (340 to 5,100 m³/h)",
+      staticPressure: "ESP 30 Pa (Standard) to 180 Pa (High Static Pressure Series)",
+      coolingCapacity: "0.5 TR to 7.5 TR (1.8 kW to 26 kW)",
+      coilSpecs: "2-Row / 3-Row / 4-Row Seamless Copper Tubes + Hydrophilic Corrugated Fins",
+      noiseLevel: "28 dBA to 42 dBA (Ultra-Quiet Performance)",
+      driveType: "Direct Drive with 3-Speed PSC Motor or Continuous 0-10V EC Motor",
+      motorRating: "35 W to 450 W (Energy Efficient Brushless DC / PSC)",
+      operatingTemp: "Chilled Water 4°C - 12°C / Hot Water up to 80°C",
+      standards: ["AHRI 440", "Eurovent Certified Performance", "CE Compliance", "ISO 9001:2015"]
+    },
+    keyFeatures: [
+      "Ultra-compact slim chassis height starting at just 220mm, ideal for restricted false ceiling heights",
+      "High-efficiency seamless copper tubes mechanically expanded into hydrophilic corrugated aluminum fins",
+      "One-piece deep-drawn galvanized steel drain pan insulated with 6mm closed-cell PE foam for zero condensation",
+      "Dynamically balanced wide-diameter forward-curved galvanized DIDW centrifugal impellers",
+      "Choice of 3-Speed PSC motor or high-efficiency Electronically Commutated (EC) brushless DC motor",
+      "Washable nylon / synthetic fiber pre-filter easily removable from bottom or rear access tracks"
+    ],
+    applications: [
+      "Premium Hotel Guest Rooms & Luxury Resort Suites",
+      "Commercial IT Offices, Executive Cabins & Conference Rooms",
+      "Hospital Patient Wards & Consultation Chambers",
+      "High-End Residential Apartments & Condominiums",
+      "Retail Showrooms & Boutique Commercial Stores"
+    ],
+    aerodynamicHighlights: [
+      {
+        title: "Acoustic Impeller Casing",
+        description: "Dual-inlet scroll housing engineered with optimized cutoff angle suppresses blade-pass noise down to a library-quiet 28 dBA."
+      },
+      {
+        title: "Hydrophilic Coil Heat Transfer",
+        description: "Hydrophilic blue coating prevents water bridge droplet formation between fins, ensuring uninterrupted airflow and maximum heat exchange."
+      }
+    ],
+    customOptions: [
+      { title: "System Type", description: "2-Pipe Cooling / Heating or 4-Pipe Independent Simultaneous System.", badge: "2-Pipe / 4-Pipe" },
+      { title: "Static Pressure Range", description: "Low Static (12-30 Pa) for direct discharge or High Static (50-180 Pa) for ducted distribution.", badge: "High ESP" },
+      { title: "Motor Option", description: "Standard 3-Speed PSC Motor or Smart 0-10V Modulating EC Brushless Motor.", badge: "EC Brushless" },
+      { title: "Control Valve Integration", description: "Factory-fitted 2-way or 3-way motorized modulating valve package with smart thermostat.", badge: "Smart BMS" }
+    ]
+  },
+  {
     id: "prod-centrifugal-fans",
     slug: "centrifugal-fans",
+    aliases: ["centrifugal-fan", "industrial-centrifugal-fans"],
     name: "Industrial Centrifugal Fans",
     category: "Air Management Systems",
     subCategory: "High Static Pressure Series",
@@ -877,3 +1161,78 @@ export const FAQ_ITEMS = [
     answer: "Yes. Our qualified application engineering team provides comprehensive on-site support, including duct air balancing (TAB), vibration FFT spectrum analysis, on-site dynamic balancing, and acoustic sound level verification to ensure design parameters match real-world operation."
   }
 ];
+
+export const CORE_EUROCON_NAV_PRODUCTS = [
+  {
+    name: "AHU (Air Handling Unit)",
+    slug: "ahu",
+    shortName: "AHU",
+    category: "Modular Double-Skin AHU",
+    desc: "Thermal-break double-skin AHU with AHRI certified coils & plug fan",
+    href: "/products/ahu",
+    schematicSvgType: "ahu" as const,
+    badge: "AHRI 410 / EN 1886"
+  },
+  {
+    name: "Airwashers",
+    slug: "airwashers",
+    shortName: "Airwashers",
+    category: "Evaporative Cooling",
+    desc: "Industrial Celdek pad air washers with SS304 sump & 90% saturation",
+    href: "/products/airwashers",
+    schematicSvgType: "airwasher" as const,
+    badge: "90% Saturation"
+  },
+  {
+    name: "Fan Section",
+    slug: "fan-section",
+    shortName: "Fan Section",
+    category: "Plenum & Blower Module",
+    desc: "Direct-drive plug fans & DIDW blower modules with ISO G2.5 balance",
+    href: "/products/fan-section",
+    schematicSvgType: "fansection" as const,
+    badge: "Plug & DIDW"
+  },
+  {
+    name: "Cabinet Exhaust Unit",
+    slug: "cabinet-exhaust-unit",
+    shortName: "Cabinet Exhaust",
+    category: "In-line Acoustic Box",
+    desc: "Double-skin sound-attenuated box fans for kitchen & fume extraction",
+    href: "/products/cabinet-exhaust-unit",
+    schematicSvgType: "cabinetexhaust" as const,
+    badge: "Low Noise Box"
+  },
+  {
+    name: "FCU (Fan Coil Unit)",
+    slug: "fcu",
+    shortName: "FCU",
+    category: "Ceiling Concealed",
+    desc: "Ultra-slim 220mm chilled water & DX fan coils with 28 dBA acoustics",
+    href: "/products/fcu",
+    schematicSvgType: "fcu" as const,
+    badge: "Ultra-Slim 220mm"
+  }
+];
+
+export function getProductBySlug(slug: string): Product | undefined {
+  const normalizedSlug = slug.toLowerCase().trim();
+  return PRODUCTS_DATA.find((p) => {
+    if (p.slug.toLowerCase() === normalizedSlug) return true;
+    if (p.id.toLowerCase() === normalizedSlug || p.id.toLowerCase() === `prod-${normalizedSlug}`) return true;
+    if (p.aliases && p.aliases.some((alias) => alias.toLowerCase() === normalizedSlug)) return true;
+    return false;
+  });
+}
+
+export function getAllProductSlugs(): string[] {
+  const slugs: string[] = [];
+  PRODUCTS_DATA.forEach((p) => {
+    slugs.push(p.slug);
+    if (p.aliases) {
+      slugs.push(...p.aliases);
+    }
+  });
+  return Array.from(new Set(slugs));
+}
+

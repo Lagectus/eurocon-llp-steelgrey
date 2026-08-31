@@ -14,58 +14,58 @@ interface CompactProductsProps {
 export default function CompactProducts({ onSelectProduct }: CompactProductsProps) {
   const products = [
     {
-      id: "prod-centrifugal",
+      id: "prod-ahu",
       num: "01",
+      name: "AHU (Air Handling Unit)",
+      tagline: "Thermal-break double-skin modular AHUs with AHRI certified coils and plug fan efficiency.",
+      schematicType: "ahu" as const,
+      badge: "AHRI 410 / EN 1886",
+      href: "/products/ahu",
+    },
+    {
+      id: "prod-airwashers",
+      num: "02",
+      name: "Industrial Airwashers",
+      tagline: "High-saturation Celdek 5090 evaporative cooling units with heavy-duty SS304 sump.",
+      schematicType: "airwasher" as const,
+      badge: "90% Saturation",
+      href: "/products/airwashers",
+    },
+    {
+      id: "prod-fan-section",
+      num: "03",
+      name: "Plug & Fan Section",
+      tagline: "Direct-drive plug fans and DIDW blower plenums dynamically balanced to ISO G2.5.",
+      schematicType: "fansection" as const,
+      badge: "ISO 1940 G2.5",
+      href: "/products/fan-section",
+    },
+    {
+      id: "prod-cabinet-exhaust",
+      num: "04",
+      name: "Cabinet Exhaust Unit",
+      tagline: "Whisper-quiet double-skin insulated in-line box fans for kitchen and fume exhaust.",
+      schematicType: "cabinetexhaust" as const,
+      badge: "Acoustic Box",
+      href: "/products/cabinet-exhaust-unit",
+    },
+    {
+      id: "prod-fcu",
+      num: "05",
+      name: "FCU (Fan Coil Unit)",
+      tagline: "Ultra-slim 220mm ceiling concealed chilled water & DX fan coils with 28 dBA acoustics.",
+      schematicType: "fcu" as const,
+      badge: "Ultra-Slim 220mm",
+      href: "/products/fcu",
+    },
+    {
+      id: "prod-centrifugal",
+      num: "06",
       name: "Industrial Centrifugal Fans",
-      tagline: "High-efficiency backward curved & aerofoil impellers for high static pressure.",
+      tagline: "High static pressure backward curved & aerofoil impellers for heavy-duty process exhaust.",
       schematicType: "centrifugal" as const,
       badge: "AMCA 210",
-      image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      id: "prod-axial",
-      num: "02",
-      name: "High-Volume Axial Fans",
-      tagline: "Adjustable pitch aerofoil blades for massive volume ventilation and shafts.",
-      schematicType: "axial" as const,
-      badge: "ISO 5801",
-      image: "https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      id: "prod-jet-smoke",
-      num: "03",
-      name: "Jet & Smoke Exhaust Fans",
-      tagline: "Ductless high-velocity thrust systems and 400°C/2hr certified fire extractors.",
-      schematicType: "jet" as const,
-      badge: "EN 12101-3 F400",
-      image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      id: "prod-inline",
-      num: "04",
-      name: "Inline & Acoustic Fans",
-      tagline: "Whisper-quiet double-skin insulated cabinet units for false ceiling duct runs.",
-      schematicType: "inline" as const,
-      badge: "AMCA 300 Noise",
-      image: "https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      id: "prod-hvls",
-      num: "05",
-      name: "HVLS Industrial Fans",
-      tagline: "Massive 24ft PMSM gearless destratification for high-bay warehouses and factories.",
-      schematicType: "hvls" as const,
-      badge: "PMSM Direct Drive",
-      image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      id: "prod-air-dist",
-      num: "06",
-      name: "Air Distribution & HVAC Systems",
-      tagline: "CNC pre-fabricated SMACNA Class A sealed ducts, scrubbers, and sound attenuators.",
-      schematicType: "duct" as const,
-      badge: "SMACNA Class A",
-      image: "https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=800&q=80",
+      href: "/products/centrifugal-fans",
     },
   ];
 
@@ -95,10 +95,10 @@ export default function CompactProducts({ onSelectProduct }: CompactProductsProp
 
         {/* 6 Category Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {products.map((product, idx) => (
+          {products.map((product) => (
             <Link
               key={product.id}
-              href="/products"
+              href={product.href}
               className="group relative bg-white rounded-2xl border border-slate-200 hover:border-sky-400 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden cursor-pointer hover:-translate-y-1.5"
             >
               {/* Top Diagram Preview */}

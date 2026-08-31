@@ -104,14 +104,13 @@ export default function ProductDetailModal({
                   </div>
                 </div>
 
-                <div className="md:col-span-6 bg-slate-50 p-4 rounded-xl border border-slate-200">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-[11px] font-mono text-slate-500 uppercase tracking-wider">
-                      AERODYNAMIC BLUEPRINT
-                    </span>
-                    <span className="text-[11px] font-mono text-sky-600">CAD MODEL</span>
-                  </div>
-                  <ProductSchematic type={product.schematicSvgType} className="h-44" />
+                <div className="md:col-span-6 bg-slate-950 rounded-xl border border-slate-800 overflow-hidden relative group">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="w-full h-52 object-cover"
+                  />
                 </div>
               </div>
 

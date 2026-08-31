@@ -73,27 +73,32 @@ export default function Footer() {
           {/* Col 3: Solutions (2 Cols) */}
           <div className="lg:col-span-2 space-y-3">
             <h4 className="text-xs font-mono font-bold uppercase tracking-wider text-white">
-              Solutions
+              Core Products
             </h4>
             <ul className="space-y-2 text-xs">
               <li>
-                <Link href="/products" className="hover:text-sky-400 transition-colors">
-                  Centrifugal Fans
+                <Link href="/products/ahu" className="hover:text-sky-400 transition-colors">
+                  Air Handling Unit (AHU)
                 </Link>
               </li>
               <li>
-                <Link href="/products" className="hover:text-sky-400 transition-colors">
-                  Axial Fans
+                <Link href="/products/airwashers" className="hover:text-sky-400 transition-colors">
+                  Airwashers
                 </Link>
               </li>
               <li>
-                <Link href="/products" className="hover:text-sky-400 transition-colors">
-                  Jet Fans
+                <Link href="/products/fan-section" className="hover:text-sky-400 transition-colors">
+                  Fan Section
                 </Link>
               </li>
               <li>
-                <Link href="/products" className="hover:text-sky-400 transition-colors">
-                  HVLS Fans
+                <Link href="/products/cabinet-exhaust-unit" className="hover:text-sky-400 transition-colors">
+                  Cabinet Exhaust Unit
+                </Link>
+              </li>
+              <li>
+                <Link href="/products/fcu" className="hover:text-sky-400 transition-colors">
+                  Fan Coil Unit (FCU)
                 </Link>
               </li>
             </ul>

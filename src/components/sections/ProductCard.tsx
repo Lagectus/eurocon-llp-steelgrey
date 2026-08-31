@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, ShieldCheck, Wind, Sliders } from "lucide-react";
 import { Product } from "@/types";
@@ -27,80 +28,100 @@ export default function ProductCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: (index % 3) * 0.1 }}
-      onClick={() => onSelect(product)}
-      className="group relative bg-white rounded-2xl border border-slate-200/90 hover:border-sky-400/80 shadow-sm hover:shadow-2xl transition-all duration-300 flex flex-col justify-between overflow-hidden cursor-pointer hover:-translate-y-2"
+      className="group relative bg-white rounded-2xl border border-slate-200/90 hover:border-sky-400/80 shadow-sm hover:shadow-2xl transition-all duration-300 flex flex-col justify-between overflow-hidden hover:-translate-y-2"
     >
-      {/* Top Graphic / Schematic Area */}
-      <div className="relative bg-slate-50 border-b border-slate-100 p-5 overflow-hidden">
-        {/* Top Badges */}
-        <div className="flex items-center justify-between mb-2 relative z-10">
-          <span className="font-mono text-xs font-black text-sky-600 tracking-wider group-hover:translate-x-1 transition-transform">
-            {formattedIndex} // {product.category.toUpperCase()}
-          </span>
-          <span className="inline-flex items-center gap-1 text-[10px] font-mono px-2 py-0.5 rounded-full bg-white border border-slate-200 text-slate-600 shadow-xs">
-            <ShieldCheck className="w-3 h-3 text-sky-600" />
-            {product.specs.standards ? product.specs.standards[0] : "AMCA"}
-          </span>
-        </div>
+      <Link href={`/products/${product.slug}`} className="flex-1 flex flex-col justify-between">
+        {/* Top Graphic / Image Area */}
+        <div className="relative bg-slate-900 border-b border-slate-100 h-52 overflow-hidden group/img">
+          {/* Real High-Resolution Industrial Product Image */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={product.image}
+            alt={product.name}
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          />
 
-        {/* Vector Schematic Diagram Preview */}
-        <div className="py-2 transform group-hover:scale-105 transition-transform duration-500">
-          <ProductSchematic type={product.schematicSvgType} className="h-40" />
-        </div>
-
-        {/* Floating Airflow Tag */}
-        {product.specs.airflowRange && (
-          <div className="absolute bottom-3 left-4 bg-white/90 backdrop-blur-xs px-2.5 py-1 rounded-md text-[10px] font-mono text-slate-700 border border-slate-200 shadow-xs flex items-center gap-1.5">
-            <Wind className="w-3 h-3 text-sky-500" />
-            <span>{product.specs.airflowRange.split("(")[0]}</span>
+          {/* Top Badges Overlay */}
+          <div className="absolute top-3 left-3 right-3 flex items-center justify-between z-10">
+            <span className="font-mono text-[10px] font-black text-white px-2 py-0.5 rounded-md bg-slate-900/80 backdrop-blur-xs border border-white/10 tracking-wider shadow-xs">
+              {formattedIndex} // {product.category.toUpperCase()}
+            </span>
+            <span className="inline-flex items-center gap-1 text-[10px] font-mono px-2 py-0.5 rounded-md bg-slate-900/80 backdrop-blur-xs border border-white/10 text-sky-400 shadow-xs">
+              <ShieldCheck className="w-3 h-3 text-sky-400" />
+              {product.specs.standards ? product.specs.standards[0] : "AMCA"}
+            </span>
           </div>
-        )}
-      </div>
 
-      {/* Card Body Content */}
-      <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
-        <div>
-          <h3 className="text-lg sm:text-xl font-extrabold text-slate-900 group-hover:text-sky-600 transition-colors">
-            {product.name}
-          </h3>
-          <p className="text-xs sm:text-sm text-slate-500 mt-2 leading-relaxed line-clamp-2">
-            {product.shortDescription}
-          </p>
-        </div>
-
-        {/* Quick Specs Pills */}
-        <div className="space-y-1.5 pt-2 border-t border-slate-100 text-[11px] font-mono text-slate-600">
-          {product.specs.staticPressure && (
-            <div className="flex items-center justify-between">
-              <span className="text-slate-400">Max Pressure:</span>
-              <span className="font-semibold text-slate-800">{product.specs.staticPressure}</span>
+          {/* Floating Airflow Tag */}
+          {product.specs.airflowRange && (
+            <div className="absolute bottom-3 left-3 bg-slate-900/90 backdrop-blur-xs px-2.5 py-1 rounded-md text-[10px] font-mono text-slate-200 border border-slate-700/80 shadow-xs flex items-center gap-1.5 z-10">
+              <Wind className="w-3 h-3 text-sky-400" />
+              <span>{product.specs.airflowRange.split("(")[0]}</span>
             </div>
           )}
-          {product.specs.motorRating && (
-            <div className="flex items-center justify-between">
-              <span className="text-slate-400">Motor Class:</span>
-              <span className="font-semibold text-slate-800">{product.specs.motorRating.split(",")[0]}</span>
+
+          {/* Floating Hero Badge */}
+          {product.heroBadge && (
+            <div className="absolute bottom-3 right-3 bg-sky-600/90 backdrop-blur-xs px-2 py-0.5 rounded text-[9px] font-mono font-bold text-white shadow-xs z-10">
+              {product.heroBadge.split("&")[0]}
             </div>
           )}
         </div>
 
-        {/* Card Footer Actions */}
-        <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
-          <span className="text-xs font-bold text-sky-600 flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
-            <span>Explore Engineering Specs</span>
-            <ArrowRight className="w-4 h-4" />
-          </span>
+        {/* Card Body Content */}
+        <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
+          <div>
+            <h3 className="text-lg sm:text-xl font-extrabold text-slate-900 group-hover:text-sky-600 transition-colors">
+              {product.name}
+            </h3>
+            <p className="text-xs sm:text-sm text-slate-500 mt-2 leading-relaxed line-clamp-2">
+              {product.shortDescription}
+            </p>
+          </div>
 
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              onQuote(product.name);
-            }}
-            className="text-[11px] font-semibold text-slate-500 hover:text-sky-600 underline underline-offset-4"
-          >
-            Quick RFQ
-          </button>
+          {/* Quick Specs Pills */}
+          <div className="space-y-1.5 pt-2 border-t border-slate-100 text-[11px] font-mono text-slate-600">
+            {product.specs.staticPressure && (
+              <div className="flex items-center justify-between">
+                <span className="text-slate-400">Max Pressure:</span>
+                <span className="font-semibold text-slate-800">{product.specs.staticPressure}</span>
+              </div>
+            )}
+            {product.specs.motorRating && (
+              <div className="flex items-center justify-between">
+                <span className="text-slate-400">Motor Class:</span>
+                <span className="font-semibold text-slate-800">{product.specs.motorRating.split(",")[0]}</span>
+              </div>
+            )}
+            {product.specs.coolingCapacity && (
+              <div className="flex items-center justify-between">
+                <span className="text-slate-400">Capacity:</span>
+                <span className="font-semibold text-slate-800">{product.specs.coolingCapacity.split("(")[0]}</span>
+              </div>
+            )}
+          </div>
         </div>
+      </Link>
+
+      {/* Card Footer Actions */}
+      <div className="px-6 pb-5 pt-2 flex items-center justify-between">
+        <Link
+          href={`/products/${product.slug}`}
+          className="text-xs font-bold text-sky-600 flex items-center gap-1.5 group-hover:gap-2.5 transition-all"
+        >
+          <span>Explore Specifications</span>
+          <ArrowRight className="w-4 h-4" />
+        </Link>
+
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            onQuote(product.name);
+          }}
+          className="text-[11px] font-semibold text-slate-500 hover:text-sky-600 underline underline-offset-4 cursor-pointer"
+        >
+          Quick RFQ
+        </button>
       </div>
 
       {/* Expanding Accent Line at Bottom */}
@@ -110,3 +131,4 @@ export default function ProductCard({
     </motion.div>
   );
 }
+
