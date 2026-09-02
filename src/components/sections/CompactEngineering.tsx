@@ -38,8 +38,8 @@ export default function CompactEngineering() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="space-y-3 max-w-2xl mb-14">
-          <div className="inline-flex items-center gap-2 text-xs font-mono font-bold tracking-[0.2em] uppercase text-sky-600">
-            <span className="w-2 h-2 rounded-full bg-sky-500" />
+          <div className="inline-flex items-center gap-2 text-xs font-mono font-bold tracking-[0.2em] uppercase text-red-600">
+            <span className="w-2 h-2 rounded-full bg-red-500" />
             <span>THE EUROCON ADVANTAGE</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-[1.12]">
@@ -70,7 +70,7 @@ export default function CompactEngineering() {
 
                 {/* Overlay Badge */}
                 <div className="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-slate-950/90 backdrop-blur-md border border-slate-800 text-white space-y-1">
-                  <div className="flex items-center gap-1.5 text-[10px] font-mono text-sky-400 font-bold">
+                  <div className="flex items-center gap-1.5 text-[10px] font-mono text-red-400 font-bold">
                     <Sparkles className="w-3.5 h-3.5" />
                     <span>AERODYNAMIC RIGOR</span>
                   </div>
@@ -93,15 +93,15 @@ export default function CompactEngineering() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
-                  className="p-5 rounded-2xl bg-white border border-slate-200 hover:border-sky-300 shadow-xs hover:shadow-md transition-all flex items-start gap-4 group"
+                  className="p-5 rounded-2xl bg-white border border-slate-200 hover:border-red-300 shadow-xs hover:shadow-md transition-all flex items-start gap-4 group"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-slate-50 group-hover:bg-sky-50 text-slate-700 group-hover:text-sky-600 flex items-center justify-center font-mono font-black text-sm shrink-0 transition-colors border border-slate-200/80 group-hover:border-sky-200">
+                  <div className="w-12 h-12 rounded-xl bg-slate-50 group-hover:bg-red-50 text-slate-700 group-hover:text-red-600 flex items-center justify-center font-mono font-black text-sm shrink-0 transition-colors border border-slate-200/80 group-hover:border-red-200">
                     {cap.num}
                   </div>
 
                   <div className="space-y-1 flex-1">
                     <div className="flex items-center gap-2">
-                      <h3 className="font-bold text-base text-slate-900 group-hover:text-sky-600 transition-colors">
+                      <h3 className="font-bold text-base text-slate-900 group-hover:text-red-600 transition-colors">
                         {cap.title}
                       </h3>
                     </div>
@@ -120,7 +120,7 @@ export default function CompactEngineering() {
                 className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm tracking-wide transition-all shadow-md"
               >
                 <span>Explore Engineering & CFD Simulation</span>
-                <ArrowRight className="w-4 h-4 text-sky-400" />
+                <ArrowRight className="w-4 h-4 text-red-400" />
               </Link>
             </div>
           </div>

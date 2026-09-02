@@ -69,7 +69,7 @@ export default function AboutSection({ onOpenQuoteModal }: AboutSectionProps) {
               className="relative mx-auto"
             >
               {/* Decorative Framing Accent */}
-              <div className="absolute -inset-3 rounded-2xl bg-gradient-to-br from-sky-500/20 to-transparent blur-md pointer-events-none" />
+              <div className="absolute -inset-3 rounded-2xl bg-gradient-to-br from-red-500/20 to-transparent blur-md pointer-events-none" />
 
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-200 bg-white">
                 <div className="relative h-[380px] sm:h-[480px] w-full overflow-hidden group">
@@ -82,7 +82,7 @@ export default function AboutSection({ onOpenQuoteModal }: AboutSectionProps) {
 
                   {/* Floating Engineering Badge */}
                   <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-xl shadow-lg border border-slate-200 flex items-center gap-2">
-                    <Factory className="w-4 h-4 text-sky-600" />
+                    <Factory className="w-4 h-4 text-red-600" />
                     <div>
                       <span className="block text-[10px] font-mono text-slate-500 uppercase">PLANT CAPABILITY</span>
                       <span className="text-xs font-bold text-slate-900">Modern CNC Infrastructure</span>
@@ -92,10 +92,10 @@ export default function AboutSection({ onOpenQuoteModal }: AboutSectionProps) {
                   {/* Bottom Metrics Bar */}
                   <div className="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-slate-900/90 backdrop-blur-md border border-slate-800 text-white flex items-center justify-between">
                     <div className="space-y-0.5">
-                      <span className="text-[10px] font-mono text-sky-400 uppercase">QUALITY ASSURANCE</span>
+                      <span className="text-[10px] font-mono text-red-400 uppercase">QUALITY ASSURANCE</span>
                       <p className="text-xs font-semibold text-slate-200">ISO 9001:2015 & AMCA 210 Lab Certified</p>
                     </div>
-                    <ShieldCheck className="w-6 h-6 text-sky-400 shrink-0" />
+                    <ShieldCheck className="w-6 h-6 text-red-400 shrink-0" />
                   </div>
                 </div>
               </div>
@@ -117,7 +117,7 @@ export default function AboutSection({ onOpenQuoteModal }: AboutSectionProps) {
                   onClick={() => setActiveTab("engineering")}
                   className={`pb-3 text-xs sm:text-sm font-bold uppercase tracking-wider transition-all relative ${
                     activeTab === "engineering"
-                      ? "text-sky-600"
+                      ? "text-red-600"
                       : "text-slate-500 hover:text-slate-800"
                   }`}
                 >
@@ -125,7 +125,7 @@ export default function AboutSection({ onOpenQuoteModal }: AboutSectionProps) {
                   {activeTab === "engineering" && (
                     <motion.div
                       layoutId="activeTabIndicator"
-                      className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-sky-600 rounded-full"
+                      className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-red-600 rounded-full"
                     />
                   )}
                 </button>
@@ -134,7 +134,7 @@ export default function AboutSection({ onOpenQuoteModal }: AboutSectionProps) {
                   onClick={() => setActiveTab("manufacturing")}
                   className={`pb-3 text-xs sm:text-sm font-bold uppercase tracking-wider transition-all relative ${
                     activeTab === "manufacturing"
-                      ? "text-sky-600"
+                      ? "text-red-600"
                       : "text-slate-500 hover:text-slate-800"
                   }`}
                 >
@@ -142,7 +142,7 @@ export default function AboutSection({ onOpenQuoteModal }: AboutSectionProps) {
                   {activeTab === "manufacturing" && (
                     <motion.div
                       layoutId="activeTabIndicator"
-                      className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-sky-600 rounded-full"
+                      className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-red-600 rounded-full"
                     />
                   )}
                 </button>
@@ -151,7 +151,7 @@ export default function AboutSection({ onOpenQuoteModal }: AboutSectionProps) {
                   onClick={() => setActiveTab("compliance")}
                   className={`pb-3 text-xs sm:text-sm font-bold uppercase tracking-wider transition-all relative ${
                     activeTab === "compliance"
-                      ? "text-sky-600"
+                      ? "text-red-600"
                       : "text-slate-500 hover:text-slate-800"
                   }`}
                 >
@@ -159,7 +159,7 @@ export default function AboutSection({ onOpenQuoteModal }: AboutSectionProps) {
                   {activeTab === "compliance" && (
                     <motion.div
                       layoutId="activeTabIndicator"
-                      className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-sky-600 rounded-full"
+                      className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-red-600 rounded-full"
                     />
                   )}
                 </button>
@@ -176,7 +176,7 @@ export default function AboutSection({ onOpenQuoteModal }: AboutSectionProps) {
                 <ul className="space-y-2.5 pt-1">
                   {tabContent[activeTab].points.map((point, index) => (
                     <li key={index} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700">
-                      <CheckCircle2 className="w-4 h-4 text-sky-600 shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-4 h-4 text-red-600 shrink-0 mt-0.5" />
                       <span>{point}</span>
                     </li>
                   ))}

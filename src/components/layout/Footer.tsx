@@ -2,7 +2,8 @@
 
 import React from "react";
 import Link from "next/link";
-import { Wind, Phone, Mail, MapPin, ArrowUp } from "lucide-react";
+import Image from "next/image";
+import { Phone, Mail, MapPin, ArrowUp } from "lucide-react";
 import { COMPANY_INFO } from "@/data/euroconData";
 
 export default function Footer() {
@@ -19,12 +20,18 @@ export default function Footer() {
           {/* Col 1: Brand & Bio (5 Cols) */}
           <div className="lg:col-span-5 space-y-4">
             <Link href="/" className="flex items-center gap-3 group">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-sky-500 to-cyan-400 flex items-center justify-center text-slate-950 font-black shadow-md shadow-sky-500/20">
-                <Wind className="w-5 h-5 text-slate-950" />
+              <div className="w-9 h-9 rounded-xl overflow-hidden shadow-md shadow-red-500/20">
+                <Image
+                  src="/logo.png"
+                  alt="Eurocon Logo"
+                  width={36}
+                  height={36}
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div>
                 <span className="font-extrabold text-lg text-white tracking-wider block">
-                  EUROCON <span className="text-sky-400 font-light">SYSTEM LLP</span>
+                  <span className="text-red-500">EURO</span><span className="text-white">CON</span> <span className="text-slate-400 font-light">SYSTEM LLP</span>
                 </span>
                 <span className="text-[9px] font-mono tracking-widest text-slate-400 uppercase">
                   HVAC & Industrial Air Solutions
@@ -48,22 +55,22 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-xs">
               <li>
-                <Link href="/about" className="hover:text-sky-400 transition-colors">
+                <Link href="/about" className="hover:text-red-400 transition-colors">
                   About
                 </Link>
               </li>
               <li>
-                <Link href="/engineering" className="hover:text-sky-400 transition-colors">
+                <Link href="/engineering" className="hover:text-red-400 transition-colors">
                   Engineering
                 </Link>
               </li>
               <li>
-                <Link href="/quality" className="hover:text-sky-400 transition-colors">
+                <Link href="/quality" className="hover:text-red-400 transition-colors">
                   Quality
                 </Link>
               </li>
               <li>
-                <Link href="/projects" className="hover:text-sky-400 transition-colors">
+                <Link href="/projects" className="hover:text-red-400 transition-colors">
                   Projects
                 </Link>
               </li>
@@ -77,27 +84,27 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-xs">
               <li>
-                <Link href="/products/ahu" className="hover:text-sky-400 transition-colors">
+                <Link href="/products/ahu" className="hover:text-red-400 transition-colors">
                   Air Handling Unit (AHU)
                 </Link>
               </li>
               <li>
-                <Link href="/products/airwashers" className="hover:text-sky-400 transition-colors">
+                <Link href="/products/airwashers" className="hover:text-red-400 transition-colors">
                   Airwashers
                 </Link>
               </li>
               <li>
-                <Link href="/products/fan-section" className="hover:text-sky-400 transition-colors">
+                <Link href="/products/fan-section" className="hover:text-red-400 transition-colors">
                   Fan Section
                 </Link>
               </li>
               <li>
-                <Link href="/products/cabinet-exhaust-unit" className="hover:text-sky-400 transition-colors">
+                <Link href="/products/cabinet-exhaust-unit" className="hover:text-red-400 transition-colors">
                   Cabinet Exhaust Unit
                 </Link>
               </li>
               <li>
-                <Link href="/products/fcu" className="hover:text-sky-400 transition-colors">
+                <Link href="/products/fcu" className="hover:text-red-400 transition-colors">
                   Fan Coil Unit (FCU)
                 </Link>
               </li>
@@ -111,17 +118,17 @@ export default function Footer() {
             </h4>
             <div className="space-y-2 text-xs text-slate-400">
               <p className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 text-sky-400 shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-red-400 shrink-0 mt-0.5" />
                 <span>{COMPANY_INFO.headquarters.address}, {COMPANY_INFO.headquarters.city}</span>
               </p>
               <p className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-sky-400 shrink-0" />
+                <Phone className="w-4 h-4 text-red-400 shrink-0" />
                 <a href={`tel:${COMPANY_INFO.headquarters.phone.split("/")[0].trim()}`} className="hover:text-white transition-colors">
                   {COMPANY_INFO.headquarters.phone.split("/")[0]}
                 </a>
               </p>
               <p className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-sky-400 shrink-0" />
+                <Mail className="w-4 h-4 text-red-400 shrink-0" />
                 <a href={`mailto:${COMPANY_INFO.headquarters.email}`} className="hover:text-white transition-colors">
                   {COMPANY_INFO.headquarters.email}
                 </a>
@@ -138,7 +145,7 @@ export default function Footer() {
 
           <button
             onClick={scrollToTop}
-            className="inline-flex items-center gap-1.5 text-slate-400 hover:text-sky-400 transition-colors"
+            className="inline-flex items-center gap-1.5 text-slate-400 hover:text-red-400 transition-colors"
           >
             <span>TOP OF PAGE</span>
             <ArrowUp className="w-3.5 h-3.5" />

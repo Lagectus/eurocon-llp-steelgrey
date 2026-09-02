@@ -69,7 +69,13 @@ export const PRODUCTS_DATA: Product[] = [
     shortDescription: "Engineered modular Double-Skin Air Handling Units (AHUs) with thermal-break extruded aluminum profiles, EU4 to HEPA multi-stage filtration, and high-efficiency direct-drive EC/Plug fans.",
     fullDescription: "EUROCON Double Skin Air Handling Units (AHUs) are engineered to deliver conditioned, filtered, and precisely balanced air across large commercial complexes, cleanroom facilities, pharmaceutical labs, data centers, and industrial facilities. Built with 25mm / 50mm injected PUF insulation (40 kg/m³ density) in thermal-break extruded aluminum profiles, Eurocon AHUs eliminate condensation and thermal bridging while ensuring whisper-quiet acoustic damping and Class L1/L2 casing air leakage compliance.",
     heroBadge: "AHRI 410 & EN 1886 Thermal Break",
-    image: "/images/products/ahu.jpg",
+    image: "/images/products/ahu/1.png",
+    gallery: [
+      "/images/products/ahu/1.png",
+      "/images/products/ahu/2.png",
+      "/images/products/ahu/3.png",
+      "/images/products/ahu/4.png"
+    ],
     cfdImage: "/images/products/cfd-ahu.jpg",
     schematicSvgType: "ahu",
     specs: {

@@ -82,7 +82,7 @@ export default function QuoteModal({ isOpen, onClose, initialProduct = "" }: Quo
         particleCount: 80,
         spread: 60,
         origin: { y: 0.6 },
-        colors: ["#0284C7", "#0EA5E9", "#38BDF8", "#10B981"],
+        colors: ["#DC2626", "#EF4444", "#DC2626", "#10B981"],
       });
     }, 1200);
   };
@@ -109,11 +109,11 @@ export default function QuoteModal({ isOpen, onClose, initialProduct = "" }: Quo
             className="relative w-full max-w-2xl bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col z-10 border border-slate-200 my-8"
           >
             {/* Header */}
-            <div className="relative bg-gradient-to-r from-slate-950 via-slate-900 to-sky-950 text-white p-6 sm:p-8 flex items-start justify-between border-b border-slate-800">
+            <div className="relative bg-gradient-to-r from-slate-950 via-slate-900 to-[#0F1932] text-white p-6 sm:p-8 flex items-start justify-between border-b border-slate-800">
               <div>
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-sky-500/20 text-sky-400 text-xs font-mono border border-sky-500/30">
-                    <Sparkles className="w-3 h-3 text-sky-400" />
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-red-500/20 text-red-400 text-xs font-mono border border-red-500/30">
+                    <Sparkles className="w-3 h-3 text-red-400" />
                     ENGINEERING ESTIMATION & RFQ
                   </span>
                 </div>
@@ -149,7 +149,7 @@ export default function QuoteModal({ isOpen, onClose, initialProduct = "" }: Quo
                     RFQ Specification Submitted Successfully!
                   </h4>
                   <p className="text-sm text-slate-600 max-w-md mx-auto">
-                    Thank you, <span className="font-semibold text-slate-900">{formData.fullName}</span>. Your RFQ inquiry for <span className="font-semibold text-sky-600">{formData.product}</span> has been logged under reference ticket <span className="font-mono font-bold">#EUR-{Math.floor(100000 + Math.random() * 900000)}</span>.
+                    Thank you, <span className="font-semibold text-slate-900">{formData.fullName}</span>. Your RFQ inquiry for <span className="font-semibold text-red-600">{formData.product}</span> has been logged under reference ticket <span className="font-mono font-bold">#EUR-{Math.floor(100000 + Math.random() * 900000)}</span>.
                   </p>
                   <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-600 max-w-md mx-auto text-left space-y-1">
                     <p className="font-semibold text-slate-800">What happens next?</p>
@@ -171,14 +171,14 @@ export default function QuoteModal({ isOpen, onClose, initialProduct = "" }: Quo
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-xs font-semibold uppercase font-mono text-slate-700 mb-1.5 flex items-center gap-1.5">
-                        <User className="w-3.5 h-3.5 text-sky-600" /> Full Name *
+                        <User className="w-3.5 h-3.5 text-red-600" /> Full Name *
                       </label>
                       <input
                         type="text"
                         value={formData.fullName}
                         onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                         placeholder="e.g. Vikram Malhotra"
-                        className={`w-full px-3.5 py-2.5 rounded-lg border text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 transition-all ${
+                        className={`w-full px-3.5 py-2.5 rounded-lg border text-sm focus:outline-none focus:ring-2 focus:ring-red-500 transition-all ${
                           errors.fullName ? "border-red-500 bg-red-50/30" : "border-slate-300 bg-slate-50/50"
                         }`}
                       />
@@ -187,14 +187,14 @@ export default function QuoteModal({ isOpen, onClose, initialProduct = "" }: Quo
 
                     <div>
                       <label className="block text-xs font-semibold uppercase font-mono text-slate-700 mb-1.5 flex items-center gap-1.5">
-                        <Building2 className="w-3.5 h-3.5 text-sky-600" /> Company / Organization *
+                        <Building2 className="w-3.5 h-3.5 text-red-600" /> Company / Organization *
                       </label>
                       <input
                         type="text"
                         value={formData.companyName}
                         onChange={(e) => setFormData({ ...formData, companyName: e.target.value })}
                         placeholder="e.g. Sterling Engineering Infra"
-                        className={`w-full px-3.5 py-2.5 rounded-lg border text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 transition-all ${
+                        className={`w-full px-3.5 py-2.5 rounded-lg border text-sm focus:outline-none focus:ring-2 focus:ring-red-500 transition-all ${
                           errors.companyName ? "border-red-500 bg-red-50/30" : "border-slate-300 bg-slate-50/50"
                         }`}
                       />
@@ -206,14 +206,14 @@ export default function QuoteModal({ isOpen, onClose, initialProduct = "" }: Quo
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-xs font-semibold uppercase font-mono text-slate-700 mb-1.5 flex items-center gap-1.5">
-                        <Mail className="w-3.5 h-3.5 text-sky-600" /> Corporate Email *
+                        <Mail className="w-3.5 h-3.5 text-red-600" /> Corporate Email *
                       </label>
                       <input
                         type="email"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         placeholder="v.malhotra@sterlinginfra.com"
-                        className={`w-full px-3.5 py-2.5 rounded-lg border text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 transition-all ${
+                        className={`w-full px-3.5 py-2.5 rounded-lg border text-sm focus:outline-none focus:ring-2 focus:ring-red-500 transition-all ${
                           errors.email ? "border-red-500 bg-red-50/30" : "border-slate-300 bg-slate-50/50"
                         }`}
                       />
@@ -222,14 +222,14 @@ export default function QuoteModal({ isOpen, onClose, initialProduct = "" }: Quo
 
                     <div>
                       <label className="block text-xs font-semibold uppercase font-mono text-slate-700 mb-1.5 flex items-center gap-1.5">
-                        <Phone className="w-3.5 h-3.5 text-sky-600" /> Phone / WhatsApp *
+                        <Phone className="w-3.5 h-3.5 text-red-600" /> Phone / WhatsApp *
                       </label>
                       <input
                         type="tel"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         placeholder="+91 98765 43210"
-                        className={`w-full px-3.5 py-2.5 rounded-lg border text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 transition-all ${
+                        className={`w-full px-3.5 py-2.5 rounded-lg border text-sm focus:outline-none focus:ring-2 focus:ring-red-500 transition-all ${
                           errors.phone ? "border-red-500 bg-red-50/30" : "border-slate-300 bg-slate-50/50"
                         }`}
                       />
@@ -241,12 +241,12 @@ export default function QuoteModal({ isOpen, onClose, initialProduct = "" }: Quo
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                     <div>
                       <label className="block text-xs font-semibold uppercase font-mono text-slate-700 mb-1.5 flex items-center gap-1.5">
-                        <SlidersHorizontal className="w-3.5 h-3.5 text-sky-600" /> Product Solution Line
+                        <SlidersHorizontal className="w-3.5 h-3.5 text-red-600" /> Product Solution Line
                       </label>
                       <select
                         value={formData.product}
                         onChange={(e) => setFormData({ ...formData, product: e.target.value })}
-                        className="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 bg-slate-50/50 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500"
+                        className="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 bg-slate-50/50 text-sm focus:outline-none focus:ring-2 focus:ring-red-500"
                       >
                         {PRODUCTS_DATA.map((p) => (
                           <option key={p.id} value={p.name}>
@@ -263,7 +263,7 @@ export default function QuoteModal({ isOpen, onClose, initialProduct = "" }: Quo
                       <select
                         value={formData.industry}
                         onChange={(e) => setFormData({ ...formData, industry: e.target.value })}
-                        className="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 bg-slate-50/50 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500"
+                        className="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 bg-slate-50/50 text-sm focus:outline-none focus:ring-2 focus:ring-red-500"
                       >
                         {INDUSTRIES_DATA.map((ind) => (
                           <option key={ind.id} value={ind.name}>
@@ -284,7 +284,7 @@ export default function QuoteModal({ isOpen, onClose, initialProduct = "" }: Quo
                       <select
                         value={formData.estimatedAirflow}
                         onChange={(e) => setFormData({ ...formData, estimatedAirflow: e.target.value })}
-                        className="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 bg-slate-50/50 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500"
+                        className="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 bg-slate-50/50 text-sm focus:outline-none focus:ring-2 focus:ring-red-500"
                       >
                         <option value="Under 5,000 CFM">Under 5,000 CFM (Small Ducted / Inline)</option>
                         <option value="5,000 - 20,000 CFM">5,000 - 20,000 CFM (Medium Plant)</option>
@@ -301,7 +301,7 @@ export default function QuoteModal({ isOpen, onClose, initialProduct = "" }: Quo
                       <select
                         value={formData.operatingEnvironment}
                         onChange={(e) => setFormData({ ...formData, operatingEnvironment: e.target.value })}
-                        className="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 bg-slate-50/50 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500"
+                        className="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 bg-slate-50/50 text-sm focus:outline-none focus:ring-2 focus:ring-red-500"
                       >
                         <option value="Standard HVAC">Standard HVAC / Ambient Air</option>
                         <option value="300C / 400C Fire Smoke Rated">300°C / 400°C Emergency Fire Rated</option>
@@ -322,7 +322,7 @@ export default function QuoteModal({ isOpen, onClose, initialProduct = "" }: Quo
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       placeholder="Please specify static pressure (Pa / in. wg), motor efficiency class (IE3/IE4), duct dimensions or project timeline..."
-                      className="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 bg-slate-50/50 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 resize-none"
+                      className="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 bg-slate-50/50 text-sm focus:outline-none focus:ring-2 focus:ring-red-500 resize-none"
                     />
                   </div>
 
@@ -336,7 +336,7 @@ export default function QuoteModal({ isOpen, onClose, initialProduct = "" }: Quo
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3 rounded-lg bg-sky-600 hover:bg-sky-500 text-white font-bold text-sm transition-all shadow-md shadow-sky-600/25 hover:shadow-lg hover:shadow-sky-600/35 disabled:opacity-50"
+                      className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3 rounded-lg bg-red-600 hover:bg-red-500 text-white font-bold text-sm transition-all shadow-md shadow-red-600/25 hover:shadow-lg hover:shadow-red-600/35 disabled:opacity-50"
                     >
                       {isSubmitting ? (
                         <>

@@ -48,7 +48,7 @@ export default function ProductSection({
 
           <button
             onClick={() => onOpenQuoteModal()}
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-sky-50 text-sky-700 font-bold text-xs font-mono border border-sky-200 hover:bg-sky-100 transition-colors self-start md:self-end"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-red-50 text-red-700 font-bold text-xs font-mono border border-red-200 hover:bg-red-100 transition-colors self-start md:self-end"
           >
             <span>DOWNLOAD CATALOG (PDF)</span>
             <ArrowRight className="w-3.5 h-3.5" />

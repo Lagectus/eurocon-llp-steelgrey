@@ -87,15 +87,15 @@ export default function EngineeringSection() {
                 className={`p-6 rounded-2xl cursor-pointer transition-all border flex flex-col justify-between ${
                   isSelected
                     ? "bg-slate-900 text-white border-slate-900 shadow-xl -translate-y-1"
-                    : "bg-slate-50 text-slate-800 border-slate-200 hover:bg-white hover:border-sky-300 hover:shadow-md"
+                    : "bg-slate-50 text-slate-800 border-slate-200 hover:bg-white hover:border-red-300 hover:shadow-md"
                 }`}
               >
                 <div>
                   <div
                     className={`w-12 h-12 rounded-xl flex items-center justify-center mb-5 ${
                       isSelected
-                        ? "bg-sky-500 text-slate-950"
-                        : "bg-white text-sky-600 border border-slate-200 shadow-xs"
+                        ? "bg-red-500 text-slate-950"
+                        : "bg-white text-red-600 border border-slate-200 shadow-xs"
                     }`}
                   >
                     <Icon className="w-6 h-6" />
@@ -117,7 +117,7 @@ export default function EngineeringSection() {
                 <div className="mt-6 pt-4 border-t border-slate-200/40">
                   <span
                     className={`text-xs font-mono font-bold block ${
-                      isSelected ? "text-sky-400" : "text-sky-600"
+                      isSelected ? "text-red-400" : "text-red-600"
                     }`}
                   >
                     {concept.metric}
@@ -130,13 +130,13 @@ export default function EngineeringSection() {
 
         {/* Interactive Aerodynamic Engineering Calculator & CFD Simulator */}
         <div className="mt-12 bg-slate-950 text-white rounded-3xl p-6 sm:p-10 border border-slate-800 shadow-2xl relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-sky-500/10 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute top-0 right-0 w-96 h-96 bg-red-500/10 rounded-full blur-3xl pointer-events-none" />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
             {/* Left Sliders Control (6 Cols) */}
             <div className="lg:col-span-6 space-y-6">
               <div>
-                <div className="flex items-center gap-2 text-xs font-mono text-sky-400 mb-1">
+                <div className="flex items-center gap-2 text-xs font-mono text-red-400 mb-1">
                   <Sparkles className="w-3.5 h-3.5" />
                   <span>INTERACTIVE PERFORMANCE ESTIMATOR</span>
                 </div>
@@ -152,7 +152,7 @@ export default function EngineeringSection() {
               <div className="space-y-2">
                 <div className="flex justify-between text-xs font-mono">
                   <span className="text-slate-400">Required Airflow (CFM):</span>
-                  <span className="text-sky-400 font-bold text-sm">
+                  <span className="text-red-400 font-bold text-sm">
                     {inputCfm.toLocaleString()} CFM ({(inputCfm * 1.699).toFixed(0)} m³/h)
                   </span>
                 </div>
@@ -163,7 +163,7 @@ export default function EngineeringSection() {
                   step="1000"
                   value={inputCfm}
                   onChange={(e) => setInputCfm(Number(e.target.value))}
-                  className="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-sky-500"
+                  className="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-red-500"
                 />
               </div>
 
@@ -171,7 +171,7 @@ export default function EngineeringSection() {
               <div className="space-y-2">
                 <div className="flex justify-between text-xs font-mono">
                   <span className="text-slate-400">System Static Resistance (Pa):</span>
-                  <span className="text-sky-400 font-bold text-sm">
+                  <span className="text-red-400 font-bold text-sm">
                     {inputPressure} Pa ({(inputPressure / 249.08).toFixed(2)} in. wg)
                   </span>
                 </div>
@@ -182,7 +182,7 @@ export default function EngineeringSection() {
                   step="50"
                   value={inputPressure}
                   onChange={(e) => setInputPressure(Number(e.target.value))}
-                  className="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-sky-500"
+                  className="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-red-500"
                 />
               </div>
 
@@ -196,13 +196,13 @@ export default function EngineeringSection() {
             <div className="lg:col-span-6 bg-slate-900/90 rounded-2xl p-6 border border-slate-800 space-y-4">
               <div className="text-xs font-mono uppercase tracking-wider text-slate-400 border-b border-slate-800 pb-3 flex justify-between">
                 <span>SIMULATED FAN METRICS</span>
-                <span className="text-sky-400 font-bold">EUROCON CFD MATRIX</span>
+                <span className="text-red-400 font-bold">EUROCON CFD MATRIX</span>
               </div>
 
               <div className="grid grid-cols-2 gap-4">
                 <div className="p-3.5 rounded-xl bg-slate-950 border border-slate-800">
                   <span className="block text-[11px] font-mono text-slate-500">ESTIMATED MOTOR POWER</span>
-                  <span className="text-xl sm:text-2xl font-black text-sky-400">{estimatedPowerKw} kW</span>
+                  <span className="text-xl sm:text-2xl font-black text-red-400">{estimatedPowerKw} kW</span>
                   <span className="block text-[10px] text-slate-400 mt-0.5">IE4 Super-Premium Efficiency</span>
                 </div>
 

@@ -55,7 +55,7 @@ export default function ProductShowcase({
             </button>
             <button
               onClick={() => scroll("right")}
-              className="p-3 rounded-full bg-sky-600 hover:bg-sky-500 text-white transition-colors shadow-md shadow-sky-600/30"
+              className="p-3 rounded-full bg-red-600 hover:bg-red-500 text-white transition-colors shadow-md shadow-red-600/30"
               aria-label="Scroll right"
             >
               <ChevronRight className="w-5 h-5" />
@@ -73,12 +73,12 @@ export default function ProductShowcase({
             <div
               key={product.id}
               onClick={() => onSelectProduct(product)}
-              className="snap-start shrink-0 w-[320px] sm:w-[400px] lg:w-[460px] bg-slate-900/90 rounded-2xl border border-slate-800 hover:border-sky-500/60 p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 shadow-xl group"
+              className="snap-start shrink-0 w-[320px] sm:w-[400px] lg:w-[460px] bg-slate-900/90 rounded-2xl border border-slate-800 hover:border-red-500/60 p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 shadow-xl group"
             >
               <div>
                 {/* Header Tag */}
                 <div className="flex items-center justify-between text-xs font-mono text-slate-400 mb-4">
-                  <span className="text-sky-400 font-bold">
+                  <span className="text-red-400 font-bold">
                     0{idx + 1} // {product.category.toUpperCase()}
                   </span>
                   <span className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 text-[10px]">
@@ -87,11 +87,11 @@ export default function ProductShowcase({
                 </div>
 
                 {/* Schematic / Visual Preview */}
-                <div className="bg-slate-950/80 rounded-xl p-4 border border-slate-800/80 mb-5 group-hover:border-sky-500/30 transition-colors">
+                <div className="bg-slate-950/80 rounded-xl p-4 border border-slate-800/80 mb-5 group-hover:border-red-500/30 transition-colors">
                   <ProductSchematic type={product.schematicSvgType} isDark={true} className="h-44" />
                 </div>
 
-                <h3 className="text-xl font-extrabold text-white group-hover:text-sky-400 transition-colors">
+                <h3 className="text-xl font-extrabold text-white group-hover:text-red-400 transition-colors">
                   {product.name}
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-400 mt-2 line-clamp-2 leading-relaxed">
@@ -102,7 +102,7 @@ export default function ProductShowcase({
                 <div className="mt-4 p-3 rounded-lg bg-slate-950/60 border border-slate-800 space-y-1 text-xs font-mono text-slate-300">
                   <div className="flex justify-between">
                     <span className="text-slate-500">Airflow:</span>
-                    <span className="text-sky-400">{product.specs.airflowRange?.split("(")[0]}</span>
+                    <span className="text-red-400">{product.specs.airflowRange?.split("(")[0]}</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-slate-500">Static Pres:</span>
@@ -113,7 +113,7 @@ export default function ProductShowcase({
 
               {/* Action Button */}
               <div className="pt-6 mt-4 border-t border-slate-800/80 flex items-center justify-between">
-                <span className="text-xs font-bold text-sky-400 flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
+                <span className="text-xs font-bold text-red-400 flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
                   <span>Open Engineering Datasheet</span>
                   <ArrowRight className="w-4 h-4" />
                 </span>
@@ -123,7 +123,7 @@ export default function ProductShowcase({
                     e.stopPropagation();
                     onOpenQuoteModal(product.name);
                   }}
-                  className="px-3 py-1 rounded bg-sky-500/10 hover:bg-sky-500/20 text-sky-400 text-xs font-mono border border-sky-500/30 transition-colors"
+                  className="px-3 py-1 rounded bg-red-500/10 hover:bg-red-500/20 text-red-400 text-xs font-mono border border-red-500/30 transition-colors"
                 >
                   RFQ
                 </button>

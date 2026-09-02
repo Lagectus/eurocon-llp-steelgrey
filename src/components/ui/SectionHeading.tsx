@@ -42,10 +42,10 @@ export default function SectionHeading({
             transition={{ duration: 0.5 }}
             className="flex items-center gap-2"
           >
-            <span className="w-2 h-2 rounded-full bg-sky-500 animate-pulse" />
+            <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
             <span
               className={`text-xs font-bold tracking-[0.2em] uppercase font-mono ${
-                isDark ? "text-sky-400" : "text-sky-600"
+                isDark ? "text-red-400" : "text-red-600"
               }`}
             >
               {eyebrow}
@@ -61,10 +61,10 @@ export default function SectionHeading({
             className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-medium border ${
               isDark
                 ? "bg-slate-800/80 border-slate-700 text-slate-300"
-                : "bg-sky-50 border-sky-200/80 text-sky-700"
+                : "bg-red-50 border-red-200/80 text-red-700"
             }`}
           >
-            <Sparkles className="w-3 h-3 text-sky-500" />
+            <Sparkles className="w-3 h-3 text-red-500" />
             {badge}
           </motion.span>
         )}

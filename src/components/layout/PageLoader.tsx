@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function PageLoader() {
@@ -33,7 +34,7 @@ export default function PageLoader() {
             y: "-100%",
             transition: { duration: 0.7, ease: [0.76, 0, 0.24, 1] },
           }}
-          className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-slate-950 text-white select-none pointer-events-auto"
+          className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#0F1932] text-white select-none pointer-events-auto"
         >
           {/* Subtle background tech grid */}
           <div className="absolute inset-0 bg-tech-grid-dark opacity-30 pointer-events-none" />
@@ -44,22 +45,16 @@ export default function PageLoader() {
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.5, ease: "easeOut" }}
-              className="w-16 h-16 rounded-2xl bg-gradient-to-tr from-sky-600 via-cyan-500 to-blue-400 p-[1px] mb-6 shadow-2xl shadow-sky-500/20"
+              className="w-20 h-20 mb-6"
             >
-              <div className="w-full h-full bg-slate-950 rounded-2xl flex items-center justify-center">
-                <svg
-                  className="w-8 h-8 text-sky-400 animate-spin"
-                  style={{ animationDuration: "8s" }}
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
-                </svg>
-              </div>
+              <Image
+                src="/logo.png"
+                alt="Eurocon Logo"
+                width={80}
+                height={80}
+                className="w-full h-full object-contain drop-shadow-2xl"
+                priority
+              />
             </motion.div>
 
             {/* Brand Title */}
@@ -70,7 +65,7 @@ export default function PageLoader() {
               className="space-y-1"
             >
               <h1 className="text-2xl sm:text-3xl font-extrabold tracking-wider text-white">
-                EUROCON <span className="text-sky-400 font-light">SYSTEM LLP</span>
+                <span className="text-red-500">EURO</span><span className="text-white">CON</span> <span className="text-slate-400 font-light">SYSTEM LLP</span>
               </h1>
               <p className="text-xs tracking-[0.25em] text-slate-400 uppercase">
                 Engineered Airflow Solutions
@@ -81,7 +76,7 @@ export default function PageLoader() {
             <div className="w-48 sm:w-64 mt-8 space-y-2">
               <div className="h-[2px] w-full bg-slate-800 rounded-full overflow-hidden">
                 <motion.div
-                  className="h-full bg-gradient-to-r from-sky-500 via-cyan-400 to-blue-500"
+                  className="h-full bg-gradient-to-r from-red-600 via-red-500 to-[#1B2A6B]"
                   style={{ width: `${progress}%` }}
                   transition={{ ease: "easeOut" }}
                 />

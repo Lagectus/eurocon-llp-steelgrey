@@ -13,9 +13,9 @@ interface CompactCTAProps {
 
 export default function CompactCTA({ onOpenQuoteModal }: CompactCTAProps) {
   return (
-    <section className="relative py-20 sm:py-28 bg-gradient-to-br from-slate-950 via-slate-900 to-sky-950 text-white overflow-hidden">
+    <section className="relative py-20 sm:py-28 bg-gradient-to-br from-slate-950 via-slate-900 to-[#0F1932] text-white overflow-hidden">
       {/* Background Animated Streamlines */}
-      <AirflowCanvas particleCount={25} color="rgba(56, 189, 248, 0.3)" />
+      <AirflowCanvas particleCount={25} color="rgba(220, 38, 38, 0.3)" />
       <div className="absolute inset-0 bg-tech-grid-dark opacity-25 pointer-events-none" />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-7">
@@ -23,7 +23,7 @@ export default function CompactCTA({ onOpenQuoteModal }: CompactCTAProps) {
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-500/20 border border-sky-500/30 text-sky-400 text-xs font-mono font-bold"
+          className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-500/20 border border-red-500/30 text-red-400 text-xs font-mono font-bold"
         >
           <Sparkles className="w-3.5 h-3.5" />
           <span>DIRECT APPLICATION ENGINEERING</span>
@@ -38,7 +38,7 @@ export default function CompactCTA({ onOpenQuoteModal }: CompactCTAProps) {
         >
           LET'S ENGINEER YOUR NEXT{" "}
           <br className="hidden sm:inline" />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-cyan-300 to-blue-400">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-red-300 to-[#1B2A6B]">
             AIRFLOW SOLUTION.
           </span>
         </motion.h2>
@@ -64,7 +64,7 @@ export default function CompactCTA({ onOpenQuoteModal }: CompactCTAProps) {
           <MagneticButton>
             <button
               onClick={onOpenQuoteModal}
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-extrabold text-sm tracking-wide transition-all shadow-xl shadow-sky-500/25 hover:shadow-sky-500/40 hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-red-500 hover:bg-red-400 text-slate-950 font-extrabold text-sm tracking-wide transition-all shadow-xl shadow-red-500/25 hover:shadow-red-500/40 hover:-translate-y-0.5"
             >
               <span>Request a Quote</span>
               <ArrowRight className="w-4 h-4 text-slate-950" />
@@ -74,7 +74,7 @@ export default function CompactCTA({ onOpenQuoteModal }: CompactCTAProps) {
           <MagneticButton>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-7 py-4 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-white font-bold text-sm tracking-wide border border-slate-700 transition-all hover:border-sky-500/50"
+              className="inline-flex items-center gap-2 px-7 py-4 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-white font-bold text-sm tracking-wide border border-slate-700 transition-all hover:border-red-500/50"
             >
               <span>Contact Us</span>
             </Link>
@@ -84,7 +84,7 @@ export default function CompactCTA({ onOpenQuoteModal }: CompactCTAProps) {
         {/* Trust Note */}
         <div className="pt-6 border-t border-slate-800/80 flex flex-wrap items-center justify-center gap-6 text-xs font-mono text-slate-400">
           <div className="flex items-center gap-1.5">
-            <ShieldCheck className="w-4 h-4 text-sky-400" />
+            <ShieldCheck className="w-4 h-4 text-red-400" />
             <span>AMCA 210 / 300 & EN 12101-3 F400 Certified</span>
           </div>
           <div className="flex items-center gap-1.5">

@@ -64,7 +64,7 @@ export default function ContactSection() {
         particleCount: 70,
         spread: 60,
         origin: { y: 0.6 },
-        colors: ["#0284C7", "#0EA5E9", "#10B981"],
+        colors: ["#DC2626", "#EF4444", "#10B981"],
       });
     }, 1000);
   };
@@ -84,7 +84,7 @@ export default function ContactSection() {
             {/* Headquarters Card */}
             <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-4">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center border border-sky-100">
+                <div className="w-10 h-10 rounded-xl bg-red-50 text-red-600 flex items-center justify-center border border-red-100">
                   <Building2 className="w-5 h-5" />
                 </div>
                 <div>
@@ -99,7 +99,7 @@ export default function ContactSection() {
 
               <div className="space-y-3 pt-2 text-xs sm:text-sm text-slate-600">
                 <div className="flex items-start gap-3">
-                  <MapPin className="w-4 h-4 text-sky-600 shrink-0 mt-1" />
+                  <MapPin className="w-4 h-4 text-red-600 shrink-0 mt-1" />
                   <div>
                     <p className="font-semibold text-slate-800">{COMPANY_INFO.headquarters.address}</p>
                     <p>{COMPANY_INFO.headquarters.city}</p>
@@ -107,11 +107,11 @@ export default function ContactSection() {
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <Phone className="w-4 h-4 text-sky-600 shrink-0" />
+                  <Phone className="w-4 h-4 text-red-600 shrink-0" />
                   <div>
                     <a
                       href={`tel:${COMPANY_INFO.headquarters.phone.split("/")[0].trim()}`}
-                      className="font-semibold text-slate-900 hover:text-sky-600 transition-colors"
+                      className="font-semibold text-slate-900 hover:text-red-600 transition-colors"
                     >
                       {COMPANY_INFO.headquarters.phone}
                     </a>
@@ -119,11 +119,11 @@ export default function ContactSection() {
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <Mail className="w-4 h-4 text-sky-600 shrink-0" />
+                  <Mail className="w-4 h-4 text-red-600 shrink-0" />
                   <div>
                     <a
                       href={`mailto:${COMPANY_INFO.headquarters.email}`}
-                      className="font-semibold text-slate-900 hover:text-sky-600 transition-colors"
+                      className="font-semibold text-slate-900 hover:text-red-600 transition-colors"
                     >
                       {COMPANY_INFO.headquarters.email}
                     </a>
@@ -131,7 +131,7 @@ export default function ContactSection() {
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <Clock className="w-4 h-4 text-sky-600 shrink-0" />
+                  <Clock className="w-4 h-4 text-red-600 shrink-0" />
                   <span>{COMPANY_INFO.headquarters.workingHours}</span>
                 </div>
               </div>
@@ -139,7 +139,7 @@ export default function ContactSection() {
 
             {/* Regional Network Note */}
             <div className="p-6 rounded-2xl bg-slate-900 text-white space-y-3">
-              <div className="flex items-center gap-2 text-xs font-mono text-sky-400">
+              <div className="flex items-center gap-2 text-xs font-mono text-red-400">
                 <ShieldCheck className="w-4 h-4" />
                 <span>PAN-INDIA DISTRIBUTION & SERVICE</span>
               </div>
@@ -182,7 +182,7 @@ export default function ContactSection() {
                   <span className="text-xs font-bold font-mono uppercase text-slate-500 tracking-wider">
                     DIRECT PROJECT ENQUIRY FORM
                   </span>
-                  <span className="text-[11px] font-mono text-sky-600 flex items-center gap-1">
+                  <span className="text-[11px] font-mono text-red-600 flex items-center gap-1">
                     <Sparkles className="w-3 h-3" /> FAST RESPONSE
                   </span>
                 </div>
@@ -197,7 +197,7 @@ export default function ContactSection() {
                       value={formData.fullName}
                       onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                       placeholder="e.g. Ramesh Chandra"
-                      className={`w-full px-3.5 py-2.5 rounded-lg border text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 ${
+                      className={`w-full px-3.5 py-2.5 rounded-lg border text-sm focus:outline-none focus:ring-2 focus:ring-red-500 ${
                         errors.fullName ? "border-red-500 bg-red-50/20" : "border-slate-300 bg-slate-50/40"
                       }`}
                     />
@@ -213,7 +213,7 @@ export default function ContactSection() {
                       value={formData.companyName}
                       onChange={(e) => setFormData({ ...formData, companyName: e.target.value })}
                       placeholder="e.g. Acme Infra Projects"
-                      className={`w-full px-3.5 py-2.5 rounded-lg border text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 ${
+                      className={`w-full px-3.5 py-2.5 rounded-lg border text-sm focus:outline-none focus:ring-2 focus:ring-red-500 ${
                         errors.companyName ? "border-red-500 bg-red-50/20" : "border-slate-300 bg-slate-50/40"
                       }`}
                     />
@@ -231,7 +231,7 @@ export default function ContactSection() {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="r.chandra@acmeinfra.com"
-                      className={`w-full px-3.5 py-2.5 rounded-lg border text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 ${
+                      className={`w-full px-3.5 py-2.5 rounded-lg border text-sm focus:outline-none focus:ring-2 focus:ring-red-500 ${
                         errors.email ? "border-red-500 bg-red-50/20" : "border-slate-300 bg-slate-50/40"
                       }`}
                     />
@@ -247,7 +247,7 @@ export default function ContactSection() {
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       placeholder="+91 98111 22334"
-                      className={`w-full px-3.5 py-2.5 rounded-lg border text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 ${
+                      className={`w-full px-3.5 py-2.5 rounded-lg border text-sm focus:outline-none focus:ring-2 focus:ring-red-500 ${
                         errors.phone ? "border-red-500 bg-red-50/20" : "border-slate-300 bg-slate-50/40"
                       }`}
                     />
@@ -263,7 +263,7 @@ export default function ContactSection() {
                     <select
                       value={formData.projectType}
                       onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}
-                      className="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 bg-slate-50/40 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500"
+                      className="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 bg-slate-50/40 text-sm focus:outline-none focus:ring-2 focus:ring-red-500"
                     >
                       {INDUSTRIES_DATA.map((ind) => (
                         <option key={ind.id} value={ind.name}>
@@ -280,7 +280,7 @@ export default function ContactSection() {
                     <select
                       value={formData.productInterest}
                       onChange={(e) => setFormData({ ...formData, productInterest: e.target.value })}
-                      className="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 bg-slate-50/40 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500"
+                      className="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 bg-slate-50/40 text-sm focus:outline-none focus:ring-2 focus:ring-red-500"
                     >
                       {PRODUCTS_DATA.map((prod) => (
                         <option key={prod.id} value={prod.name}>
@@ -300,7 +300,7 @@ export default function ContactSection() {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     placeholder="Tell us about airflow requirements, static pressure targets, fire safety ratings, or delivery schedule..."
-                    className={`w-full px-3.5 py-2.5 rounded-lg border text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 resize-none ${
+                    className={`w-full px-3.5 py-2.5 rounded-lg border text-sm focus:outline-none focus:ring-2 focus:ring-red-500 resize-none ${
                       errors.message ? "border-red-500 bg-red-50/20" : "border-slate-300 bg-slate-50/40"
                     }`}
                   />
@@ -315,7 +315,7 @@ export default function ContactSection() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold text-sm transition-all shadow-md shadow-sky-600/25 hover:shadow-lg disabled:opacity-50"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-sm transition-all shadow-md shadow-red-600/25 hover:shadow-lg disabled:opacity-50"
                   >
                     {isSubmitting ? (
                       <>

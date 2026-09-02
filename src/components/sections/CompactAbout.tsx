@@ -32,9 +32,9 @@ export default function CompactAbout() {
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="inline-flex items-center gap-2 text-xs font-mono font-bold tracking-[0.2em] uppercase text-sky-600"
+              className="inline-flex items-center gap-2 text-xs font-mono font-bold tracking-[0.2em] uppercase text-red-600"
             >
-              <span className="w-2 h-2 rounded-full bg-sky-500" />
+              <span className="w-2 h-2 rounded-full bg-red-500" />
               <span>THE EUROCON PHILOSOPHY</span>
             </motion.div>
 
@@ -47,7 +47,7 @@ export default function CompactAbout() {
             >
               ENGINEERING AIRFLOW.{" "}
               <br />
-              <span className="text-sky-600">CREATING COMFORT.</span>
+              <span className="text-red-600">CREATING COMFORT.</span>
             </motion.h2>
 
             <motion.div
@@ -74,10 +74,10 @@ export default function CompactAbout() {
             >
               <Link
                 href="/about"
-                className="inline-flex items-center gap-2 text-sm font-bold text-slate-900 hover:text-sky-600 group transition-colors"
+                className="inline-flex items-center gap-2 text-sm font-bold text-slate-900 hover:text-red-600 group transition-colors"
               >
                 <span>Discover Eurocon</span>
-                <ArrowRight className="w-4 h-4 text-sky-600 transform group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 text-red-600 transform group-hover:translate-x-1 transition-transform" />
               </Link>
             </motion.div>
           </div>
@@ -101,14 +101,14 @@ export default function CompactAbout() {
 
                 <div className="absolute bottom-4 left-4 right-4 p-3.5 rounded-xl bg-slate-950/90 backdrop-blur-md border border-slate-800 text-white flex items-center justify-between shadow-xl">
                   <div className="space-y-0.5">
-                    <span className="text-[10px] font-mono text-sky-400 uppercase font-bold">
+                    <span className="text-[10px] font-mono text-red-400 uppercase font-bold">
                       MANUFACTURING FACILITY
                     </span>
                     <p className="text-xs font-semibold text-slate-200">
                       CNC Fiber Laser Cutting & Automated Form Line
                     </p>
                   </div>
-                  <ShieldCheck className="w-5 h-5 text-sky-400 shrink-0" />
+                  <ShieldCheck className="w-5 h-5 text-red-400 shrink-0" />
                 </div>
               </div>
             </motion.div>
@@ -124,10 +124,10 @@ export default function CompactAbout() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="p-5 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-sky-300 transition-colors"
+              className="p-5 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-red-300 transition-colors"
             >
               <div className="flex items-center gap-2.5 mb-2">
-                <CheckCircle2 className="w-4 h-4 text-sky-600 shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-red-600 shrink-0" />
                 <h3 className="font-bold text-sm text-slate-900">
                   {item.title}
                 </h3>

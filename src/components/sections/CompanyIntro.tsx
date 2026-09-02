@@ -16,18 +16,18 @@ export default function CompanyIntro() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
           {/* Left Column: Big Statement (6 Cols) */}
           <div className="lg:col-span-6 space-y-4">
-            <div className="inline-flex items-center gap-2 text-xs font-mono font-bold tracking-[0.2em] uppercase text-sky-600">
-              <span className="w-2 h-2 rounded-full bg-sky-500" />
+            <div className="inline-flex items-center gap-2 text-xs font-mono font-bold tracking-[0.2em] uppercase text-red-600">
+              <span className="w-2 h-2 rounded-full bg-red-500" />
               <span>THE EUROCON PHILOSOPHY</span>
             </div>
 
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.12]">
               ENGINEERING AIRFLOW.{" "}
-              <span className="text-sky-600">CREATING COMFORT.</span>
+              <span className="text-red-600">CREATING COMFORT.</span>
             </h2>
 
             <div className="pt-2">
-              <div className="h-1 w-20 bg-gradient-to-r from-sky-500 to-cyan-400 rounded-full" />
+              <div className="h-1 w-20 bg-gradient-to-r from-red-500 to-[#1B2A6B] rounded-full" />
             </div>
           </div>
 
@@ -43,7 +43,7 @@ export default function CompanyIntro() {
             <div className="pt-2 flex flex-wrap items-center gap-4">
               <a
                 href="#about"
-                className="inline-flex items-center gap-2 text-sm font-bold text-sky-600 hover:text-sky-700 transition-colors group"
+                className="inline-flex items-center gap-2 text-sm font-bold text-red-600 hover:text-red-700 transition-colors group"
               >
                 <span>Read Full Engineering Capabilities</span>
                 <ArrowUpRight className="w-4 h-4 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -62,7 +62,7 @@ export default function CompanyIntro() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="relative p-5 sm:p-6 rounded-2xl bg-slate-50 border border-slate-200/90 hover:border-sky-300 hover:shadow-md transition-all group"
+                className="relative p-5 sm:p-6 rounded-2xl bg-slate-50 border border-slate-200/90 hover:border-red-300 hover:shadow-md transition-all group"
               >
                 <div className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tight flex items-baseline">
                   <span>{metric.value}</span>
@@ -75,7 +75,7 @@ export default function CompanyIntro() {
                 </p>
 
                 {/* Subtle top accent bar on hover */}
-                <div className="absolute top-0 left-6 right-6 h-[2px] bg-sky-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left rounded-full" />
+                <div className="absolute top-0 left-6 right-6 h-[2px] bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left rounded-full" />
               </motion.div>
             ))}
           </div>

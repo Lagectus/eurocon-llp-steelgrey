@@ -65,8 +65,8 @@ export default function CompactIndustries() {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
           <div className="space-y-3 max-w-2xl">
-            <div className="inline-flex items-center gap-2 text-xs font-mono font-bold tracking-[0.2em] uppercase text-sky-600">
-              <span className="w-2 h-2 rounded-full bg-sky-500" />
+            <div className="inline-flex items-center gap-2 text-xs font-mono font-bold tracking-[0.2em] uppercase text-red-600">
+              <span className="w-2 h-2 rounded-full bg-red-500" />
               <span>INDUSTRIES WE SERVE</span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-[1.12]">
@@ -76,10 +76,10 @@ export default function CompactIndustries() {
 
           <Link
             href="/industries"
-            className="inline-flex items-center gap-2 text-sm font-bold text-slate-900 hover:text-sky-600 group transition-colors self-start md:self-end whitespace-nowrap"
+            className="inline-flex items-center gap-2 text-sm font-bold text-slate-900 hover:text-red-600 group transition-colors self-start md:self-end whitespace-nowrap"
           >
             <span>Explore Industries</span>
-            <ArrowRight className="w-4 h-4 text-sky-600 transform group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="w-4 h-4 text-red-600 transform group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
 
@@ -105,14 +105,14 @@ export default function CompactIndustries() {
                     <div className="flex items-center justify-between mb-4">
                       <span
                         className={`font-mono text-xs font-bold ${
-                          isSelected ? "text-sky-400" : "text-slate-400"
+                          isSelected ? "text-red-400" : "text-slate-400"
                         }`}
                       >
                         {ind.num}
                       </span>
                       <div
                         className={`p-2 rounded-lg ${
-                          isSelected ? "bg-sky-500 text-slate-950" : "bg-white text-slate-700 shadow-xs"
+                          isSelected ? "bg-red-500 text-slate-950" : "bg-white text-slate-700 shadow-xs"
                         }`}
                       >
                         <Icon className="w-4 h-4" />
@@ -132,12 +132,12 @@ export default function CompactIndustries() {
                   </div>
 
                   <div className="mt-4 pt-3 border-t border-slate-200/40 flex items-center justify-between text-xs font-semibold">
-                    <span className={isSelected ? "text-sky-400" : "text-slate-500"}>
+                    <span className={isSelected ? "text-red-400" : "text-slate-500"}>
                       Sector Overview
                     </span>
                     <ArrowRight
                       className={`w-3.5 h-3.5 transition-transform ${
-                        isSelected ? "text-sky-400 translate-x-1" : "text-slate-400"
+                        isSelected ? "text-red-400 translate-x-1" : "text-slate-400"
                       }`}
                     />
                   </div>
@@ -166,7 +166,7 @@ export default function CompactIndustries() {
 
                 {/* Info Card Overlay */}
                 <div className="absolute bottom-6 left-6 right-6 p-5 rounded-xl bg-slate-950/90 backdrop-blur-md border border-slate-800 text-white space-y-2">
-                  <div className="flex items-center justify-between text-[11px] font-mono text-sky-400">
+                  <div className="flex items-center justify-between text-[11px] font-mono text-red-400">
                     <span>SECTOR SPOTLIGHT</span>
                     <span>EUROCON ENGINEERED</span>
                   </div>
@@ -179,7 +179,7 @@ export default function CompactIndustries() {
                   <div className="pt-2">
                     <Link
                       href="/industries"
-                      className="inline-flex items-center gap-1.5 text-xs font-bold text-sky-400 hover:text-sky-300"
+                      className="inline-flex items-center gap-1.5 text-xs font-bold text-red-400 hover:text-red-300"
                     >
                       <span>Explore Sector Engineering</span>
                       <ArrowRight className="w-3.5 h-3.5" />

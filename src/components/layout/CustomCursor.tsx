@@ -70,15 +70,15 @@ export default function CustomCursor() {
           height: cursorType === "view" ? 64 : cursorType === "pointer" ? 44 : 32,
           backgroundColor:
             cursorType === "view"
-              ? "rgba(2, 132, 199, 0.9)"
+              ? "rgba(220, 38, 38, 0.9)"
               : cursorType === "pointer"
-              ? "rgba(14, 165, 233, 0.2)"
+              ? "rgba(220, 38, 38, 0.2)"
               : "rgba(0, 0, 0, 0)",
           borderColor:
             cursorType === "view"
               ? "rgba(0, 0, 0, 0)"
               : cursorType === "pointer"
-              ? "rgba(2, 132, 199, 0.6)"
+              ? "rgba(220, 38, 38, 0.6)"
               : "rgba(15, 23, 42, 0.35)",
           borderWidth: cursorType === "view" ? 0 : 1.5,
           scale: 1,
@@ -99,7 +99,7 @@ export default function CustomCursor() {
 
       {/* Center Small Precision Dot */}
       <motion.div
-        className="fixed top-0 left-0 pointer-events-none z-50 w-2 h-2 rounded-full bg-sky-600"
+        className="fixed top-0 left-0 pointer-events-none z-50 w-2 h-2 rounded-full bg-red-600"
         animate={{
           x: mousePosition.x - 4,
           y: mousePosition.y - 4,

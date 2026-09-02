@@ -34,8 +34,8 @@ export default function ProjectsPage() {
         <section className="py-16 sm:py-20 bg-slate-50 border-b border-slate-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl space-y-4">
-              <div className="inline-flex items-center gap-2 text-xs font-mono font-bold tracking-[0.2em] uppercase text-sky-600">
-                <span className="w-2 h-2 rounded-full bg-sky-500" />
+              <div className="inline-flex items-center gap-2 text-xs font-mono font-bold tracking-[0.2em] uppercase text-red-600">
+                <span className="w-2 h-2 rounded-full bg-red-500" />
                 <span>PROVEN ENGINEERING TRACK RECORD</span>
               </div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.1]">

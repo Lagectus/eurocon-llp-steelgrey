@@ -28,9 +28,9 @@ export default function ManufacturingSection({ onOpenQuoteModal }: Manufacturing
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-500/20 border border-sky-500/30 text-sky-400 text-xs font-mono"
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-500/20 border border-red-500/30 text-red-400 text-xs font-mono"
           >
-            <Factory className="w-3.5 h-3.5 text-sky-400" />
+            <Factory className="w-3.5 h-3.5 text-red-400" />
             <span>ADVANCED MANUFACTURING INFRASTRUCTURE</span>
           </motion.div>
 
@@ -43,7 +43,7 @@ export default function ManufacturingSection({ onOpenQuoteModal }: Manufacturing
           >
             BUILT WITH PRECISION.{" "}
             <br className="hidden sm:inline" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-cyan-300 to-blue-400">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-red-300 to-[#1B2A6B]">
               DELIVERED WITH CONFIDENCE.
             </span>
           </motion.h2>
@@ -61,7 +61,7 @@ export default function ManufacturingSection({ onOpenQuoteModal }: Manufacturing
           {/* Plant Capability Highlights */}
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4">
             <div className="p-4 rounded-xl bg-slate-900/80 backdrop-blur-md border border-slate-800">
-              <span className="block text-xl sm:text-2xl font-black text-sky-400">±0.05 mm</span>
+              <span className="block text-xl sm:text-2xl font-black text-red-400">±0.05 mm</span>
               <span className="block text-xs text-slate-400 font-mono mt-1">Laser Cutting Precision</span>
             </div>
             <div className="p-4 rounded-xl bg-slate-900/80 backdrop-blur-md border border-slate-800">
@@ -77,7 +77,7 @@ export default function ManufacturingSection({ onOpenQuoteModal }: Manufacturing
           <div className="pt-4 flex flex-wrap items-center gap-4">
             <button
               onClick={onOpenQuoteModal}
-              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-extrabold text-sm tracking-wide transition-all shadow-lg shadow-sky-500/25 hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-red-500 hover:bg-red-400 text-slate-950 font-extrabold text-sm tracking-wide transition-all shadow-lg shadow-red-500/25 hover:-translate-y-0.5"
             >
               <span>Explore Our Capabilities</span>
               <ArrowRight className="w-4 h-4 text-slate-950" />

@@ -47,9 +47,9 @@ export default function ProductsPage() {
   };
 
   const coreIcons: Record<string, React.ReactNode> = {
-    ahu: <Layers className="w-4 h-4 text-sky-500" />,
-    airwashers: <Droplets className="w-4 h-4 text-cyan-500" />,
-    "fan-section": <Fan className="w-4 h-4 text-blue-500" />,
+    ahu: <Layers className="w-4 h-4 text-red-500" />,
+    airwashers: <Droplets className="w-4 h-4 text-[#1B2A6B]" />,
+    "fan-section": <Fan className="w-4 h-4 text-[#1B2A6B]" />,
     "cabinet-exhaust-unit": <Box className="w-4 h-4 text-amber-500" />,
     fcu: <Wind className="w-4 h-4 text-teal-500" />
   };
@@ -72,8 +72,8 @@ export default function ProductsPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
               <div className="max-w-3xl space-y-4">
-                <div className="inline-flex items-center gap-2 text-xs font-mono font-bold tracking-[0.2em] uppercase text-sky-600">
-                  <span className="w-2 h-2 rounded-full bg-sky-500" />
+                <div className="inline-flex items-center gap-2 text-xs font-mono font-bold tracking-[0.2em] uppercase text-red-600">
+                  <span className="w-2 h-2 rounded-full bg-red-500" />
                   <span>EUROCON TECHNICAL CATALOG</span>
                 </div>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.1]">
@@ -89,7 +89,7 @@ export default function ProductsPage() {
                 className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs font-mono transition-colors self-start md:self-end shadow-md"
               >
                 <span>REQUEST SPEC QUOTE (RFQ)</span>
-                <ArrowRight className="w-4 h-4 text-sky-400" />
+                <ArrowRight className="w-4 h-4 text-red-400" />
               </button>
             </div>
 
@@ -99,7 +99,7 @@ export default function ProductsPage() {
                 <span className="text-xs font-mono font-bold text-slate-500 uppercase tracking-wider">
                   QUICK ACCESS: 5 CORE EUROCON PRODUCT LINES
                 </span>
-                <span className="text-[11px] font-mono text-sky-600">CLICK TO VIEW DEDICATED SPEC SHEET</span>
+                <span className="text-[11px] font-mono text-red-600">CLICK TO VIEW DEDICATED SPEC SHEET</span>
               </div>
 
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
@@ -107,19 +107,19 @@ export default function ProductsPage() {
                   <Link
                     key={prod.slug}
                     href={prod.href}
-                    className="p-3.5 rounded-xl bg-white border border-slate-200 hover:border-sky-400 shadow-xs hover:shadow-md transition-all group flex flex-col justify-between"
+                    className="p-3.5 rounded-xl bg-white border border-slate-200 hover:border-red-400 shadow-xs hover:shadow-md transition-all group flex flex-col justify-between"
                   >
                     <div className="flex items-center justify-between mb-2">
-                      <div className="w-7 h-7 rounded-lg bg-slate-50 group-hover:bg-sky-50 flex items-center justify-center border border-slate-100 transition-colors">
-                        {coreIcons[prod.slug] || <Wind className="w-4 h-4 text-sky-600" />}
+                      <div className="w-7 h-7 rounded-lg bg-slate-50 group-hover:bg-red-50 flex items-center justify-center border border-slate-100 transition-colors">
+                        {coreIcons[prod.slug] || <Wind className="w-4 h-4 text-red-600" />}
                       </div>
-                      <span className="text-[9px] font-mono font-bold text-sky-600 bg-sky-50 px-1.5 py-0.5 rounded">
+                      <span className="text-[9px] font-mono font-bold text-red-600 bg-red-50 px-1.5 py-0.5 rounded">
                         {prod.badge}
                       </span>
                     </div>
 
                     <div>
-                      <h4 className="font-extrabold text-xs text-slate-900 group-hover:text-sky-600 transition-colors truncate">
+                      <h4 className="font-extrabold text-xs text-slate-900 group-hover:text-red-600 transition-colors truncate">
                         {prod.name}
                       </h4>
                       <span className="text-[10px] text-slate-500 line-clamp-1 mt-0.5 block">
@@ -127,7 +127,7 @@ export default function ProductsPage() {
                       </span>
                     </div>
 
-                    <div className="pt-2 mt-2 border-t border-slate-100 flex items-center justify-between text-[10px] font-bold text-sky-600">
+                    <div className="pt-2 mt-2 border-t border-slate-100 flex items-center justify-between text-[10px] font-bold text-red-600">
                       <span>View Page</span>
                       <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
                     </div>

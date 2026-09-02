@@ -75,8 +75,8 @@ export default function CompactProducts({ onSelectProduct }: CompactProductsProp
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
           <div className="space-y-3 max-w-2xl">
-            <div className="inline-flex items-center gap-2 text-xs font-mono font-bold tracking-[0.2em] uppercase text-sky-600">
-              <span className="w-2 h-2 rounded-full bg-sky-500" />
+            <div className="inline-flex items-center gap-2 text-xs font-mono font-bold tracking-[0.2em] uppercase text-red-600">
+              <span className="w-2 h-2 rounded-full bg-red-500" />
               <span>OUR SOLUTIONS</span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-[1.12]">
@@ -86,10 +86,10 @@ export default function CompactProducts({ onSelectProduct }: CompactProductsProp
 
           <Link
             href="/products"
-            className="inline-flex items-center gap-2 text-sm font-bold text-slate-900 hover:text-sky-600 group transition-colors self-start md:self-end whitespace-nowrap"
+            className="inline-flex items-center gap-2 text-sm font-bold text-slate-900 hover:text-red-600 group transition-colors self-start md:self-end whitespace-nowrap"
           >
             <span>View All Solutions</span>
-            <ArrowRight className="w-4 h-4 text-sky-600 transform group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="w-4 h-4 text-red-600 transform group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
 
@@ -99,16 +99,16 @@ export default function CompactProducts({ onSelectProduct }: CompactProductsProp
             <Link
               key={product.id}
               href={product.href}
-              className="group relative bg-white rounded-2xl border border-slate-200 hover:border-sky-400 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden cursor-pointer hover:-translate-y-1.5"
+              className="group relative bg-white rounded-2xl border border-slate-200 hover:border-red-400 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden cursor-pointer hover:-translate-y-1.5"
             >
               {/* Top Diagram Preview */}
               <div className="relative bg-slate-100/60 p-5 border-b border-slate-100 overflow-hidden">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="font-mono text-xs font-black text-sky-600 group-hover:translate-x-1 transition-transform">
+                  <span className="font-mono text-xs font-black text-red-600 group-hover:translate-x-1 transition-transform">
                     {product.num}
                   </span>
                   <span className="inline-flex items-center gap-1 text-[10px] font-mono px-2 py-0.5 rounded-full bg-white border border-slate-200 text-slate-600">
-                    <ShieldCheck className="w-3 h-3 text-sky-600" />
+                    <ShieldCheck className="w-3 h-3 text-red-600" />
                     {product.badge}
                   </span>
                 </div>
@@ -121,7 +121,7 @@ export default function CompactProducts({ onSelectProduct }: CompactProductsProp
               {/* Card Body */}
               <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
                 <div>
-                  <h3 className="text-lg font-bold text-slate-900 group-hover:text-sky-600 transition-colors">
+                  <h3 className="text-lg font-bold text-slate-900 group-hover:text-red-600 transition-colors">
                     {product.name}
                   </h3>
                   <p className="text-xs sm:text-sm text-slate-500 mt-2 leading-relaxed">
@@ -130,7 +130,7 @@ export default function CompactProducts({ onSelectProduct }: CompactProductsProp
                 </div>
 
                 <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
-                  <span className="text-xs font-bold text-sky-600 flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
+                  <span className="text-xs font-bold text-red-600 flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
                     <span>Explore Specifications</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </span>
@@ -139,7 +139,7 @@ export default function CompactProducts({ onSelectProduct }: CompactProductsProp
 
               {/* Expanding Bottom Line */}
               <div className="h-[3px] w-full bg-slate-100 relative">
-                <div className="h-full bg-gradient-to-r from-sky-500 to-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                <div className="h-full bg-gradient-to-r from-red-500 to-[#1B2A6B] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
               </div>
             </Link>
           ))}
@@ -152,7 +152,7 @@ export default function CompactProducts({ onSelectProduct }: CompactProductsProp
             className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm tracking-wide transition-all shadow-md hover:shadow-lg"
           >
             <span>View All Solutions & Technical Catalog</span>
-            <ArrowRight className="w-4 h-4 text-sky-400" />
+            <ArrowRight className="w-4 h-4 text-red-400" />
           </Link>
         </div>
       </div>

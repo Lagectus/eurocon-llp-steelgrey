@@ -14,10 +14,10 @@ export default function ProductSchematic({
   className = "w-full h-48",
   isDark = false,
 }: ProductSchematicProps) {
-  const strokeColor = isDark ? "#38BDF8" : "#0284C7";
+  const strokeColor = isDark ? "#DC2626" : "#DC2626";
   const dimStroke = isDark ? "#64748B" : "#94A3B8";
-  const fillColor = isDark ? "rgba(14, 165, 233, 0.12)" : "rgba(2, 132, 199, 0.08)";
-  const accentColor = "#0EA5E9";
+  const fillColor = isDark ? "rgba(220, 38, 38, 0.12)" : "rgba(220, 38, 38, 0.08)";
+  const accentColor = "#EF4444";
 
   return (
     <div className={`relative flex items-center justify-center overflow-hidden rounded-xl ${className}`}>
@@ -59,7 +59,7 @@ export default function ProductSchematic({
             );
           })}
           {/* Airflow Velocity Vectors */}
-          <path d="M 150 110 Q 200 80, 275 60" fill="none" stroke="#38BDF8" strokeWidth="2" strokeDasharray="4 4" className="animate-airflow-line" />
+          <path d="M 150 110 Q 200 80, 275 60" fill="none" stroke="#DC2626" strokeWidth="2" strokeDasharray="4 4" className="animate-airflow-line" />
           <text x="210" y="180" fill={dimStroke} fontSize="9" fontFamily="monospace">AMCA 210 SCROLL</text>
         </svg>
       )}
@@ -80,7 +80,7 @@ export default function ProductSchematic({
           <line x1="80" y1="55" x2="110" y2="75" stroke={dimStroke} strokeWidth="1.5" />
           <line x1="80" y1="145" x2="110" y2="125" stroke={dimStroke} strokeWidth="1.5" />
           {/* Through-flow Dynamic Lines */}
-          <line x1="20" y1="100" x2="280" y2="100" stroke="#38BDF8" strokeWidth="2" strokeDasharray="6 4" className="animate-airflow-line" />
+          <line x1="20" y1="100" x2="280" y2="100" stroke="#DC2626" strokeWidth="2" strokeDasharray="6 4" className="animate-airflow-line" />
           <text x="70" y="180" fill={dimStroke} fontSize="9" fontFamily="monospace">AEROFOIL DIE-CAST BLADES</text>
         </svg>
       )}
@@ -133,8 +133,8 @@ export default function ProductSchematic({
           <path d="M 20 85 L 18 70" stroke={accentColor} strokeWidth="3" strokeLinecap="round" />
           <path d="M 280 85 L 282 70" stroke={accentColor} strokeWidth="3" strokeLinecap="round" />
           {/* Downward Destratification Airflow */}
-          <path d="M 100 95 Q 80 150, 40 170" fill="none" stroke="#38BDF8" strokeWidth="2" strokeDasharray="4 4" className="animate-airflow-line" />
-          <path d="M 200 95 Q 220 150, 260 170" fill="none" stroke="#38BDF8" strokeWidth="2" strokeDasharray="4 4" className="animate-airflow-line" />
+          <path d="M 100 95 Q 80 150, 40 170" fill="none" stroke="#DC2626" strokeWidth="2" strokeDasharray="4 4" className="animate-airflow-line" />
+          <path d="M 200 95 Q 220 150, 260 170" fill="none" stroke="#DC2626" strokeWidth="2" strokeDasharray="4 4" className="animate-airflow-line" />
           <text x="85" y="190" fill={dimStroke} fontSize="9" fontFamily="monospace">24 FT PMSM GEARLESS SPAN</text>
         </svg>
       )}
@@ -206,7 +206,7 @@ export default function ProductSchematic({
           <line x1="58" y1="105" x2="72" y2="120" stroke={accentColor} strokeWidth="2" />
           <line x1="58" y1="125" x2="72" y2="140" stroke={accentColor} strokeWidth="2" />
           {/* Section 2: Cooling & Heating Coil (Copper tubes + Al fins) */}
-          <rect x="100" y="48" width="32" height="100" rx="3" fill="rgba(14, 165, 233, 0.2)" stroke={accentColor} strokeWidth="2" />
+          <rect x="100" y="48" width="32" height="100" rx="3" fill="rgba(220, 38, 38, 0.2)" stroke={accentColor} strokeWidth="2" />
           <line x1="108" y1="52" x2="108" y2="144" stroke={strokeColor} strokeWidth="1.5" />
           <line x1="116" y1="52" x2="116" y2="144" stroke={strokeColor} strokeWidth="1.5" />
           <line x1="124" y1="52" x2="124" y2="144" stroke={strokeColor} strokeWidth="1.5" />
@@ -220,7 +220,7 @@ export default function ProductSchematic({
           <circle cx="250" cy="95" r="10" fill={accentColor} />
           <rect x="235" y="130" width="30" height="12" rx="2" fill={strokeColor} />
           {/* Airflow Velocity Streamline */}
-          <path d="M 20 95 L 295 95" fill="none" stroke="#38BDF8" strokeWidth="2" strokeDasharray="5 3" className="animate-airflow-line" />
+          <path d="M 20 95 L 295 95" fill="none" stroke="#DC2626" strokeWidth="2" strokeDasharray="5 3" className="animate-airflow-line" />
           {/* Base Channel Skid */}
           <rect x="20" y="160" width="280" height="10" rx="2" fill={strokeColor} opacity="0.8" />
           <text x="35" y="186" fill={dimStroke} fontSize="8.5" fontFamily="monospace">DOUBLE SKIN PUF 50MM • PLUG FAN / EC MOTOR</text>
@@ -232,12 +232,12 @@ export default function ProductSchematic({
           {/* Airwasher Main Casing */}
           <rect x="30" y="35" width="260" height="115" rx="4" fill={fillColor} stroke={strokeColor} strokeWidth="2.5" />
           {/* Heavy Gauge Water Sump Tank at Bottom */}
-          <rect x="25" y="145" width="270" height="25" rx="3" fill="rgba(14, 165, 233, 0.25)" stroke={strokeColor} strokeWidth="2" />
+          <rect x="25" y="145" width="270" height="25" rx="3" fill="rgba(220, 38, 38, 0.25)" stroke={strokeColor} strokeWidth="2" />
           <text x="110" y="162" fill={dimStroke} fontSize="8" fontFamily="monospace">SS304 WATER SUMP TANK</text>
           {/* Fresh Air Inlet Louver / Pre-filter */}
           <rect x="38" y="45" width="14" height="95" rx="2" fill="none" stroke={dimStroke} strokeWidth="1.5" />
           {/* Celdek Evaporative Cellulose Pad Bank */}
-          <rect x="75" y="45" width="45" height="95" rx="3" fill="rgba(56, 189, 248, 0.2)" stroke={accentColor} strokeWidth="2" />
+          <rect x="75" y="45" width="45" height="95" rx="3" fill="rgba(220, 38, 38, 0.2)" stroke={accentColor} strokeWidth="2" />
           {/* Cross-flute pattern on Celdek */}
           <line x1="75" y1="55" x2="120" y2="85" stroke={accentColor} strokeWidth="1.5" opacity="0.6" />
           <line x1="75" y1="85" x2="120" y2="115" stroke={accentColor} strokeWidth="1.5" opacity="0.6" />
@@ -250,9 +250,9 @@ export default function ProductSchematic({
           <circle cx="140" cy="85" r="4" fill={accentColor} />
           <circle cx="140" cy="110" r="4" fill={accentColor} />
           {/* Spray Droplet Cones */}
-          <path d="M 136 60 L 115 50 M 136 60 L 115 70" stroke="#38BDF8" strokeWidth="1.5" strokeDasharray="2 2" />
-          <path d="M 136 85 L 115 75 M 136 85 L 115 95" stroke="#38BDF8" strokeWidth="1.5" strokeDasharray="2 2" />
-          <path d="M 136 110 L 115 100 M 136 110 L 115 120" stroke="#38BDF8" strokeWidth="1.5" strokeDasharray="2 2" />
+          <path d="M 136 60 L 115 50 M 136 60 L 115 70" stroke="#DC2626" strokeWidth="1.5" strokeDasharray="2 2" />
+          <path d="M 136 85 L 115 75 M 136 85 L 115 95" stroke="#DC2626" strokeWidth="1.5" strokeDasharray="2 2" />
+          <path d="M 136 110 L 115 100 M 136 110 L 115 120" stroke="#DC2626" strokeWidth="1.5" strokeDasharray="2 2" />
           {/* PVC / GI Mist Eliminator Vane Bank */}
           <rect x="165" y="45" width="22" height="95" rx="2" fill="none" stroke={strokeColor} strokeWidth="1.5" />
           <line x1="172" y1="48" x2="180" y2="137" stroke={dimStroke} strokeWidth="2" strokeDasharray="4 2" />
@@ -260,7 +260,7 @@ export default function ProductSchematic({
           <circle cx="240" cy="90" r="28" fill="none" stroke={strokeColor} strokeWidth="2" />
           <circle cx="240" cy="90" r="10" fill={accentColor} />
           {/* Flow vector */}
-          <path d="M 20 90 L 290 90" fill="none" stroke="#38BDF8" strokeWidth="2" strokeDasharray="4 4" className="animate-airflow-line" />
+          <path d="M 20 90 L 290 90" fill="none" stroke="#DC2626" strokeWidth="2" strokeDasharray="4 4" className="animate-airflow-line" />
           <text x="50" y="188" fill={dimStroke} fontSize="8.5" fontFamily="monospace">CELDEK 5090 / 7090 PAD • 90% SATURATION EFFICIENCY</text>
         </svg>
       )}
@@ -271,7 +271,7 @@ export default function ProductSchematic({
           <rect x="40" y="30" width="240" height="135" rx="6" fill={fillColor} stroke={strokeColor} strokeWidth="2.5" />
           <rect x="48" y="38" width="224" height="119" rx="4" fill="none" stroke={dimStroke} strokeDasharray="4 2" />
           {/* Aerodynamic Bellmouth Inlet Cone */}
-          <path d="M 40 60 C 70 60, 90 75, 105 75 L 105 125 C 90 125, 70 140, 40 140 Z" fill="rgba(14, 165, 233, 0.15)" stroke={accentColor} strokeWidth="2" />
+          <path d="M 40 60 C 70 60, 90 75, 105 75 L 105 125 C 90 125, 70 140, 40 140 Z" fill="rgba(220, 38, 38, 0.15)" stroke={accentColor} strokeWidth="2" />
           {/* Dynamic Plug Fan Wheel / Impeller */}
           <circle cx="165" cy="95" r="44" fill="none" stroke={strokeColor} strokeWidth="2.5" />
           <circle cx="165" cy="95" r="16" fill={fillColor} stroke={accentColor} strokeWidth="2" />
@@ -310,7 +310,7 @@ export default function ProductSchematic({
           {/* Centrifugal DIDW Blower Wheel inside Cabinet */}
           <path
             d="M 100 95 C 100 65, 145 50, 185 50 L 225 50 L 225 95 C 205 95, 190 140, 145 145 C 105 145, 90 120, 100 95 Z"
-            fill="rgba(14, 165, 233, 0.15)"
+            fill="rgba(220, 38, 38, 0.15)"
             stroke={accentColor}
             strokeWidth="2"
           />
@@ -321,7 +321,7 @@ export default function ProductSchematic({
           <rect x="60" y="50" width="8" height="12" rx="1" fill={strokeColor} />
           <rect x="60" y="130" width="8" height="12" rx="1" fill={strokeColor} />
           {/* Through Flow Airflow Line */}
-          <line x1="15" y1="98" x2="305" y2="98" stroke="#38BDF8" strokeWidth="2" strokeDasharray="5 3" className="animate-airflow-line" />
+          <line x1="15" y1="98" x2="305" y2="98" stroke="#DC2626" strokeWidth="2" strokeDasharray="5 3" className="animate-airflow-line" />
           <text x="50" y="185" fill={dimStroke} fontSize="8.5" fontFamily="monospace">IN-LINE DOUBLE SKIN ACOUSTIC CABINET BLOWER</text>
         </svg>
       )}
@@ -337,7 +337,7 @@ export default function ProductSchematic({
           <line x1="48" y1="52" x2="48" y2="142" stroke={dimStroke} strokeWidth="3" />
           <line x1="56" y1="55" x2="56" y2="140" stroke={accentColor} strokeWidth="1.5" strokeDasharray="2 2" />
           {/* Multi-Row Chilled Water Hydrophilic Fin Coil */}
-          <rect x="80" y="52" width="38" height="90" rx="2" fill="rgba(14, 165, 233, 0.2)" stroke={accentColor} strokeWidth="2" />
+          <rect x="80" y="52" width="38" height="90" rx="2" fill="rgba(220, 38, 38, 0.2)" stroke={accentColor} strokeWidth="2" />
           <line x1="88" y1="56" x2="88" y2="138" stroke={strokeColor} strokeWidth="1.5" />
           <line x1="98" y1="56" x2="98" y2="138" stroke={strokeColor} strokeWidth="1.5" />
           <line x1="108" y1="56" x2="108" y2="138" stroke={strokeColor} strokeWidth="1.5" />

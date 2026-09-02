@@ -31,13 +31,13 @@ export default function AboutPage() {
         <section className="relative py-16 sm:py-24 bg-slate-50 border-b border-slate-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl space-y-4">
-              <div className="inline-flex items-center gap-2 text-xs font-mono font-bold tracking-[0.2em] uppercase text-sky-600">
-                <span className="w-2 h-2 rounded-full bg-sky-500" />
+              <div className="inline-flex items-center gap-2 text-xs font-mono font-bold tracking-[0.2em] uppercase text-red-600">
+                <span className="w-2 h-2 rounded-full bg-red-500" />
                 <span>ABOUT EUROCON SYSTEM LLP</span>
               </div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.1]">
                 ENGINEERED AIRFLOW. <br />
-                <span className="text-sky-600">BUILT FOR PERFORMANCE.</span>
+                <span className="text-red-600">BUILT FOR PERFORMANCE.</span>
               </h1>
               <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-light">
                 EUROCON SYSTEM LLP is an advanced industrial air management, ventilation, and HVAC engineering solutions provider dedicated to high aerodynamic efficiency, life-safety compliance, and multi-decade mechanical dependability.
@@ -93,7 +93,7 @@ export default function AboutPage() {
             <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {COMPANY_INFO.certifications.map((cert, idx) => (
                 <div key={idx} className="p-5 rounded-xl bg-white border border-slate-200 flex items-start gap-3 shadow-xs">
-                  <ShieldCheck className="w-5 h-5 text-sky-600 shrink-0 mt-0.5" />
+                  <ShieldCheck className="w-5 h-5 text-red-600 shrink-0 mt-0.5" />
                   <span className="text-xs sm:text-sm font-semibold text-slate-800">{cert}</span>
                 </div>
               ))}
@@ -113,7 +113,7 @@ export default function AboutPage() {
             <div className="pt-2 flex flex-wrap justify-center gap-4">
               <button
                 onClick={() => setIsQuoteOpen(true)}
-                className="px-8 py-3.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold text-sm transition-colors shadow-lg"
+                className="px-8 py-3.5 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-sm transition-colors shadow-lg"
               >
                 Request a Quote
               </button>

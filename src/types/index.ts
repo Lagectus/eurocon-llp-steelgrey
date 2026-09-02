@@ -26,6 +26,7 @@ export interface Product {
   heroBadge: string;
   image: string;
   cfdImage?: string;
+  gallery?: string[];
   schematicSvgType: "centrifugal" | "axial" | "jet" | "inline" | "hvls" | "smoke" | "duct" | "scrubber" | "ahu" | "airwasher" | "fansection" | "cabinetexhaust" | "fcu";
   specs: ProductSpecification;
   keyFeatures: string[];
