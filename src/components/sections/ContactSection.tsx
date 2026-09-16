@@ -25,7 +25,7 @@ export default function ContactSection() {
     email: "",
     phone: "",
     projectType: "Commercial & Corporate Towers",
-    productInterest: "Centrifugal Fans",
+    productInterest: "Air Handling Unit (AHU)",
     message: "",
   });
 

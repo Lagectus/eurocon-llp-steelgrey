@@ -19,7 +19,7 @@ export default function QuoteModal({ isOpen, onClose, initialProduct = "" }: Quo
     email: "",
     phone: "",
     industry: "Commercial & Corporate Towers",
-    product: initialProduct || "Industrial Centrifugal Fans",
+    product: initialProduct || "Air Handling Unit (AHU)",
     estimatedAirflow: "15,000 CFM",
     operatingEnvironment: "Standard HVAC",
     projectTimeline: "Immediate (1 - 3 Months)",

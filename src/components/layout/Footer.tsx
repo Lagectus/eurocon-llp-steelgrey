@@ -40,11 +40,11 @@ export default function Footer() {
             </Link>
 
             <p className="text-xs text-slate-400 leading-relaxed max-w-sm">
-              Engineering high-efficiency centrifugal blowers, axial flow systems, emergency smoke extraction, and automated air distribution networks for critical industrial and infrastructure projects.
+              Engineering high-efficiency air handling units (AHU), industrial air washers, treated fresh air units (TFA), modular fan sections, acoustic cabinet exhaust, scrubbers, and inline ventilation units.
             </p>
 
             <div className="text-[11px] font-mono text-slate-500">
-              AMCA 210/300 • EN 12101-3 F400 • ISO 9001:2015 • SMACNA
+              AMCA 210/300 • EN 1886 • AHRI 410 • ISO 9001:2015
             </div>
           </div>
 
@@ -84,18 +84,23 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-xs">
               <li>
+                <Link href="/products/fan-section" className="hover:text-red-400 transition-colors">
+                  Fan Section
+                </Link>
+              </li>
+              <li>
+                <Link href="/products/airwashers" className="hover:text-red-400 transition-colors">
+                  Air Washer
+                </Link>
+              </li>
+              <li>
                 <Link href="/products/ahu" className="hover:text-red-400 transition-colors">
                   Air Handling Unit (AHU)
                 </Link>
               </li>
               <li>
-                <Link href="/products/airwashers" className="hover:text-red-400 transition-colors">
-                  Airwashers
-                </Link>
-              </li>
-              <li>
-                <Link href="/products/fan-section" className="hover:text-red-400 transition-colors">
-                  Fan Section
+                <Link href="/products/tfa" className="hover:text-red-400 transition-colors">
+                  TFA (Treated Fresh Air)
                 </Link>
               </li>
               <li>
@@ -104,8 +109,13 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/products/fcu" className="hover:text-red-400 transition-colors">
-                  Fan Coil Unit (FCU)
+                <Link href="/products/scrubber-systems" className="hover:text-red-400 transition-colors">
+                  Scrubber Dry & Wet
+                </Link>
+              </li>
+              <li>
+                <Link href="/products/cabinet-inline-unit" className="hover:text-red-400 transition-colors">
+                  Cabinet Inline Unit
                 </Link>
               </li>
             </ul>

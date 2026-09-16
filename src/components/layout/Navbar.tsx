@@ -17,6 +17,7 @@ import {
   Box,
   Droplets,
   Sliders,
+  Filter,
   Cpu
 } from "lucide-react";
 import { PRODUCTS_DATA, COMPANY_INFO, CORE_EUROCON_NAV_PRODUCTS } from "@/data/euroconData";
@@ -33,16 +34,12 @@ export default function Navbar({
 }: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isProductsMenuOpen, setIsProductsMenuOpen] = useState(false);
-  const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const pathname = usePathname();
+  const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 30) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 20);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -66,11 +63,13 @@ export default function Navbar({
   const isProductsActive = pathname?.startsWith("/products");
 
   const productIcons: Record<string, React.ReactNode> = {
-    ahu: <Layers className="w-5 h-5 text-red-500" />,
-    airwashers: <Droplets className="w-5 h-5 text-blue-800" />,
     "fan-section": <Fan className="w-5 h-5 text-red-600" />,
+    airwashers: <Droplets className="w-5 h-5 text-[#1B2A6B]" />,
+    ahu: <Layers className="w-5 h-5 text-red-500" />,
+    tfa: <Wind className="w-5 h-5 text-emerald-600" />,
     "cabinet-exhaust-unit": <Box className="w-5 h-5 text-amber-500" />,
-    fcu: <Wind className="w-5 h-5 text-blue-700" />
+    "scrubber-systems": <Filter className="w-5 h-5 text-purple-600" />,
+    "cabinet-inline-unit": <Sliders className="w-5 h-5 text-cyan-600" />
   };
 
   return (
@@ -174,7 +173,7 @@ export default function Navbar({
                       EUROCON ENGINEERED PRODUCT LINES
                     </span>
                     <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-red-50 text-red-600 font-semibold border border-red-100">
-                      5 CORE SERIES
+                      7 CORE SERIES
                     </span>
                   </div>
 

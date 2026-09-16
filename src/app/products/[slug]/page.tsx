@@ -548,8 +548,8 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
                           ? AHU_ANGLE_METADATA[showcasePhotoIndex].title
                           : product.slug === "airwashers"
                           ? "Industrial Airwasher Unit — High-Saturation Evaporative Cooling System"
-                          : product.slug === "fcu"
-                          ? "FCU (Fan Coil Unit) — Ultra-Slim Ceiling Concealed Chilled Water & DX Series"
+                          : product.slug === "tfa"
+                          ? "TFA (Treated Fresh Air Unit) — 100% Fresh Air & Energy Recovery DOAS"
                           : `${product.name} — Industrial Build Specification`}
                       </span>
                     </div>
@@ -559,8 +559,8 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
                         ? AHU_ANGLE_METADATA[showcasePhotoIndex].badge
                         : product.slug === "airwashers"
                         ? "90% Saturation / Celdek 5090"
-                        : product.slug === "fcu"
-                        ? "Ultra-Slim 220mm / 28 dBA"
+                        : product.slug === "tfa"
+                        ? "100% Fresh Air / Enthalpy Wheel"
                         : product.heroBadge || "EUROCON OEM"}
                     </span>
                   </div>

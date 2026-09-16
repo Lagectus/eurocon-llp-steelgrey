@@ -141,7 +141,7 @@ export default function Hero({ onOpenQuoteModal }: HeroProps) {
                 <div className="relative h-80 sm:h-96 w-full overflow-hidden group">
                   <img
                     src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80"
-                    alt="Eurocon High Precision Industrial Centrifugal Fan"
+                    alt="Eurocon High Precision Industrial Air Handling & Fan Systems"
                     className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700 filter brightness-95"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />

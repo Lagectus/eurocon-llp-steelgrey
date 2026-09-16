@@ -22,10 +22,9 @@ export default function ProductSection({
 
   const categories = [
     "All",
-    "Air Management Systems",
-    "Smoke Exhaust Systems",
-    "Air Distribution",
     "Air Handling Solutions",
+    "Ventilation & Exhaust Systems",
+    "Pollution Control Systems",
   ];
 
   const filteredProducts = PRODUCTS_DATA.filter((p) => {
@@ -33,7 +32,7 @@ export default function ProductSection({
     return p.category === selectedCategory;
   });
 
-  const displayedProducts = showAll ? filteredProducts : filteredProducts.slice(0, 6);
+  const displayedProducts = showAll ? filteredProducts : filteredProducts.slice(0, 8);
 
   return (
     <section id="products" className="relative py-24 sm:py-32 bg-white border-b border-slate-200">

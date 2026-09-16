@@ -93,7 +93,7 @@ export default function MobileMenu({
                     onClick={onClose}
                     className="text-[11px] font-bold text-red-600 hover:text-red-700 flex items-center gap-0.5"
                   >
-                    <span>All (12+)</span>
+                    <span>All (7)</span>
                     <ChevronRight className="w-3 h-3" />
                   </Link>
                 </div>
