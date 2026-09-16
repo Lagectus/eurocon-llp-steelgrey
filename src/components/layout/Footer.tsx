@@ -64,11 +64,6 @@ export default function Footer() {
                   Quality
                 </Link>
               </li>
-              <li>
-                <Link href="/projects" className="hover:text-red-400 transition-colors">
-                  Projects
-                </Link>
-              </li>
             </ul>
           </div>
 

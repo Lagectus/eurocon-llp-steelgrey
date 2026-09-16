@@ -1,0 +1,181 @@
+"use client";
+
+import React, { useEffect, useRef } from "react";
+import { ArrowRight, Cpu, Factory, ShieldCheck, Headphones } from "lucide-react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Link from "next/link";
+
+export default function EngineeringShowcase() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const headerRef = useRef<HTMLDivElement>(null);
+  const gridRef = useRef<HTMLDivElement>(null);
+  const ctaRef = useRef<HTMLDivElement>(null);
+
+  const capabilities = [
+    {
+      num: "01",
+      title: "Precision Engineering",
+      desc: "Aerodynamic design, 3D CFD boundary layer simulation and application-focused engineering.",
+      icon: Cpu,
+      direction: "left" as const,
+    },
+    {
+      num: "02",
+      title: "Advanced Manufacturing",
+      desc: "Modern CNC fiber laser cutting (±0.05mm), automated roll-forming, and robotic seam welding.",
+      icon: Factory,
+      direction: "right" as const,
+    },
+    {
+      num: "03",
+      title: "Quality Focus",
+      desc: "ISO 1940 Grade G2.5 dynamic balancing, AMCA laboratory airflow rigs, and 100% FAT verification.",
+      icon: ShieldCheck,
+      direction: "left" as const,
+    },
+    {
+      num: "04",
+      title: "Project Support",
+      desc: "Comprehensive engineering assistance from aerodynamic sizing through on-site commissioning.",
+      icon: Headphones,
+      direction: "right" as const,
+    },
+  ];
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReducedMotion) return;
+
+    const ctx = gsap.context(() => {
+      // Header reveal
+      gsap.fromTo(headerRef.current,
+        { opacity: 0, y: 60 },
+        {
+          opacity: 1, y: 0, duration: 0.8,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 75%",
+            toggleActions: "play none none none",
+          },
+        }
+      );
+
+      // Cards with alternating directions
+      if (gridRef.current) {
+        const cards = Array.from(gridRef.current.children) as HTMLElement[];
+        cards.forEach((card, i) => {
+          const dir = capabilities[i].direction;
+          gsap.fromTo(card,
+            {
+              opacity: 0,
+              x: dir === "left" ? -80 : 80,
+              scale: 0.92,
+            },
+            {
+              opacity: 1,
+              x: 0,
+              scale: 1,
+              duration: 0.8,
+              ease: "power3.out",
+              scrollTrigger: {
+                trigger: card,
+                start: "top 85%",
+                toggleActions: "play none none none",
+              },
+            }
+          );
+        });
+      }
+
+      // CTA reveal
+      gsap.fromTo(ctaRef.current,
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1, y: 0, duration: 0.6,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: ctaRef.current,
+            start: "top 90%",
+            toggleActions: "play none none none",
+          },
+        }
+      );
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
+
+  return (
+    <section ref={sectionRef} id="engineering" className="relative py-14 sm:py-18 bg-white overflow-hidden">
+      {/* Decorative background */}
+      <div className="absolute top-1/2 right-0 w-[400px] h-[400px] bg-red-50/40 rounded-full blur-[100px] pointer-events-none translate-x-1/2 -translate-y-1/2" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <div ref={headerRef} className="text-center max-w-3xl mx-auto mb-10 sm:mb-12 opacity-0">
+          <div className="inline-flex items-center gap-2 text-xs font-mono font-bold tracking-[0.2em] uppercase text-red-600 mb-4">
+            <span className="w-8 h-[2px] bg-red-500" />
+            <span>THE EUROCON ADVANTAGE</span>
+            <span className="w-8 h-[2px] bg-red-500" />
+          </div>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-[1.1]">
+            PRECISION ENGINEERING.
+            <br />
+            MEASURABLE PERFORMANCE.
+          </h2>
+        </div>
+
+        {/* 2x2 Grid */}
+        <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+          {capabilities.map((cap) => {
+            const Icon = cap.icon;
+            return (
+              <div
+                key={cap.num}
+                className="group relative p-6 sm:p-7 rounded-2xl bg-slate-50 border border-slate-200 hover:border-red-300 transition-all duration-500 hover:shadow-xl hover:-translate-y-1 overflow-hidden"
+              >
+                {/* Background number watermark */}
+                <span className="absolute -right-4 -bottom-6 text-[140px] font-black text-slate-100 leading-none pointer-events-none select-none group-hover:text-red-50 transition-colors duration-500">
+                  {cap.num}
+                </span>
+
+                <div className="relative z-10 space-y-4">
+                  <div className="flex items-center gap-4">
+                    <div className="w-14 h-14 rounded-2xl bg-white group-hover:bg-red-50 text-slate-700 group-hover:text-red-600 flex items-center justify-center transition-colors duration-300 border border-slate-200 group-hover:border-red-200 shadow-sm">
+                      <Icon className="w-6 h-6" />
+                    </div>
+                    <span className="font-mono text-xs font-black text-red-600">
+                      {cap.num}
+                    </span>
+                  </div>
+
+                  <h3 className="text-xl sm:text-2xl font-bold text-slate-900 group-hover:text-red-600 transition-colors">
+                    {cap.title}
+                  </h3>
+
+                  <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+                    {cap.desc}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* CTA */}
+        <div ref={ctaRef} className="mt-8 sm:mt-10 text-center opacity-0">
+          <Link
+            href="/quality"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm tracking-wide transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+          >
+            <span>Explore Quality & Testing Standards</span>
+            <ArrowRight className="w-4 h-4 text-red-400" />
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}

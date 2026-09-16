@@ -91,21 +91,24 @@ export default function CompactAbout() {
               transition={{ duration: 0.8 }}
               className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-200 bg-slate-900 group"
             >
-              <div className="relative h-72 sm:h-96 w-full overflow-hidden bg-slate-950">
+              <div className="relative h-72 sm:h-96 w-full overflow-hidden bg-gradient-to-br from-slate-100 via-slate-50 to-slate-200 flex items-center justify-center p-6 border border-slate-200">
+                {/* Tech grid background */}
+                <div className="absolute inset-0 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] bg-[length:16px_16px] opacity-60 pointer-events-none" />
+
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/images/facility.jpg"
-                  alt="Eurocon High-Precision Manufacturing and Engineering Plant"
-                  className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700"
+                  src="/images/products/fan-section.png"
+                  alt="Eurocon High-Precision Modular Fan Section"
+                  className="w-full h-full object-contain filter drop-shadow-2xl transform group-hover:scale-105 transition-transform duration-700 relative z-10"
                 />
 
-                <div className="absolute bottom-4 left-4 right-4 p-3.5 rounded-xl bg-slate-950/90 backdrop-blur-md border border-slate-800 text-white flex items-center justify-between shadow-xl">
+                <div className="absolute bottom-4 left-4 right-4 p-3.5 rounded-xl bg-slate-950/90 backdrop-blur-md border border-slate-800 text-white flex items-center justify-between shadow-xl z-20">
                   <div className="space-y-0.5">
                     <span className="text-[10px] font-mono text-red-400 uppercase font-bold">
-                      MANUFACTURING FACILITY
+                      PRECISION AIR MANAGEMENT
                     </span>
                     <p className="text-xs font-semibold text-slate-200">
-                      CNC Fiber Laser Cutting & Automated Form Line
+                      Modular Fan Section & Dynamic Balancing (ISO 1940 G2.5)
                     </p>
                   </div>
                   <ShieldCheck className="w-5 h-5 text-red-400 shrink-0" />

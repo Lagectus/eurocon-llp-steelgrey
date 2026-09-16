@@ -246,17 +246,6 @@ export default function Navbar({
           </Link>
 
           <Link
-            href="/projects"
-            className={`px-3.5 py-2 rounded-lg text-sm font-semibold transition-colors ${
-              pathname === "/projects"
-                ? "text-red-600 bg-red-50/80"
-                : "text-slate-700 hover:text-red-600 hover:bg-slate-50"
-            }`}
-          >
-            Projects
-          </Link>
-
-          <Link
             href="/contact"
             className={`px-3.5 py-2 rounded-lg text-sm font-semibold transition-colors ${
               pathname === "/contact"

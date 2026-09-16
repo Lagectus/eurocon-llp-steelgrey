@@ -65,8 +65,8 @@ export const PRODUCTS_DATA: Product[] = [
     name: "Fan Section",
     category: "Ventilation & Exhaust Systems",
     subCategory: "Modular Plenum & Blower Series",
-    tagline: "Precision-engineered modular fan plenums with plug fan and DIDW blower assemblies.",
-    shortDescription: "Modular Fan Sections housing direct-drive plug fans or DIDW backward curved blowers on vibration-isolated sub-bases, optimized for AHU retrofits, fresh air intake, and process exhaust.",
+    tagline: "Precision-engineered modular fan plenums with DIDW blower and aerofoil fan assemblies.",
+    shortDescription: "Modular Fan Sections housing direct-drive fans or DIDW backward curved blowers on vibration-isolated sub-bases, optimized for AHU retrofits, fresh air intake, and process exhaust.",
     fullDescription: "EUROCON Fan Sections are self-contained aerodynamic supply and exhaust modules designed for seamless integration into built-up HVAC air systems, custom plenums, and industrial processes. Built within high-rigidity extruded aluminum frameworks with 25mm / 50mm double-skin PUF insulated panels (40 kg/m³ density), Eurocon Fan Sections feature direct-drive backward curved aerofoil plug fans or DIDW centrifugal blowers statically and dynamically balanced to ISO 1940 Grade G2.5 for whisper-quiet vibration-free operation.",
     heroBadge: "ISO 1940 Grade G2.5 Dynamic Balancing",
     image: "/images/products/fan-sections.png",
@@ -992,10 +992,10 @@ export const CORE_EUROCON_NAV_PRODUCTS = [
     slug: "fan-section",
     shortName: "Fan Section",
     category: "Plenum & Blower Module",
-    desc: "Direct-drive plug fans & DIDW blower modules with ISO G2.5 balance",
+    desc: "Direct-drive fans & DIDW blower modules with ISO G2.5 balance",
     href: "/products/fan-section",
     schematicSvgType: "fansection" as const,
-    badge: "Plug & DIDW"
+    badge: "ISO 1940 G2.5"
   },
   {
     name: "Air Washer",

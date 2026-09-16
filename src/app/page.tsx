@@ -7,13 +7,14 @@ import Navbar from "@/components/layout/Navbar";
 import MobileMenu from "@/components/layout/MobileMenu";
 import Footer from "@/components/layout/Footer";
 
-// The EXACT 6 Major Homepage Sections
-import Hero from "@/components/sections/Hero";
-import CompactAbout from "@/components/sections/CompactAbout";
-import CompactProducts from "@/components/sections/CompactProducts";
-import CompactIndustries from "@/components/sections/CompactIndustries";
-import CompactEngineering from "@/components/sections/CompactEngineering";
-import CompactCTA from "@/components/sections/CompactCTA";
+// Cinematic Redesigned Homepage Sections
+import CinematicHero from "@/components/sections/CinematicHero";
+import MetricsMarquee from "@/components/sections/MetricsMarquee";
+import AboutStorytelling from "@/components/sections/AboutStorytelling";
+import HorizontalProducts from "@/components/sections/HorizontalProducts";
+import PinnedIndustries from "@/components/sections/PinnedIndustries";
+import EngineeringShowcase from "@/components/sections/EngineeringShowcase";
+import CinematicCTA from "@/components/sections/CinematicCTA";
 
 // Interactive Modals
 import QuoteModal from "@/components/ui/QuoteModal";
@@ -57,25 +58,28 @@ export default function HomePage() {
         onOpenQuoteModal={() => handleOpenQuoteModal("General Technical Inquiry")}
       />
 
-      {/* 6 High-Impact Sections */}
+      {/* 7 Cinematic Homepage Sections */}
       <main className="relative">
-        {/* 01 — HERO */}
-        <Hero onOpenQuoteModal={() => handleOpenQuoteModal("Eurocon Industrial Airflow Consultation")} />
+        {/* 01 — CINEMATIC HERO */}
+        <CinematicHero onOpenQuoteModal={() => handleOpenQuoteModal("Eurocon Industrial Airflow Consultation")} />
 
-        {/* 02 — ABOUT / COMPANY INTRO */}
-        <CompactAbout />
+        {/* 02 — METRICS MARQUEE */}
+        <MetricsMarquee />
 
-        {/* 03 — SOLUTIONS / PRODUCTS */}
-        <CompactProducts onSelectProduct={handleSelectProduct} />
+        {/* 03 — ABOUT STORYTELLING */}
+        <AboutStorytelling />
 
-        {/* 04 — INDUSTRIES */}
-        <CompactIndustries />
+        {/* 04 — HORIZONTAL PRODUCTS SCROLL */}
+        <HorizontalProducts />
 
-        {/* 05 — ENGINEERING + WHY EUROCON */}
-        <CompactEngineering />
+        {/* 05 — PINNED INDUSTRIES SHOWCASE */}
+        <PinnedIndustries />
 
-        {/* 06 — FINAL CTA */}
-        <CompactCTA onOpenQuoteModal={() => handleOpenQuoteModal("Custom Airflow System Requirement")} />
+        {/* 06 — ENGINEERING CAPABILITIES */}
+        <EngineeringShowcase />
+
+        {/* 07 — CINEMATIC CTA */}
+        <CinematicCTA onOpenQuoteModal={() => handleOpenQuoteModal("Custom Airflow System Requirement")} />
       </main>
 
       {/* Compact Clean Footer */}

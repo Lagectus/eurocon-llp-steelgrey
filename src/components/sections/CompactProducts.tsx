@@ -16,7 +16,7 @@ export default function CompactProducts({}: CompactProductsProps = {}) {
       id: "prod-fan-section",
       num: "01",
       name: "Fan Section",
-      tagline: "Direct-drive plug fans and DIDW blower plenums dynamically balanced to ISO 1940 Grade G2.5.",
+      tagline: "Direct-drive fans and DIDW blower plenums dynamically balanced to ISO 1940 Grade G2.5.",
       schematicType: "fansection" as const,
       badge: "ISO 1940 G2.5",
       href: "/products/fan-section",
