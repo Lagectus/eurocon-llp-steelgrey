@@ -49,6 +49,7 @@ export default function ProductsPage() {
     "fan-section": <Fan className="w-4 h-4 text-[#1B2A6B]" />,
     airwashers: <Droplets className="w-4 h-4 text-[#1B2A6B]" />,
     ahu: <Layers className="w-4 h-4 text-red-500" />,
+    fcu: <Wind className="w-4 h-4 text-teal-600" />,
     tfa: <Wind className="w-4 h-4 text-emerald-600" />,
     "cabinet-exhaust-unit": <Box className="w-4 h-4 text-amber-500" />,
     "scrubber-systems": <Filter className="w-4 h-4 text-purple-600" />,
@@ -81,7 +82,7 @@ export default function ProductsPage() {
                   AIR MANAGEMENT & HVAC SOLUTIONS
                 </h1>
                 <p className="text-base sm:text-lg text-slate-600 font-light">
-                  Engineered Double Skin AHUs, Industrial Airwashers, Modular Fan Sections, Treated Fresh Air Units (TFA), Acoustic Cabinet Exhaust Units, Wet & Dry Scrubbers, and Cabinet Inline Units.
+                  Engineered Double Skin AHUs, Industrial Airwashers, Modular Fan Sections, Fan Coil Units (FCU), Treated Fresh Air Units (TFA), Acoustic Cabinet Exhaust Units, Wet & Dry Scrubbers, and Cabinet Inline Units.
                 </p>
               </div>
 
@@ -98,12 +99,12 @@ export default function ProductsPage() {
             <div className="mt-10 pt-8 border-t border-slate-200">
               <div className="flex items-center justify-between mb-3">
                 <span className="text-xs font-mono font-bold text-slate-500 uppercase tracking-wider">
-                  QUICK ACCESS: 7 CORE EUROCON PRODUCT LINES
+                  QUICK ACCESS: 8 CORE EUROCON PRODUCT LINES
                 </span>
                 <span className="text-[11px] font-mono text-red-600">CLICK TO VIEW DEDICATED SPEC SHEET</span>
               </div>
 
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-3">
+              <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-4 xl:grid-cols-8 gap-2.5 sm:gap-3">
                 {CORE_EUROCON_NAV_PRODUCTS.map((prod) => (
                   <Link
                     key={prod.slug}

@@ -43,8 +43,18 @@ export default function CompactProducts({}: CompactProductsProps = {}) {
       image: "/images/products/AHU.png",
     },
     {
-      id: "prod-tfa",
+      id: "prod-fcu",
       num: "04",
+      name: "FCU (Fan Coil Unit)",
+      tagline: "Ultra-slim 220mm ceiling concealed chilled water & DX fan coils with 28 dBA acoustics.",
+      schematicType: "fcu" as const,
+      badge: "Ultra-Slim 220mm",
+      href: "/products/fcu",
+      image: "/images/products/FCU-(fancoilunit).png",
+    },
+    {
+      id: "prod-tfa",
+      num: "05",
       name: "TFA (Treated Fresh Air Unit)",
       tagline: "100% Outdoor air conditioning units with total enthalpy heat recovery wheels and multi-stage filtration.",
       schematicType: "ahu" as const,
@@ -54,7 +64,7 @@ export default function CompactProducts({}: CompactProductsProps = {}) {
     },
     {
       id: "prod-cabinet-exhaust",
-      num: "05",
+      num: "06",
       name: "Cabinet Exhaust Unit",
       tagline: "Whisper-quiet double-skin insulated in-line box fans for commercial kitchen and fume exhaust.",
       schematicType: "cabinetexhaust" as const,
@@ -64,7 +74,7 @@ export default function CompactProducts({}: CompactProductsProps = {}) {
     },
     {
       id: "prod-scrubber-systems",
-      num: "06",
+      num: "07",
       name: "Scrubber Dry & Wet",
       tagline: "High-efficiency packed-bed wet & activated carbon dry scrubbers for industrial fumes and VOCs.",
       schematicType: "scrubber" as const,
@@ -74,7 +84,7 @@ export default function CompactProducts({}: CompactProductsProps = {}) {
     },
     {
       id: "prod-cabinet-inline-unit",
-      num: "07",
+      num: "08",
       name: "Cabinet Inline Unit",
       tagline: "Galvanized double-skin acoustic in-line fans engineered for low-noise false ceiling duct ventilation.",
       schematicType: "inline" as const,

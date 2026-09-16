@@ -26,6 +26,7 @@ export const metadata: Metadata = {
   keywords: [
     "Eurocon System LLP",
     "Air Handling Unit (AHU)",
+    "Fan Coil Unit (FCU)",
     "Industrial Air Washer",
     "TFA Treated Fresh Air Unit",
     "Fan Section",

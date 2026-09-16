@@ -238,6 +238,65 @@ export const PRODUCTS_DATA: Product[] = [
     ]
   },
   {
+    id: "prod-fcu",
+    slug: "fcu",
+    aliases: ["fan-coil-unit", "fan-coil-units", "ceiling-fcu", "concealed-fcu", "cassette-fcu"],
+    name: "FCU (Fan Coil Unit)",
+    category: "Air Handling Solutions",
+    subCategory: "Ceiling Concealed & Cassette Series",
+    tagline: "Ultra-slim, whisper-quiet ceiling concealed chilled water & DX fan coil units.",
+    shortDescription: "Low-profile ceiling-concealed and cassette Fan Coil Units (FCU) engineered with multi-speed or EC brushless motors, hydrophilic-finned copper coils, and sloped condensation drain trays.",
+    fullDescription: "EUROCON Fan Coil Units (FCU) are precision-engineered for zonal climate control in commercial offices, luxury hotels, hospital patient rooms, and residential towers. Featuring an ultra-slim chassis (as low as 220mm height) that easily fits tight ceiling voids, low-noise dynamically balanced multi-blade blowers, and high-efficiency copper tube heat exchangers with hydrophilic coated fins.",
+    heroBadge: "Ultra-Slim 220mm Profile & 28 dBA",
+    image: "/images/products/FCU-(fancoilunit).png",
+    gallery: [
+      "/images/products/FCU-(fancoilunit).png"
+    ],
+    schematicSvgType: "fcu",
+    specs: {
+      airflowRange: "200 to 3,000 CFM (340 to 5,100 m³/h)",
+      staticPressure: "ESP 30 Pa (Standard) to 180 Pa (High Static Pressure Series)",
+      coolingCapacity: "0.5 TR to 7.5 TR (1.8 kW to 26 kW)",
+      coilSpecs: "2-Row / 3-Row / 4-Row Seamless Copper Tubes + Hydrophilic Corrugated Fins",
+      noiseLevel: "28 dBA to 42 dBA (Ultra-Quiet Performance)",
+      driveType: "Direct Drive with 3-Speed PSC Motor or Continuous 0-10V EC Motor",
+      motorRating: "35 W to 450 W (Energy Efficient Brushless DC / PSC)",
+      operatingTemp: "Chilled Water 4°C - 12°C / Hot Water up to 80°C",
+      standards: ["AHRI 440", "Eurovent Certified Performance", "CE Compliance", "ISO 9001:2015"]
+    },
+    keyFeatures: [
+      "Ultra-compact slim chassis height starting at just 220mm, ideal for restricted false ceiling heights",
+      "High-efficiency seamless copper tubes mechanically expanded into hydrophilic corrugated aluminum fins",
+      "One-piece deep-drawn galvanized steel drain pan insulated with 6mm closed-cell PE foam for zero condensation",
+      "Dynamically balanced wide-diameter forward-curved galvanized DIDW centrifugal impellers",
+      "Choice of 3-Speed PSC motor or high-efficiency Electronically Commutated (EC) brushless DC motor",
+      "Washable nylon / synthetic fiber pre-filter easily removable from bottom or rear access tracks"
+    ],
+    applications: [
+      "Premium Hotel Guest Rooms & Luxury Resort Suites",
+      "Commercial IT Offices, Executive Cabins & Conference Rooms",
+      "Hospital Patient Wards & Consultation Chambers",
+      "High-End Residential Apartments & Condominiums",
+      "Retail Showrooms & Boutique Commercial Stores"
+    ],
+    aerodynamicHighlights: [
+      {
+        title: "Acoustic Impeller Casing",
+        description: "Dual-inlet scroll housing engineered with optimized cutoff angle suppresses blade-pass noise down to a library-quiet 28 dBA."
+      },
+      {
+        title: "Hydrophilic Coil Heat Transfer",
+        description: "Hydrophilic blue coating prevents water bridge droplet formation between fins, ensuring uninterrupted airflow and maximum heat exchange."
+      }
+    ],
+    customOptions: [
+      { title: "System Type", description: "2-Pipe Cooling / Heating or 4-Pipe Independent Simultaneous System.", badge: "2-Pipe / 4-Pipe" },
+      { title: "Static Pressure Range", description: "Low Static (12-30 Pa) for direct discharge or High Static (50-180 Pa) for ducted distribution.", badge: "High ESP" },
+      { title: "Motor Option", description: "Standard 3-Speed PSC Motor or Smart 0-10V Modulating EC Brushless Motor.", badge: "EC Brushless" },
+      { title: "Control Valve Integration", description: "Factory-fitted 2-way or 3-way motorized modulating valve package with smart thermostat.", badge: "Smart BMS" }
+    ]
+  },
+  {
     id: "prod-tfa",
     slug: "tfa",
     aliases: ["tfa-unit", "treated-fresh-air-unit", "fresh-air-handling-unit", "treated-fanair-unit", "tfa"],
@@ -957,6 +1016,16 @@ export const CORE_EUROCON_NAV_PRODUCTS = [
     href: "/products/ahu",
     schematicSvgType: "ahu" as const,
     badge: "AHRI 410 / EN 1886"
+  },
+  {
+    name: "FCU (Fan Coil Unit)",
+    slug: "fcu",
+    shortName: "FCU",
+    category: "Ceiling Concealed",
+    desc: "Ultra-slim 220mm chilled water & DX fan coils with 28 dBA acoustics",
+    href: "/products/fcu",
+    schematicSvgType: "fcu" as const,
+    badge: "Ultra-Slim 220mm"
   },
   {
     name: "TFA (Treated Fresh Air Unit)",

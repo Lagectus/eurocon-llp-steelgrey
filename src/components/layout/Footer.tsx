@@ -99,6 +99,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/products/fcu" className="hover:text-red-400 transition-colors">
+                  Fan Coil Unit (FCU)
+                </Link>
+              </li>
+              <li>
                 <Link href="/products/tfa" className="hover:text-red-400 transition-colors">
                   TFA (Treated Fresh Air)
                 </Link>

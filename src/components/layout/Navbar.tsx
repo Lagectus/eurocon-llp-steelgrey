@@ -66,6 +66,7 @@ export default function Navbar({
     "fan-section": <Fan className="w-5 h-5 text-red-600" />,
     airwashers: <Droplets className="w-5 h-5 text-[#1B2A6B]" />,
     ahu: <Layers className="w-5 h-5 text-red-500" />,
+    fcu: <Wind className="w-5 h-5 text-teal-600" />,
     tfa: <Wind className="w-5 h-5 text-emerald-600" />,
     "cabinet-exhaust-unit": <Box className="w-5 h-5 text-amber-500" />,
     "scrubber-systems": <Filter className="w-5 h-5 text-purple-600" />,
@@ -173,7 +174,7 @@ export default function Navbar({
                       EUROCON ENGINEERED PRODUCT LINES
                     </span>
                     <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-red-50 text-red-600 font-semibold border border-red-100">
-                      7 CORE SERIES
+                      8 CORE SERIES
                     </span>
                   </div>
 
