@@ -60,11 +60,6 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/engineering" className="hover:text-red-400 transition-colors">
-                  Engineering
-                </Link>
-              </li>
-              <li>
                 <Link href="/quality" className="hover:text-red-400 transition-colors">
                   Quality
                 </Link>

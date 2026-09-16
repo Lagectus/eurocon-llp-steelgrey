@@ -233,16 +233,6 @@ export default function Navbar({
             Industries
           </Link>
 
-          <Link
-            href="/engineering"
-            className={`px-3.5 py-2 rounded-lg text-sm font-semibold transition-colors ${
-              pathname === "/engineering"
-                ? "text-red-600 bg-red-50/80"
-                : "text-slate-700 hover:text-red-600 hover:bg-slate-50"
-            }`}
-          >
-            Engineering
-          </Link>
 
           <Link
             href="/quality"

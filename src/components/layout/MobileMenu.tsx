@@ -22,7 +22,6 @@ export default function MobileMenu({
     { name: "Home", href: "/" },
     { name: "About Eurocon", href: "/about" },
     { name: "Industries Served", href: "/industries" },
-    { name: "Engineering & CFD", href: "/engineering" },
     { name: "Quality Assurance", href: "/quality" },
     { name: "Selected Projects", href: "/projects" },
     { name: "Contact & Plant", href: "/contact" },

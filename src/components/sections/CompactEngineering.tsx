@@ -116,10 +116,10 @@ export default function CompactEngineering() {
             {/* CTA Link */}
             <div className="pt-4">
               <Link
-                href="/engineering"
+                href="/quality"
                 className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm tracking-wide transition-all shadow-md"
               >
-                <span>Explore Engineering & CFD Simulation</span>
+                <span>Explore Quality & Testing Standards</span>
                 <ArrowRight className="w-4 h-4 text-red-400" />
               </Link>
             </div>
