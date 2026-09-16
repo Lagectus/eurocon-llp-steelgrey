@@ -3,25 +3,21 @@
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, ShieldCheck, Wind, Sliders } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Product } from "@/types";
-import ProductSchematic from "../ui/ProductSchematic";
 
 interface ProductCardProps {
   product: Product;
   index: number;
-  onSelect: (product: Product) => void;
+  onSelect?: (product: Product) => void;
   onQuote: (productName: string) => void;
 }
 
 export default function ProductCard({
   product,
   index,
-  onSelect,
   onQuote,
 }: ProductCardProps) {
-  const formattedIndex = String(index + 1).padStart(2, "0");
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 25 }}
@@ -32,42 +28,17 @@ export default function ProductCard({
     >
       <Link href={`/products/${product.slug}`} className="flex-1 flex flex-col justify-between">
         {/* Top Graphic / Image Area */}
-        <div className="relative bg-slate-900 border-b border-slate-100 h-52 overflow-hidden group/img">
+        <div className="relative bg-white border-b border-slate-100 h-56 sm:h-60 overflow-hidden group/img flex items-center justify-center p-4">
+          {/* Subtle industrial grid */}
+          <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] bg-size-[14px_14px] opacity-60 pointer-events-none" />
+
           {/* Real High-Resolution Industrial Product Image */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={product.image}
             alt={product.name}
-            className={`w-full h-full transition-transform duration-700 group-hover:scale-105 ${
-              product.slug === "ahu" ? "object-contain p-3" : "object-cover"
-            }`}
+            className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105 filter drop-shadow-md relative z-1"
           />
-
-          {/* Top Badges Overlay */}
-          <div className="absolute top-3 left-3 right-3 flex items-center justify-between z-10">
-            <span className="font-mono text-[10px] font-black text-white px-2 py-0.5 rounded-md bg-slate-900/80 backdrop-blur-xs border border-white/10 tracking-wider shadow-xs">
-              {formattedIndex} // {product.category.toUpperCase()}
-            </span>
-            <span className="inline-flex items-center gap-1 text-[10px] font-mono px-2 py-0.5 rounded-md bg-slate-900/80 backdrop-blur-xs border border-white/10 text-red-400 shadow-xs">
-              <ShieldCheck className="w-3 h-3 text-red-400" />
-              {product.specs.standards ? product.specs.standards[0] : "AMCA"}
-            </span>
-          </div>
-
-          {/* Floating Airflow Tag */}
-          {product.specs.airflowRange && (
-            <div className="absolute bottom-3 left-3 bg-slate-900/90 backdrop-blur-xs px-2.5 py-1 rounded-md text-[10px] font-mono text-slate-200 border border-slate-700/80 shadow-xs flex items-center gap-1.5 z-10">
-              <Wind className="w-3 h-3 text-red-400" />
-              <span>{product.specs.airflowRange.split("(")[0]}</span>
-            </div>
-          )}
-
-          {/* Floating Hero Badge */}
-          {product.heroBadge && (
-            <div className="absolute bottom-3 right-3 bg-red-600/90 backdrop-blur-xs px-2 py-0.5 rounded text-[9px] font-mono font-bold text-white shadow-xs z-10">
-              {product.heroBadge.split("&")[0]}
-            </div>
-          )}
         </div>
 
         {/* Card Body Content */}
@@ -127,8 +98,8 @@ export default function ProductCard({
       </div>
 
       {/* Expanding Accent Line at Bottom */}
-      <div className="h-[3px] w-full bg-slate-100 relative">
-        <div className="h-full bg-gradient-to-r from-red-500 to-[#1B2A6B] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+      <div className="h-0.75 w-full bg-slate-100 relative">
+        <div className="h-full bg-linear-to-r from-red-500 to-[#1B2A6B] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
       </div>
     </motion.div>
   );

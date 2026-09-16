@@ -1,34 +1,26 @@
 "use client";
 
-import React, { useState, use, useRef, useEffect } from "react";
+import React, { useState, use, useEffect } from "react";
 import Link from "next/link";
-import { notFound } from "next/navigation";
 import { motion, AnimatePresence, useScroll, useSpring, useMotionValueEvent, Variants } from "framer-motion";
 import {
   Wind,
   ShieldCheck,
   ArrowRight,
-  Download,
   CheckCircle2,
   Sliders,
   Sparkles,
   ChevronRight,
   Layers,
   Fan,
-  Box,
-  Droplets,
   Cpu,
-  FileText,
   Phone,
-  Mail,
   Zap,
   Gauge,
   Thermometer,
   Filter,
   Check,
   Building2,
-  ExternalLink,
-  ChevronDown,
   Eye
 } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
@@ -36,8 +28,7 @@ import MobileMenu from "@/components/layout/MobileMenu";
 import Footer from "@/components/layout/Footer";
 import ProductSchematic from "@/components/ui/ProductSchematic";
 import QuoteModal from "@/components/ui/QuoteModal";
-import { getProductBySlug, PRODUCTS_DATA, CORE_EUROCON_NAV_PRODUCTS, COMPANY_INFO } from "@/data/euroconData";
-import { Product } from "@/types";
+import { getProductBySlug, PRODUCTS_DATA, COMPANY_INFO } from "@/data/euroconData";
 
 interface ProductPageProps {
   params: Promise<{ slug: string }>;
@@ -75,36 +66,12 @@ const scaleInVariants: Variants = {
 
 const AHU_ANGLE_METADATA = [
   {
-    title: "Angle 01: 3D Isometric View (Service & Damper Face)",
-    shortTitle: "3D Isometric (Left)",
-    tag: "3D Isometric",
-    badge: "TB2 Profile",
-    highlight: "Double-Skin PUF & Thermal Break",
-    description: "Modular thermal-break extruded aluminum profiles with 25mm / 50mm high-density injected PUF (40 kg/m³) panels, eliminating condensation and thermal bridging."
-  },
-  {
-    title: "Angle 02: Front Service Elevation & Inspection Access",
-    shortTitle: "Front Elevation",
-    tag: "Front Elevation",
-    badge: "Access Doors",
-    highlight: "Hinged Doors & Viewing Window",
-    description: "Full front elevation showing hinged double-wall inspection access doors with nylon/die-cast zinc handles, safety latches, viewing port, and heavy structural base channel."
-  },
-  {
-    title: "Angle 03: 3D Isometric View (Opposite Supply Connection)",
-    shortTitle: "3D Isometric (Right)",
-    tag: "Opposite 3D",
-    badge: "Coil & Filter",
-    highlight: "Airtight Seal & Duct Transition",
-    description: "Highlights the opposed-blade volume control damper connection, multi-tier filter bank tracks, and precision corner castings for rigid vibration-free operation."
-  },
-  {
-    title: "Angle 04: Discharge Damper End Profile & Blade Linkage",
-    shortTitle: "Damper Profile",
-    tag: "Damper Profile",
-    badge: "Airfoil Damper",
-    highlight: "Aerofoil Louvers & Linkage",
-    description: "Detailed end profile of the aerofoil extruded aluminum damper blades with dual-lip EPDM seals and manual quadrant/actuator mounting linkage for precise balancing."
+    title: "AHU (DX Type System) — Modular Double-Skin Construction",
+    shortTitle: "DX System Isometric View",
+    tag: "DX Type System",
+    badge: "DX Coil & TB2",
+    highlight: "Double-Skin PUF & DX Coil Stubs",
+    description: "Modular thermal-break extruded aluminum profiles with 25mm / 50mm high-density injected PUF (40 kg/m³) panels, factory-fitted Direct Expansion (DX) cooling coil connections, multi-stage EU4 to HEPA filtration tracks, and high-efficiency fan section."
   }
 ];
 
@@ -222,7 +189,7 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
     <div className="min-h-screen bg-slate-50 text-slate-900 flex flex-col justify-between selection:bg-red-500 selection:text-white">
       {/* Top Reading Scroll Progress Bar */}
       <motion.div
-        className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-red-500 via-blue-600 to-[#1B2A6B] origin-left z-50 shadow-sm"
+        className="fixed top-0 left-0 right-0 h-1 bg-linear-to-r from-red-500 via-blue-600 to-[#1B2A6B] origin-left z-50 shadow-sm"
         style={{ scaleX }}
       />
 
@@ -299,7 +266,7 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
         </div>
 
         {/* Section 1: Product Hero Section */}
-        <section id="overview" className="py-12 sm:py-16 bg-gradient-to-b from-white via-slate-50 to-slate-100 border-b border-slate-200">
+        <section id="overview" className="py-12 sm:py-16 bg-linear-to-b from-white via-slate-50 to-slate-100 border-b border-slate-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
               {/* Left Column: Product Info & CTAs */}
@@ -452,7 +419,7 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
                   </div>
 
                   {/* Visualizer Display Area */}
-                  <div className="p-4 bg-slate-50 relative min-h-[340px] flex flex-col items-center justify-center overflow-hidden">
+                  <div className="p-4 bg-slate-50 relative min-h-85 flex flex-col items-center justify-center overflow-hidden">
                     {/* Background Blueprint Grid */}
                     <div className="absolute inset-0 bg-tech-grid opacity-35 pointer-events-none" />
 
@@ -484,16 +451,12 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
                             className="w-full h-full object-contain filter drop-shadow-md transition-transform duration-500 group-hover:scale-105"
                           />
                           {/* Floating Angle Badge */}
-                          {galleryImages.length > 1 && (
-                            <div className="absolute top-2.5 left-2.5 px-2.5 py-1 rounded-md bg-white/95 backdrop-blur-md border border-slate-200 text-[10px] font-mono text-red-600 font-bold flex items-center gap-1.5 shadow-xs">
-                              <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
-                              <span>
-                                {product.slug === "ahu" && AHU_ANGLE_METADATA[selectedPhotoIndex]
-                                  ? AHU_ANGLE_METADATA[selectedPhotoIndex].tag
-                                  : `VIEW 0${selectedPhotoIndex + 1}`}
-                              </span>
-                            </div>
-                          )}
+                          <div className="absolute top-2.5 left-2.5 px-2.5 py-1 rounded-md bg-white/95 backdrop-blur-md border border-slate-200 text-[10px] font-mono text-red-600 font-bold flex items-center gap-1.5 shadow-xs">
+                            <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
+                            <span>
+                              {product.heroBadge || product.name.toUpperCase()}
+                            </span>
+                          </div>
                         </motion.div>
                       )}
                     </AnimatePresence>
@@ -503,7 +466,7 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
                       <div className="w-full pt-3 mt-2 border-t border-slate-200 relative z-10 flex items-center justify-between gap-2">
                         <span className="text-[10px] font-mono uppercase tracking-wider text-slate-500 flex items-center gap-1">
                           <Eye className="w-3 h-3 text-red-600" />
-                          <span>4 REAL ANGLES:</span>
+                          <span>{galleryImages.length} VIEWS AVAILABLE:</span>
                         </span>
                         <div className="flex items-center gap-1.5">
                           {galleryImages.map((imgUrl, idx) => {
@@ -584,19 +547,27 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
                       <span>
                         {product.slug === "ahu" && AHU_ANGLE_METADATA[showcasePhotoIndex]
                           ? AHU_ANGLE_METADATA[showcasePhotoIndex].title
-                          : `INSPECTION ANGLE 0${showcasePhotoIndex + 1}`}
+                          : product.slug === "airwashers"
+                          ? "Industrial Airwasher Unit — High-Saturation Evaporative Cooling System"
+                          : product.slug === "fcu"
+                          ? "FCU (Fan Coil Unit) — Ultra-Slim Ceiling Concealed Chilled Water & DX Series"
+                          : `${product.name} — Industrial Build Specification`}
                       </span>
                     </div>
 
                     <span className="hidden sm:inline-flex px-2.5 py-1.5 rounded-lg bg-white/95 backdrop-blur-md border border-slate-200 text-[10px] font-mono text-red-600 font-bold shadow-xs">
                       {product.slug === "ahu" && AHU_ANGLE_METADATA[showcasePhotoIndex]
                         ? AHU_ANGLE_METADATA[showcasePhotoIndex].badge
-                        : "EUROCON OEM"}
+                        : product.slug === "airwashers"
+                        ? "90% Saturation / Celdek 5090"
+                        : product.slug === "fcu"
+                        ? "Ultra-Slim 220mm / 28 dBA"
+                        : product.heroBadge || "EUROCON OEM"}
                     </span>
                   </div>
 
                   {/* Main Showcase Image Display */}
-                  <div className="relative h-80 sm:h-[400px] w-full p-6 sm:p-8 flex items-center justify-center">
+                  <div className="relative h-80 sm:h-100 w-full p-6 sm:p-8 flex items-center justify-center">
                     <AnimatePresence mode="wait">
                       <motion.img
                         key={showcasePhotoIndex}

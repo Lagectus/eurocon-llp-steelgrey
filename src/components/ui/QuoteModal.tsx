@@ -30,11 +30,13 @@ export default function QuoteModal({ isOpen, onClose, initialProduct = "" }: Quo
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
 
-  useEffect(() => {
-    if (initialProduct) {
-      setFormData((prev) => ({ ...prev, product: initialProduct }));
-    }
-  }, [initialProduct]);
+  const [prevInitialProduct, setPrevInitialProduct] = useState(initialProduct);
+  const [ticketId, setTicketId] = useState(849201);
+
+  if (initialProduct && initialProduct !== prevInitialProduct) {
+    setPrevInitialProduct(initialProduct);
+    setFormData((prev) => ({ ...prev, product: initialProduct }));
+  }
 
   useEffect(() => {
     if (isOpen) {
@@ -71,6 +73,7 @@ export default function QuoteModal({ isOpen, onClose, initialProduct = "" }: Quo
     if (!validate()) return;
 
     setIsSubmitting(true);
+    setTicketId(Math.floor(100000 + Math.random() * 900000));
 
     // Simulate enterprise RFQ routing
     setTimeout(() => {
@@ -149,7 +152,7 @@ export default function QuoteModal({ isOpen, onClose, initialProduct = "" }: Quo
                     RFQ Specification Submitted Successfully!
                   </h4>
                   <p className="text-sm text-slate-600 max-w-md mx-auto">
-                    Thank you, <span className="font-semibold text-slate-900">{formData.fullName}</span>. Your RFQ inquiry for <span className="font-semibold text-red-600">{formData.product}</span> has been logged under reference ticket <span className="font-mono font-bold">#EUR-{Math.floor(100000 + Math.random() * 900000)}</span>.
+                    Thank you, <span className="font-semibold text-slate-900">{formData.fullName}</span>. Your RFQ inquiry for <span className="font-semibold text-red-600">{formData.product}</span> has been logged under reference ticket <span className="font-mono font-bold">#EUR-{ticketId}</span>.
                   </p>
                   <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-600 max-w-md mx-auto text-left space-y-1">
                     <p className="font-semibold text-slate-800">What happens next?</p>

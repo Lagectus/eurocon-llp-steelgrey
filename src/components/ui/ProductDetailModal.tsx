@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, CheckCircle2, Sliders, ShieldCheck, ArrowRight, FileText, Wind, Layers } from "lucide-react";
 import { Product } from "@/types";
-import ProductSchematic from "./ProductSchematic";
 
 interface ProductDetailModalProps {
   product: Product | null;
@@ -19,11 +18,13 @@ export default function ProductDetailModal({
   onClose,
   onOpenQuoteModal,
 }: ProductDetailModalProps) {
+  const [prevProductId, setPrevProductId] = useState(product?.id);
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState(0);
 
-  useEffect(() => {
+  if (product?.id !== prevProductId) {
+    setPrevProductId(product?.id);
     setSelectedPhotoIndex(0);
-  }, [product?.id]);
+  }
 
   // Prevent body scroll when modal is open
   useEffect(() => {
@@ -69,7 +70,7 @@ export default function ProductDetailModal({
                   </span>
                   {product.subCategory && (
                     <span className="text-xs text-slate-400 font-mono">
-                      // {product.subCategory}
+                      {"// "}{product.subCategory}
                     </span>
                   )}
                 </div>
@@ -110,26 +111,26 @@ export default function ProductDetailModal({
                   </div>
                 </div>
 
-                <div className="md:col-span-6 bg-slate-950 rounded-xl border border-slate-800 overflow-hidden relative group p-3 flex flex-col items-center justify-center">
+                <div className="md:col-span-6 bg-slate-50 rounded-xl border border-slate-200 overflow-hidden relative group p-3 flex flex-col items-center justify-center">
                   <div className="w-full h-48 flex items-center justify-center overflow-hidden">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={(product.gallery && product.gallery[selectedPhotoIndex]) || product.image}
                       alt={product.name}
-                      className="w-full h-full object-contain filter drop-shadow-xl transition-transform duration-500 group-hover:scale-105"
+                      className="w-full h-full object-contain filter drop-shadow-md transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
                   {product.gallery && product.gallery.length > 1 && (
-                    <div className="flex items-center gap-1.5 pt-2 mt-1 border-t border-slate-800/80 w-full justify-center">
+                    <div className="flex items-center gap-1.5 pt-2 mt-1 border-t border-slate-200 w-full justify-center">
                       {product.gallery.map((imgUrl, idx) => (
                         <button
                           key={idx}
                           type="button"
                           onClick={() => setSelectedPhotoIndex(idx)}
-                          className={`w-11 h-8 rounded-lg overflow-hidden border p-0.5 bg-slate-900 transition-all ${
+                          className={`w-11 h-8 rounded-lg overflow-hidden border p-0.5 bg-white transition-all ${
                             selectedPhotoIndex === idx
                               ? "border-red-500 ring-2 ring-red-500/40"
-                              : "border-slate-800 opacity-60 hover:opacity-100"
+                              : "border-slate-200 opacity-60 hover:opacity-100"
                           }`}
                         >
                           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -236,7 +237,7 @@ export default function ProductDetailModal({
             {/* Modal Footer CTA */}
             <div className="p-4 sm:p-6 bg-slate-50 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
               <span className="text-xs text-slate-500 font-mono">
-                Model: EUROCON-{product.slug.toUpperCase()} // Spec Rev 2026.1
+                Model: EUROCON-{product.slug.toUpperCase()}{" // Spec Rev 2026.1"}
               </span>
               <div className="flex items-center gap-3 w-full sm:w-auto">
                 <button

@@ -69,12 +69,9 @@ export const PRODUCTS_DATA: Product[] = [
     shortDescription: "Engineered modular Double-Skin Air Handling Units (AHUs) with thermal-break extruded aluminum profiles, EU4 to HEPA multi-stage filtration, and high-efficiency direct-drive EC/Plug fans.",
     fullDescription: "EUROCON Double Skin Air Handling Units (AHUs) are engineered to deliver conditioned, filtered, and precisely balanced air across large commercial complexes, cleanroom facilities, pharmaceutical labs, data centers, and industrial facilities. Built with 25mm / 50mm injected PUF insulation (40 kg/m³ density) in thermal-break extruded aluminum profiles, Eurocon AHUs eliminate condensation and thermal bridging while ensuring whisper-quiet acoustic damping and Class L1/L2 casing air leakage compliance.",
     heroBadge: "AHRI 410 & EN 1886 Thermal Break",
-    image: "/images/products/ahu/1.png",
+    image: "/images/products/AHU.png",
     gallery: [
-      "/images/products/ahu/1.png",
-      "/images/products/ahu/2.png",
-      "/images/products/ahu/3.png",
-      "/images/products/ahu/4.png"
+      "/images/products/AHU.png"
     ],
     cfdImage: "/images/products/cfd-ahu.jpg",
     schematicSvgType: "ahu",
@@ -133,7 +130,10 @@ export const PRODUCTS_DATA: Product[] = [
     shortDescription: "Industrial Air Washer units equipped with Celdek 5090/7090 cross-fluted cellulose evaporative pads, high-pressure PVC mist eliminators, and heavy-gauge SS304 sump tanks, delivering up to 90% saturation efficiency.",
     fullDescription: "EUROCON Air Washer Units provide high-volume evaporative cooling and continuous humidification/air cleaning for massive industrial shop floors, textile mills, printing facilities, packaging units, and power plants. Engineered with durable Celdek pads or spray-bank technology, coupled with backward curved or aerofoil centrifugal blowers, Eurocon Airwashers lower ambient temperatures economically with a fraction of the power consumption of conventional DX refrigeration.",
     heroBadge: "Up to 90% Saturation Efficiency",
-    image: "/images/products/airwashers.jpg",
+    image: "/images/products/industrial-airwashers.png",
+    gallery: [
+      "/images/products/industrial-airwashers.png"
+    ],
     cfdImage: "/images/products/cfd-airwashers.jpg",
     schematicSvgType: "airwasher",
     specs: {
@@ -189,7 +189,10 @@ export const PRODUCTS_DATA: Product[] = [
     shortDescription: "Modular Fan Sections housing direct-drive plug fans or DIDW backward curved blowers on vibration-isolated sub-bases, optimized for AHU retrofits, fresh air intake, and process exhaust.",
     fullDescription: "EUROCON Fan Sections are self-contained aerodynamic supply and exhaust modules designed for seamless integration into built-up HVAC air systems, custom plenums, and industrial processes. Featuring aerodynamically profiled aluminum or high-strength steel impellers dynamically balanced to ISO 1940 Grade G2.5, spring-isolated floating inertia bases, and acoustic double-skin panels.",
     heroBadge: "ISO 1940 Grade G2.5 Dynamic Balancing",
-    image: "/images/products/fan-section.jpg",
+    image: "/images/products/fan-sections.png",
+    gallery: [
+      "/images/products/fan-sections.png"
+    ],
     cfdImage: "/images/products/cfd-fan-section.jpg",
     schematicSvgType: "fansection",
     specs: {
@@ -245,7 +248,10 @@ export const PRODUCTS_DATA: Product[] = [
     shortDescription: "Heavy-duty acoustic cabinet exhaust fans engineered with double-inlet centrifugal DIDW wheels, internal sound-absorbing acoustic lining, and multi-position inlet/outlet spigots.",
     fullDescription: "EUROCON Cabinet Exhaust Units are ultra-quiet, enclosed in-line extraction systems tailored for commercial kitchen hood exhaust, laboratory fume clearance, multi-story bathroom exhaust, and factory ventilation. Fabricated with a robust extruded aluminum pentapost frame and double-skin acoustic panels lined with high-density rockwool / PUF insulation.",
     heroBadge: "Acoustic Double Skin & Low Noise",
-    image: "/images/products/cabinet-exhaust.jpg",
+    image: "/images/products/cabinet-exhaust.png",
+    gallery: [
+      "/images/products/cabinet-exhaust.png"
+    ],
     cfdImage: "/images/products/cfd-cabinet-exhaust.jpg",
     schematicSvgType: "cabinetexhaust",
     specs: {
@@ -301,7 +307,10 @@ export const PRODUCTS_DATA: Product[] = [
     shortDescription: "Low-profile ceiling-concealed and cassette Fan Coil Units (FCU) engineered with multi-speed or EC brushless motors, hydrophilic-finned copper coils, and sloped condensation drain trays.",
     fullDescription: "EUROCON Fan Coil Units (FCU) are precision-engineered for zonal climate control in commercial offices, luxury hotels, hospital patient rooms, and residential towers. Featuring an ultra-slim chassis (as low as 220mm height) that easily fits tight ceiling voids, low-noise dynamically balanced multi-blade blowers, and high-efficiency copper tube heat exchangers with hydrophilic coated fins.",
     heroBadge: "Ultra-Slim 220mm Profile & 28 dBA",
-    image: "/images/products/fcu.jpg",
+    image: "/images/products/FCU-(fancoilunit).png",
+    gallery: [
+      "/images/products/FCU-(fancoilunit).png"
+    ],
     cfdImage: "/images/products/cfd-fcu.jpg",
     schematicSvgType: "fcu",
     specs: {
@@ -358,7 +367,10 @@ export const PRODUCTS_DATA: Product[] = [
     shortDescription: "High-efficiency centrifugal fans engineered with aerodynamically contoured backward curved or aerofoil impellers, delivering high static pressure and low acoustic signatures.",
     fullDescription: "EUROCON Centrifugal Air Movement Systems are precision-engineered for heavy industrial exhaust, HVAC air handling, boiler draft, cleanroom pressurization, and corrosive fume evacuation. Constructed from heavy-gauge mild steel, stainless steel (SS304/SS316), or spark-resistant aluminum.",
     heroBadge: "AMCA 210 Certified Impeller Profiles",
-    image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/products/centrifugal-fan.png",
+    gallery: [
+      "/images/products/centrifugal-fan.png"
+    ],
     schematicSvgType: "centrifugal",
     specs: {
       airflowRange: "1,000 to 180,000 CFM (1,700 to 305,000 m³/h)",
@@ -404,7 +416,10 @@ export const PRODUCTS_DATA: Product[] = [
     shortDescription: "Direct and belt-driven axial flow fans featuring cast aluminum aerofoil blades with on-site pitch adjustability for exact airflow modulation and energy optimization.",
     fullDescription: "EUROCON Axial Flow Series delivers massive air displacement across long duct runs, basement ventilation shafts, factory floors, and marine/offshore installations. Available in standard casing, long casing, bifurcated motor-isolated design for hostile environments, and guide-vane high pressure series.",
     heroBadge: "Die-Cast Aerofoil Blades",
-    image: "https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/products/axial-fan.png",
+    gallery: [
+      "/images/products/axial-fan.png"
+    ],
     schematicSvgType: "axial",
     specs: {
       airflowRange: "2,000 to 220,000 CFM (3,400 to 375,000 m³/h)",
@@ -450,7 +465,10 @@ export const PRODUCTS_DATA: Product[] = [
     shortDescription: "Sleek low-profile impulse and induction jet fans designed to eliminate costly ductwork in enclosed parking structures and highway tunnels, providing dynamic CO clearing and high-temperature smoke extraction.",
     fullDescription: "EUROCON Jet Ventilation Systems utilize impulse momentum theory to induce and steer air masses across open underground volumes toward main exhaust shafts. Available in unidirectional and 100% reversible symmetric thrust variants, certified for continuous ventilation and extreme emergency fire scenarios.",
     heroBadge: "300°C / 2-Hour Fire Certified",
-    image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/products/jet-fan.png",
+    gallery: [
+      "/images/products/jet-fan.png"
+    ],
     schematicSvgType: "jet",
     specs: {
       airflowRange: "Thrust range: 25 N to 120 N (Impulse) | 4,000 to 12,500 CFM (Induction)",
@@ -495,7 +513,10 @@ export const PRODUCTS_DATA: Product[] = [
     shortDescription: "Ultra-quiet inline centrifugal and mixed-flow fans enclosed in double-skin insulated acoustic cabinets, engineered for false-ceiling installations in premium commercial, hospital, and residential buildings.",
     fullDescription: "EUROCON Inline Fan Series combines high static pressure capability with acoustic comfort. Designed with mixed-flow aerodynamic impellers or forward/backward curved centrifugal wheels, these units fit seamlessly into straight duct runs to provide fresh air supply, toilet exhaust, and zone pressurization.",
     heroBadge: "Whisper-Quiet Acoustic Lining",
-    image: "https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/products/inline-fan.png",
+    gallery: [
+      "/images/products/inline-fan.png"
+    ],
     schematicSvgType: "inline",
     specs: {
       airflowRange: "250 to 18,000 CFM (425 to 30,500 m³/h)",
@@ -541,7 +562,10 @@ export const PRODUCTS_DATA: Product[] = [
     shortDescription: "Engineered with aviation-grade extruded aerofoil blades and permanent magnet synchronous motors (PMSM), moving immense air volumes with minimal electrical consumption.",
     fullDescription: "EUROCON HVLS Fans create a continuous, soothing breeze that breaks up thermal stratification in high-ceiling structures. By lowering perceived indoor temperatures by 4°C to 7°C, they drastically reduce cooling energy costs while keeping workers comfortable and preventing moisture condensation on inventory.",
     heroBadge: "PMSM Direct Drive Gearless Technology",
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/products/hvls-fan.png",
+    gallery: [
+      "/images/products/hvls-fan.png"
+    ],
     schematicSvgType: "hvls",
     specs: {
       airflowRange: "80,000 to 450,000 CFM per fan unit",
@@ -587,7 +611,10 @@ export const PRODUCTS_DATA: Product[] = [
     shortDescription: "Certified high-temperature smoke extract fans and staircase pressurization units engineered to keep escape routes clear of toxic fumes and heat during critical fire incidents.",
     fullDescription: "EUROCON Life-Safety Smoke Management Systems comply with rigorous global fire safety benchmarks (EN 12101-3, BS 7346, NFPA 92). From high-pressure centrifugal smoke extract units to roof-mounted vertical discharge cowls and lobby pressurization fans, every system is designed for instant emergency startup.",
     heroBadge: "EN 12101-3 F400 Certified",
-    image: "https://images.unsplash.com/photo-1590247813693-5541d1c609fd?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/products/smoke-exhaust.png",
+    gallery: [
+      "/images/products/smoke-exhaust.png"
+    ],
     schematicSvgType: "smoke",
     specs: {
       airflowRange: "1,500 to 160,000 CFM",
@@ -632,7 +659,10 @@ export const PRODUCTS_DATA: Product[] = [
     shortDescription: "CNC-fabricated galvanized iron (GI), stainless steel, and phenolic pre-insulated ducting systems engineered to SMACNA Class A leakage standards for optimal airflow delivery.",
     fullDescription: "EUROCON Pre-Fabricated Duct Systems eliminate manual on-site sheet metal fabrication errors. Produced on automated CNC coil lines with integrated TDF/TDC four-bolt flange connections, our ducts guarantee tight seam seals, precise geometric tolerances, and minimal static pressure loss across complex HVAC layouts.",
     heroBadge: "SMACNA Class A Air Leakage Compliant",
-    image: "https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/products/pre-fabricated-duct.png",
+    gallery: [
+      "/images/products/pre-fabricated-duct.png"
+    ],
     schematicSvgType: "duct",
     specs: {
       airflowRange: "Engineered for 500 to 250,000 CFM duct runs",
@@ -677,7 +707,10 @@ export const PRODUCTS_DATA: Product[] = [
     shortDescription: "Engineered pollution control scrubbers removing toxic fumes, acid mists, organic vapors, and particulate emissions to ensure strict environmental regulatory compliance.",
     fullDescription: "EUROCON Industrial Air Scrubbing Systems utilize advanced mass-transfer packed columns, high-energy venturi nozzles, and chemical neutralizing spray headers to scrub hazardous gaseous pollutants from industrial exhausts. Manufactured in corrosion-proof PP/FRP, SS316L, or lined carbon steel.",
     heroBadge: "99.5% Gas Absorption Efficiency",
-    image: "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/products/wet-scrubber.png",
+    gallery: [
+      "/images/products/wet-scrubber.png"
+    ],
     schematicSvgType: "scrubber",
     specs: {
       airflowRange: "1,000 to 85,000 CFM (1,700 to 145,000 m³/h)",

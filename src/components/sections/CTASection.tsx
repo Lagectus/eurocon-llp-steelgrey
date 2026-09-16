@@ -35,7 +35,7 @@ export default function CTASection({ onOpenQuoteModal }: CTASectionProps) {
           transition={{ duration: 0.6 }}
           className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1]"
         >
-          LET'S ENGINEER YOUR NEXT{" "}
+          LET&apos;S ENGINEER YOUR NEXT{" "}
           <br className="hidden sm:inline" />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-red-300 to-[#1B2A6B]">
             AIRFLOW SOLUTION.

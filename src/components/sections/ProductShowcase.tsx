@@ -79,7 +79,7 @@ export default function ProductShowcase({
                 {/* Header Tag */}
                 <div className="flex items-center justify-between text-xs font-mono text-slate-400 mb-4">
                   <span className="text-red-400 font-bold">
-                    0{idx + 1} // {product.category.toUpperCase()}
+                    0{idx + 1}{" // "}{product.category.toUpperCase()}
                   </span>
                   <span className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 text-[10px]">
                     {product.heroBadge}

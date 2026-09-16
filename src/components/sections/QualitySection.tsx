@@ -66,7 +66,7 @@ export default function QualitySection() {
                 </div>
 
                 <div className="text-[11px] font-mono font-bold text-red-600 uppercase tracking-wider mb-1">
-                  // {step.code}
+                  {"// "}{step.code}
                 </div>
 
                 <h3 className="text-base sm:text-lg font-extrabold text-slate-900 leading-snug group-hover:text-red-700 transition-colors">

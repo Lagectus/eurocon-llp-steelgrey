@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
 import { ArrowRight, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 import ProductSchematic from "../ui/ProductSchematic";
@@ -11,16 +10,17 @@ interface CompactProductsProps {
   onSelectProduct?: (product: Product) => void;
 }
 
-export default function CompactProducts({ onSelectProduct }: CompactProductsProps) {
+export default function CompactProducts({}: CompactProductsProps = {}) {
   const products = [
     {
       id: "prod-ahu",
       num: "01",
-      name: "AHU (Air Handling Unit)",
-      tagline: "Thermal-break double-skin modular AHUs with AHRI certified coils and plug fan efficiency.",
+      name: "AHU (DX Type System)",
+      tagline: "Thermal-break double-skin modular AHUs with Direct Expansion (DX) coils and plug fan efficiency.",
       schematicType: "ahu" as const,
-      badge: "AHRI 410 / EN 1886",
+      badge: "DX Type System",
       href: "/products/ahu",
+      image: "/images/products/AHU.png",
     },
     {
       id: "prod-airwashers",
@@ -30,6 +30,7 @@ export default function CompactProducts({ onSelectProduct }: CompactProductsProp
       schematicType: "airwasher" as const,
       badge: "90% Saturation",
       href: "/products/airwashers",
+      image: "/images/products/industrial-airwashers.png",
     },
     {
       id: "prod-fan-section",
@@ -39,6 +40,7 @@ export default function CompactProducts({ onSelectProduct }: CompactProductsProp
       schematicType: "fansection" as const,
       badge: "ISO 1940 G2.5",
       href: "/products/fan-section",
+      image: "/images/products/fan-sections.png",
     },
     {
       id: "prod-cabinet-exhaust",
@@ -48,6 +50,7 @@ export default function CompactProducts({ onSelectProduct }: CompactProductsProp
       schematicType: "cabinetexhaust" as const,
       badge: "Acoustic Box",
       href: "/products/cabinet-exhaust-unit",
+      image: "/images/products/cabinet-exhaust.png",
     },
     {
       id: "prod-fcu",
@@ -57,6 +60,7 @@ export default function CompactProducts({ onSelectProduct }: CompactProductsProp
       schematicType: "fcu" as const,
       badge: "Ultra-Slim 220mm",
       href: "/products/fcu",
+      image: "/images/products/FCU-(fancoilunit).png",
     },
     {
       id: "prod-centrifugal",
@@ -66,6 +70,7 @@ export default function CompactProducts({ onSelectProduct }: CompactProductsProp
       schematicType: "centrifugal" as const,
       badge: "AMCA 210",
       href: "/products/centrifugal-fans",
+      image: "/images/products/centrifugal-fan.png",
     },
   ];
 
@@ -102,19 +107,31 @@ export default function CompactProducts({ onSelectProduct }: CompactProductsProp
               className="group relative bg-white rounded-2xl border border-slate-200 hover:border-red-400 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden cursor-pointer hover:-translate-y-1.5"
             >
               {/* Top Diagram Preview */}
-              <div className="relative bg-slate-100/60 p-5 border-b border-slate-100 overflow-hidden">
-                <div className="flex items-center justify-between mb-2">
+              <div className="relative bg-white p-5 border-b border-slate-100 overflow-hidden">
+                {/* Subtle industrial grid */}
+                <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] bg-size-[14px_14px] opacity-60 pointer-events-none" />
+
+                <div className="flex items-center justify-between mb-3 relative z-10">
                   <span className="font-mono text-xs font-black text-red-600 group-hover:translate-x-1 transition-transform">
                     {product.num}
                   </span>
-                  <span className="inline-flex items-center gap-1 text-[10px] font-mono px-2 py-0.5 rounded-full bg-white border border-slate-200 text-slate-600">
+                  <span className="inline-flex items-center gap-1 text-[10px] font-mono font-semibold px-2.5 py-0.5 rounded-full bg-slate-50 border border-slate-200 text-slate-700 shadow-xs">
                     <ShieldCheck className="w-3 h-3 text-red-600" />
                     {product.badge}
                   </span>
                 </div>
 
-                <div className="py-2 transform group-hover:scale-105 transition-transform duration-500">
-                  <ProductSchematic type={product.schematicType} className="h-36" />
+                <div className="h-56 sm:h-64 flex items-center justify-center relative z-10 p-2">
+                  {"image" in product && product.image ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="w-full h-full object-contain filter drop-shadow-md transform group-hover:scale-105 transition-transform duration-500"
+                    />
+                  ) : (
+                    <ProductSchematic type={product.schematicType} className="h-52 w-full" />
+                  )}
                 </div>
               </div>
 
@@ -138,8 +155,8 @@ export default function CompactProducts({ onSelectProduct }: CompactProductsProp
               </div>
 
               {/* Expanding Bottom Line */}
-              <div className="h-[3px] w-full bg-slate-100 relative">
-                <div className="h-full bg-gradient-to-r from-red-500 to-[#1B2A6B] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+              <div className="h-0.75 w-full bg-slate-100 relative">
+                <div className="h-full bg-linear-to-r from-red-500 to-[#1B2A6B] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
               </div>
             </Link>
           ))}
