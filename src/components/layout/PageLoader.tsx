@@ -65,7 +65,7 @@ export default function PageLoader() {
               className="space-y-1"
             >
               <h1 className="text-2xl sm:text-3xl font-extrabold tracking-wider text-white">
-                <span className="text-red-500">EURO</span><span className="text-white">CON</span> <span className="text-slate-400 font-light">SYSTEM LLP</span>
+                <span className="text-blue-500">EURO</span><span className="text-white">CON</span> <span className="text-slate-400 font-light">SYSTEM LLP</span>
               </h1>
               <p className="text-xs tracking-[0.25em] text-slate-400 uppercase">
                 Engineered Airflow Solutions
@@ -76,7 +76,7 @@ export default function PageLoader() {
             <div className="w-48 sm:w-64 mt-8 space-y-2">
               <div className="h-[2px] w-full bg-slate-800 rounded-full overflow-hidden">
                 <motion.div
-                  className="h-full bg-gradient-to-r from-red-600 via-red-500 to-[#1B2A6B]"
+                  className="h-full bg-gradient-to-r from-blue-600 via-blue-500 to-slate-400"
                   style={{ width: `${progress}%` }}
                   transition={{ ease: "easeOut" }}
                 />

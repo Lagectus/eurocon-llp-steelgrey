@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight, CheckCircle2, ShieldCheck } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
@@ -102,41 +102,43 @@ export default function AboutStorytelling() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="about-preview" className="relative py-14 sm:py-18 bg-white overflow-hidden">
-      {/* Subtle background accent */}
-      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-red-50/50 rounded-full blur-[120px] pointer-events-none -translate-x-1/2 -translate-y-1/2" />
+    <section ref={sectionRef} id="about-preview" className="relative py-16 sm:py-24 bg-white border-b border-slate-200 overflow-hidden text-[#334155]">
+      {/* Background technical grid and soft blue ambience */}
+      <div className="absolute inset-0 bg-tech-grid opacity-35 pointer-events-none" />
+      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-[120px] pointer-events-none -translate-x-1/2 -translate-y-1/2" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
           {/* Left: Image with clip-path reveal */}
           <div className="relative order-2 lg:order-1">
             <div
               ref={imageWrapRef}
-              className="relative rounded-3xl overflow-hidden shadow-2xl will-change-[clip-path]"
+              className="relative rounded-3xl overflow-hidden shadow-xl border border-slate-200 bg-slate-50 will-change-[clip-path]"
               style={{ clipPath: "inset(50% 50% 50% 50%)" }}
             >
-              <div className="relative h-[400px] sm:h-[520px] overflow-hidden bg-gradient-to-br from-slate-100 via-slate-50 to-slate-200 flex items-center justify-center p-6 border border-slate-200">
+              <div className="relative h-[400px] sm:h-[520px] overflow-hidden bg-gradient-to-br from-slate-50 via-white to-slate-100 flex items-center justify-center p-6 border border-slate-200">
                 {/* Tech grid background */}
-                <div className="absolute inset-0 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] bg-[length:16px_16px] opacity-60 pointer-events-none" />
+                <div className="absolute inset-0 bg-[radial-gradient(#CBD5E1_1px,transparent_1px)] bg-[length:16px_16px] opacity-60 pointer-events-none" />
 
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   ref={imageRef}
                   src="/images/products/fan-section.png"
                   alt="Eurocon High-Precision Modular Fan Section"
-                  className="w-full h-full object-contain filter drop-shadow-2xl will-change-transform transform hover:scale-105 transition-transform duration-700 relative z-10"
+                  className="w-full h-full object-contain filter drop-shadow-md will-change-transform transform hover:scale-105 transition-transform duration-700 relative z-10"
                 />
 
-                {/* Bottom overlay card */}
-                <div className="absolute bottom-5 left-5 right-5 p-4 rounded-xl bg-slate-950/90 backdrop-blur-md border border-slate-800 text-white flex items-center justify-between z-20 shadow-xl">
+                {/* Bottom overlay card in white */}
+                <div className="absolute bottom-5 left-5 right-5 p-4 rounded-xl bg-white/95 backdrop-blur-md border border-slate-200 text-[#334155] flex items-center justify-between z-20 shadow-lg">
                   <div className="space-y-0.5">
-                    <span className="text-[10px] font-mono text-red-400 uppercase font-bold">
+                    <span className="text-[10px] font-mono text-blue-600 uppercase font-bold tracking-wider">
                       PRECISION AIR MANAGEMENT
                     </span>
-                    <p className="text-xs font-semibold text-slate-200">
+                    <p className="text-xs font-semibold text-[#334155]">
                       Modular Fan Section & Dynamic Balancing (ISO 1940 G2.5)
                     </p>
                   </div>
+                  <ShieldCheck className="w-5 h-5 text-blue-600 shrink-0" />
                 </div>
               </div>
             </div>
@@ -146,56 +148,62 @@ export default function AboutStorytelling() {
           <div className="space-y-6 order-1 lg:order-2">
             <div
               ref={eyebrowRef}
-              className="inline-flex items-center gap-2 text-xs font-mono font-bold tracking-[0.2em] uppercase text-red-600 opacity-0"
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-xs font-mono font-bold tracking-[0.2em] uppercase text-blue-700 opacity-0 shadow-xs"
             >
-              <span className="w-8 h-[2px] bg-red-500" />
+              <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
               <span>THE EUROCON PHILOSOPHY</span>
             </div>
 
             <h2
               ref={headingRef}
-              className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.05] opacity-0"
+              className="text-4xl sm:text-5xl lg:text-6xl font-black text-[#334155] tracking-tight leading-[1.08] opacity-0"
             >
               ENGINEERING AIRFLOW.
               <br />
-              <span className="text-red-600">CREATING COMFORT.</span>
+              <span className="text-blue-600">CREATING COMFORT.</span>
             </h2>
 
-            <div ref={bodyRef} className="space-y-4 text-slate-600 text-base sm:text-lg leading-relaxed opacity-0">
+            <div ref={bodyRef} className="space-y-4 text-[#64748B] text-base sm:text-lg leading-relaxed opacity-0">
               <p>
-                <strong className="text-slate-900 font-bold">EUROCON SYSTEM LLP</strong> delivers advanced air management, ventilation and industrial HVAC engineering solutions designed for demanding environmental, thermal and life-safety applications.
+                <strong className="text-[#334155] font-bold">EUROCON SYSTEM LLP</strong> delivers advanced air management, ventilation and industrial HVAC engineering solutions designed for demanding environmental, thermal and life-safety applications.
               </p>
-              <p className="text-sm sm:text-base text-slate-500">
+              <p className="text-sm sm:text-base text-[#64748B]">
                 From subterranean metro transit smoke routing and sterile cleanrooms to expansive manufacturing shopfloors, our systems guarantee aerodynamic precision, acoustic comfort, and lifelong durability.
               </p>
             </div>
 
-            <div ref={ctaLinkRef} className="pt-2 opacity-0">
+            <div ref={ctaLinkRef} className="pt-2 flex flex-wrap items-center gap-4 opacity-0">
               <Link
                 href="/about"
-                className="group inline-flex items-center gap-2 text-sm font-bold text-slate-900 hover:text-red-600 transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-800 text-white font-bold text-sm tracking-wide transition-all shadow-md shadow-blue-600/20 hover:shadow-lg"
               >
                 <span>Discover Eurocon</span>
-                <ArrowRight className="w-4 h-4 text-red-600 transform group-hover:translate-x-1.5 transition-transform" />
+                <ArrowRight className="w-4 h-4 text-white" />
+              </Link>
+              <Link
+                href="/quality"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white hover:bg-slate-50 text-[#334155] font-bold text-sm tracking-wide border border-slate-300 hover:border-blue-600 hover:text-blue-600 transition-all shadow-xs"
+              >
+                <span>Quality Standards</span>
               </Link>
             </div>
           </div>
         </div>
 
         {/* Highlight Cards */}
-        <div ref={cardsRef} className="mt-10 sm:mt-12 pt-8 sm:pt-10 border-t border-slate-200 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div ref={cardsRef} className="mt-12 sm:mt-16 pt-10 sm:pt-12 border-t border-slate-200 grid grid-cols-1 md:grid-cols-3 gap-6">
           {highlights.map((item) => (
             <div
               key={item.title}
-              className="group p-6 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-red-300 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+              className="group p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-500 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
             >
-              <div className="flex items-center gap-2.5 mb-3">
-                <CheckCircle2 className="w-5 h-5 text-red-600 shrink-0" />
-                <h3 className="font-bold text-base text-slate-900 group-hover:text-red-600 transition-colors">
-                  {item.title}
-                </h3>
+              <div className="w-10 h-10 rounded-xl bg-blue-50 border border-blue-200 text-blue-600 flex items-center justify-center mb-3 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                <CheckCircle2 className="w-5 h-5" />
               </div>
-              <p className="text-sm text-slate-600 leading-relaxed pl-7.5">
+              <h3 className="font-bold text-base text-[#334155] group-hover:text-blue-600 transition-colors">
+                {item.title}
+              </h3>
+              <p className="text-sm text-[#64748B] leading-relaxed mt-1.5 font-normal">
                 {item.desc}
               </p>
             </div>

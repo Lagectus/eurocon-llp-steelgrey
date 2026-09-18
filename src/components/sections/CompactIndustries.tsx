@@ -65,21 +65,21 @@ export default function CompactIndustries() {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
           <div className="space-y-3 max-w-2xl">
-            <div className="inline-flex items-center gap-2 text-xs font-mono font-bold tracking-[0.2em] uppercase text-red-600">
-              <span className="w-2 h-2 rounded-full bg-red-500" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-xs font-mono font-bold tracking-[0.2em] uppercase text-blue-700">
+              <span className="w-2 h-2 rounded-full bg-blue-600" />
               <span>INDUSTRIES WE SERVE</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-[1.12]">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#334155] tracking-tight leading-[1.12]">
               SOLUTIONS FOR CRITICAL ENVIRONMENTS.
             </h2>
           </div>
 
           <Link
             href="/industries"
-            className="inline-flex items-center gap-2 text-sm font-bold text-slate-900 hover:text-red-600 group transition-colors self-start md:self-end whitespace-nowrap"
+            className="inline-flex items-center gap-2 text-sm font-bold text-[#64748B] hover:text-blue-600 group transition-colors self-start md:self-end whitespace-nowrap"
           >
             <span>Explore Industries</span>
-            <ArrowRight className="w-4 h-4 text-red-600 transform group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="w-4 h-4 text-blue-600 transform group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
 
@@ -97,47 +97,47 @@ export default function CompactIndustries() {
                   onClick={() => setActiveIndustry(ind)}
                   className={`p-5 rounded-2xl cursor-pointer transition-all duration-300 border flex flex-col justify-between ${
                     isSelected
-                      ? "bg-slate-900 text-white border-slate-900 shadow-xl -translate-y-1"
-                      : "bg-slate-50 text-slate-800 border-slate-200 hover:bg-slate-100 hover:border-slate-300"
+                      ? "bg-blue-600 text-white border-blue-500 shadow-xl -translate-y-1"
+                      : "bg-white text-[#334155] border-slate-200 hover:border-blue-400 hover:bg-slate-50"
                   }`}
                 >
                   <div>
                     <div className="flex items-center justify-between mb-4">
                       <span
                         className={`font-mono text-xs font-bold ${
-                          isSelected ? "text-red-400" : "text-slate-400"
+                          isSelected ? "text-blue-100" : "text-slate-400"
                         }`}
                       >
                         {ind.num}
                       </span>
                       <div
                         className={`p-2 rounded-lg ${
-                          isSelected ? "bg-red-500 text-slate-950" : "bg-white text-slate-700 shadow-xs"
+                          isSelected ? "bg-white/20 text-white" : "bg-blue-50 text-blue-600 border border-blue-200"
                         }`}
                       >
                         <Icon className="w-4 h-4" />
                       </div>
                     </div>
 
-                    <h3 className="font-bold text-base mb-1.5 leading-snug">
+                    <h3 className={`font-bold text-base mb-1.5 leading-snug ${isSelected ? "text-white" : "text-[#334155]"}`}>
                       {ind.name}
                     </h3>
                     <p
                       className={`text-xs leading-relaxed line-clamp-2 ${
-                        isSelected ? "text-slate-300" : "text-slate-500"
+                        isSelected ? "text-blue-100" : "text-[#64748B]"
                       }`}
                     >
                       {ind.tagline}
                     </p>
                   </div>
 
-                  <div className="mt-4 pt-3 border-t border-slate-200/40 flex items-center justify-between text-xs font-semibold">
-                    <span className={isSelected ? "text-red-400" : "text-slate-500"}>
+                  <div className="mt-4 pt-3 border-t border-slate-200 flex items-center justify-between text-xs font-semibold">
+                    <span className={isSelected ? "text-white" : "text-blue-600"}>
                       Sector Overview
                     </span>
                     <ArrowRight
                       className={`w-3.5 h-3.5 transition-transform ${
-                        isSelected ? "text-red-400 translate-x-1" : "text-slate-400"
+                        isSelected ? "text-white translate-x-1" : "text-blue-600"
                       }`}
                     />
                   </div>
@@ -147,7 +147,7 @@ export default function CompactIndustries() {
           </div>
 
           {/* Right Column: Dynamic Spotlight Visual (5 Cols) */}
-          <div className="lg:col-span-5 relative rounded-2xl overflow-hidden shadow-2xl border border-slate-200 bg-slate-950 min-h-[380px] lg:min-h-full">
+          <div className="lg:col-span-5 relative rounded-2xl overflow-hidden shadow-xl border border-slate-200 bg-white min-h-[380px] lg:min-h-full">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeIndustry.id}
@@ -160,26 +160,26 @@ export default function CompactIndustries() {
                 <img
                   src={activeIndustry.image}
                   alt={activeIndustry.name}
-                  className="w-full h-full object-cover object-center filter brightness-75 contrast-105"
+                  className="w-full h-full object-cover object-center filter brightness-90 contrast-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
                 {/* Info Card Overlay */}
-                <div className="absolute bottom-6 left-6 right-6 p-5 rounded-xl bg-slate-950/90 backdrop-blur-md border border-slate-800 text-white space-y-2">
-                  <div className="flex items-center justify-between text-[11px] font-mono text-red-400">
+                <div className="absolute bottom-6 left-6 right-6 p-5 rounded-xl bg-white/95 backdrop-blur-md border border-slate-200 text-[#334155] space-y-2 shadow-xl">
+                  <div className="flex items-center justify-between text-[11px] font-mono text-blue-600">
                     <span>SECTOR SPOTLIGHT</span>
                     <span>EUROCON ENGINEERED</span>
                   </div>
-                  <h4 className="text-lg font-bold text-white">
+                  <h4 className="text-lg font-bold text-[#334155]">
                     {activeIndustry.name}
                   </h4>
-                  <p className="text-xs text-slate-300 leading-relaxed">
+                  <p className="text-xs text-[#64748B] leading-relaxed">
                     {activeIndustry.tagline}
                   </p>
                   <div className="pt-2">
                     <Link
                       href="/industries"
-                      className="inline-flex items-center gap-1.5 text-xs font-bold text-red-400 hover:text-red-300"
+                      className="inline-flex items-center gap-1.5 text-xs font-bold text-blue-600 hover:text-blue-800"
                     >
                       <span>Explore Sector Engineering</span>
                       <ArrowRight className="w-3.5 h-3.5" />

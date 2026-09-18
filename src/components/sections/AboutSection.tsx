@@ -53,9 +53,9 @@ export default function AboutSection({ onOpenQuoteModal }: AboutSectionProps) {
   };
 
   return (
-    <section id="about" className="relative py-24 sm:py-32 bg-slate-50 overflow-hidden">
+    <section id="about" className="relative py-24 sm:py-32 bg-white border-b border-slate-200 overflow-hidden">
       {/* Subtle Background Elements */}
-      <div className="absolute inset-0 bg-tech-grid opacity-30 pointer-events-none" />
+      <div className="absolute inset-0 bg-tech-grid opacity-20 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
@@ -69,33 +69,33 @@ export default function AboutSection({ onOpenQuoteModal }: AboutSectionProps) {
               className="relative mx-auto"
             >
               {/* Decorative Framing Accent */}
-              <div className="absolute -inset-3 rounded-2xl bg-gradient-to-br from-red-500/20 to-transparent blur-md pointer-events-none" />
+              <div className="absolute -inset-3 rounded-2xl bg-gradient-to-br from-blue-500/10 to-transparent blur-md pointer-events-none" />
 
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-200 bg-white">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl border border-slate-200 bg-white">
                 <div className="relative h-[380px] sm:h-[480px] w-full overflow-hidden group">
                   <img
                     src="https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80"
                     alt="Eurocon Engineering and Manufacturing Facility"
                     className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700 filter brightness-95"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
 
                   {/* Floating Engineering Badge */}
                   <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-xl shadow-lg border border-slate-200 flex items-center gap-2">
-                    <Factory className="w-4 h-4 text-red-600" />
+                    <Factory className="w-4 h-4 text-blue-600" />
                     <div>
                       <span className="block text-[10px] font-mono text-slate-500 uppercase">PLANT CAPABILITY</span>
-                      <span className="text-xs font-bold text-slate-900">Modern CNC Infrastructure</span>
+                      <span className="text-xs font-bold text-[#334155]">Modern CNC Infrastructure</span>
                     </div>
                   </div>
 
                   {/* Bottom Metrics Bar */}
-                  <div className="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-slate-900/90 backdrop-blur-md border border-slate-800 text-white flex items-center justify-between">
+                  <div className="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-white/95 backdrop-blur-md border border-slate-200 text-[#334155] flex items-center justify-between shadow-lg">
                     <div className="space-y-0.5">
-                      <span className="text-[10px] font-mono text-red-400 uppercase">QUALITY ASSURANCE</span>
-                      <p className="text-xs font-semibold text-slate-200">ISO 9001:2015 & AMCA 210 Lab Certified</p>
+                      <span className="text-[10px] font-mono text-blue-600 uppercase font-bold">QUALITY ASSURANCE</span>
+                      <p className="text-xs font-semibold text-[#334155]">ISO 9001:2015 & AMCA 210 Lab Certified</p>
                     </div>
-                    <ShieldCheck className="w-6 h-6 text-red-400 shrink-0" />
+                    <ShieldCheck className="w-6 h-6 text-blue-600 shrink-0" />
                   </div>
                 </div>
               </div>
@@ -117,15 +117,15 @@ export default function AboutSection({ onOpenQuoteModal }: AboutSectionProps) {
                   onClick={() => setActiveTab("engineering")}
                   className={`pb-3 text-xs sm:text-sm font-bold uppercase tracking-wider transition-all relative ${
                     activeTab === "engineering"
-                      ? "text-red-600"
-                      : "text-slate-500 hover:text-slate-800"
+                      ? "text-blue-600"
+                      : "text-slate-500 hover:text-[#334155]"
                   }`}
                 >
                   01. Engineering Design
                   {activeTab === "engineering" && (
                     <motion.div
                       layoutId="activeTabIndicator"
-                      className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-red-600 rounded-full"
+                      className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-blue-600 rounded-full"
                     />
                   )}
                 </button>
@@ -134,15 +134,15 @@ export default function AboutSection({ onOpenQuoteModal }: AboutSectionProps) {
                   onClick={() => setActiveTab("manufacturing")}
                   className={`pb-3 text-xs sm:text-sm font-bold uppercase tracking-wider transition-all relative ${
                     activeTab === "manufacturing"
-                      ? "text-red-600"
-                      : "text-slate-500 hover:text-slate-800"
+                      ? "text-blue-600"
+                      : "text-slate-500 hover:text-[#334155]"
                   }`}
                 >
                   02. CNC Plant
                   {activeTab === "manufacturing" && (
                     <motion.div
                       layoutId="activeTabIndicator"
-                      className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-red-600 rounded-full"
+                      className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-blue-600 rounded-full"
                     />
                   )}
                 </button>
@@ -151,15 +151,15 @@ export default function AboutSection({ onOpenQuoteModal }: AboutSectionProps) {
                   onClick={() => setActiveTab("compliance")}
                   className={`pb-3 text-xs sm:text-sm font-bold uppercase tracking-wider transition-all relative ${
                     activeTab === "compliance"
-                      ? "text-red-600"
-                      : "text-slate-500 hover:text-slate-800"
+                      ? "text-blue-600"
+                      : "text-slate-500 hover:text-[#334155]"
                   }`}
                 >
                   03. Compliance
                   {activeTab === "compliance" && (
                     <motion.div
                       layoutId="activeTabIndicator"
-                      className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-red-600 rounded-full"
+                      className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-blue-600 rounded-full"
                     />
                   )}
                 </button>
@@ -167,16 +167,16 @@ export default function AboutSection({ onOpenQuoteModal }: AboutSectionProps) {
 
               {/* Tab Content Box */}
               <div className="pt-5 space-y-4">
-                <h4 className="text-base font-bold text-slate-900">
+                <h4 className="text-base font-bold text-[#334155]">
                   {tabContent[activeTab].title}
                 </h4>
-                <p className="text-sm text-slate-600 leading-relaxed">
+                <p className="text-sm text-[#64748B] leading-relaxed">
                   {tabContent[activeTab].desc}
                 </p>
                 <ul className="space-y-2.5 pt-1">
                   {tabContent[activeTab].points.map((point, index) => (
-                    <li key={index} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700">
-                      <CheckCircle2 className="w-4 h-4 text-red-600 shrink-0 mt-0.5" />
+                    <li key={index} className="flex items-start gap-2.5 text-xs sm:text-sm text-[#64748B]">
+                      <CheckCircle2 className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
                       <span>{point}</span>
                     </li>
                   ))}
@@ -188,7 +188,7 @@ export default function AboutSection({ onOpenQuoteModal }: AboutSectionProps) {
             <div className="pt-4 flex items-center gap-4">
               <a
                 href="#products"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs sm:text-sm font-bold tracking-wide transition-all shadow-md"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-800 text-white text-xs sm:text-sm font-bold tracking-wide transition-all shadow-md shadow-blue-600/20"
               >
                 <span>Discover Eurocon Solutions</span>
                 <ArrowRight className="w-4 h-4" />
@@ -196,7 +196,7 @@ export default function AboutSection({ onOpenQuoteModal }: AboutSectionProps) {
 
               <button
                 onClick={onOpenQuoteModal}
-                className="px-5 py-3 rounded-xl bg-white hover:bg-slate-100 text-slate-800 text-xs sm:text-sm font-bold border border-slate-300 transition-colors"
+                className="px-5 py-3 rounded-xl bg-white hover:bg-slate-50 text-[#334155] text-xs sm:text-sm font-bold border border-slate-300 hover:border-blue-400 transition-colors shadow-xs cursor-pointer"
               >
                 Request Plant Tour / RFQ
               </button>

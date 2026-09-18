@@ -30,16 +30,15 @@ export default function ProductShowcase({
   };
 
   return (
-    <section className="relative py-24 sm:py-32 bg-slate-950 text-white overflow-hidden">
+    <section className="relative py-24 sm:py-32 bg-white border-y border-slate-200 text-[#334155] overflow-hidden">
       {/* Background Radial Atmosphere */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(2,132,199,0.12),transparent_70%)]" />
-      <div className="absolute inset-0 bg-tech-grid-dark opacity-20 pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(37,99,235,0.08),transparent_70%)]" />
+      <div className="absolute inset-0 bg-tech-grid opacity-20 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header Row with Carousel Navigation Arrows */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <SectionHeading
-            theme="dark"
             eyebrow="ENGINEERED FOR EVERY AIRFLOW CHALLENGE"
             title="AERODYNAMIC SHOWCASE"
             subtitle="Explore our flagship air handling assemblies, built with high-efficiency impellers and heavy-gauge construction for mission-critical installations."
@@ -48,14 +47,14 @@ export default function ProductShowcase({
           <div className="flex items-center gap-3">
             <button
               onClick={() => scroll("left")}
-              className="p-3 rounded-full bg-slate-800 hover:bg-slate-700 text-white transition-colors border border-slate-700 shadow-md"
+              className="p-3 rounded-full bg-slate-50 hover:bg-slate-100 text-[#334155] transition-colors border border-slate-200 shadow-xs cursor-pointer"
               aria-label="Scroll left"
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
             <button
               onClick={() => scroll("right")}
-              className="p-3 rounded-full bg-red-600 hover:bg-red-500 text-white transition-colors shadow-md shadow-red-600/30"
+              className="p-3 rounded-full bg-blue-600 hover:bg-blue-800 text-white transition-colors shadow-md shadow-blue-600/30 cursor-pointer"
               aria-label="Scroll right"
             >
               <ChevronRight className="w-5 h-5" />
@@ -73,47 +72,47 @@ export default function ProductShowcase({
             <div
               key={product.id}
               onClick={() => onSelectProduct(product)}
-              className="snap-start shrink-0 w-[320px] sm:w-[400px] lg:w-[460px] bg-slate-900/90 rounded-2xl border border-slate-800 hover:border-red-500/60 p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 shadow-xl group"
+              className="snap-start shrink-0 w-[320px] sm:w-[400px] lg:w-[460px] bg-white rounded-2xl border border-slate-200 hover:border-blue-500 p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 shadow-sm hover:shadow-xl group"
             >
               <div>
                 {/* Header Tag */}
-                <div className="flex items-center justify-between text-xs font-mono text-slate-400 mb-4">
-                  <span className="text-red-400 font-bold">
+                <div className="flex items-center justify-between text-xs font-mono text-slate-500 mb-4">
+                  <span className="text-blue-600 font-bold">
                     0{idx + 1}{" // "}{product.category.toUpperCase()}
                   </span>
-                  <span className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 text-[10px]">
+                  <span className="px-2 py-0.5 rounded bg-slate-50 border border-slate-200 text-[#64748B] text-[10px]">
                     {product.heroBadge}
                   </span>
                 </div>
 
                 {/* Schematic / Visual Preview */}
-                <div className="bg-slate-950/80 rounded-xl p-4 border border-slate-800/80 mb-5 group-hover:border-red-500/30 transition-colors">
-                  <ProductSchematic type={product.schematicSvgType} isDark={true} className="h-44" />
+                <div className="bg-slate-50 rounded-xl p-4 border border-slate-200 mb-5 group-hover:border-blue-300 transition-colors">
+                  <ProductSchematic type={product.schematicSvgType} isDark={false} className="h-44" />
                 </div>
 
-                <h3 className="text-xl font-extrabold text-white group-hover:text-red-400 transition-colors">
+                <h3 className="text-xl font-extrabold text-[#334155] group-hover:text-blue-600 transition-colors">
                   {product.name}
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-400 mt-2 line-clamp-2 leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#64748B] mt-2 line-clamp-2 leading-relaxed">
                   {product.shortDescription}
                 </p>
 
                 {/* Technical Highlights Box */}
-                <div className="mt-4 p-3 rounded-lg bg-slate-950/60 border border-slate-800 space-y-1 text-xs font-mono text-slate-300">
+                <div className="mt-4 p-3 rounded-lg bg-slate-50 border border-slate-200 space-y-1 text-xs font-mono text-[#64748B]">
                   <div className="flex justify-between">
                     <span className="text-slate-500">Airflow:</span>
-                    <span className="text-red-400">{product.specs.airflowRange?.split("(")[0]}</span>
+                    <span className="text-blue-600 font-semibold">{product.specs.airflowRange?.split("(")[0]}</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-slate-500">Static Pres:</span>
-                    <span className="text-slate-200">{product.specs.staticPressure}</span>
+                    <span className="text-[#334155] font-semibold">{product.specs.staticPressure}</span>
                   </div>
                 </div>
               </div>
 
               {/* Action Button */}
-              <div className="pt-6 mt-4 border-t border-slate-800/80 flex items-center justify-between">
-                <span className="text-xs font-bold text-red-400 flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
+              <div className="pt-6 mt-4 border-t border-slate-200 flex items-center justify-between">
+                <span className="text-xs font-bold text-blue-600 flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
                   <span>Open Engineering Datasheet</span>
                   <ArrowRight className="w-4 h-4" />
                 </span>
@@ -123,7 +122,7 @@ export default function ProductShowcase({
                     e.stopPropagation();
                     onOpenQuoteModal(product.name);
                   }}
-                  className="px-3 py-1 rounded bg-red-500/10 hover:bg-red-500/20 text-red-400 text-xs font-mono border border-red-500/30 transition-colors"
+                  className="px-3 py-1 rounded bg-blue-50 hover:bg-blue-100 text-blue-700 text-xs font-mono border border-blue-200 transition-colors cursor-pointer"
                 >
                   RFQ
                 </button>

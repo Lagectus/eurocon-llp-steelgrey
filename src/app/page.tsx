@@ -59,7 +59,7 @@ export default function HomePage() {
       />
 
       {/* 7 Cinematic Homepage Sections */}
-      <main className="relative">
+      <main className="relative bg-white text-[#334155]">
         {/* 01 — CINEMATIC HERO */}
         <CinematicHero onOpenQuoteModal={() => handleOpenQuoteModal("Eurocon Industrial Airflow Consultation")} />
 

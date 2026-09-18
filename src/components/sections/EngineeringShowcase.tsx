@@ -109,19 +109,19 @@ export default function EngineeringShowcase() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="engineering" className="relative py-14 sm:py-18 bg-white overflow-hidden">
+    <section ref={sectionRef} id="engineering" className="relative py-14 sm:py-18 bg-white text-[#334155] border-b border-slate-200 overflow-hidden">
       {/* Decorative background */}
-      <div className="absolute top-1/2 right-0 w-[400px] h-[400px] bg-red-50/40 rounded-full blur-[100px] pointer-events-none translate-x-1/2 -translate-y-1/2" />
+      <div className="absolute top-1/2 right-0 w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[100px] pointer-events-none translate-x-1/2 -translate-y-1/2" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div ref={headerRef} className="text-center max-w-3xl mx-auto mb-10 sm:mb-12 opacity-0">
-          <div className="inline-flex items-center gap-2 text-xs font-mono font-bold tracking-[0.2em] uppercase text-red-600 mb-4">
-            <span className="w-8 h-[2px] bg-red-500" />
+          <div className="inline-flex items-center gap-2 text-xs font-mono font-bold tracking-[0.2em] uppercase text-blue-600 mb-4">
+            <span className="w-8 h-[2px] bg-blue-600" />
             <span>THE EUROCON ADVANTAGE</span>
-            <span className="w-8 h-[2px] bg-red-500" />
+            <span className="w-8 h-[2px] bg-blue-600" />
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-[1.1]">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#334155] tracking-tight leading-[1.1]">
             PRECISION ENGINEERING.
             <br />
             MEASURABLE PERFORMANCE.
@@ -135,28 +135,28 @@ export default function EngineeringShowcase() {
             return (
               <div
                 key={cap.num}
-                className="group relative p-6 sm:p-7 rounded-2xl bg-slate-50 border border-slate-200 hover:border-red-300 transition-all duration-500 hover:shadow-xl hover:-translate-y-1 overflow-hidden"
+                className="group relative p-6 sm:p-7 rounded-2xl bg-white border border-slate-200 hover:border-blue-500 transition-all duration-500 hover:shadow-xl hover:-translate-y-1 overflow-hidden"
               >
                 {/* Background number watermark */}
-                <span className="absolute -right-4 -bottom-6 text-[140px] font-black text-slate-100 leading-none pointer-events-none select-none group-hover:text-red-50 transition-colors duration-500">
+                <span className="absolute -right-4 -bottom-6 text-[140px] font-black text-slate-100 leading-none pointer-events-none select-none group-hover:text-blue-50 transition-colors duration-500">
                   {cap.num}
                 </span>
 
                 <div className="relative z-10 space-y-4">
                   <div className="flex items-center gap-4">
-                    <div className="w-14 h-14 rounded-2xl bg-white group-hover:bg-red-50 text-slate-700 group-hover:text-red-600 flex items-center justify-center transition-colors duration-300 border border-slate-200 group-hover:border-red-200 shadow-sm">
+                    <div className="w-14 h-14 rounded-2xl bg-blue-50 group-hover:bg-blue-600 text-blue-600 group-hover:text-white flex items-center justify-center transition-colors duration-300 border border-blue-200 shadow-xs">
                       <Icon className="w-6 h-6" />
                     </div>
-                    <span className="font-mono text-xs font-black text-red-600">
+                    <span className="font-mono text-xs font-black text-blue-600">
                       {cap.num}
                     </span>
                   </div>
 
-                  <h3 className="text-xl sm:text-2xl font-bold text-slate-900 group-hover:text-red-600 transition-colors">
+                  <h3 className="text-xl sm:text-2xl font-bold text-[#334155] group-hover:text-blue-600 transition-colors">
                     {cap.title}
                   </h3>
 
-                  <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+                  <p className="text-sm sm:text-base text-[#64748B] leading-relaxed font-normal">
                     {cap.desc}
                   </p>
                 </div>
@@ -169,10 +169,10 @@ export default function EngineeringShowcase() {
         <div ref={ctaRef} className="mt-8 sm:mt-10 text-center opacity-0">
           <Link
             href="/quality"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm tracking-wide transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-blue-600 hover:bg-blue-800 text-white font-bold text-sm tracking-wide transition-all shadow-md shadow-blue-600/25 hover:shadow-blue-600/40 hover:-translate-y-0.5"
           >
             <span>Explore Quality & Testing Standards</span>
-            <ArrowRight className="w-4 h-4 text-red-400" />
+            <ArrowRight className="w-4 h-4 text-white" />
           </Link>
         </div>
       </div>

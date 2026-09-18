@@ -36,6 +36,7 @@ export default function CinematicHero({ onOpenQuoteModal }: CinematicHeroProps) 
         }
       });
       if (bgRef.current) gsap.set(bgRef.current, { scale: 1, opacity: 1 });
+      if (overlayRef.current) gsap.set(overlayRef.current, { opacity: 0.65 });
       return;
     }
 
@@ -44,7 +45,7 @@ export default function CinematicHero({ onOpenQuoteModal }: CinematicHeroProps) 
       const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
 
       tl.fromTo(bgRef.current, { scale: 1.2, opacity: 0 }, { scale: 1, opacity: 1, duration: 2, ease: "power2.out" })
-        .fromTo(overlayRef.current, { opacity: 0 }, { opacity: 1, duration: 1.2 }, 0.3)
+        .fromTo(overlayRef.current, { opacity: 0 }, { opacity: 0.65, duration: 1.2 }, 0.3)
         .fromTo(eyebrowRef.current,
           { opacity: 0, y: 30 },
           { opacity: 1, y: 0, duration: 0.8 },
@@ -144,17 +145,17 @@ export default function CinematicHero({ onOpenQuoteModal }: CinematicHeroProps) 
         />
       </div>
 
-      {/* Dark gradient overlay */}
+      {/* Dark cinematic overlay to keep the industrial background visible while improving readability */}
       <div
         ref={overlayRef}
-        className="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-950/60 to-slate-950/90 opacity-0"
+        className="absolute inset-0 bg-gradient-to-r from-slate-950/70 via-slate-900/45 to-slate-950/60 opacity-0"
       />
 
       {/* Subtle grid overlay */}
-      <div className="absolute inset-0 bg-tech-grid-dark opacity-15 pointer-events-none" />
+      <div className="absolute inset-0 bg-tech-grid opacity-30 pointer-events-none" />
 
       {/* Decorative floating accent */}
-      <div ref={decorRef} className="absolute top-1/4 right-[15%] w-[300px] h-[300px] rounded-full bg-red-500/10 blur-[100px] pointer-events-none hidden lg:block" />
+      <div ref={decorRef} className="absolute top-1/4 right-[15%] w-[300px] h-[300px] rounded-full bg-blue-500/10 blur-[100px] pointer-events-none hidden lg:block" />
 
       {/* Main Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -162,9 +163,9 @@ export default function CinematicHero({ onOpenQuoteModal }: CinematicHeroProps) 
           {/* Eyebrow */}
           <div
             ref={eyebrowRef}
-            className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-white/90 text-xs font-mono font-bold tracking-[0.2em] uppercase mb-6 opacity-0"
+            className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs font-mono font-bold tracking-[0.2em] uppercase mb-6 opacity-0 shadow-[0_0_30px_rgba(15,23,42,0.4)]"
           >
-            <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
+            <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
             <span>PRECISION HVAC & INDUSTRIAL VENTILATION</span>
           </div>
 
@@ -172,24 +173,24 @@ export default function CinematicHero({ onOpenQuoteModal }: CinematicHeroProps) 
           <h1 className="mb-6 sm:mb-8">
             <span
               ref={headingLine1Ref}
-              className="block text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] xl:text-[3.75rem] font-black tracking-tight leading-[1.08] text-white opacity-0"
+              className="block text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] xl:text-[3.75rem] font-black tracking-tight leading-[1.08] text-white opacity-0 drop-shadow-[0_2px_18px_rgba(15,23,42,0.9)]"
             >
               ENGINEERED
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-400"> AIRFLOW.</span>
+              <span className="text-blue-500"> AIRFLOW.</span>
             </span>
             <span
               ref={headingLine2Ref}
-              className="block text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] xl:text-[3.75rem] font-black tracking-tight leading-[1.08] text-white mt-1.5 sm:mt-2 opacity-0"
+              className="block text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] xl:text-[3.75rem] font-black tracking-tight leading-[1.08] text-white mt-1.5 sm:mt-2 opacity-0 drop-shadow-[0_2px_18px_rgba(15,23,42,0.9)]"
             >
               BUILT FOR
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-200 to-slate-400"> PERFORMANCE.</span>
+              <span className="text-blue-500"> PERFORMANCE.</span>
             </span>
           </h1>
 
           {/* Supporting Text */}
           <p
             ref={paragraphRef}
-            className="text-base sm:text-lg text-slate-300 max-w-2xl font-light leading-relaxed mb-8 opacity-0"
+            className="text-base sm:text-lg text-white max-w-2xl font-light leading-relaxed mb-8 opacity-0 drop-shadow-[0_1px_12px_rgba(15,23,42,0.7)]"
           >
             Advanced air management, ventilation and industrial HVAC solutions engineered for efficiency, reliability and total environmental comfort.
           </p>
@@ -199,7 +200,7 @@ export default function CinematicHero({ onOpenQuoteModal }: CinematicHeroProps) 
             <MagneticButton>
               <Link
                 href="/products"
-                className="group inline-flex items-center gap-2.5 px-8 py-4 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-sm tracking-wide transition-all shadow-2xl shadow-red-600/30 hover:shadow-red-500/40 hover:-translate-y-0.5"
+                className="group inline-flex items-center gap-2.5 px-8 py-4 rounded-xl bg-blue-600 hover:bg-blue-800 text-white font-bold text-sm tracking-wide transition-all shadow-xl shadow-blue-600/25 hover:shadow-blue-600/40 hover:-translate-y-0.5"
               >
                 <span>Explore Solutions</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -209,7 +210,7 @@ export default function CinematicHero({ onOpenQuoteModal }: CinematicHeroProps) 
             <MagneticButton>
               <button
                 onClick={onOpenQuoteModal}
-                className="inline-flex items-center gap-2 px-7 py-4 rounded-xl bg-white/10 hover:bg-white/15 backdrop-blur-md text-white font-bold text-sm tracking-wide border border-white/20 transition-all hover:border-white/40"
+                className="inline-flex items-center gap-2 px-7 py-4 rounded-xl bg-white hover:bg-slate-50 backdrop-blur-md text-[#334155] font-bold text-sm tracking-wide border border-slate-300 hover:border-blue-600 hover:text-blue-600 transition-all shadow-xs"
               >
                 <span>Talk to Our Experts</span>
               </button>
@@ -219,14 +220,14 @@ export default function CinematicHero({ onOpenQuoteModal }: CinematicHeroProps) 
           {/* Trust Badges */}
           <div
             ref={badgesRef}
-            className="flex flex-wrap items-center gap-6 text-xs text-slate-400 font-mono opacity-0"
+            className="flex flex-wrap items-center gap-6 text-xs text-white font-mono opacity-0"
           >
             <div className="flex items-center gap-1.5">
-              <ShieldCheck className="w-4 h-4 text-red-500" />
+              <ShieldCheck className="w-4 h-4 text-blue-400" />
               <span>AMCA 210 Lab Certified</span>
             </div>
             <div className="flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
               <span>EN 12101-3 400°C/2h Fire Rated</span>
             </div>
             <div className="flex items-center gap-1.5">
@@ -245,8 +246,8 @@ export default function CinematicHero({ onOpenQuoteModal }: CinematicHeroProps) 
         <span className="text-[10px] font-mono tracking-[0.3em] uppercase text-slate-500">
           SCROLL TO EXPLORE
         </span>
-        <div className="w-5 h-9 rounded-full border-2 border-slate-600 flex items-start justify-center p-1.5">
-          <div className="w-1.5 h-1.5 rounded-full bg-red-500 animate-bounce" />
+        <div className="w-5 h-9 rounded-full border-2 border-slate-300 flex items-start justify-center p-1.5">
+          <div className="w-1.5 h-1.5 rounded-full bg-blue-600 animate-bounce" />
         </div>
       </div>
     </section>

@@ -222,25 +222,25 @@ export default function PinnedIndustries() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative bg-slate-950">
+    <section ref={sectionRef} className="relative bg-white border-y border-slate-200">
       {/* Section Header */}
       <div className="pt-12 sm:pt-14 pb-6 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="space-y-3 max-w-2xl">
-            <div className="inline-flex items-center gap-2 text-xs font-mono font-bold tracking-[0.2em] uppercase text-red-500">
-              <span className="w-8 h-[2px] bg-red-500" />
+            <div className="inline-flex items-center gap-2 text-xs font-mono font-bold tracking-[0.2em] uppercase text-blue-600">
+              <span className="w-8 h-[2px] bg-blue-600" />
               <span>INDUSTRIES WE SERVE</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-[1.1]">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#334155] tracking-tight leading-[1.1]">
               SOLUTIONS FOR CRITICAL ENVIRONMENTS.
             </h2>
           </div>
           <Link
             href="/industries"
-            className="inline-flex items-center gap-2 text-sm font-bold text-slate-300 hover:text-red-400 group transition-colors self-start md:self-end whitespace-nowrap"
+            className="inline-flex items-center gap-2 text-sm font-bold text-[#64748B] hover:text-blue-600 group transition-colors self-start md:self-end whitespace-nowrap"
           >
             <span>Explore All Sectors</span>
-            <ArrowRight className="w-4 h-4 text-red-500 transform group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="w-4 h-4 text-blue-600 transform group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
       </div>
@@ -249,7 +249,7 @@ export default function PinnedIndustries() {
       <div ref={pinContainerRef} className="hidden lg:block relative h-screen">
         <div className="absolute inset-x-0 bottom-0 top-[74px] grid grid-cols-12 gap-8 px-6 lg:px-12 items-center">
           {/* Left Column: Real Equipment Visual that transitions (5 of 12 cols) */}
-          <div className="col-span-5 h-[calc(100vh-120px)] relative rounded-3xl overflow-hidden border border-slate-800/80 shadow-2xl bg-gradient-to-br from-slate-950 via-slate-900 to-[#0F1932]">
+          <div className="col-span-5 h-[calc(100vh-120px)] relative rounded-3xl overflow-hidden border border-slate-200 shadow-xl bg-gradient-to-br from-slate-50 via-white to-blue-50/20">
             <div ref={imageContainerRef} className="absolute inset-0">
               {industries.map((ind, i) => (
                 <div
@@ -258,10 +258,10 @@ export default function PinnedIndustries() {
                   style={{ opacity: activeIndex === i ? 1 : 0 }}
                 >
                   {/* Subtle Tech grid */}
-                  <div className="absolute inset-0 bg-[radial-gradient(#334155_1px,transparent_1px)] bg-[length:18px_18px] opacity-40 pointer-events-none" />
+                  <div className="absolute inset-0 bg-[radial-gradient(#CBD5E1_1px,transparent_1px)] bg-[length:18px_18px] opacity-60 pointer-events-none" />
 
                   {/* Ambient Glow */}
-                  <div className="absolute w-64 h-64 rounded-full bg-red-600/10 blur-[80px] pointer-events-none" />
+                  <div className="absolute w-64 h-64 rounded-full bg-blue-500/10 blur-[80px] pointer-events-none" />
 
                   {/* Machine Product Image with 3D Float */}
                   <div className="relative w-full h-[62%] flex items-center justify-center mb-16 z-10">
@@ -269,28 +269,28 @@ export default function PinnedIndustries() {
                     <img
                       src={ind.image}
                       alt={ind.name}
-                      className="max-h-full max-w-full object-contain filter drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)] transform hover:scale-105 transition-transform duration-700"
+                      className="max-h-full max-w-full object-contain filter drop-shadow-md transform hover:scale-105 transition-transform duration-700"
                     />
                   </div>
 
                   {/* Floating Live Spec Badge on Image */}
-                  <div className="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-slate-950/90 backdrop-blur-md border border-slate-800 text-white space-y-1.5 shadow-2xl z-20">
+                  <div className="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-white/95 backdrop-blur-md border border-slate-200 text-[#334155] space-y-1.5 shadow-lg z-20">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
                         <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                        <span className="text-[10px] font-mono text-emerald-400 font-bold uppercase tracking-wider">
+                        <span className="text-[10px] font-mono text-emerald-600 font-bold uppercase tracking-wider">
                           ENGINEERED SYSTEM
                         </span>
                       </div>
-                      <span className="text-[10px] font-mono text-red-400 font-bold">
+                      <span className="text-[10px] font-mono text-blue-600 font-bold">
                         {ind.code}
                       </span>
                     </div>
-                    <p className="text-xs font-bold text-white truncate">
+                    <p className="text-xs font-bold text-[#334155] truncate">
                       {ind.systemLabel}
                     </p>
-                    <div className="flex items-center gap-1.5 text-[10px] text-slate-400 font-mono">
-                      <ShieldCheck className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                    <div className="flex items-center gap-1.5 text-[10px] text-[#64748B] font-mono">
+                      <ShieldCheck className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
                       <span className="truncate">{ind.compliance}</span>
                     </div>
                   </div>
@@ -304,7 +304,7 @@ export default function PinnedIndustries() {
                 <div
                   key={i}
                   className={`w-2 rounded-full transition-all duration-300 ${
-                    activeIndex === i ? "h-8 bg-red-500 shadow-lg shadow-red-500/50" : "h-2 bg-white/25"
+                    activeIndex === i ? "h-8 bg-blue-600 shadow-md shadow-blue-500/30" : "h-2 bg-slate-300"
                   }`}
                 />
               ))}
@@ -326,57 +326,57 @@ export default function PinnedIndustries() {
                       {/* Top Meta Bar */}
                       <div className="flex items-center justify-between gap-4">
                         <div className="flex items-center gap-3">
-                          <div className="w-12 h-12 rounded-xl bg-red-500/15 border border-red-500/30 flex items-center justify-center text-red-400 shadow-md shadow-red-500/10">
+                          <div className="w-12 h-12 rounded-xl bg-blue-50 border border-blue-200 flex items-center justify-center text-blue-600 shadow-xs">
                             <Icon className="w-6 h-6" />
                           </div>
                           <div>
-                            <span className="text-[11px] font-mono font-bold tracking-wider text-red-500 uppercase block">
+                            <span className="text-[11px] font-mono font-bold tracking-wider text-blue-600 uppercase block">
                               SECTOR {ind.num} // {ind.code}
                             </span>
-                            <span className="text-xs text-slate-400 font-mono">
+                            <span className="text-xs text-[#64748B] font-mono">
                               Industrial Airflow Application
                             </span>
                           </div>
                         </div>
 
-                        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-[11px] font-mono text-slate-300">
-                          <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
+                        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-slate-200 text-[11px] font-mono text-[#64748B] shadow-xs">
+                          <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
                           <span>Standard Compliant</span>
                         </span>
                       </div>
 
                       {/* Main Title & Description */}
                       <div className="space-y-2">
-                        <h3 className="text-2xl xl:text-3xl font-black text-white tracking-tight leading-snug">
+                        <h3 className="text-2xl xl:text-3xl font-black text-[#334155] tracking-tight leading-snug">
                           {ind.name}
                         </h3>
-                        <p className="text-sm text-slate-400 leading-relaxed font-light">
+                        <p className="text-sm text-[#64748B] leading-relaxed font-normal">
                           {ind.tagline}
                         </p>
                       </div>
 
                       {/* Key Performance Stats Row */}
                       <div className="grid grid-cols-2 gap-4">
-                        <div className="p-4 rounded-2xl bg-slate-900/90 border border-slate-800/80 shadow-md">
+                        <div className="p-4 rounded-2xl bg-white border border-slate-200 shadow-xs">
                           <div className="flex items-center gap-2 mb-1">
-                            <Gauge className="w-4 h-4 text-red-400" />
-                            <span className="text-[11px] font-mono text-slate-400 uppercase font-semibold">
+                            <Gauge className="w-4 h-4 text-blue-600" />
+                            <span className="text-[11px] font-mono text-[#64748B] uppercase font-semibold">
                               {ind.statLabel}
                             </span>
                           </div>
-                          <span className="text-2xl xl:text-3xl font-black text-white tracking-tight">
+                          <span className="text-2xl xl:text-3xl font-black text-[#334155] tracking-tight">
                             {ind.statValue}
                           </span>
                         </div>
 
-                        <div className="p-4 rounded-2xl bg-slate-900/90 border border-slate-800/80 shadow-md">
+                        <div className="p-4 rounded-2xl bg-white border border-slate-200 shadow-xs">
                           <div className="flex items-center gap-2 mb-1">
-                            <Cpu className="w-4 h-4 text-blue-400" />
-                            <span className="text-[11px] font-mono text-slate-400 uppercase font-semibold">
+                            <Cpu className="w-4 h-4 text-blue-500" />
+                            <span className="text-[11px] font-mono text-[#64748B] uppercase font-semibold">
                               {ind.secondaryStatLabel}
                             </span>
                           </div>
-                          <span className="text-2xl xl:text-3xl font-black text-white tracking-tight">
+                          <span className="text-2xl xl:text-3xl font-black text-[#334155] tracking-tight">
                             {ind.secondaryStat}
                           </span>
                         </div>
@@ -384,21 +384,21 @@ export default function PinnedIndustries() {
 
                       {/* 3 Technical Capability Highlights */}
                       <div className="space-y-2.5">
-                        <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-slate-400 font-bold block">
+                        <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#64748B] font-bold block">
                           Engineered Capabilities & Safeguards
                         </span>
                         <div className="space-y-2">
                           {ind.highlights.map((item, hIdx) => (
                             <div
                               key={hIdx}
-                              className="flex items-start gap-3 p-3 rounded-xl bg-slate-900/40 border border-slate-800/60 hover:border-red-500/30 transition-colors"
+                              className="flex items-start gap-3 p-3 rounded-xl bg-slate-50 border border-slate-200 hover:border-blue-400 transition-colors"
                             >
-                              <CheckCircle2 className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
+                              <CheckCircle2 className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
                               <div className="space-y-0.5">
-                                <span className="text-xs font-bold text-slate-200 block">
+                                <span className="text-xs font-bold text-[#334155] block">
                                   {item.title}
                                 </span>
-                                <span className="text-[11px] text-slate-400 leading-normal block font-light">
+                                <span className="text-[11px] text-[#64748B] leading-normal block font-normal">
                                   {item.desc}
                                 </span>
                               </div>
@@ -408,14 +408,14 @@ export default function PinnedIndustries() {
                       </div>
 
                       {/* Applied Equipment & CTA Footer */}
-                      <div className="pt-2 border-t border-slate-800/80 flex flex-wrap items-center justify-between gap-4">
+                      <div className="pt-2 border-t border-slate-200 flex flex-wrap items-center justify-between gap-4">
                         <div className="flex items-center gap-2">
-                          <Layers className="w-3.5 h-3.5 text-slate-400" />
+                          <Layers className="w-3.5 h-3.5 text-[#64748B]" />
                           <div className="flex flex-wrap gap-1.5">
                             {ind.equipment.map((eq, eqIdx) => (
                               <span
                                 key={eqIdx}
-                                className="px-2.5 py-0.5 rounded-md bg-slate-800/80 text-slate-300 text-[10px] font-mono font-semibold"
+                                className="px-2.5 py-0.5 rounded-md bg-white text-[#334155] border border-slate-200 text-[10px] font-mono font-semibold"
                               >
                                 {eq}
                               </span>
@@ -425,7 +425,7 @@ export default function PinnedIndustries() {
 
                         <Link
                           href="/industries"
-                          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-xs tracking-wide transition-all shadow-lg shadow-red-600/20 hover:shadow-red-500/30 hover:-translate-y-0.5"
+                          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-800 text-white font-bold text-xs tracking-wide transition-all shadow-md shadow-blue-600/20 hover:shadow-blue-600/30 hover:-translate-y-0.5"
                         >
                           <span>Explore Solutions</span>
                           <ArrowRight className="w-3.5 h-3.5" />
@@ -448,56 +448,56 @@ export default function PinnedIndustries() {
             return (
               <div
                 key={ind.id}
-                className="relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900"
+                className="relative rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-xs"
               >
                 {/* Header Image */}
-                <div className="relative h-48 w-full overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-[#0F1932] flex items-center justify-center p-4">
+                <div className="relative h-48 w-full overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50/20 flex items-center justify-center p-4">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={ind.image} alt={ind.name} className="h-full object-contain filter drop-shadow-xl z-10" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent pointer-events-none" />
+                  <img src={ind.image} alt={ind.name} className="h-full object-contain filter drop-shadow-sm z-10" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-white/80 via-transparent to-transparent pointer-events-none" />
                   
                   <div className="absolute top-4 left-4 flex items-center gap-2 z-20">
-                    <div className="w-9 h-9 rounded-xl bg-red-500/20 border border-red-500/30 flex items-center justify-center text-red-400">
+                    <div className="w-9 h-9 rounded-xl bg-blue-50 border border-blue-200 flex items-center justify-center text-blue-600">
                       <Icon className="w-4 h-4" />
                     </div>
-                    <span className="font-mono text-xs font-bold text-red-500">{ind.num} // {ind.code}</span>
+                    <span className="font-mono text-xs font-bold text-blue-600">{ind.num} // {ind.code}</span>
                   </div>
 
                   <div className="absolute bottom-2 left-4 right-4 z-20">
-                    <span className="text-[11px] font-mono text-slate-400 block">{ind.systemLabel}</span>
+                    <span className="text-[11px] font-mono text-[#64748B] block">{ind.systemLabel}</span>
                   </div>
                 </div>
 
                 {/* Card Content */}
                 <div className="p-5 space-y-4">
-                  <p className="text-xs text-slate-400 leading-relaxed">{ind.tagline}</p>
+                  <p className="text-xs text-[#64748B] leading-relaxed">{ind.tagline}</p>
 
                   {/* Mobile Stats */}
                   <div className="grid grid-cols-2 gap-3">
-                    <div className="p-3 rounded-xl bg-slate-950 border border-slate-800">
-                      <span className="text-[10px] font-mono text-slate-400 block">{ind.statLabel}</span>
-                      <span className="text-lg font-black text-white">{ind.statValue}</span>
+                    <div className="p-3 rounded-xl bg-slate-50 border border-slate-200">
+                      <span className="text-[10px] font-mono text-[#64748B] block">{ind.statLabel}</span>
+                      <span className="text-lg font-black text-[#334155]">{ind.statValue}</span>
                     </div>
-                    <div className="p-3 rounded-xl bg-slate-950 border border-slate-800">
-                      <span className="text-[10px] font-mono text-slate-400 block">{ind.secondaryStatLabel}</span>
-                      <span className="text-lg font-black text-white">{ind.secondaryStat}</span>
+                    <div className="p-3 rounded-xl bg-slate-50 border border-slate-200">
+                      <span className="text-[10px] font-mono text-[#64748B] block">{ind.secondaryStatLabel}</span>
+                      <span className="text-lg font-black text-[#334155]">{ind.secondaryStat}</span>
                     </div>
                   </div>
 
                   {/* Highlights */}
                   <div className="space-y-2">
                     {ind.highlights.map((h, hIdx) => (
-                      <div key={hIdx} className="flex items-start gap-2 text-xs text-slate-300">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-red-500 shrink-0 mt-0.5" />
-                        <span><strong className="text-white">{h.title}:</strong> {h.desc}</span>
+                      <div key={hIdx} className="flex items-start gap-2 text-xs text-[#64748B]">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-blue-600 shrink-0 mt-0.5" />
+                        <span><strong className="text-[#334155]">{h.title}:</strong> {h.desc}</span>
                       </div>
                     ))}
                   </div>
 
                   {/* Equipment */}
-                  <div className="pt-2 border-t border-slate-800 flex flex-wrap gap-1.5">
+                  <div className="pt-2 border-t border-slate-200 flex flex-wrap gap-1.5">
                     {ind.equipment.map((eq, eqIdx) => (
-                      <span key={eqIdx} className="px-2 py-0.5 rounded bg-slate-800 text-[10px] font-mono text-slate-300">
+                      <span key={eqIdx} className="px-2 py-0.5 rounded bg-slate-50 text-[10px] font-mono text-[#334155] border border-slate-200">
                         {eq}
                       </span>
                     ))}
@@ -505,7 +505,7 @@ export default function PinnedIndustries() {
 
                   <Link
                     href="/industries"
-                    className="inline-flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-red-600 text-white font-bold text-xs"
+                    className="inline-flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-blue-600 hover:bg-blue-800 text-white font-bold text-xs transition-colors"
                   >
                     <span>Explore {ind.shortTitle} Solutions</span>
                     <ArrowRight className="w-3.5 h-3.5" />

@@ -53,11 +53,11 @@ export default function MetricsMarquee() {
   return (
     <section
       ref={sectionRef}
-      className="relative py-6 sm:py-8 bg-slate-950 border-y border-slate-800 overflow-hidden"
+      className="relative py-6 sm:py-8 bg-white border-y border-slate-200 overflow-hidden"
     >
       {/* Fade edges */}
-      <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-slate-950 to-transparent z-10 pointer-events-none" />
-      <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-slate-950 to-transparent z-10 pointer-events-none" />
+      <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+      <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
 
       {/* Marquee Track */}
       <div className="animate-marquee flex items-center whitespace-nowrap will-change-transform">
@@ -67,20 +67,20 @@ export default function MetricsMarquee() {
             <div className="flex items-center gap-3 px-8 sm:px-12">
               <span
                 ref={(el) => { if (i < METRIC_HIGHLIGHTS.length) numbersRef.current[i] = el; }}
-                className="text-3xl sm:text-4xl font-black text-white tabular-nums"
+                className="text-3xl sm:text-4xl font-black text-[#334155] tabular-nums"
               >
                 {metric.numericValue}
               </span>
-              <span className="text-sm sm:text-base font-bold text-red-500 tracking-wide">
+              <span className="text-sm sm:text-base font-bold text-blue-600 tracking-wide">
                 {metric.suffix}
               </span>
-              <span className="text-xs sm:text-sm text-slate-500 font-medium max-w-[160px] leading-tight">
+              <span className="text-xs sm:text-sm text-[#64748B] font-medium max-w-[160px] leading-tight">
                 {metric.label}
               </span>
             </div>
 
             {/* Separator */}
-            <div className="w-1.5 h-1.5 rounded-full bg-red-600/60 shrink-0" />
+            <div className="w-1.5 h-1.5 rounded-full bg-blue-600 shrink-0" />
           </div>
         ))}
       </div>

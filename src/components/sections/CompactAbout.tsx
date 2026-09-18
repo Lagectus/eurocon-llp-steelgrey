@@ -32,9 +32,9 @@ export default function CompactAbout() {
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="inline-flex items-center gap-2 text-xs font-mono font-bold tracking-[0.2em] uppercase text-red-600"
+              className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-xs font-mono font-bold tracking-[0.2em] uppercase text-blue-700"
             >
-              <span className="w-2 h-2 rounded-full bg-red-500" />
+              <span className="w-2 h-2 rounded-full bg-blue-600" />
               <span>THE EUROCON PHILOSOPHY</span>
             </motion.div>
 
@@ -43,11 +43,11 @@ export default function CompactAbout() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-[1.12]"
+              className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#334155] tracking-tight leading-[1.12]"
             >
               ENGINEERING AIRFLOW.{" "}
               <br />
-              <span className="text-red-600">CREATING COMFORT.</span>
+              <span className="text-blue-600">CREATING COMFORT.</span>
             </motion.h2>
 
             <motion.div
@@ -55,12 +55,12 @@ export default function CompactAbout() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="space-y-4 text-slate-600 text-base sm:text-lg leading-relaxed"
+              className="space-y-4 text-[#64748B] text-base sm:text-lg leading-relaxed"
             >
               <p>
-                <strong className="text-slate-900 font-bold">EUROCON SYSTEM LLP</strong> delivers advanced air management, ventilation and industrial HVAC engineering solutions designed for demanding environmental, thermal and life-safety applications.
+                <strong className="text-[#334155] font-bold">EUROCON SYSTEM LLP</strong> delivers advanced air management, ventilation and industrial HVAC engineering solutions designed for demanding environmental, thermal and life-safety applications.
               </p>
-              <p className="text-sm sm:text-base text-slate-500">
+              <p className="text-sm sm:text-base text-[#64748B]">
                 From subterranean metro transit smoke routing and sterile cleanrooms to expansive manufacturing shopfloors, our systems guarantee aerodynamic precision, acoustic comfort, and lifelong durability.
               </p>
             </motion.div>
@@ -70,14 +70,14 @@ export default function CompactAbout() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="pt-2"
+              className="pt-2 flex flex-wrap gap-4 items-center"
             >
               <Link
                 href="/about"
-                className="inline-flex items-center gap-2 text-sm font-bold text-slate-900 hover:text-red-600 group transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-800 text-white font-bold text-sm tracking-wide transition-all shadow-md shadow-blue-600/20 hover:shadow-lg hover:shadow-blue-600/30 group"
               >
                 <span>Discover Eurocon</span>
-                <ArrowRight className="w-4 h-4 text-red-600 transform group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
               </Link>
             </motion.div>
           </div>
@@ -89,29 +89,29 @@ export default function CompactAbout() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-200 bg-slate-900 group"
+              className="relative rounded-2xl overflow-hidden shadow-xl border border-slate-200 bg-white group"
             >
-              <div className="relative h-72 sm:h-96 w-full overflow-hidden bg-gradient-to-br from-slate-100 via-slate-50 to-slate-200 flex items-center justify-center p-6 border border-slate-200">
+              <div className="relative h-72 sm:h-96 w-full overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50/20 flex items-center justify-center p-6 border border-slate-200">
                 {/* Tech grid background */}
-                <div className="absolute inset-0 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] bg-[length:16px_16px] opacity-60 pointer-events-none" />
+                <div className="absolute inset-0 bg-tech-grid opacity-20 pointer-events-none" />
 
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="/images/products/fan-section.png"
                   alt="Eurocon High-Precision Modular Fan Section"
-                  className="w-full h-full object-contain filter drop-shadow-2xl transform group-hover:scale-105 transition-transform duration-700 relative z-10"
+                  className="w-full h-full object-contain filter drop-shadow-md transform group-hover:scale-105 transition-transform duration-700 relative z-10"
                 />
 
-                <div className="absolute bottom-4 left-4 right-4 p-3.5 rounded-xl bg-slate-950/90 backdrop-blur-md border border-slate-800 text-white flex items-center justify-between shadow-xl z-20">
+                <div className="absolute bottom-4 left-4 right-4 p-3.5 rounded-xl bg-white/95 backdrop-blur-md border border-slate-200 text-[#334155] flex items-center justify-between shadow-xl z-20">
                   <div className="space-y-0.5">
-                    <span className="text-[10px] font-mono text-red-400 uppercase font-bold">
+                    <span className="text-[10px] font-mono text-blue-600 uppercase font-bold">
                       PRECISION AIR MANAGEMENT
                     </span>
-                    <p className="text-xs font-semibold text-slate-200">
+                    <p className="text-xs font-semibold text-[#334155]">
                       Modular Fan Section & Dynamic Balancing (ISO 1940 G2.5)
                     </p>
                   </div>
-                  <ShieldCheck className="w-5 h-5 text-red-400 shrink-0" />
+                  <ShieldCheck className="w-5 h-5 text-blue-600 shrink-0" />
                 </div>
               </div>
             </motion.div>
@@ -127,15 +127,15 @@ export default function CompactAbout() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="p-5 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-red-300 transition-colors"
+              className="p-5 rounded-xl bg-white border border-slate-200 hover:border-blue-400 shadow-sm transition-all"
             >
               <div className="flex items-center gap-2.5 mb-2">
-                <CheckCircle2 className="w-4 h-4 text-red-600 shrink-0" />
-                <h3 className="font-bold text-sm text-slate-900">
+                <CheckCircle2 className="w-4 h-4 text-blue-600 shrink-0" />
+                <h3 className="font-bold text-sm text-[#334155]">
                   {item.title}
                 </h3>
               </div>
-              <p className="text-xs text-slate-600 leading-relaxed pl-6.5">
+              <p className="text-xs text-[#64748B] leading-relaxed pl-6.5">
                 {item.desc}
               </p>
             </motion.div>
