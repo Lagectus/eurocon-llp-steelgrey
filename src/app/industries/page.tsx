@@ -19,7 +19,7 @@ export default function IndustriesPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#6B7280] text-white flex flex-col justify-between">
+    <div className="min-h-screen bg-[#4B5563] text-white flex flex-col justify-between">
       <Navbar
         onOpenQuoteModal={() => handleOpenQuote()}
         onOpenMobileMenu={() => setIsMobileOpen(true)}
@@ -31,7 +31,7 @@ export default function IndustriesPage() {
       />
 
       <main className="pt-24 pb-20">
-        <section className="py-16 sm:py-20 bg-[#6B7280] border-b border-white/10">
+        <section className="py-16 sm:py-20 bg-[#4B5563] border-b border-white/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl space-y-4">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-600/15 border border-blue-500/30 text-xs font-mono font-bold tracking-[0.2em] uppercase text-blue-400">

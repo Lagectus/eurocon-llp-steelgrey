@@ -45,10 +45,10 @@ export default function MobileMenu({
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "spring", damping: 25, stiffness: 250 }}
-            className="relative w-full max-w-sm h-full bg-[#4B5563] shadow-2xl flex flex-col z-10 overflow-hidden border-l border-white/10 text-white"
+            className="relative w-full max-w-sm h-full bg-[#374151] shadow-2xl flex flex-col z-10 overflow-hidden border-l border-white/10 text-white"
           >
             {/* Header */}
-            <div className="p-6 bg-[#374151] text-white flex items-center justify-between border-b border-white/10">
+            <div className="p-6 bg-[#1F2937] text-white flex items-center justify-between border-b border-white/10">
               <div className="flex items-center gap-2.5">
                 <div className="w-8 h-8 rounded-lg overflow-hidden bg-white p-0.5 border border-white/20 shrink-0">
                   <Image
@@ -81,7 +81,7 @@ export default function MobileMenu({
             {/* Navigation Links */}
             <div className="p-5 overflow-y-auto flex-1 space-y-4 text-white">
               {/* Core Products Sub-menu */}
-              <div className="bg-[#374151] p-3.5 rounded-2xl border border-white/10 space-y-2">
+              <div className="bg-[#1F2937] p-3.5 rounded-2xl border border-white/10 space-y-2">
                 <div className="flex items-center justify-between px-1.5 pb-1">
                   <span className="text-[11px] font-mono font-bold tracking-wider uppercase text-gray-400">
                     PRODUCTS & SOLUTIONS
@@ -128,7 +128,7 @@ export default function MobileMenu({
             </div>
 
             {/* Drawer Footer */}
-            <div className="p-6 bg-[#374151] border-t border-white/10 space-y-4">
+            <div className="p-6 bg-[#1F2937] border-t border-white/10 space-y-4">
               <button
                 onClick={() => {
                   onClose();

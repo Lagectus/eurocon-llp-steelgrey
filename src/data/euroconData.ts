@@ -558,7 +558,7 @@ export const INDUSTRIES_DATA: Industry[] = [
     ],
     stats: { label: "Energy Reduction", value: "Up to 28%" },
     image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=80",
-    accentColor: "#0284C7"
+    accentColor: "#010A6D"
   },
   {
     id: "ind-manufacturing",
@@ -584,7 +584,7 @@ export const INDUSTRIES_DATA: Industry[] = [
     ],
     stats: { label: "Shopfloor Air Turnover", value: "18+ ACH" },
     image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1000&q=80",
-    accentColor: "#0EA5E9"
+    accentColor: "#010A6D"
   },
   {
     id: "ind-automotive",
@@ -610,7 +610,7 @@ export const INDUSTRIES_DATA: Industry[] = [
     ],
     stats: { label: "Paint Booth Air Uniformity", value: "99.4%" },
     image: "https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1000&q=80",
-    accentColor: "#06B6D4"
+    accentColor: "#010A6D"
   },
   {
     id: "ind-metro",
@@ -636,7 +636,7 @@ export const INDUSTRIES_DATA: Industry[] = [
     ],
     stats: { label: "Emergency Thrust", value: "Up to 120 N" },
     image: "https://images.unsplash.com/photo-1517649763962-0c623266ddc0?auto=format&fit=crop&w=1000&q=80",
-    accentColor: "#0284C7"
+    accentColor: "#010A6D"
   },
   {
     id: "ind-datacenters",
@@ -662,7 +662,7 @@ export const INDUSTRIES_DATA: Industry[] = [
     ],
     stats: { label: "PUE Efficiency Gain", value: "14% Avg" },
     image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1000&q=80",
-    accentColor: "#50A2FF"
+    accentColor: "#010A6D"
   },
   {
     id: "ind-pharma",
@@ -740,7 +740,7 @@ export const INDUSTRIES_DATA: Industry[] = [
     ],
     stats: { label: "Passenger IAQ Rating", value: "Class A" },
     image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1000&q=80",
-    accentColor: "#0284C7"
+    accentColor: "#010A6D"
   }
 ];
 

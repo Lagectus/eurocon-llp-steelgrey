@@ -102,7 +102,7 @@ export default function AboutStorytelling() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="about-preview" className="relative py-16 sm:py-24 bg-[#6B7280] border-b border-white/10 overflow-hidden text-white">
+    <section ref={sectionRef} id="about-preview" className="relative py-16 sm:py-24 bg-[#4B5563] border-b border-white/10 overflow-hidden text-white">
       {/* Background technical grid and soft blue ambience */}
       <div className="absolute inset-0 bg-tech-grid opacity-35 pointer-events-none" />
       <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-500/8 rounded-full blur-[120px] pointer-events-none -translate-x-1/2 -translate-y-1/2" />
@@ -113,7 +113,7 @@ export default function AboutStorytelling() {
           <div className="relative order-2 lg:order-1">
             <div
               ref={imageWrapRef}
-              className="relative rounded-3xl overflow-hidden shadow-xl border border-white/15 bg-[#4B5563] will-change-[clip-path]"
+              className="relative rounded-3xl overflow-hidden shadow-xl border border-white/15 bg-[#374151] will-change-[clip-path]"
               style={{ clipPath: "inset(50% 50% 50% 50%)" }}
             >
               <div className="relative h-[400px] sm:h-[520px] overflow-hidden bg-gradient-to-br from-gray-100 via-white to-gray-50 flex items-center justify-center p-6 border border-white/10">
@@ -195,7 +195,7 @@ export default function AboutStorytelling() {
           {highlights.map((item) => (
             <div
               key={item.title}
-              className="group p-6 rounded-2xl bg-[#4B5563] border border-white/12 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+              className="group p-6 rounded-2xl bg-[#374151] border border-white/12 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
             >
               <div className="w-10 h-10 rounded-xl bg-blue-600/15 border border-blue-500/30 text-blue-400 flex items-center justify-center mb-3 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                 <CheckCircle2 className="w-5 h-5" />

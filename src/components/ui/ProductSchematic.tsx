@@ -14,10 +14,10 @@ export default function ProductSchematic({
   className = "w-full h-48",
   isDark = true,
 }: ProductSchematicProps) {
-  const strokeColor = isDark ? "#50A2FF" : "#50A2FF";
+  const strokeColor = "#010A6D";
   const dimStroke = isDark ? "#64748B" : "#94A3B8";
-  const fillColor = isDark ? "rgba(80, 162, 255, 0.12)" : "rgba(80, 162, 255, 0.08)";
-  const accentColor = isDark ? "#7BBFFF" : "#50A2FF";
+  const fillColor = isDark ? "rgba(1, 10, 109, 0.15)" : "rgba(1, 10, 109, 0.08)";
+  const accentColor = "#010A6D";
 
   return (
     <div className={`relative flex items-center justify-center overflow-hidden rounded-xl ${className}`}>
@@ -206,7 +206,7 @@ export default function ProductSchematic({
           <line x1="58" y1="105" x2="72" y2="120" stroke={accentColor} strokeWidth="2" />
           <line x1="58" y1="125" x2="72" y2="140" stroke={accentColor} strokeWidth="2" />
           {/* Section 2: Cooling & Heating Coil (Copper tubes + Al fins) */}
-          <rect x="100" y="48" width="32" height="100" rx="3" fill="rgba(80, 162, 255, 0.2)" stroke={accentColor} strokeWidth="2" />
+          <rect x="100" y="48" width="32" height="100" rx="3" fill="rgba(1, 10, 109, 0.2)" stroke={accentColor} strokeWidth="2" />
           <line x1="108" y1="52" x2="108" y2="144" stroke={strokeColor} strokeWidth="1.5" />
           <line x1="116" y1="52" x2="116" y2="144" stroke={strokeColor} strokeWidth="1.5" />
           <line x1="124" y1="52" x2="124" y2="144" stroke={strokeColor} strokeWidth="1.5" />
@@ -232,12 +232,12 @@ export default function ProductSchematic({
           {/* Airwasher Main Casing */}
           <rect x="30" y="35" width="260" height="115" rx="4" fill={fillColor} stroke={strokeColor} strokeWidth="2.5" />
           {/* Heavy Gauge Water Sump Tank at Bottom */}
-          <rect x="25" y="145" width="270" height="25" rx="3" fill="rgba(80, 162, 255, 0.25)" stroke={strokeColor} strokeWidth="2" />
+          <rect x="25" y="145" width="270" height="25" rx="3" fill="rgba(1, 10, 109, 0.25)" stroke={strokeColor} strokeWidth="2" />
           <text x="110" y="162" fill={dimStroke} fontSize="8" fontFamily="monospace">SS304 WATER SUMP TANK</text>
           {/* Fresh Air Inlet Louver / Pre-filter */}
           <rect x="38" y="45" width="14" height="95" rx="2" fill="none" stroke={dimStroke} strokeWidth="1.5" />
           {/* Celdek Evaporative Cellulose Pad Bank */}
-          <rect x="75" y="45" width="45" height="95" rx="3" fill="rgba(80, 162, 255, 0.2)" stroke={accentColor} strokeWidth="2" />
+          <rect x="75" y="45" width="45" height="95" rx="3" fill="rgba(1, 10, 109, 0.2)" stroke={accentColor} strokeWidth="2" />
           {/* Cross-flute pattern on Celdek */}
           <line x1="75" y1="55" x2="120" y2="85" stroke={accentColor} strokeWidth="1.5" opacity="0.6" />
           <line x1="75" y1="85" x2="120" y2="115" stroke={accentColor} strokeWidth="1.5" opacity="0.6" />
@@ -271,7 +271,7 @@ export default function ProductSchematic({
           <rect x="40" y="30" width="240" height="135" rx="6" fill={fillColor} stroke={strokeColor} strokeWidth="2.5" />
           <rect x="48" y="38" width="224" height="119" rx="4" fill="none" stroke={dimStroke} strokeDasharray="4 2" />
           {/* Aerodynamic Bellmouth Inlet Cone */}
-          <path d="M 40 60 C 70 60, 90 75, 105 75 L 105 125 C 90 125, 70 140, 40 140 Z" fill="rgba(80, 162, 255, 0.15)" stroke={accentColor} strokeWidth="2" />
+          <path d="M 40 60 C 70 60, 90 75, 105 75 L 105 125 C 90 125, 70 140, 40 140 Z" fill="rgba(1, 10, 109, 0.15)" stroke={accentColor} strokeWidth="2" />
           {/* Dynamic Plug Fan Wheel / Impeller */}
           <circle cx="165" cy="95" r="44" fill="none" stroke={strokeColor} strokeWidth="2.5" />
           <circle cx="165" cy="95" r="16" fill={fillColor} stroke={accentColor} strokeWidth="2" />
@@ -310,7 +310,7 @@ export default function ProductSchematic({
           {/* Centrifugal DIDW Blower Wheel inside Cabinet */}
           <path
             d="M 100 95 C 100 65, 145 50, 185 50 L 225 50 L 225 95 C 205 95, 190 140, 145 145 C 105 145, 90 120, 100 95 Z"
-            fill="rgba(80, 162, 255, 0.15)"
+            fill="rgba(1, 10, 109, 0.15)"
             stroke={accentColor}
             strokeWidth="2"
           />
@@ -337,7 +337,7 @@ export default function ProductSchematic({
           <line x1="48" y1="52" x2="48" y2="142" stroke={dimStroke} strokeWidth="3" />
           <line x1="56" y1="55" x2="56" y2="140" stroke={accentColor} strokeWidth="1.5" strokeDasharray="2 2" />
           {/* Multi-Row Chilled Water Hydrophilic Fin Coil */}
-          <rect x="80" y="52" width="38" height="90" rx="2" fill="rgba(80, 162, 255, 0.2)" stroke={accentColor} strokeWidth="2" />
+          <rect x="80" y="52" width="38" height="90" rx="2" fill="rgba(1, 10, 109, 0.2)" stroke={accentColor} strokeWidth="2" />
           <line x1="88" y1="56" x2="88" y2="138" stroke={strokeColor} strokeWidth="1.5" />
           <line x1="98" y1="56" x2="98" y2="138" stroke={strokeColor} strokeWidth="1.5" />
           <line x1="108" y1="56" x2="108" y2="138" stroke={strokeColor} strokeWidth="1.5" />

@@ -85,7 +85,7 @@ export default function QuoteModal({ isOpen, onClose, initialProduct = "" }: Quo
         particleCount: 80,
         spread: 60,
         origin: { y: 0.6 },
-        colors: ["#50A2FF", "#50A2FF", "#7BBFFF", "#64748B"],
+        colors: ["#010A6D", "#010A6D", "#010645", "#64748B"],
       });
     }, 1200);
   };

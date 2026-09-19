@@ -15,7 +15,7 @@ export default function AboutPage() {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-[#6B7280] text-white flex flex-col justify-between">
+    <div className="min-h-screen bg-[#4B5563] text-white flex flex-col justify-between">
       <Navbar
         onOpenQuoteModal={() => setIsQuoteOpen(true)}
         onOpenMobileMenu={() => setIsMobileOpen(true)}
@@ -28,7 +28,7 @@ export default function AboutPage() {
 
       <main className="pt-24 pb-20">
         {/* Page Hero */}
-        <section className="relative py-16 sm:py-24 bg-[#6B7280] border-b border-white/10">
+        <section className="relative py-16 sm:py-24 bg-[#4B5563] border-b border-white/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl space-y-4">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-600/15 border border-blue-500/30 text-xs font-mono font-bold tracking-[0.2em] uppercase text-blue-400">
@@ -63,7 +63,7 @@ export default function AboutPage() {
 
               <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/10">
                 {METRIC_HIGHLIGHTS.slice(0, 2).map((m) => (
-                  <div key={m.label} className="p-4 rounded-xl bg-[#4B5563] border border-white/12 shadow-xs">
+                  <div key={m.label} className="p-4 rounded-xl bg-[#374151] border border-white/12 shadow-xs">
                     <span className="text-2xl sm:text-3xl font-black text-white font-mono block">{m.value}</span>
                     <span className="text-xs font-bold text-gray-400 mt-1 block">{m.label}</span>
                   </div>
@@ -71,7 +71,7 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <div className="lg:col-span-6 rounded-2xl overflow-hidden shadow-xl border border-white/15 bg-[#4B5563]">
+            <div className="lg:col-span-6 rounded-2xl overflow-hidden shadow-xl border border-white/15 bg-[#374151]">
               <img
                 src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80"
                 alt="Eurocon Engineering Facility"
@@ -82,7 +82,7 @@ export default function AboutPage() {
         </section>
 
         {/* Certifications Matrix */}
-        <section className="py-16 bg-[#4B5563] border-y border-white/10">
+        <section className="py-16 bg-[#374151] border-y border-white/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <SectionHeading
               eyebrow="QUALITY & ACCREDITATIONS"
@@ -92,7 +92,7 @@ export default function AboutPage() {
 
             <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {COMPANY_INFO.certifications.map((cert, idx) => (
-                <div key={idx} className="p-5 rounded-xl bg-[#374151] border border-white/12 flex items-start gap-3 shadow-xs">
+                <div key={idx} className="p-5 rounded-xl bg-[#1F2937] border border-white/12 flex items-start gap-3 shadow-xs">
                   <ShieldCheck className="w-5 h-5 text-blue-400 shrink-0 mt-0.5" />
                   <span className="text-xs sm:text-sm font-semibold text-white">{cert}</span>
                 </div>
@@ -103,7 +103,7 @@ export default function AboutPage() {
 
         {/* Action Banner */}
         <section className="pt-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="p-10 rounded-2xl bg-gradient-to-br from-[#4B5563] via-[#374151] to-[#4B5563] border border-white/12 text-white space-y-6 shadow-lg">
+          <div className="p-10 rounded-2xl bg-gradient-to-br from-[#374151] via-[#1F2937] to-[#374151] border border-white/12 text-white space-y-6 shadow-lg">
             <h3 className="text-2xl sm:text-3xl font-black text-white">
               Ready to Discuss Your Airflow Specification?
             </h3>

@@ -1,41 +1,41 @@
 @import "tailwindcss";
 
-/* Override Tailwind blue palette → all blue-* classes use #50A2FF family */
+/* Override Tailwind blue palette → all blue-* classes use #010A6D family */
 @theme {
-  --color-blue-50: #E8F4FF;
-  --color-blue-100: #D1E9FF;
-  --color-blue-200: #A8D4FF;
-  --color-blue-300: #7BBFFF;
-  --color-blue-400: #50A2FF;
-  --color-blue-500: #50A2FF;
-  --color-blue-600: #50A2FF;
-  --color-blue-700: #3D8AE8;
-  --color-blue-800: #2B6FBF;
-  --color-blue-900: #1A5599;
-  --color-blue-950: #0E3A6B;
+  --color-blue-50: #EEF1FA;
+  --color-blue-100: #D8DEF5;
+  --color-blue-200: #B2BEEA;
+  --color-blue-300: #7B90DB;
+  --color-blue-400: #010A6D;
+  --color-blue-500: #010A6D;
+  --color-blue-600: #010A6D;
+  --color-blue-700: #01085A;
+  --color-blue-800: #010645;
+  --color-blue-900: #000430;
+  --color-blue-950: #00021A;
 }
 
 @layer base {
   :root {
-    --primary-blue: #50A2FF;
-    --dark-blue: #2B6FBF;
-    --accent-blue: #50A2FF;
-    --steel-grey: #6B7280;
-    --dark-steel: #4B5563;
-    --light-steel: #9CA3AF;
-    --light-grey: #374151;
-    --background: #6B7280;
+    --primary-blue: #010A6D;
+    --dark-blue: #010645;
+    --accent-blue: #010A6D;
+    --steel-grey: #4B5563;
+    --dark-steel: #374151;
+    --light-steel: #6B7280;
+    --light-grey: #1F2937;
+    --background: #4B5563;
     --text-primary: #FFFFFF;
     --text-secondary: #D1D5DB;
-    --border: #9CA3AF;
+    --border: #6B7280;
 
-    --background-rgb: 107 114 128;
+    --background-rgb: 75 85 99;
     --foreground-rgb: 255 255 255;
-    --primary: 80 162 255;
-    --primary-dark: 43 111 191;
-    --accent: 80 162 255;
-    --muted: 156 163 175;
-    --border-rgb: 156 163 175;
+    --primary: 1 10 109;
+    --primary-dark: 1 6 69;
+    --accent: 1 10 109;
+    --muted: 107 114 128;
+    --border-rgb: 107 114 128;
   }
 
   html {
@@ -46,26 +46,26 @@
   }
 
   body {
-    background-color: #6B7280;
+    background-color: #4B5563;
     color: #FFFFFF;
     overflow-x: hidden;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
 
   ::selection {
-    background: #50A2FF;
+    background: #010A6D;
     color: #FFFFFF;
   }
 }
 
 /* Centralized Button & Card Tokens */
 .btn-primary {
-  background-color: #50A2FF;
+  background-color: #010A6D;
   color: #FFFFFF;
   transition: all 0.2s ease-in-out;
 }
 .btn-primary:hover {
-  background-color: #2B6FBF;
+  background-color: #010645;
 }
 
 .btn-secondary {
@@ -75,13 +75,13 @@
   transition: all 0.2s ease-in-out;
 }
 .btn-secondary:hover {
-  border-color: #50A2FF;
+  border-color: #010A6D;
   color: #FFFFFF;
-  background-color: rgba(80, 162, 255, 0.15);
+  background-color: rgba(1, 10, 109, 0.25);
 }
 
 .card-steel {
-  background-color: #4B5563;
+  background-color: #374151;
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 1rem;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
@@ -89,8 +89,8 @@
   color: #FFFFFF;
 }
 .card-steel:hover {
-  border-color: #50A2FF;
-  box-shadow: 0 10px 25px -5px rgba(80, 162, 255, 0.15);
+  border-color: #010A6D;
+  box-shadow: 0 10px 25px -5px rgba(1, 10, 109, 0.35);
 }
 
 /* Custom Industrial Engineering Grid */
@@ -109,7 +109,7 @@
 }
 
 .bg-radial-gradient {
-  background: radial-gradient(circle at 50% 30%, rgba(80, 162, 255, 0.1) 0%, rgba(107, 114, 128, 0) 70%);
+  background: radial-gradient(circle at 50% 30%, rgba(1, 10, 109, 0.2) 0%, rgba(75, 85, 99, 0) 70%);
 }
 
 /* Airflow Animated Wave Lines */
@@ -157,14 +157,14 @@
 
 /* Glassmorphism Classes */
 .glass-panel {
-  background: rgba(75, 85, 99, 0.7);
+  background: rgba(55, 65, 81, 0.7);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .glass-panel-dark {
-  background: rgba(55, 65, 81, 0.8);
+  background: rgba(31, 41, 55, 0.8);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -176,16 +176,16 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #4B5563;
+  background: #374151;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #9CA3AF;
+  background: #6B7280;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #50A2FF;
+  background: #010A6D;
 }
 
 /* Hide scrollbars for clean horizontal slider */

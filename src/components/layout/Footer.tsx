@@ -12,7 +12,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative bg-[#374151] text-gray-400 text-sm overflow-hidden border-t border-white/10">
+    <footer className="relative bg-[#1F2937] text-gray-400 text-sm overflow-hidden border-t border-white/10">
       <div className="absolute inset-0 bg-tech-grid opacity-15 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-10 relative z-10">

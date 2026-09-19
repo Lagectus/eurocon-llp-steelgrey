@@ -222,7 +222,7 @@ export default function PinnedIndustries() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative bg-[#6B7280] border-y border-white/10">
+    <section ref={sectionRef} className="relative bg-[#4B5563] border-y border-white/10">
       {/* Section Header */}
       <div className="pt-12 sm:pt-14 pb-6 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
@@ -357,7 +357,7 @@ export default function PinnedIndustries() {
 
                       {/* Key Performance Stats Row */}
                       <div className="grid grid-cols-2 gap-4">
-                        <div className="p-4 rounded-2xl bg-[#4B5563] border border-white/12 shadow-xs">
+                        <div className="p-4 rounded-2xl bg-[#374151] border border-white/12 shadow-xs">
                           <div className="flex items-center gap-2 mb-1">
                             <Gauge className="w-4 h-4 text-blue-400" />
                             <span className="text-[11px] font-mono text-gray-400 uppercase font-semibold">
@@ -369,7 +369,7 @@ export default function PinnedIndustries() {
                           </span>
                         </div>
 
-                        <div className="p-4 rounded-2xl bg-[#4B5563] border border-white/12 shadow-xs">
+                        <div className="p-4 rounded-2xl bg-[#374151] border border-white/12 shadow-xs">
                           <div className="flex items-center gap-2 mb-1">
                             <Cpu className="w-4 h-4 text-blue-400" />
                             <span className="text-[11px] font-mono text-gray-400 uppercase font-semibold">
@@ -391,7 +391,7 @@ export default function PinnedIndustries() {
                           {ind.highlights.map((item, hIdx) => (
                             <div
                               key={hIdx}
-                              className="flex items-start gap-3 p-3 rounded-xl bg-[#4B5563]/80 border border-white/10 hover:border-blue-500/40 transition-colors"
+                              className="flex items-start gap-3 p-3 rounded-xl bg-[#374151]/80 border border-white/10 hover:border-blue-500/40 transition-colors"
                             >
                               <CheckCircle2 className="w-4 h-4 text-blue-400 shrink-0 mt-0.5" />
                               <div className="space-y-0.5">
@@ -448,7 +448,7 @@ export default function PinnedIndustries() {
             return (
               <div
                 key={ind.id}
-                className="relative rounded-2xl overflow-hidden border border-white/12 bg-[#4B5563] shadow-lg"
+                className="relative rounded-2xl overflow-hidden border border-white/12 bg-[#374151] shadow-lg"
               >
                 {/* Header Image */}
                 <div className="relative h-48 w-full overflow-hidden bg-gradient-to-br from-gray-100 via-white to-gray-50 flex items-center justify-center p-4">
@@ -474,11 +474,11 @@ export default function PinnedIndustries() {
 
                   {/* Mobile Stats */}
                   <div className="grid grid-cols-2 gap-3">
-                    <div className="p-3 rounded-xl bg-[#374151] border border-white/10">
+                    <div className="p-3 rounded-xl bg-[#1F2937] border border-white/10">
                       <span className="text-[10px] font-mono text-gray-400 block">{ind.statLabel}</span>
                       <span className="text-lg font-black text-white">{ind.statValue}</span>
                     </div>
-                    <div className="p-3 rounded-xl bg-[#374151] border border-white/10">
+                    <div className="p-3 rounded-xl bg-[#1F2937] border border-white/10">
                       <span className="text-[10px] font-mono text-gray-400 block">{ind.secondaryStatLabel}</span>
                       <span className="text-lg font-black text-white">{ind.secondaryStat}</span>
                     </div>

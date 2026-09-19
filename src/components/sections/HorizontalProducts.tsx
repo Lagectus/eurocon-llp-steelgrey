@@ -182,7 +182,7 @@ export default function HorizontalProducts() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="solutions" className="relative bg-[#6B7280] text-white border-b border-white/10">
+    <section ref={sectionRef} id="solutions" className="relative bg-[#4B5563] text-white border-b border-white/10">
       {/* Section Header (above the pin area) */}
       <div className="pt-12 sm:pt-14 pb-6 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div ref={headerRef} className="flex flex-col md:flex-row md:items-end justify-between gap-6">
@@ -225,7 +225,7 @@ export default function HorizontalProducts() {
             <Link
               key={product.id}
               href={product.href}
-              className="product-card-hover group relative bg-[#4B5563] rounded-2xl border border-white/12 overflow-hidden flex-shrink-0 lg:w-[380px] xl:w-[420px] flex flex-col shadow-lg hover:shadow-2xl hover:border-blue-500/50 transition-all"
+              className="product-card-hover group relative bg-[#374151] rounded-2xl border border-white/12 overflow-hidden flex-shrink-0 lg:w-[380px] xl:w-[420px] flex flex-col shadow-lg hover:shadow-2xl hover:border-blue-500/50 transition-all"
             >
               {/* Image Area */}
               <div className="relative bg-gradient-to-br from-gray-100 via-white to-gray-50 border-b border-white/10 overflow-hidden">
@@ -278,7 +278,7 @@ export default function HorizontalProducts() {
           ))}
 
           {/* 09 — Final Catalog Call-to-Action Card */}
-          <div className="product-card-hover group relative bg-gradient-to-br from-[#4B5563] via-[#374151] to-[#4B5563] text-white rounded-2xl border border-white/12 overflow-hidden flex-shrink-0 lg:w-[380px] xl:w-[420px] flex flex-col justify-between p-7 shadow-lg">
+          <div className="product-card-hover group relative bg-gradient-to-br from-[#374151] via-[#1F2937] to-[#374151] text-white rounded-2xl border border-white/12 overflow-hidden flex-shrink-0 lg:w-[380px] xl:w-[420px] flex flex-col justify-between p-7 shadow-lg">
             <div className="space-y-4">
               <div className="flex items-center justify-between">
                 <span className="font-mono text-xs font-black text-blue-400">

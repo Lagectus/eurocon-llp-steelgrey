@@ -77,8 +77,8 @@ export default function Navbar({
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled
-          ? "bg-[#4B5563]/95 backdrop-blur-md shadow-lg border-b border-white/10 py-3"
-          : "bg-[#4B5563]/90 backdrop-blur-md border-b border-white/10 py-3.5 sm:py-4"
+          ? "bg-[#374151]/95 backdrop-blur-md shadow-lg border-b border-white/10 py-3"
+          : "bg-[#374151]/90 backdrop-blur-md border-b border-white/10 py-3.5 sm:py-4"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
@@ -163,7 +163,7 @@ export default function Navbar({
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: 6, scale: 0.98 }}
                   transition={{ duration: 0.18 }}
-                  className="absolute top-full -left-28 w-[580px] mt-2 bg-[#374151] rounded-2xl shadow-xl border border-white/15 p-4 z-50 text-white"
+                  className="absolute top-full -left-28 w-[580px] mt-2 bg-[#1F2937] rounded-2xl shadow-xl border border-white/15 p-4 z-50 text-white"
                 >
                   <div className="px-2 pb-2.5 mb-2.5 border-b border-white/10 flex items-center justify-between">
                     <span className="text-[11px] font-mono font-bold tracking-wider uppercase text-gray-300">

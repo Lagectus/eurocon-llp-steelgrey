@@ -82,13 +82,13 @@ export default function CinematicCTA({ onOpenQuoteModal }: CinematicCTAProps) {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative overflow-hidden bg-[#6B7280]">
+    <section ref={sectionRef} className="relative overflow-hidden bg-[#4B5563]">
       <div
         ref={containerRef}
-        className="relative py-16 sm:py-20 bg-gradient-to-br from-[#4B5563] via-[#6B7280] to-[#4B5563] text-white overflow-hidden will-change-transform opacity-0 border-t border-white/10"
+        className="relative py-16 sm:py-20 bg-gradient-to-br from-[#374151] via-[#4B5563] to-[#374151] text-white overflow-hidden will-change-transform opacity-0 border-t border-white/10"
       >
         {/* Background effects */}
-        <AirflowCanvas particleCount={25} color="rgba(80, 162, 255, 0.15)" />
+        <AirflowCanvas particleCount={25} color="rgba(1, 10, 109, 0.15)" />
         <div className="absolute inset-0 bg-tech-grid opacity-25 pointer-events-none" />
 
         {/* Decorative glow */}

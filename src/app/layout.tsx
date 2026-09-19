@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#2B6FBF",
+  themeColor: "#010A6D",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
@@ -73,7 +73,7 @@ export default function RootLayout({
     >
       <body
         suppressHydrationWarning
-        className="min-h-screen bg-[#6B7280] text-white font-sans antialiased selection:bg-blue-600 selection:text-white"
+        className="min-h-screen bg-[#4B5563] text-white font-sans antialiased selection:bg-blue-600 selection:text-white"
       >
         {children}
       </body>
