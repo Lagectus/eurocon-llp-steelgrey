@@ -22,7 +22,7 @@ export default function Hero({ onOpenQuoteModal }: HeroProps) {
       <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-blue-600/5 rounded-full blur-3xl pointer-events-none" />
 
       {/* Subtle Vector Airflow Streamlines */}
-      <AirflowCanvas particleCount={30} color="rgba(37, 99, 235, 0.25)" />
+      <AirflowCanvas particleCount={30} color="rgba(80, 162, 255, 0.25)" />
 
       {/* Main Content Grid */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -151,7 +151,7 @@ export default function Hero({ onOpenQuoteModal }: HeroProps) {
                     <path
                       d="M 20 100 Q 180 50, 340 140 T 480 110"
                       fill="none"
-                      stroke="#2563EB"
+                      stroke="#50A2FF"
                       strokeWidth="2"
                       strokeDasharray="6 4"
                       className="animate-airflow-line"

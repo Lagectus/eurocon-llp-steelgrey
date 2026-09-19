@@ -662,7 +662,7 @@ export const INDUSTRIES_DATA: Industry[] = [
     ],
     stats: { label: "PUE Efficiency Gain", value: "14% Avg" },
     image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1000&q=80",
-    accentColor: "#3B82F6"
+    accentColor: "#50A2FF"
   },
   {
     id: "ind-pharma",

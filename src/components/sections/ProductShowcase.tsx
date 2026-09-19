@@ -32,7 +32,7 @@ export default function ProductShowcase({
   return (
     <section className="relative py-24 sm:py-32 bg-white border-y border-slate-200 text-[#334155] overflow-hidden">
       {/* Background Radial Atmosphere */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(37,99,235,0.08),transparent_70%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(80,162,255,0.08),transparent_70%)]" />
       <div className="absolute inset-0 bg-tech-grid opacity-20 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

@@ -53,7 +53,7 @@ export default function SectionHeading({
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-medium border bg-blue-50 border-blue-200 text-blue-700"
+            className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-medium border bg-blue-600/15 border-blue-500/30 text-blue-400"
           >
             <Sparkles className="w-3 h-3 text-blue-600" />
             {badge}
@@ -67,7 +67,7 @@ export default function SectionHeading({
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.15] text-[#334155]"
+        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.15] text-white"
       >
         {title}
       </motion.h2>
@@ -79,7 +79,7 @@ export default function SectionHeading({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-4 text-base sm:text-lg leading-relaxed text-[#64748B]"
+          className="mt-4 text-base sm:text-lg leading-relaxed text-gray-400"
         >
           {subtitle}
         </motion.p>

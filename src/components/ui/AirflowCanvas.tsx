@@ -15,7 +15,7 @@ interface Particle {
 export default function AirflowCanvas({
   className = "",
   particleCount = 35,
-  color = "rgba(37, 99, 235, 0.4)",
+  color = "rgba(80, 162, 255, 0.4)",
   direction = "right",
 }: {
   className?: string;
@@ -74,7 +74,7 @@ export default function AirflowCanvas({
 
         const gradient = ctx.createLinearGradient(startX, startY, endX, endY);
         gradient.addColorStop(0, color.replace("0.4", `${p.opacity}`));
-        gradient.addColorStop(1, "rgba(37, 99, 235, 0)");
+        gradient.addColorStop(1, "rgba(80, 162, 255, 0)");
 
         ctx.strokeStyle = gradient;
         ctx.lineWidth = p.thickness;

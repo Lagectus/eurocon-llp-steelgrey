@@ -71,15 +71,15 @@ export default function CustomCursor() {
           height: cursorType === "view" ? 64 : cursorType === "pointer" ? 44 : 32,
           backgroundColor:
             cursorType === "view"
-              ? "rgba(37, 99, 235, 0.9)"
+              ? "rgba(80, 162, 255, 0.9)"
               : cursorType === "pointer"
-              ? "rgba(37, 99, 235, 0.2)"
+              ? "rgba(80, 162, 255, 0.2)"
               : "rgba(0, 0, 0, 0)",
           borderColor:
             cursorType === "view"
               ? "rgba(0, 0, 0, 0)"
               : cursorType === "pointer"
-              ? "rgba(37, 99, 235, 0.6)"
+              ? "rgba(80, 162, 255, 0.6)"
               : "rgba(15, 23, 42, 0.35)",
           borderWidth: cursorType === "view" ? 0 : 1.5,
           scale: 1,

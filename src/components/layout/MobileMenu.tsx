@@ -36,7 +36,7 @@ export default function MobileMenu({
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 bg-slate-950/60 backdrop-blur-sm"
+            className="fixed inset-0 bg-black/60 backdrop-blur-sm"
           />
 
           {/* Drawer */}
@@ -45,12 +45,12 @@ export default function MobileMenu({
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "spring", damping: 25, stiffness: 250 }}
-            className="relative w-full max-w-sm h-full bg-white shadow-2xl flex flex-col z-10 overflow-hidden border-l border-slate-200 text-[#334155]"
+            className="relative w-full max-w-sm h-full bg-[#4B5563] shadow-2xl flex flex-col z-10 overflow-hidden border-l border-white/10 text-white"
           >
             {/* Header */}
-            <div className="p-6 bg-slate-50 text-[#334155] flex items-center justify-between border-b border-slate-200">
+            <div className="p-6 bg-[#374151] text-white flex items-center justify-between border-b border-white/10">
               <div className="flex items-center gap-2.5">
-                <div className="w-8 h-8 rounded-lg overflow-hidden bg-white p-0.5 border border-slate-200">
+                <div className="w-8 h-8 rounded-lg overflow-hidden bg-white p-0.5 border border-white/20 shrink-0">
                   <Image
                     src="/logo.png"
                     alt="Eurocon Logo"
@@ -60,10 +60,10 @@ export default function MobileMenu({
                   />
                 </div>
                 <div>
-                  <span className="font-extrabold text-base tracking-wide block text-[#334155]">
-                    <span className="text-blue-600">EURO</span>CON
+                  <span className="font-black text-base tracking-wide block text-white leading-tight">
+                    <span className="text-blue-400">EURO</span>CON
                   </span>
-                  <span className="text-[10px] text-slate-500 font-mono tracking-widest uppercase">
+                  <span className="text-[10px] text-gray-400 font-mono tracking-widest uppercase font-bold">
                     SYSTEM LLP
                   </span>
                 </div>
@@ -71,7 +71,7 @@ export default function MobileMenu({
 
               <button
                 onClick={onClose}
-                className="p-2 rounded-full bg-slate-200 text-[#334155] hover:bg-slate-300 transition-colors"
+                className="p-2 rounded-xl bg-white/10 text-white hover:bg-white/20 hover:text-white transition-colors cursor-pointer"
                 aria-label="Close menu"
               >
                 <X className="w-5 h-5" />
@@ -79,17 +79,17 @@ export default function MobileMenu({
             </div>
 
             {/* Navigation Links */}
-            <div className="p-5 overflow-y-auto flex-1 space-y-4 text-[#334155]">
+            <div className="p-5 overflow-y-auto flex-1 space-y-4 text-white">
               {/* Core Products Sub-menu */}
-              <div className="bg-slate-50 p-3.5 rounded-2xl border border-slate-200 space-y-2">
+              <div className="bg-[#374151] p-3.5 rounded-2xl border border-white/10 space-y-2">
                 <div className="flex items-center justify-between px-1.5 pb-1">
-                  <span className="text-[11px] font-mono font-bold tracking-wider uppercase text-slate-500">
+                  <span className="text-[11px] font-mono font-bold tracking-wider uppercase text-gray-400">
                     PRODUCTS & SOLUTIONS
                   </span>
                   <Link
                     href="/products"
                     onClick={onClose}
-                    className="text-[11px] font-bold text-blue-600 hover:text-blue-700 flex items-center gap-0.5"
+                    className="text-[11px] font-bold text-blue-400 hover:text-blue-300 flex items-center gap-0.5"
                   >
                     <span>All (8)</span>
                     <ChevronRight className="w-3.5 h-3.5" />
@@ -102,10 +102,10 @@ export default function MobileMenu({
                       key={prod.slug}
                       href={prod.href}
                       onClick={onClose}
-                      className="flex items-center justify-between py-2 px-2.5 rounded-xl text-xs font-bold text-[#334155] hover:bg-white hover:text-blue-600 hover:shadow-xs transition-all border border-transparent hover:border-slate-200"
+                      className="flex items-center justify-between py-2 px-2.5 rounded-xl text-xs font-bold text-white hover:bg-white/8 hover:text-blue-400 hover:shadow-xs transition-all border border-transparent hover:border-white/10"
                     >
                       <span className="truncate">{prod.name}</span>
-                      <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
+                      <ChevronRight className="w-3.5 h-3.5 text-gray-500" />
                     </Link>
                   ))}
                 </div>
@@ -118,17 +118,17 @@ export default function MobileMenu({
                     key={link.name}
                     href={link.href}
                     onClick={onClose}
-                    className="flex items-center justify-between py-2.5 px-3 rounded-xl font-bold text-sm text-[#334155] hover:bg-slate-100 hover:text-blue-600 transition-colors"
+                    className="flex items-center justify-between py-2.5 px-3 rounded-xl font-bold text-sm text-white hover:bg-white/8 hover:text-blue-400 transition-colors"
                   >
                     <span>{link.name}</span>
-                    <ArrowRight className="w-4 h-4 text-slate-400" />
+                    <ArrowRight className="w-4 h-4 text-gray-500" />
                   </Link>
                 ))}
               </div>
             </div>
 
             {/* Drawer Footer */}
-            <div className="p-6 bg-slate-50 border-t border-slate-200 space-y-4">
+            <div className="p-6 bg-[#374151] border-t border-white/10 space-y-4">
               <button
                 onClick={() => {
                   onClose();
@@ -140,13 +140,13 @@ export default function MobileMenu({
                 <ArrowRight className="w-4 h-4" />
               </button>
 
-              <div className="text-xs text-slate-600 space-y-1.5 pt-2">
+              <div className="text-xs text-gray-400 space-y-1.5 pt-2">
                 <div className="flex items-center gap-2">
-                  <Phone className="w-3.5 h-3.5 text-blue-600" />
+                  <Phone className="w-3.5 h-3.5 text-blue-400" />
                   <span>{COMPANY_INFO.headquarters.phone.split("/")[0]}</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Mail className="w-3.5 h-3.5 text-blue-600" />
+                  <Mail className="w-3.5 h-3.5 text-blue-400" />
                   <span>{COMPANY_INFO.headquarters.email}</span>
                 </div>
               </div>

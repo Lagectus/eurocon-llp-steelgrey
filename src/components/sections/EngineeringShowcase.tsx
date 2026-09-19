@@ -109,19 +109,19 @@ export default function EngineeringShowcase() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="engineering" className="relative py-14 sm:py-18 bg-white text-[#334155] border-b border-slate-200 overflow-hidden">
+    <section ref={sectionRef} id="engineering" className="relative py-14 sm:py-18 bg-[#6B7280] text-white border-b border-white/10 overflow-hidden">
       {/* Decorative background */}
-      <div className="absolute top-1/2 right-0 w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[100px] pointer-events-none translate-x-1/2 -translate-y-1/2" />
+      <div className="absolute top-1/2 right-0 w-[400px] h-[400px] bg-blue-500/8 rounded-full blur-[100px] pointer-events-none translate-x-1/2 -translate-y-1/2" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div ref={headerRef} className="text-center max-w-3xl mx-auto mb-10 sm:mb-12 opacity-0">
-          <div className="inline-flex items-center gap-2 text-xs font-mono font-bold tracking-[0.2em] uppercase text-blue-600 mb-4">
-            <span className="w-8 h-[2px] bg-blue-600" />
+          <div className="inline-flex items-center gap-2 text-xs font-mono font-bold tracking-[0.2em] uppercase text-blue-400 mb-4">
+            <span className="w-8 h-[2px] bg-blue-400" />
             <span>THE EUROCON ADVANTAGE</span>
-            <span className="w-8 h-[2px] bg-blue-600" />
+            <span className="w-8 h-[2px] bg-blue-400" />
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#334155] tracking-tight leading-[1.1]">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-[1.1]">
             PRECISION ENGINEERING.
             <br />
             MEASURABLE PERFORMANCE.
@@ -135,28 +135,28 @@ export default function EngineeringShowcase() {
             return (
               <div
                 key={cap.num}
-                className="group relative p-6 sm:p-7 rounded-2xl bg-white border border-slate-200 hover:border-blue-500 transition-all duration-500 hover:shadow-xl hover:-translate-y-1 overflow-hidden"
+                className="group relative p-6 sm:p-7 rounded-2xl bg-[#4B5563] border border-white/12 hover:border-blue-500/50 transition-all duration-500 hover:shadow-xl hover:-translate-y-1 overflow-hidden"
               >
                 {/* Background number watermark */}
-                <span className="absolute -right-4 -bottom-6 text-[140px] font-black text-slate-100 leading-none pointer-events-none select-none group-hover:text-blue-50 transition-colors duration-500">
+                <span className="absolute -right-4 -bottom-6 text-[140px] font-black text-white/5 leading-none pointer-events-none select-none group-hover:text-blue-500/8 transition-colors duration-500">
                   {cap.num}
                 </span>
 
                 <div className="relative z-10 space-y-4">
                   <div className="flex items-center gap-4">
-                    <div className="w-14 h-14 rounded-2xl bg-blue-50 group-hover:bg-blue-600 text-blue-600 group-hover:text-white flex items-center justify-center transition-colors duration-300 border border-blue-200 shadow-xs">
+                    <div className="w-14 h-14 rounded-2xl bg-blue-600/15 group-hover:bg-blue-600 text-blue-400 group-hover:text-white flex items-center justify-center transition-colors duration-300 border border-blue-500/30 shadow-xs">
                       <Icon className="w-6 h-6" />
                     </div>
-                    <span className="font-mono text-xs font-black text-blue-600">
+                    <span className="font-mono text-xs font-black text-blue-400">
                       {cap.num}
                     </span>
                   </div>
 
-                  <h3 className="text-xl sm:text-2xl font-bold text-[#334155] group-hover:text-blue-600 transition-colors">
+                  <h3 className="text-xl sm:text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">
                     {cap.title}
                   </h3>
 
-                  <p className="text-sm sm:text-base text-[#64748B] leading-relaxed font-normal">
+                  <p className="text-sm sm:text-base text-gray-400 leading-relaxed font-normal">
                     {cap.desc}
                   </p>
                 </div>

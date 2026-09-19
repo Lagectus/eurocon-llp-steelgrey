@@ -210,7 +210,7 @@ export default function CinematicHero({ onOpenQuoteModal }: CinematicHeroProps) 
             <MagneticButton>
               <button
                 onClick={onOpenQuoteModal}
-                className="inline-flex items-center gap-2 px-7 py-4 rounded-xl bg-white hover:bg-slate-50 backdrop-blur-md text-[#334155] font-bold text-sm tracking-wide border border-slate-300 hover:border-blue-600 hover:text-blue-600 transition-all shadow-xs"
+                className="inline-flex items-center gap-2 px-7 py-4 rounded-xl bg-white/10 hover:bg-white/15 backdrop-blur-md text-white font-bold text-sm tracking-wide border border-white/20 hover:border-blue-500 hover:text-blue-400 transition-all shadow-xs"
               >
                 <span>Talk to Our Experts</span>
               </button>
@@ -243,11 +243,11 @@ export default function CinematicHero({ onOpenQuoteModal }: CinematicHeroProps) 
         ref={scrollIndicatorRef}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 opacity-0"
       >
-        <span className="text-[10px] font-mono tracking-[0.3em] uppercase text-slate-500">
+        <span className="text-[10px] font-mono tracking-[0.3em] uppercase text-gray-400">
           SCROLL TO EXPLORE
         </span>
-        <div className="w-5 h-9 rounded-full border-2 border-slate-300 flex items-start justify-center p-1.5">
-          <div className="w-1.5 h-1.5 rounded-full bg-blue-600 animate-bounce" />
+        <div className="w-5 h-9 rounded-full border-2 border-gray-500 flex items-start justify-center p-1.5">
+          <div className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-bounce" />
         </div>
       </div>
     </section>

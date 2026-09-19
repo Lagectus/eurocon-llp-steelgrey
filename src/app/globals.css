@@ -1,26 +1,41 @@
 @import "tailwindcss";
 
+/* Override Tailwind blue palette → all blue-* classes use #50A2FF family */
+@theme {
+  --color-blue-50: #E8F4FF;
+  --color-blue-100: #D1E9FF;
+  --color-blue-200: #A8D4FF;
+  --color-blue-300: #7BBFFF;
+  --color-blue-400: #50A2FF;
+  --color-blue-500: #50A2FF;
+  --color-blue-600: #50A2FF;
+  --color-blue-700: #3D8AE8;
+  --color-blue-800: #2B6FBF;
+  --color-blue-900: #1A5599;
+  --color-blue-950: #0E3A6B;
+}
+
 @layer base {
   :root {
-    --primary-blue: #2563EB;
-    --dark-blue: #1E3A8A;
-    --accent-blue: #3B82F6;
-    --steel-grey: #475569;
-    --dark-steel: #334155;
-    --light-steel: #64748B;
-    --light-grey: #F1F5F9;
-    --background: #FFFFFF;
-    --text-primary: #334155;
-    --text-secondary: #64748B;
-    --border: #E2E8F0;
+    --primary-blue: #50A2FF;
+    --dark-blue: #2B6FBF;
+    --accent-blue: #50A2FF;
+    --steel-grey: #6B7280;
+    --dark-steel: #4B5563;
+    --light-steel: #9CA3AF;
+    --light-grey: #374151;
+    --background: #6B7280;
+    --text-primary: #FFFFFF;
+    --text-secondary: #D1D5DB;
+    --border: #9CA3AF;
 
-    --background-rgb: 255 255 255;
-    --foreground-rgb: 51 65 85;
-    --primary: 37 99 235;
-    --primary-dark: 30 58 138;
-    --accent: 59 130 246;
-    --muted: 100 116 139;
-    --border-rgb: 226 232 240;
+    --background-rgb: 107 114 128;
+    --foreground-rgb: 255 255 255;
+    --primary: 80 162 255;
+    --primary-dark: 43 111 191;
+    --accent: 80 162 255;
+    --muted: 156 163 175;
+    --border-rgb: 156 163 175;
   }
 
   html {
@@ -31,70 +46,70 @@
   }
 
   body {
-    background-color: #FFFFFF;
-    color: #334155;
+    background-color: #6B7280;
+    color: #FFFFFF;
     overflow-x: hidden;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
 
   ::selection {
-    background: #2563EB;
+    background: #50A2FF;
     color: #FFFFFF;
   }
 }
 
 /* Centralized Button & Card Tokens */
 .btn-primary {
-  background-color: #2563EB;
+  background-color: #50A2FF;
   color: #FFFFFF;
   transition: all 0.2s ease-in-out;
 }
 .btn-primary:hover {
-  background-color: #1E3A8A;
+  background-color: #2B6FBF;
 }
 
 .btn-secondary {
-  background-color: #FFFFFF;
-  color: #334155;
-  border: 1px solid #CBD5E1;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.25);
   transition: all 0.2s ease-in-out;
 }
 .btn-secondary:hover {
-  border-color: #2563EB;
-  color: #2563EB;
-  background-color: #EFF6FF;
+  border-color: #50A2FF;
+  color: #FFFFFF;
+  background-color: rgba(80, 162, 255, 0.15);
 }
 
 .card-steel {
-  background-color: #FFFFFF;
-  border: 1px solid #E2E8F0;
+  background-color: #4B5563;
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 1rem;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
-  color: #334155;
+  color: #FFFFFF;
 }
 .card-steel:hover {
-  border-color: #3B82F6;
-  box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.1);
+  border-color: #50A2FF;
+  box-shadow: 0 10px 25px -5px rgba(80, 162, 255, 0.15);
 }
 
 /* Custom Industrial Engineering Grid */
 .bg-tech-grid {
   background-size: 40px 40px;
   background-image: 
-    linear-gradient(to right, rgba(15, 23, 42, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
 }
 
 .bg-tech-grid-dark {
   background-size: 48px 48px;
   background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
 }
 
 .bg-radial-gradient {
-  background: radial-gradient(circle at 50% 30%, rgba(37, 99, 235, 0.08) 0%, rgba(250, 250, 250, 0) 70%);
+  background: radial-gradient(circle at 50% 30%, rgba(80, 162, 255, 0.1) 0%, rgba(107, 114, 128, 0) 70%);
 }
 
 /* Airflow Animated Wave Lines */
@@ -142,17 +157,17 @@
 
 /* Glassmorphism Classes */
 .glass-panel {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(75, 85, 99, 0.7);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(226, 232, 240, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .glass-panel-dark {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(55, 65, 81, 0.8);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(226, 232, 240, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Custom Scrollbar */
@@ -161,16 +176,16 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #F8FAFC;
+  background: #4B5563;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #CBD5E1;
+  background: #9CA3AF;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #2563EB;
+  background: #50A2FF;
 }
 
 /* Hide scrollbars for clean horizontal slider */
@@ -218,7 +233,7 @@
 
 .product-card-hover:hover {
   transform: translateY(-8px);
-  box-shadow: 0 25px 60px -12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 25px 60px -12px rgba(0, 0, 0, 0.3);
 }
 
 .product-card-hover:hover .product-card-image {

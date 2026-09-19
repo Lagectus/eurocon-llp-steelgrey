@@ -64,7 +64,7 @@ export default function ContactSection() {
         particleCount: 70,
         spread: 60,
         origin: { y: 0.6 },
-        colors: ["#2563EB", "#3B82F6", "#60A5FA", "#64748B"],
+        colors: ["#50A2FF", "#50A2FF", "#7BBFFF", "#64748B"],
       });
     }, 1000);
   };

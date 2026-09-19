@@ -15,7 +15,7 @@ export default function CompactCTA({ onOpenQuoteModal }: CompactCTAProps) {
   return (
     <section className="relative py-20 sm:py-28 bg-gradient-to-br from-slate-50 via-white to-blue-50/30 border-t border-slate-200 text-[#334155] overflow-hidden">
       {/* Background Animated Streamlines */}
-      <AirflowCanvas particleCount={25} color="rgba(37, 99, 235, 0.25)" />
+      <AirflowCanvas particleCount={25} color="rgba(80, 162, 255, 0.25)" />
       <div className="absolute inset-0 bg-tech-grid opacity-20 pointer-events-none" />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-7">

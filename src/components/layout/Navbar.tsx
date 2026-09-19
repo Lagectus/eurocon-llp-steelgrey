@@ -63,28 +63,28 @@ export default function Navbar({
   const isProductsActive = pathname?.startsWith("/products");
 
   const productIcons: Record<string, React.ReactNode> = {
-    "fan-section": <Fan className="w-5 h-5 text-blue-600" />,
-    airwashers: <Droplets className="w-5 h-5 text-blue-600" />,
-    ahu: <Layers className="w-5 h-5 text-blue-600" />,
-    fcu: <Wind className="w-5 h-5 text-slate-600" />,
-    tfa: <Wind className="w-5 h-5 text-blue-600" />,
-    "cabinet-exhaust-unit": <Box className="w-5 h-5 text-slate-600" />,
-    "scrubber-systems": <Filter className="w-5 h-5 text-blue-600" />,
-    "cabinet-inline-unit": <Sliders className="w-5 h-5 text-slate-600" />
+    "fan-section": <Fan className="w-4 h-4 text-blue-400" />,
+    airwashers: <Droplets className="w-4 h-4 text-blue-400" />,
+    ahu: <Layers className="w-4 h-4 text-blue-400" />,
+    fcu: <Wind className="w-4 h-4 text-blue-400" />,
+    tfa: <Wind className="w-4 h-4 text-blue-400" />,
+    "cabinet-exhaust-unit": <Box className="w-4 h-4 text-blue-400" />,
+    "scrubber-systems": <Filter className="w-4 h-4 text-blue-400" />,
+    "cabinet-inline-unit": <Sliders className="w-4 h-4 text-blue-400" />,
   };
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled
-          ? "bg-white/95 backdrop-blur-md shadow-xs border-b border-slate-200 py-3.5"
-          : "bg-white/90 backdrop-blur-sm border-b border-slate-200/80 py-4"
+          ? "bg-[#4B5563]/95 backdrop-blur-md shadow-lg border-b border-white/10 py-3"
+          : "bg-[#4B5563]/90 backdrop-blur-md border-b border-white/10 py-3.5 sm:py-4"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
         {/* Brand Logo */}
-        <Link href="/" className="flex items-center gap-3 group focus:outline-none">
-          <div className="w-10 h-10 rounded-xl overflow-hidden shadow-xs group-hover:scale-105 transition-transform bg-white p-0.5 border border-slate-200">
+        <Link href="/" className="flex items-center gap-3 group focus:outline-none shrink-0">
+          <div className="w-10 h-10 rounded-xl overflow-hidden shadow-xs group-hover:scale-105 transition-transform bg-white p-0.5 border border-white/20 shrink-0">
             <Image
               src="/logo.png"
               alt="Eurocon Logo"
@@ -95,29 +95,25 @@ export default function Navbar({
             />
           </div>
 
-          <div className="flex flex-col">
-            <div className="flex items-center gap-0.5">
-              <span className="font-black text-lg tracking-wider text-blue-600">
-                EURO
-              </span>
-              <span className="font-black text-lg tracking-wider text-[#334155]">
-                CON
-              </span>
+          <div className="flex flex-col shrink-0 select-none">
+            <div className="flex items-center text-lg sm:text-xl font-black tracking-wider leading-none">
+              <span className="text-blue-400">EURO</span>
+              <span className="text-white">CON</span>
             </div>
-            <span className="text-[9px] font-mono tracking-[0.22em] uppercase text-slate-500">
+            <span className="text-[9px] font-mono tracking-[0.22em] uppercase text-gray-300 font-bold mt-1">
               HVAC & AIR SOLUTIONS LLP
             </span>
           </div>
         </Link>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
+        <nav className="hidden lg:flex items-center gap-0.5 xl:gap-1.5">
           <Link
             href="/"
-            className={`px-3.5 py-2 rounded-lg text-sm font-semibold transition-colors ${
+            className={`px-3 py-2 rounded-lg text-sm font-semibold transition-all ${
               pathname === "/"
-                ? "text-blue-600 bg-blue-50 border border-blue-200"
-                : "text-[#334155] hover:text-blue-600 hover:bg-slate-50"
+                ? "text-white bg-blue-600 font-bold shadow-md"
+                : "text-gray-200 hover:text-white hover:bg-white/10"
             }`}
           >
             Home
@@ -125,10 +121,10 @@ export default function Navbar({
 
           <Link
             href="/about"
-            className={`px-3.5 py-2 rounded-lg text-sm font-semibold transition-colors ${
+            className={`px-3 py-2 rounded-lg text-sm font-semibold transition-all ${
               pathname === "/about"
-                ? "text-blue-600 bg-blue-50 border border-blue-200"
-                : "text-[#334155] hover:text-blue-600 hover:bg-slate-50"
+                ? "text-white bg-blue-600 font-bold shadow-md"
+                : "text-gray-200 hover:text-white hover:bg-white/10"
             }`}
           >
             About
@@ -142,76 +138,74 @@ export default function Navbar({
           >
             <Link
               href="/products"
-              className={`flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-sm font-semibold transition-colors ${
+              className={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-semibold transition-all ${
                 isProductsActive || isProductsMenuOpen
-                  ? "text-blue-600 bg-blue-50 border border-blue-200"
-                  : "text-[#334155] hover:text-blue-600 hover:bg-slate-50"
+                  ? "text-white bg-blue-600 font-bold shadow-md"
+                  : "text-gray-200 hover:text-white hover:bg-white/10"
               }`}
             >
               <span>Products</span>
               <ChevronDown
                 className={`w-4 h-4 transition-transform duration-200 ${
-                  isProductsMenuOpen ? "rotate-180 text-blue-600" : "text-slate-400"
+                  isProductsMenuOpen ? "rotate-180 text-white" : "text-gray-400"
                 }`}
               />
             </Link>
 
             {/* Invisible hover bridge */}
-            <div className="absolute top-full left-0 w-full h-3 -mt-1" />
+            <div className="absolute top-full left-0 w-full h-3" />
 
-            {/* Dropdown Menu */}
+            {/* Dropdown Menu (2 Columns for modern clean aesthetics) */}
             <AnimatePresence>
               {isProductsMenuOpen && (
                 <motion.div
-                  initial={{ opacity: 0, y: 10, scale: 0.98 }}
+                  initial={{ opacity: 0, y: 8, scale: 0.98 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: 6, scale: 0.98 }}
-                  transition={{ duration: 0.2 }}
-                  className="absolute top-full -left-20 w-[520px] mt-2 bg-white rounded-2xl shadow-xl border border-slate-200 p-4 z-50 text-[#334155]"
+                  transition={{ duration: 0.18 }}
+                  className="absolute top-full -left-28 w-[580px] mt-2 bg-[#374151] rounded-2xl shadow-xl border border-white/15 p-4 z-50 text-white"
                 >
-                  <div className="px-2 pb-2 mb-2 border-b border-slate-100 flex items-center justify-between">
-                    <span className="text-[11px] font-mono font-bold tracking-wider uppercase text-slate-500">
+                  <div className="px-2 pb-2.5 mb-2.5 border-b border-white/10 flex items-center justify-between">
+                    <span className="text-[11px] font-mono font-bold tracking-wider uppercase text-gray-300">
                       EUROCON ENGINEERED PRODUCT LINES
                     </span>
-                    <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-blue-50 text-blue-600 font-semibold border border-blue-200">
+                    <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-blue-600/20 text-blue-400 font-bold border border-blue-500/30">
                       8 CORE SERIES
                     </span>
                   </div>
 
-                  <div className="space-y-1">
+                  <div className="grid grid-cols-2 gap-1.5">
                     {CORE_EUROCON_NAV_PRODUCTS.map((prod) => (
                       <Link
                         key={prod.slug}
                         href={prod.href}
                         onClick={() => setIsProductsMenuOpen(false)}
-                        className="p-2.5 rounded-xl hover:bg-slate-50 flex items-start gap-3.5 group transition-all border border-transparent hover:border-slate-200"
+                        className="p-2.5 rounded-xl hover:bg-white/8 flex items-start gap-3 group transition-all border border-transparent hover:border-white/15"
                       >
-                        <div className="w-9 h-9 rounded-lg bg-slate-50 group-hover:bg-blue-50 flex items-center justify-center shrink-0 mt-0.5 border border-slate-200 group-hover:border-blue-300 transition-colors">
-                          {productIcons[prod.slug] || <Wind className="w-5 h-5 text-blue-600" />}
+                        <div className="w-8 h-8 rounded-lg bg-white/8 group-hover:bg-blue-600/20 flex items-center justify-center shrink-0 mt-0.5 border border-white/10 group-hover:border-blue-400/40 transition-colors">
+                          {productIcons[prod.slug] || <Wind className="w-4 h-4 text-blue-400" />}
                         </div>
 
                         <div className="flex-1 min-w-0">
-                          <span className="font-bold text-sm text-[#334155] group-hover:text-blue-600 transition-colors block truncate">
+                          <span className="font-bold text-xs sm:text-sm text-white group-hover:text-blue-400 transition-colors block truncate">
                             {prod.name}
                           </span>
-                          <span className="text-xs text-slate-500 line-clamp-1 mt-0.5 block">
+                          <span className="text-[11px] text-gray-400 line-clamp-1 mt-0.5 block">
                             {prod.desc}
                           </span>
                         </div>
-
-                        <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-blue-600 transform group-hover:translate-x-1 transition-all mt-2.5 shrink-0" />
                       </Link>
                     ))}
                   </div>
 
-                  <div className="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between px-2">
-                    <span className="text-[11px] font-mono text-slate-400">
+                  <div className="mt-3 pt-3 border-t border-white/10 flex items-center justify-between px-2">
+                    <span className="text-[10px] font-mono text-gray-400">
                       AHRI • EN 1886 • AMCA 210 • ISO 9001
                     </span>
                     <Link
                       href="/products"
                       onClick={() => setIsProductsMenuOpen(false)}
-                      className="text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1.5 py-1 px-2.5 rounded-lg hover:bg-blue-50 transition-colors"
+                      className="text-xs font-bold text-blue-400 hover:text-blue-300 flex items-center gap-1.5 py-1 px-2.5 rounded-lg hover:bg-blue-600/15 transition-colors"
                     >
                       <span>All Products Catalog</span>
                       <ArrowRight className="w-3.5 h-3.5" />
@@ -224,10 +218,10 @@ export default function Navbar({
 
           <Link
             href="/industries"
-            className={`px-3.5 py-2 rounded-lg text-sm font-semibold transition-colors ${
+            className={`px-3 py-2 rounded-lg text-sm font-semibold transition-all ${
               pathname === "/industries"
-                ? "text-blue-600 bg-blue-50 border border-blue-200"
-                : "text-[#334155] hover:text-blue-600 hover:bg-slate-50"
+                ? "text-white bg-blue-600 font-bold shadow-md"
+                : "text-gray-200 hover:text-white hover:bg-white/10"
             }`}
           >
             Industries
@@ -235,10 +229,10 @@ export default function Navbar({
 
           <Link
             href="/quality"
-            className={`px-3.5 py-2 rounded-lg text-sm font-semibold transition-colors ${
+            className={`px-3 py-2 rounded-lg text-sm font-semibold transition-all ${
               pathname === "/quality"
-                ? "text-blue-600 bg-blue-50 border border-blue-200"
-                : "text-[#334155] hover:text-blue-600 hover:bg-slate-50"
+                ? "text-white bg-blue-600 font-bold shadow-md"
+                : "text-gray-200 hover:text-white hover:bg-white/10"
             }`}
           >
             Quality
@@ -246,10 +240,10 @@ export default function Navbar({
 
           <Link
             href="/contact"
-            className={`px-3.5 py-2 rounded-lg text-sm font-semibold transition-colors ${
+            className={`px-3 py-2 rounded-lg text-sm font-semibold transition-all ${
               pathname === "/contact"
-                ? "text-blue-600 bg-blue-50 border border-blue-200"
-                : "text-[#334155] hover:text-blue-600 hover:bg-slate-50"
+                ? "text-white bg-blue-600 font-bold shadow-md"
+                : "text-gray-200 hover:text-white hover:bg-white/10"
             }`}
           >
             Contact
@@ -257,11 +251,11 @@ export default function Navbar({
         </nav>
 
         {/* Right CTA */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3 shrink-0">
           <MagneticButton>
             <button
               onClick={onOpenQuoteModal}
-              className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-800 text-white font-bold text-xs sm:text-sm tracking-wide transition-all shadow-md shadow-blue-600/20 hover:shadow-lg hover:-translate-y-0.5"
+              className="hidden sm:inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs sm:text-sm tracking-wide transition-all shadow-md shadow-blue-600/20 hover:shadow-lg hover:shadow-blue-600/30 hover:-translate-y-0.5 cursor-pointer shrink-0"
             >
               <span>Get a Quote</span>
               <ArrowRight className="w-4 h-4" />
@@ -271,7 +265,7 @@ export default function Navbar({
           {/* Mobile Menu Hamburger */}
           <button
             onClick={onOpenMobileMenu}
-            className="p-2.5 rounded-xl lg:hidden bg-slate-100 text-[#334155] hover:bg-slate-200 border border-slate-200 transition-colors"
+            className="p-2.5 rounded-xl lg:hidden bg-white/10 text-white hover:text-blue-400 hover:bg-white/15 border border-white/15 transition-colors flex items-center justify-center shrink-0 cursor-pointer"
             aria-label="Open mobile menu"
           >
             <Menu className="w-5 h-5" />
