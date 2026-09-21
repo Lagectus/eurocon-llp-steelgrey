@@ -123,14 +123,14 @@ export default function QuoteModal({ isOpen, onClose, initialProduct = "" }: Quo
                 <h3 className="text-xl sm:text-2xl font-extrabold text-[#334155]">
                   Request Technical Quotation
                 </h3>
-                <p className="text-xs sm:text-sm text-[#64748B] mt-1 max-w-lg font-normal">
+                <p className="text-xs sm:text-sm text-slate-800 mt-1 max-w-lg font-medium">
                   Submit your engineering parameters. Our HVAC application engineers will review your aerodynamic specifications and respond within 24 hours.
                 </p>
               </div>
 
               <button
                 onClick={onClose}
-                className="p-2 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-[#334155] transition-colors"
+                className="p-2 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 hover:text-black transition-colors"
                 aria-label="Close modal"
               >
                 <X className="w-5 h-5" />
@@ -151,11 +151,11 @@ export default function QuoteModal({ isOpen, onClose, initialProduct = "" }: Quo
                   <h4 className="text-2xl font-bold text-[#334155]">
                     RFQ Specification Submitted Successfully!
                   </h4>
-                  <p className="text-sm text-[#64748B] max-w-md mx-auto font-normal">
-                    Thank you, <span className="font-semibold text-[#334155]">{formData.fullName}</span>. Your RFQ inquiry for <span className="font-semibold text-blue-600">{formData.product}</span> has been logged under reference ticket <span className="font-mono font-bold text-[#334155]">#EUR-{ticketId}</span>.
+                  <p className="text-sm text-slate-800 max-w-md mx-auto font-normal">
+                    Thank you, <span className="font-semibold text-black">{formData.fullName}</span>. Your RFQ inquiry for <span className="font-semibold text-blue-600">{formData.product}</span> has been logged under reference ticket <span className="font-mono font-bold text-black">#EUR-{ticketId}</span>.
                   </p>
-                  <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs text-[#64748B] max-w-md mx-auto text-left space-y-1">
-                    <p className="font-semibold text-[#334155]">What happens next?</p>
+                  <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-800 max-w-md mx-auto text-left space-y-1">
+                    <p className="font-semibold text-black">What happens next?</p>
                     <p>• Senior application engineer assigned to verify CFM & static pressure.</p>
                     <p>• Comprehensive technical proposal & fan curve dispatched to {formData.email}.</p>
                   </div>
@@ -331,7 +331,7 @@ export default function QuoteModal({ isOpen, onClose, initialProduct = "" }: Quo
 
                   {/* Submit Button */}
                   <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
-                    <div className="flex items-center gap-1.5 text-xs text-[#64748B] font-mono">
+                    <div className="flex items-center gap-1.5 text-xs text-slate-800 font-mono font-semibold">
                       <ShieldCheck className="w-4 h-4 text-emerald-600" />
                       <span>Confidential RFQ Evaluation</span>
                     </div>

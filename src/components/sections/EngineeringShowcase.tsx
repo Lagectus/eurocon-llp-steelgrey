@@ -109,7 +109,7 @@ export default function EngineeringShowcase() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="engineering" className="relative py-14 sm:py-18 bg-[#4B5563] text-white border-b border-white/10 overflow-hidden">
+    <section ref={sectionRef} id="engineering" className="relative py-14 sm:py-18 bg-[#7B8290] text-white border-b border-white/10 overflow-hidden">
       {/* Decorative background */}
       <div className="absolute top-1/2 right-0 w-[400px] h-[400px] bg-blue-500/8 rounded-full blur-[100px] pointer-events-none translate-x-1/2 -translate-y-1/2" />
 
@@ -135,7 +135,7 @@ export default function EngineeringShowcase() {
             return (
               <div
                 key={cap.num}
-                className="group relative p-6 sm:p-7 rounded-2xl bg-[#374151] border border-white/12 hover:border-blue-500/50 transition-all duration-500 hover:shadow-xl hover:-translate-y-1 overflow-hidden"
+                className="group relative p-6 sm:p-7 rounded-2xl bg-[#4B5563] border border-white/12 hover:border-blue-500/50 transition-all duration-500 hover:shadow-xl hover:-translate-y-1 overflow-hidden"
               >
                 {/* Background number watermark */}
                 <span className="absolute -right-4 -bottom-6 text-[140px] font-black text-white/5 leading-none pointer-events-none select-none group-hover:text-blue-500/8 transition-colors duration-500">
@@ -156,7 +156,7 @@ export default function EngineeringShowcase() {
                     {cap.title}
                   </h3>
 
-                  <p className="text-sm sm:text-base text-gray-400 leading-relaxed font-normal">
+                  <p className="text-sm sm:text-base text-white leading-relaxed font-normal">
                     {cap.desc}
                   </p>
                 </div>

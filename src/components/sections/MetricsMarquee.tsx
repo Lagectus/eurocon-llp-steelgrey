@@ -53,11 +53,11 @@ export default function MetricsMarquee() {
   return (
     <section
       ref={sectionRef}
-      className="relative py-6 sm:py-8 bg-[#404854] border-y border-white/10 overflow-hidden"
+      className="relative py-6 sm:py-8 bg-[#6A7380] border-y border-white/10 overflow-hidden"
     >
       {/* Fade edges */}
-      <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[#404854] to-transparent z-10 pointer-events-none" />
-      <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#404854] to-transparent z-10 pointer-events-none" />
+      <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[#6A7380] to-transparent z-10 pointer-events-none" />
+      <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#6A7380] to-transparent z-10 pointer-events-none" />
 
       {/* Marquee Track */}
       <div className="animate-marquee flex items-center whitespace-nowrap will-change-transform">
@@ -74,7 +74,7 @@ export default function MetricsMarquee() {
               <span className="text-sm sm:text-base font-bold text-blue-400 tracking-wide">
                 {metric.suffix}
               </span>
-              <span className="text-xs sm:text-sm text-gray-300 font-medium max-w-[160px] leading-tight">
+              <span className="text-xs sm:text-sm text-white font-semibold max-w-[160px] leading-tight">
                 {metric.label}
               </span>
             </div>

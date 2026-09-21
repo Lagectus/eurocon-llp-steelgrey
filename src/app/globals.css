@@ -20,22 +20,22 @@
     --primary-blue: #010A6D;
     --dark-blue: #010645;
     --accent-blue: #010A6D;
-    --steel-grey: #4B5563;
-    --dark-steel: #374151;
-    --light-steel: #6B7280;
-    --light-grey: #1F2937;
-    --background: #4B5563;
+    --steel-grey: #7B8290;
+    --dark-steel: #565F6D;
+    --light-steel: #AAB0BC;
+    --light-grey: #434D5C;
+    --background: #7B8290;
     --text-primary: #FFFFFF;
-    --text-secondary: #D1D5DB;
-    --border: #6B7280;
+    --text-secondary: #FFFFFF;
+    --border: #AAB0BC;
 
-    --background-rgb: 75 85 99;
+    --background-rgb: 123 130 144;
     --foreground-rgb: 255 255 255;
     --primary: 1 10 109;
     --primary-dark: 1 6 69;
     --accent: 1 10 109;
-    --muted: 107 114 128;
-    --border-rgb: 107 114 128;
+    --muted: 170 176 188;
+    --border-rgb: 170 176 188;
   }
 
   html {
@@ -46,7 +46,7 @@
   }
 
   body {
-    background-color: #4B5563;
+    background-color: #7B8290;
     color: #FFFFFF;
     overflow-x: hidden;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
@@ -81,7 +81,7 @@
 }
 
 .card-steel {
-  background-color: #374151;
+  background-color: #565F6D;
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 1rem;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
@@ -109,7 +109,7 @@
 }
 
 .bg-radial-gradient {
-  background: radial-gradient(circle at 50% 30%, rgba(1, 10, 109, 0.2) 0%, rgba(75, 85, 99, 0) 70%);
+  background: radial-gradient(circle at 50% 30%, rgba(1, 10, 109, 0.2) 0%, rgba(123, 130, 144, 0) 70%);
 }
 
 /* Airflow Animated Wave Lines */
@@ -157,14 +157,14 @@
 
 /* Glassmorphism Classes */
 .glass-panel {
-  background: rgba(55, 65, 81, 0.7);
+  background: rgba(75, 85, 99, 0.7);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .glass-panel-dark {
-  background: rgba(31, 41, 55, 0.8);
+  background: rgba(55, 65, 81, 0.8);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -176,11 +176,11 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #374151;
+  background: #4B5563;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #6B7280;
+  background: #9CA3AF;
   border-radius: 4px;
 }
 

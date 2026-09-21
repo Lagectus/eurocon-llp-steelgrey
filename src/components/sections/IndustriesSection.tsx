@@ -53,6 +53,7 @@ export default function IndustriesSection({ onOpenQuoteModal }: IndustriesSectio
     <section id="industries" className="relative py-24 sm:py-32 bg-white text-[#334155] border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
+          theme="light"
           eyebrow="INDUSTRIES WE SERVE"
           title="CUSTOM AIR MANAGEMENT FOR CRITICAL SECTORS"
           subtitle="From high-containment sterile cleanrooms and multi-level metro tunnels to massive automated logistics hubs, we engineer tailored HVAC ventilation solutions."
@@ -122,11 +123,11 @@ export default function IndustriesSection({ onOpenQuoteModal }: IndustriesSectio
                       <span className="px-2 py-0.5 rounded bg-blue-50 border border-blue-200 text-blue-700 text-xs font-mono font-bold">
                         SECTOR: {selectedIndustry.code}
                       </span>
-                      <span className="text-xs font-mono text-slate-500">
+                      <span className="text-xs font-mono text-slate-900 font-semibold">
                         EUROCON APPLICATION BLUEPRINT
                       </span>
                     </div>
-                    <h3 className="text-2xl font-black text-[#334155]">
+                    <h3 className="text-2xl font-black text-black">
                       {selectedIndustry.name}
                     </h3>
                   </div>
@@ -135,14 +136,14 @@ export default function IndustriesSection({ onOpenQuoteModal }: IndustriesSectio
                     <span className="block text-[10px] font-mono text-blue-600 uppercase font-bold">
                       {selectedIndustry.stats.label}
                     </span>
-                    <span className="text-xl font-black text-[#334155]">
+                    <span className="text-xl font-black text-black">
                       {selectedIndustry.stats.value}
                     </span>
                   </div>
                 </div>
 
                 {/* Sector Narrative */}
-                <p className="text-sm sm:text-base text-[#64748B] leading-relaxed font-light">
+                <p className="text-sm sm:text-base text-slate-900 leading-relaxed font-medium">
                   {selectedIndustry.description}
                 </p>
 
@@ -150,13 +151,13 @@ export default function IndustriesSection({ onOpenQuoteModal }: IndustriesSectio
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5 pt-2">
                   {/* Key Engineering Challenges */}
                   <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-3">
-                    <h4 className="text-xs font-bold font-mono uppercase text-[#334155] flex items-center gap-1.5">
+                    <h4 className="text-xs font-bold font-mono uppercase text-black flex items-center gap-1.5">
                       <AlertTriangle className="w-4 h-4 text-amber-500" />
                       Critical Project Challenges
                     </h4>
                     <ul className="space-y-2">
                       {selectedIndustry.keyChallenges.map((ch, i) => (
-                        <li key={i} className="text-xs text-[#64748B] flex items-start gap-2 font-light">
+                        <li key={i} className="text-xs text-slate-900 flex items-start gap-2 font-medium">
                           <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-1.5 shrink-0" />
                           <span>{ch}</span>
                         </li>
@@ -172,7 +173,7 @@ export default function IndustriesSection({ onOpenQuoteModal }: IndustriesSectio
                     </h4>
                     <ul className="space-y-2">
                       {selectedIndustry.solutionsProvided.map((sol, i) => (
-                        <li key={i} className="text-xs text-[#334155] flex items-start gap-2 font-light">
+                        <li key={i} className="text-xs text-slate-900 flex items-start gap-2 font-medium">
                           <CheckCircle2 className="w-3.5 h-3.5 text-blue-600 mt-0.5 shrink-0" />
                           <span>{sol}</span>
                         </li>
@@ -184,14 +185,14 @@ export default function IndustriesSection({ onOpenQuoteModal }: IndustriesSectio
                 {/* Recommended Equipment & Quote Action */}
                 <div className="pt-4 border-t border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                   <div>
-                    <span className="block text-[11px] font-mono text-slate-500 uppercase">
+                    <span className="block text-[11px] font-mono text-slate-900 uppercase font-semibold">
                       Recommended System Family:
                     </span>
                     <div className="flex flex-wrap gap-1.5 mt-1">
                       {selectedIndustry.recommendedProducts.map((p, i) => (
                         <span
                           key={i}
-                          className="px-2.5 py-1 rounded-md bg-slate-50 text-[#334155] border border-slate-200 text-xs font-semibold"
+                          className="px-2.5 py-1 rounded-md bg-slate-50 text-slate-900 border border-slate-200 text-xs font-bold"
                         >
                           {p}
                         </span>

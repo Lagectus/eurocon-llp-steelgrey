@@ -182,7 +182,7 @@ export default function HorizontalProducts() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="solutions" className="relative bg-[#4B5563] text-white border-b border-white/10">
+    <section ref={sectionRef} id="solutions" className="relative bg-[#7B8290] text-white border-b border-white/10">
       {/* Section Header (above the pin area) */}
       <div className="pt-12 sm:pt-14 pb-6 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div ref={headerRef} className="flex flex-col md:flex-row md:items-end justify-between gap-6">
@@ -197,7 +197,7 @@ export default function HorizontalProducts() {
           </div>
           <Link
             href="/products"
-            className="inline-flex items-center gap-2 text-sm font-bold text-gray-300 hover:text-blue-400 group transition-colors self-start md:self-end whitespace-nowrap"
+            className="inline-flex items-center gap-2 text-sm font-bold text-white hover:text-blue-300 group transition-colors self-start md:self-end whitespace-nowrap"
           >
             <span>View All Solutions</span>
             <ArrowRight className="w-4 h-4 text-blue-400 transform group-hover:translate-x-1 transition-transform" />
@@ -225,7 +225,7 @@ export default function HorizontalProducts() {
             <Link
               key={product.id}
               href={product.href}
-              className="product-card-hover group relative bg-[#374151] rounded-2xl border border-white/12 overflow-hidden flex-shrink-0 lg:w-[380px] xl:w-[420px] flex flex-col shadow-lg hover:shadow-2xl hover:border-blue-500/50 transition-all"
+              className="product-card-hover group relative bg-[#4B5563] rounded-2xl border border-white/12 overflow-hidden flex-shrink-0 lg:w-[380px] xl:w-[420px] flex flex-col shadow-lg hover:shadow-2xl hover:border-blue-500/50 transition-all"
             >
               {/* Image Area */}
               <div className="relative bg-gradient-to-br from-gray-100 via-white to-gray-50 border-b border-white/10 overflow-hidden">
@@ -235,7 +235,7 @@ export default function HorizontalProducts() {
                   <span className="font-mono text-xs font-black text-blue-600">
                     {product.num}
                   </span>
-                  <span className="inline-flex items-center gap-1 text-[10px] font-mono font-semibold px-2.5 py-0.5 rounded-full bg-white border border-gray-200 text-gray-600 shadow-xs">
+                  <span className="inline-flex items-center gap-1 text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-white border border-gray-200 text-slate-900 shadow-xs">
                     <ShieldCheck className="w-3 h-3 text-blue-600" />
                     {product.badge}
                   </span>
@@ -257,7 +257,7 @@ export default function HorizontalProducts() {
                   <h3 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors">
                     {product.name}
                   </h3>
-                  <p className="text-xs sm:text-sm text-gray-300 mt-2 leading-relaxed line-clamp-2 font-normal">
+                  <p className="text-xs sm:text-sm text-white mt-2 leading-relaxed line-clamp-2 font-normal">
                     {product.tagline}
                   </p>
                 </div>
@@ -278,7 +278,7 @@ export default function HorizontalProducts() {
           ))}
 
           {/* 09 — Final Catalog Call-to-Action Card */}
-          <div className="product-card-hover group relative bg-gradient-to-br from-[#374151] via-[#1F2937] to-[#374151] text-white rounded-2xl border border-white/12 overflow-hidden flex-shrink-0 lg:w-[380px] xl:w-[420px] flex flex-col justify-between p-7 shadow-lg">
+          <div className="product-card-hover group relative bg-gradient-to-br from-[#4B5563] via-[#374151] to-[#4B5563] text-white rounded-2xl border border-white/12 overflow-hidden flex-shrink-0 lg:w-[380px] xl:w-[420px] flex flex-col justify-between p-7 shadow-lg">
             <div className="space-y-4">
               <div className="flex items-center justify-between">
                 <span className="font-mono text-xs font-black text-blue-400">
@@ -293,17 +293,17 @@ export default function HorizontalProducts() {
                 <h3 className="text-2xl font-black text-white leading-tight">
                   Looking for Custom HVAC Solutions?
                 </h3>
-                <p className="text-xs text-gray-300 leading-relaxed font-normal">
+                <p className="text-xs text-white leading-relaxed font-normal">
                   Explore our complete portfolio of 45+ specialized air handling units, smoke exhaust blowers, acoustic ventilation, and chemical scrubbing systems.
                 </p>
               </div>
 
               <div className="pt-2 space-y-2">
-                <div className="flex items-center gap-2 text-xs text-gray-300 font-mono">
+                <div className="flex items-center gap-2 text-xs text-white font-mono">
                   <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
                   <span>AMCA 210 & EN 1886 Certified</span>
                 </div>
-                <div className="flex items-center gap-2 text-xs text-gray-300 font-mono">
+                <div className="flex items-center gap-2 text-xs text-white font-mono">
                   <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
                   <span>Custom CFD & Aerodynamic Sizing</span>
                 </div>

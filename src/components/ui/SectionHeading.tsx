@@ -67,7 +67,9 @@ export default function SectionHeading({
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.15] text-white"
+        className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.15] ${
+          theme === "light" ? "text-black" : "text-white"
+        }`}
       >
         {title}
       </motion.h2>
@@ -79,7 +81,9 @@ export default function SectionHeading({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-4 text-base sm:text-lg leading-relaxed text-gray-400"
+          className={`mt-4 text-base sm:text-lg leading-relaxed ${
+            theme === "light" ? "text-slate-900 font-medium" : "text-white font-normal"
+          }`}
         >
           {subtitle}
         </motion.p>

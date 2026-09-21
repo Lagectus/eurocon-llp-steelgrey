@@ -222,7 +222,7 @@ export default function PinnedIndustries() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative bg-[#4B5563] border-y border-white/10">
+    <section ref={sectionRef} className="relative bg-[#7B8290] border-y border-white/10">
       {/* Section Header */}
       <div className="pt-12 sm:pt-14 pb-6 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
@@ -237,7 +237,7 @@ export default function PinnedIndustries() {
           </div>
           <Link
             href="/industries"
-            className="inline-flex items-center gap-2 text-sm font-bold text-gray-300 hover:text-blue-400 group transition-colors self-start md:self-end whitespace-nowrap"
+            className="inline-flex items-center gap-2 text-sm font-bold text-white hover:text-blue-300 group transition-colors self-start md:self-end whitespace-nowrap"
           >
             <span>Explore All Sectors</span>
             <ArrowRight className="w-4 h-4 text-blue-400 transform group-hover:translate-x-1 transition-transform" />
@@ -274,7 +274,7 @@ export default function PinnedIndustries() {
                   </div>
 
                   {/* Floating Live Spec Badge on Image */}
-                  <div className="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-white/95 backdrop-blur-md border border-gray-200 text-gray-800 space-y-1.5 shadow-lg z-20">
+                  <div className="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-white/95 backdrop-blur-md border border-gray-200 text-slate-900 space-y-1.5 shadow-lg z-20">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
                         <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
@@ -286,10 +286,10 @@ export default function PinnedIndustries() {
                         {ind.code}
                       </span>
                     </div>
-                    <p className="text-xs font-bold text-gray-800 truncate">
+                    <p className="text-xs font-bold text-slate-900 truncate">
                       {ind.systemLabel}
                     </p>
-                    <div className="flex items-center gap-1.5 text-[10px] text-gray-500 font-mono">
+                    <div className="flex items-center gap-1.5 text-[10px] text-slate-900 font-mono font-semibold">
                       <ShieldCheck className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
                       <span className="truncate">{ind.compliance}</span>
                     </div>
@@ -304,7 +304,7 @@ export default function PinnedIndustries() {
                 <div
                   key={i}
                   className={`w-2 rounded-full transition-all duration-300 ${
-                    activeIndex === i ? "h-8 bg-blue-600 shadow-md shadow-blue-500/30" : "h-2 bg-gray-300"
+                    activeIndex === i ? "h-8 bg-blue-600 shadow-md shadow-blue-500/30" : "h-2 bg-white/40"
                   }`}
                 />
               ))}
@@ -333,13 +333,13 @@ export default function PinnedIndustries() {
                             <span className="text-[11px] font-mono font-bold tracking-wider text-blue-400 uppercase block">
                               SECTOR {ind.num} // {ind.code}
                             </span>
-                            <span className="text-xs text-gray-400 font-mono">
+                            <span className="text-xs text-white/90 font-mono">
                               Industrial Airflow Application
                             </span>
                           </div>
                         </div>
 
-                        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/8 border border-white/15 text-[11px] font-mono text-gray-300 shadow-xs">
+                        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-[11px] font-mono text-white shadow-xs">
                           <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
                           <span>Standard Compliant</span>
                         </span>
@@ -350,17 +350,17 @@ export default function PinnedIndustries() {
                         <h3 className="text-2xl xl:text-3xl font-black text-white tracking-tight leading-snug">
                           {ind.name}
                         </h3>
-                        <p className="text-sm text-gray-400 leading-relaxed font-normal">
+                        <p className="text-sm text-white leading-relaxed font-normal">
                           {ind.tagline}
                         </p>
                       </div>
 
                       {/* Key Performance Stats Row */}
                       <div className="grid grid-cols-2 gap-4">
-                        <div className="p-4 rounded-2xl bg-[#374151] border border-white/12 shadow-xs">
+                        <div className="p-4 rounded-2xl bg-[#4B5563] border border-white/12 shadow-xs">
                           <div className="flex items-center gap-2 mb-1">
                             <Gauge className="w-4 h-4 text-blue-400" />
-                            <span className="text-[11px] font-mono text-gray-400 uppercase font-semibold">
+                            <span className="text-[11px] font-mono text-white/90 uppercase font-semibold">
                               {ind.statLabel}
                             </span>
                           </div>
@@ -369,10 +369,10 @@ export default function PinnedIndustries() {
                           </span>
                         </div>
 
-                        <div className="p-4 rounded-2xl bg-[#374151] border border-white/12 shadow-xs">
+                        <div className="p-4 rounded-2xl bg-[#4B5563] border border-white/12 shadow-xs">
                           <div className="flex items-center gap-2 mb-1">
                             <Cpu className="w-4 h-4 text-blue-400" />
-                            <span className="text-[11px] font-mono text-gray-400 uppercase font-semibold">
+                            <span className="text-[11px] font-mono text-white/90 uppercase font-semibold">
                               {ind.secondaryStatLabel}
                             </span>
                           </div>
@@ -384,21 +384,21 @@ export default function PinnedIndustries() {
 
                       {/* 3 Technical Capability Highlights */}
                       <div className="space-y-2.5">
-                        <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-gray-400 font-bold block">
+                        <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-white/90 font-bold block">
                           Engineered Capabilities & Safeguards
                         </span>
                         <div className="space-y-2">
                           {ind.highlights.map((item, hIdx) => (
                             <div
                               key={hIdx}
-                              className="flex items-start gap-3 p-3 rounded-xl bg-[#374151]/80 border border-white/10 hover:border-blue-500/40 transition-colors"
+                              className="flex items-start gap-3 p-3 rounded-xl bg-[#4B5563]/80 border border-white/10 hover:border-blue-500/40 transition-colors"
                             >
                               <CheckCircle2 className="w-4 h-4 text-blue-400 shrink-0 mt-0.5" />
                               <div className="space-y-0.5">
                                 <span className="text-xs font-bold text-white block">
                                   {item.title}
                                 </span>
-                                <span className="text-[11px] text-gray-400 leading-normal block font-normal">
+                                <span className="text-[11px] text-white/90 leading-normal block font-normal">
                                   {item.desc}
                                 </span>
                               </div>
@@ -410,12 +410,12 @@ export default function PinnedIndustries() {
                       {/* Applied Equipment & CTA Footer */}
                       <div className="pt-2 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
                         <div className="flex items-center gap-2">
-                          <Layers className="w-3.5 h-3.5 text-gray-400" />
+                          <Layers className="w-3.5 h-3.5 text-white/80" />
                           <div className="flex flex-wrap gap-1.5">
                             {ind.equipment.map((eq, eqIdx) => (
                               <span
                                 key={eqIdx}
-                                className="px-2.5 py-0.5 rounded-md bg-white/8 text-gray-300 border border-white/12 text-[10px] font-mono font-semibold"
+                                className="px-2.5 py-0.5 rounded-md bg-white/10 text-white border border-white/20 text-[10px] font-mono font-semibold"
                               >
                                 {eq}
                               </span>
@@ -448,7 +448,7 @@ export default function PinnedIndustries() {
             return (
               <div
                 key={ind.id}
-                className="relative rounded-2xl overflow-hidden border border-white/12 bg-[#374151] shadow-lg"
+                className="relative rounded-2xl overflow-hidden border border-white/12 bg-[#4B5563] shadow-lg"
               >
                 {/* Header Image */}
                 <div className="relative h-48 w-full overflow-hidden bg-gradient-to-br from-gray-100 via-white to-gray-50 flex items-center justify-center p-4">
@@ -464,22 +464,22 @@ export default function PinnedIndustries() {
                   </div>
 
                   <div className="absolute bottom-2 left-4 right-4 z-20">
-                    <span className="text-[11px] font-mono text-gray-600 block">{ind.systemLabel}</span>
+                    <span className="text-[11px] font-mono text-slate-900 font-semibold block">{ind.systemLabel}</span>
                   </div>
                 </div>
 
                 {/* Card Content */}
                 <div className="p-5 space-y-4">
-                  <p className="text-xs text-gray-400 leading-relaxed">{ind.tagline}</p>
+                  <p className="text-xs text-white leading-relaxed">{ind.tagline}</p>
 
                   {/* Mobile Stats */}
                   <div className="grid grid-cols-2 gap-3">
-                    <div className="p-3 rounded-xl bg-[#1F2937] border border-white/10">
-                      <span className="text-[10px] font-mono text-gray-400 block">{ind.statLabel}</span>
+                    <div className="p-3 rounded-xl bg-[#374151] border border-white/10">
+                      <span className="text-[10px] font-mono text-white/90 block">{ind.statLabel}</span>
                       <span className="text-lg font-black text-white">{ind.statValue}</span>
                     </div>
-                    <div className="p-3 rounded-xl bg-[#1F2937] border border-white/10">
-                      <span className="text-[10px] font-mono text-gray-400 block">{ind.secondaryStatLabel}</span>
+                    <div className="p-3 rounded-xl bg-[#374151] border border-white/10">
+                      <span className="text-[10px] font-mono text-white/90 block">{ind.secondaryStatLabel}</span>
                       <span className="text-lg font-black text-white">{ind.secondaryStat}</span>
                     </div>
                   </div>
@@ -487,7 +487,7 @@ export default function PinnedIndustries() {
                   {/* Highlights */}
                   <div className="space-y-2">
                     {ind.highlights.map((h, hIdx) => (
-                      <div key={hIdx} className="flex items-start gap-2 text-xs text-gray-400">
+                      <div key={hIdx} className="flex items-start gap-2 text-xs text-white/90">
                         <CheckCircle2 className="w-3.5 h-3.5 text-blue-400 shrink-0 mt-0.5" />
                         <span><strong className="text-white">{h.title}:</strong> {h.desc}</span>
                       </div>
@@ -497,7 +497,7 @@ export default function PinnedIndustries() {
                   {/* Equipment */}
                   <div className="pt-2 border-t border-white/10 flex flex-wrap gap-1.5">
                     {ind.equipment.map((eq, eqIdx) => (
-                      <span key={eqIdx} className="px-2 py-0.5 rounded bg-white/8 text-[10px] font-mono text-gray-300 border border-white/10">
+                      <span key={eqIdx} className="px-2 py-0.5 rounded bg-white/10 text-[10px] font-mono text-white border border-white/20">
                         {eq}
                       </span>
                     ))}

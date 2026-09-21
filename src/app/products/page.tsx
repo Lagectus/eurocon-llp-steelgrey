@@ -57,7 +57,7 @@ export default function ProductsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#4B5563] text-white flex flex-col justify-between">
+    <div className="min-h-screen bg-[#7B8290] text-white flex flex-col justify-between">
       <Navbar
         onOpenQuoteModal={() => handleQuote()}
         onOpenMobileMenu={() => setIsMobileOpen(true)}
@@ -70,7 +70,7 @@ export default function ProductsPage() {
 
       <main className="pt-24 pb-24">
         {/* Header Hero */}
-        <section className="py-16 sm:py-20 bg-[#4B5563] border-b border-white/10">
+        <section className="py-16 sm:py-20 bg-[#7B8290] border-b border-white/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
               <div className="max-w-3xl space-y-4">
@@ -109,7 +109,7 @@ export default function ProductsPage() {
                   <Link
                     key={prod.slug}
                     href={prod.href}
-                    className="p-3.5 rounded-xl bg-[#374151] border border-white/12 hover:border-blue-500/50 shadow-xs hover:shadow-md transition-all group flex flex-col justify-between"
+                    className="p-3.5 rounded-xl bg-[#4B5563] border border-white/12 hover:border-blue-500/50 shadow-xs hover:shadow-md transition-all group flex flex-col justify-between"
                   >
                     <div className="flex items-center justify-between mb-2">
                       <div className="w-7 h-7 rounded-lg bg-white/8 group-hover:bg-blue-600/20 flex items-center justify-center border border-white/10 transition-colors">
@@ -151,7 +151,7 @@ export default function ProductsPage() {
                 className={`px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition-all ${
                   selectedCategory === cat
                     ? "bg-blue-600 text-white shadow-md shadow-blue-600/20"
-                    : "bg-[#374151] text-gray-300 border border-white/12 hover:border-blue-500/50 hover:text-blue-400"
+                    : "bg-[#4B5563] text-gray-300 border border-white/12 hover:border-blue-500/50 hover:text-blue-400"
                 }`}
               >
                 {cat === "All" ? "All Solutions" : cat}

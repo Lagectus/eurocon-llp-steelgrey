@@ -102,7 +102,7 @@ export default function AboutStorytelling() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="about-preview" className="relative py-16 sm:py-24 bg-[#4B5563] border-b border-white/10 overflow-hidden text-white">
+    <section ref={sectionRef} id="about-preview" className="relative py-16 sm:py-24 bg-[#7B8290] border-b border-white/10 overflow-hidden text-white">
       {/* Background technical grid and soft blue ambience */}
       <div className="absolute inset-0 bg-tech-grid opacity-35 pointer-events-none" />
       <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-500/8 rounded-full blur-[120px] pointer-events-none -translate-x-1/2 -translate-y-1/2" />
@@ -113,7 +113,7 @@ export default function AboutStorytelling() {
           <div className="relative order-2 lg:order-1">
             <div
               ref={imageWrapRef}
-              className="relative rounded-3xl overflow-hidden shadow-xl border border-white/15 bg-[#374151] will-change-[clip-path]"
+              className="relative rounded-3xl overflow-hidden shadow-xl border border-white/15 bg-[#4B5563] will-change-[clip-path]"
               style={{ clipPath: "inset(50% 50% 50% 50%)" }}
             >
               <div className="relative h-[400px] sm:h-[520px] overflow-hidden bg-gradient-to-br from-gray-100 via-white to-gray-50 flex items-center justify-center p-6 border border-white/10">
@@ -129,12 +129,12 @@ export default function AboutStorytelling() {
                 />
 
                 {/* Bottom overlay card */}
-                <div className="absolute bottom-5 left-5 right-5 p-4 rounded-xl bg-white/95 backdrop-blur-md border border-gray-200 text-gray-800 flex items-center justify-between z-20 shadow-lg">
+                <div className="absolute bottom-5 left-5 right-5 p-4 rounded-xl bg-white/95 backdrop-blur-md border border-gray-200 text-slate-900 flex items-center justify-between z-20 shadow-lg">
                   <div className="space-y-0.5">
                     <span className="text-[10px] font-mono text-blue-600 uppercase font-bold tracking-wider">
                       PRECISION AIR MANAGEMENT
                     </span>
-                    <p className="text-xs font-semibold text-gray-800">
+                    <p className="text-xs font-bold text-slate-900">
                       Modular Fan Section & Dynamic Balancing (ISO 1940 G2.5)
                     </p>
                   </div>
@@ -163,11 +163,11 @@ export default function AboutStorytelling() {
               <span className="text-blue-400">CREATING COMFORT.</span>
             </h2>
 
-            <div ref={bodyRef} className="space-y-4 text-gray-300 text-base sm:text-lg leading-relaxed opacity-0">
+            <div ref={bodyRef} className="space-y-4 text-white text-base sm:text-lg leading-relaxed opacity-0">
               <p>
                 <strong className="text-white font-bold">EUROCON SYSTEM LLP</strong> delivers advanced air management, ventilation and industrial HVAC engineering solutions designed for demanding environmental, thermal and life-safety applications.
               </p>
-              <p className="text-sm sm:text-base text-gray-400">
+              <p className="text-sm sm:text-base text-white/90">
                 From subterranean metro transit smoke routing and sterile cleanrooms to expansive manufacturing shopfloors, our systems guarantee aerodynamic precision, acoustic comfort, and lifelong durability.
               </p>
             </div>
@@ -195,7 +195,7 @@ export default function AboutStorytelling() {
           {highlights.map((item) => (
             <div
               key={item.title}
-              className="group p-6 rounded-2xl bg-[#374151] border border-white/12 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+              className="group p-6 rounded-2xl bg-[#4B5563] border border-white/12 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
             >
               <div className="w-10 h-10 rounded-xl bg-blue-600/15 border border-blue-500/30 text-blue-400 flex items-center justify-center mb-3 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                 <CheckCircle2 className="w-5 h-5" />
@@ -203,7 +203,7 @@ export default function AboutStorytelling() {
               <h3 className="font-bold text-base text-white group-hover:text-blue-400 transition-colors">
                 {item.title}
               </h3>
-              <p className="text-sm text-gray-400 leading-relaxed mt-1.5 font-normal">
+              <p className="text-sm text-white leading-relaxed mt-1.5 font-normal">
                 {item.desc}
               </p>
             </div>

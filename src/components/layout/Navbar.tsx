@@ -63,22 +63,22 @@ export default function Navbar({
   const isProductsActive = pathname?.startsWith("/products");
 
   const productIcons: Record<string, React.ReactNode> = {
-    "fan-section": <Fan className="w-4 h-4 text-blue-400" />,
-    airwashers: <Droplets className="w-4 h-4 text-blue-400" />,
-    ahu: <Layers className="w-4 h-4 text-blue-400" />,
-    fcu: <Wind className="w-4 h-4 text-blue-400" />,
-    tfa: <Wind className="w-4 h-4 text-blue-400" />,
-    "cabinet-exhaust-unit": <Box className="w-4 h-4 text-blue-400" />,
-    "scrubber-systems": <Filter className="w-4 h-4 text-blue-400" />,
-    "cabinet-inline-unit": <Sliders className="w-4 h-4 text-blue-400" />,
+    "fan-section": <Fan className="w-4 h-4 text-white" />,
+    airwashers: <Droplets className="w-4 h-4 text-white" />,
+    ahu: <Layers className="w-4 h-4 text-white" />,
+    fcu: <Wind className="w-4 h-4 text-white" />,
+    tfa: <Wind className="w-4 h-4 text-white" />,
+    "cabinet-exhaust-unit": <Box className="w-4 h-4 text-white" />,
+    "scrubber-systems": <Filter className="w-4 h-4 text-white" />,
+    "cabinet-inline-unit": <Sliders className="w-4 h-4 text-white" />,
   };
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled
-          ? "bg-[#374151]/95 backdrop-blur-md shadow-lg border-b border-white/10 py-3"
-          : "bg-[#374151]/90 backdrop-blur-md border-b border-white/10 py-3.5 sm:py-4"
+          ? "bg-[#4B5563]/95 backdrop-blur-md shadow-lg border-b border-white/10 py-3"
+          : "bg-[#4B5563]/90 backdrop-blur-md border-b border-white/10 py-3.5 sm:py-4"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
@@ -100,7 +100,7 @@ export default function Navbar({
               <span className="text-blue-400">EURO</span>
               <span className="text-white">CON</span>
             </div>
-            <span className="text-[9px] font-mono tracking-[0.22em] uppercase text-gray-300 font-bold mt-1">
+            <span className="text-[9px] font-mono tracking-[0.22em] uppercase text-white/90 font-bold mt-1">
               HVAC & AIR SOLUTIONS LLP
             </span>
           </div>
@@ -113,7 +113,7 @@ export default function Navbar({
             className={`px-3 py-2 rounded-lg text-sm font-semibold transition-all ${
               pathname === "/"
                 ? "text-white bg-blue-600 font-bold shadow-md"
-                : "text-gray-200 hover:text-white hover:bg-white/10"
+                : "text-white hover:bg-white/10"
             }`}
           >
             Home
@@ -124,7 +124,7 @@ export default function Navbar({
             className={`px-3 py-2 rounded-lg text-sm font-semibold transition-all ${
               pathname === "/about"
                 ? "text-white bg-blue-600 font-bold shadow-md"
-                : "text-gray-200 hover:text-white hover:bg-white/10"
+                : "text-white hover:bg-white/10"
             }`}
           >
             About
@@ -141,13 +141,13 @@ export default function Navbar({
               className={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-semibold transition-all ${
                 isProductsActive || isProductsMenuOpen
                   ? "text-white bg-blue-600 font-bold shadow-md"
-                  : "text-gray-200 hover:text-white hover:bg-white/10"
+                  : "text-white hover:bg-white/10"
               }`}
             >
               <span>Products</span>
               <ChevronDown
                 className={`w-4 h-4 transition-transform duration-200 ${
-                  isProductsMenuOpen ? "rotate-180 text-white" : "text-gray-400"
+                  isProductsMenuOpen ? "rotate-180 text-white" : "text-white/80"
                 }`}
               />
             </Link>
@@ -163,13 +163,13 @@ export default function Navbar({
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: 6, scale: 0.98 }}
                   transition={{ duration: 0.18 }}
-                  className="absolute top-full -left-28 w-[580px] mt-2 bg-[#1F2937] rounded-2xl shadow-xl border border-white/15 p-4 z-50 text-white"
+                  className="absolute top-full -left-28 w-[580px] mt-2 bg-[#374151] rounded-2xl shadow-xl border border-white/15 p-4 z-50 text-white"
                 >
                   <div className="px-2 pb-2.5 mb-2.5 border-b border-white/10 flex items-center justify-between">
-                    <span className="text-[11px] font-mono font-bold tracking-wider uppercase text-gray-300">
+                    <span className="text-[11px] font-mono font-bold tracking-wider uppercase text-white">
                       EUROCON ENGINEERED PRODUCT LINES
                     </span>
-                    <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-blue-600/20 text-blue-400 font-bold border border-blue-500/30">
+                    <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-white/10 text-white font-bold border border-white/20">
                       8 CORE SERIES
                     </span>
                   </div>
@@ -182,15 +182,15 @@ export default function Navbar({
                         onClick={() => setIsProductsMenuOpen(false)}
                         className="p-2.5 rounded-xl hover:bg-white/8 flex items-start gap-3 group transition-all border border-transparent hover:border-white/15"
                       >
-                        <div className="w-8 h-8 rounded-lg bg-white/8 group-hover:bg-blue-600/20 flex items-center justify-center shrink-0 mt-0.5 border border-white/10 group-hover:border-blue-400/40 transition-colors">
-                          {productIcons[prod.slug] || <Wind className="w-4 h-4 text-blue-400" />}
+                        <div className="w-8 h-8 rounded-lg bg-white/10 group-hover:bg-white/20 flex items-center justify-center shrink-0 mt-0.5 border border-white/15 group-hover:border-white/30 transition-colors text-white">
+                          {productIcons[prod.slug] || <Wind className="w-4 h-4 text-white" />}
                         </div>
 
                         <div className="flex-1 min-w-0">
-                          <span className="font-bold text-xs sm:text-sm text-white group-hover:text-blue-400 transition-colors block truncate">
+                          <span className="font-bold text-xs sm:text-sm text-white group-hover:text-blue-300 transition-colors block truncate">
                             {prod.name}
                           </span>
-                          <span className="text-[11px] text-gray-400 line-clamp-1 mt-0.5 block">
+                          <span className="text-[11px] text-white/90 line-clamp-1 mt-0.5 block">
                             {prod.desc}
                           </span>
                         </div>
@@ -199,16 +199,16 @@ export default function Navbar({
                   </div>
 
                   <div className="mt-3 pt-3 border-t border-white/10 flex items-center justify-between px-2">
-                    <span className="text-[10px] font-mono text-gray-400">
+                    <span className="text-[10px] font-mono text-white/80">
                       AHRI • EN 1886 • AMCA 210 • ISO 9001
                     </span>
                     <Link
                       href="/products"
                       onClick={() => setIsProductsMenuOpen(false)}
-                      className="text-xs font-bold text-blue-400 hover:text-blue-300 flex items-center gap-1.5 py-1 px-2.5 rounded-lg hover:bg-blue-600/15 transition-colors"
+                      className="text-xs font-bold text-white hover:text-blue-300 flex items-center gap-1.5 py-1 px-2.5 rounded-lg hover:bg-white/10 transition-colors"
                     >
                       <span>All Products Catalog</span>
-                      <ArrowRight className="w-3.5 h-3.5" />
+                      <ArrowRight className="w-3.5 h-3.5 text-white" />
                     </Link>
                   </div>
                 </motion.div>
@@ -221,7 +221,7 @@ export default function Navbar({
             className={`px-3 py-2 rounded-lg text-sm font-semibold transition-all ${
               pathname === "/industries"
                 ? "text-white bg-blue-600 font-bold shadow-md"
-                : "text-gray-200 hover:text-white hover:bg-white/10"
+                : "text-white hover:bg-white/10"
             }`}
           >
             Industries
@@ -232,7 +232,7 @@ export default function Navbar({
             className={`px-3 py-2 rounded-lg text-sm font-semibold transition-all ${
               pathname === "/quality"
                 ? "text-white bg-blue-600 font-bold shadow-md"
-                : "text-gray-200 hover:text-white hover:bg-white/10"
+                : "text-white hover:bg-white/10"
             }`}
           >
             Quality
@@ -243,7 +243,7 @@ export default function Navbar({
             className={`px-3 py-2 rounded-lg text-sm font-semibold transition-all ${
               pathname === "/contact"
                 ? "text-white bg-blue-600 font-bold shadow-md"
-                : "text-gray-200 hover:text-white hover:bg-white/10"
+                : "text-white hover:bg-white/10"
             }`}
           >
             Contact

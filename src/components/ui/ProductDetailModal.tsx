@@ -69,7 +69,7 @@ export default function ProductDetailModal({
                     {product.category}
                   </span>
                   {product.subCategory && (
-                    <span className="text-xs text-[#64748B] font-mono">
+                    <span className="text-xs text-slate-800 font-mono font-medium">
                       {"// "}{product.subCategory}
                     </span>
                   )}
@@ -77,7 +77,7 @@ export default function ProductDetailModal({
                 <h3 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-[#334155]">
                   {product.name}
                 </h3>
-                <p className="text-sm text-[#64748B] mt-1 max-w-2xl font-normal">
+                <p className="text-sm text-slate-800 mt-1 max-w-2xl font-medium">
                   {product.tagline}
                 </p>
               </div>
@@ -85,7 +85,7 @@ export default function ProductDetailModal({
               {/* Close Button */}
               <button
                 onClick={onClose}
-                className="absolute top-6 right-6 p-2 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-[#334155] transition-colors"
+                className="absolute top-6 right-6 p-2 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 hover:text-black transition-colors"
                 aria-label="Close modal"
               >
                 <X className="w-5 h-5" />
@@ -100,7 +100,7 @@ export default function ProductDetailModal({
                   <h4 className="text-xs font-bold font-mono uppercase tracking-wider text-blue-600 flex items-center gap-2">
                     <Wind className="w-4 h-4" /> Technical Overview
                   </h4>
-                  <p className="text-[#64748B] text-sm leading-relaxed font-normal">
+                  <p className="text-slate-800 text-sm leading-relaxed font-medium">
                     {product.fullDescription}
                   </p>
                   <div className="flex items-center gap-2 pt-2">
@@ -154,37 +154,37 @@ export default function ProductDetailModal({
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                   {product.specs.airflowRange && (
                     <div className="p-3.5 rounded-lg bg-slate-50 border border-slate-200">
-                      <span className="text-[11px] font-mono text-[#64748B] uppercase block">Airflow Range</span>
+                      <span className="text-[11px] font-mono text-slate-800 font-semibold uppercase block">Airflow Range</span>
                       <span className="text-sm font-bold text-[#334155]">{product.specs.airflowRange}</span>
                     </div>
                   )}
                   {product.specs.staticPressure && (
                     <div className="p-3.5 rounded-lg bg-slate-50 border border-slate-200">
-                      <span className="text-[11px] font-mono text-[#64748B] uppercase block">Static Pressure</span>
+                      <span className="text-[11px] font-mono text-slate-800 font-semibold uppercase block">Static Pressure</span>
                       <span className="text-sm font-bold text-[#334155]">{product.specs.staticPressure}</span>
                     </div>
                   )}
                   {product.specs.impellerDiameter && (
                     <div className="p-3.5 rounded-lg bg-slate-50 border border-slate-200">
-                      <span className="text-[11px] font-mono text-[#64748B] uppercase block">Impeller / Size Range</span>
+                      <span className="text-[11px] font-mono text-slate-800 font-semibold uppercase block">Impeller / Size Range</span>
                       <span className="text-sm font-bold text-[#334155]">{product.specs.impellerDiameter}</span>
                     </div>
                   )}
                   {product.specs.driveType && (
                     <div className="p-3.5 rounded-lg bg-slate-50 border border-slate-200">
-                      <span className="text-[11px] font-mono text-[#64748B] uppercase block">Drive Configuration</span>
+                      <span className="text-[11px] font-mono text-slate-800 font-semibold uppercase block">Drive Configuration</span>
                       <span className="text-sm font-bold text-[#334155]">{product.specs.driveType}</span>
                     </div>
                   )}
                   {product.specs.motorRating && (
                     <div className="p-3.5 rounded-lg bg-slate-50 border border-slate-200">
-                      <span className="text-[11px] font-mono text-[#64748B] uppercase block">Motor Rating & Class</span>
+                      <span className="text-[11px] font-mono text-slate-800 font-semibold uppercase block">Motor Rating & Class</span>
                       <span className="text-sm font-bold text-[#334155]">{product.specs.motorRating}</span>
                     </div>
                   )}
                   {product.specs.operatingTemp && (
                     <div className="p-3.5 rounded-lg bg-slate-50 border border-slate-200">
-                      <span className="text-[11px] font-mono text-[#64748B] uppercase block">Thermal Rating</span>
+                      <span className="text-[11px] font-mono text-slate-800 font-semibold uppercase block">Thermal Rating</span>
                       <span className="text-sm font-bold text-[#334155]">{product.specs.operatingTemp}</span>
                     </div>
                   )}
@@ -192,7 +192,7 @@ export default function ProductDetailModal({
 
                 {product.specs.standards && (
                   <div className="mt-3 flex flex-wrap items-center gap-2">
-                    <span className="text-xs font-mono text-[#64748B]">Certified Benchmarks:</span>
+                    <span className="text-xs font-mono text-slate-900 font-semibold">Certified Benchmarks:</span>
                     {product.specs.standards.map((std, i) => (
                       <span key={i} className="px-2 py-0.5 rounded bg-slate-100 text-[#334155] text-xs font-mono border border-slate-200">
                         {std}
@@ -210,7 +210,7 @@ export default function ProductDetailModal({
                   </h4>
                   <ul className="space-y-2">
                     {product.keyFeatures.map((feat, i) => (
-                      <li key={i} className="flex items-start gap-2 text-xs sm:text-sm text-[#64748B] font-normal">
+                      <li key={i} className="flex items-start gap-2 text-xs sm:text-sm text-slate-800 font-medium">
                         <CheckCircle2 className="w-4 h-4 text-blue-600 mt-0.5 shrink-0" />
                         <span>{feat}</span>
                       </li>
@@ -224,7 +224,7 @@ export default function ProductDetailModal({
                   </h4>
                   <ul className="space-y-2">
                     {product.applications.map((app, i) => (
-                      <li key={i} className="flex items-start gap-2 text-xs sm:text-sm text-[#64748B] font-normal">
+                      <li key={i} className="flex items-start gap-2 text-xs sm:text-sm text-slate-800 font-medium">
                         <span className="w-1.5 h-1.5 rounded-full bg-blue-600 mt-2 shrink-0" />
                         <span>{app}</span>
                       </li>
@@ -236,13 +236,13 @@ export default function ProductDetailModal({
 
             {/* Modal Footer CTA */}
             <div className="p-4 sm:p-6 bg-slate-50 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
-              <span className="text-xs text-[#64748B] font-mono">
+              <span className="text-xs text-slate-800 font-mono font-medium">
                 Model: EUROCON-{product.slug.toUpperCase()}{" // Spec Rev 2026.1"}
               </span>
               <div className="flex items-center gap-3 w-full sm:w-auto">
                 <button
                   onClick={onClose}
-                  className="px-4 py-2 text-sm font-medium text-[#64748B] hover:text-[#334155] transition-colors"
+                  className="px-4 py-2 text-sm font-semibold text-slate-800 hover:text-black transition-colors"
                 >
                   Close
                 </button>

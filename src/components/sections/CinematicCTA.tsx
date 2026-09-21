@@ -82,10 +82,10 @@ export default function CinematicCTA({ onOpenQuoteModal }: CinematicCTAProps) {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative overflow-hidden bg-[#4B5563]">
+    <section ref={sectionRef} className="relative overflow-hidden bg-[#7B8290]">
       <div
         ref={containerRef}
-        className="relative py-16 sm:py-20 bg-gradient-to-br from-[#374151] via-[#4B5563] to-[#374151] text-white overflow-hidden will-change-transform opacity-0 border-t border-white/10"
+        className="relative py-16 sm:py-20 bg-gradient-to-br from-[#565F6D] via-[#7B8290] to-[#565F6D] text-white overflow-hidden will-change-transform opacity-0 border-t border-white/10"
       >
         {/* Background effects */}
         <AirflowCanvas particleCount={25} color="rgba(1, 10, 109, 0.15)" />
@@ -116,7 +116,7 @@ export default function CinematicCTA({ onOpenQuoteModal }: CinematicCTAProps) {
 
           <p
             ref={bodyRef}
-            className="text-base sm:text-lg text-gray-300 max-w-xl mx-auto font-normal leading-relaxed opacity-0"
+            className="text-base sm:text-lg text-white max-w-xl mx-auto font-normal leading-relaxed opacity-0"
           >
             Have a project, airflow requirement or HVAC challenge? Talk to our engineering team for sizing, static pressure curves and custom fabrication.
           </p>
@@ -146,7 +146,7 @@ export default function CinematicCTA({ onOpenQuoteModal }: CinematicCTAProps) {
           {/* Trust Badges */}
           <div
             ref={badgesRef}
-            className="pt-6 border-t border-white/10 flex flex-wrap items-center justify-center gap-6 text-xs font-mono text-gray-400 opacity-0"
+            className="pt-6 border-t border-white/10 flex flex-wrap items-center justify-center gap-6 text-xs font-mono text-white opacity-0"
           >
             <div className="flex items-center gap-1.5">
               <ShieldCheck className="w-4 h-4 text-blue-400" />

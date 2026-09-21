@@ -45,10 +45,10 @@ export default function MobileMenu({
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "spring", damping: 25, stiffness: 250 }}
-            className="relative w-full max-w-sm h-full bg-[#374151] shadow-2xl flex flex-col z-10 overflow-hidden border-l border-white/10 text-white"
+            className="relative w-full max-w-sm h-full bg-[#4B5563] shadow-2xl flex flex-col z-10 overflow-hidden border-l border-white/10 text-white"
           >
             {/* Header */}
-            <div className="p-6 bg-[#1F2937] text-white flex items-center justify-between border-b border-white/10">
+            <div className="p-6 bg-[#374151] text-white flex items-center justify-between border-b border-white/10">
               <div className="flex items-center gap-2.5">
                 <div className="w-8 h-8 rounded-lg overflow-hidden bg-white p-0.5 border border-white/20 shrink-0">
                   <Image
@@ -63,7 +63,7 @@ export default function MobileMenu({
                   <span className="font-black text-base tracking-wide block text-white leading-tight">
                     <span className="text-blue-400">EURO</span>CON
                   </span>
-                  <span className="text-[10px] text-gray-400 font-mono tracking-widest uppercase font-bold">
+                  <span className="text-[10px] text-white/80 font-mono tracking-widest uppercase font-bold">
                     SYSTEM LLP
                   </span>
                 </div>
@@ -81,9 +81,9 @@ export default function MobileMenu({
             {/* Navigation Links */}
             <div className="p-5 overflow-y-auto flex-1 space-y-4 text-white">
               {/* Core Products Sub-menu */}
-              <div className="bg-[#1F2937] p-3.5 rounded-2xl border border-white/10 space-y-2">
+              <div className="bg-[#374151] p-3.5 rounded-2xl border border-white/10 space-y-2">
                 <div className="flex items-center justify-between px-1.5 pb-1">
-                  <span className="text-[11px] font-mono font-bold tracking-wider uppercase text-gray-400">
+                  <span className="text-[11px] font-mono font-bold tracking-wider uppercase text-white/90">
                     PRODUCTS & SOLUTIONS
                   </span>
                   <Link
@@ -105,7 +105,7 @@ export default function MobileMenu({
                       className="flex items-center justify-between py-2 px-2.5 rounded-xl text-xs font-bold text-white hover:bg-white/8 hover:text-blue-400 hover:shadow-xs transition-all border border-transparent hover:border-white/10"
                     >
                       <span className="truncate">{prod.name}</span>
-                      <ChevronRight className="w-3.5 h-3.5 text-gray-500" />
+                      <ChevronRight className="w-3.5 h-3.5 text-white" />
                     </Link>
                   ))}
                 </div>
@@ -121,14 +121,14 @@ export default function MobileMenu({
                     className="flex items-center justify-between py-2.5 px-3 rounded-xl font-bold text-sm text-white hover:bg-white/8 hover:text-blue-400 transition-colors"
                   >
                     <span>{link.name}</span>
-                    <ArrowRight className="w-4 h-4 text-gray-500" />
+                    <ArrowRight className="w-4 h-4 text-white" />
                   </Link>
                 ))}
               </div>
             </div>
 
             {/* Drawer Footer */}
-            <div className="p-6 bg-[#1F2937] border-t border-white/10 space-y-4">
+            <div className="p-6 bg-[#374151] border-t border-white/10 space-y-4">
               <button
                 onClick={() => {
                   onClose();
@@ -140,7 +140,7 @@ export default function MobileMenu({
                 <ArrowRight className="w-4 h-4" />
               </button>
 
-              <div className="text-xs text-gray-400 space-y-1.5 pt-2">
+              <div className="text-xs text-white/90 space-y-1.5 pt-2">
                 <div className="flex items-center gap-2">
                   <Phone className="w-3.5 h-3.5 text-blue-400" />
                   <span>{COMPANY_INFO.headquarters.phone.split("/")[0]}</span>
