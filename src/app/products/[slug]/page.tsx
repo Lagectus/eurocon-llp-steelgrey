@@ -333,8 +333,8 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
                   {!product.specs.coolingCapacity && product.specs.motorRating && (
                     <motion.div variants={fadeUpVariants} className="p-3 rounded-xl bg-slate-50 border border-slate-200 shadow-xs hover:border-blue-500 transition-colors">
                       <span className="text-[10px] font-mono uppercase tracking-wider text-[#64748B] block">Motor Efficiency</span>
-                      <span className="text-xs sm:text-sm font-extrabold text-[#334155] mt-0.5 block truncate">
-                        {product.specs.motorRating.split(",")[0]}
+                      <span className="text-xs sm:text-sm font-extrabold text-[#334155] mt-0.5 block truncate" title={product.specs.motorRating}>
+                        {product.specs.motorRating}
                       </span>
                     </motion.div>
                   )}

@@ -63,7 +63,7 @@ export default function ProductCard({
             {product.specs.motorRating && (
               <div className="flex items-center justify-between">
                 <span className="text-slate-400">Motor Class:</span>
-                <span className="font-semibold text-[#334155]">{product.specs.motorRating.split(",")[0]}</span>
+                <span className="font-semibold text-[#334155]">{product.specs.motorRating}</span>
               </div>
             )}
             {product.specs.coolingCapacity && (

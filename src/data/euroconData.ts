@@ -68,8 +68,8 @@ export const PRODUCTS_DATA: Product[] = [
     subCategory: "Modular Plenum & Blower Series",
     tagline: "Precision-engineered modular fan plenums with DIDW blower and aerofoil fan assemblies.",
     shortDescription: "Modular Fan Sections housing direct-drive fans or DIDW backward curved blowers on vibration-isolated sub-bases, optimized for AHU retrofits, fresh air intake, and process exhaust.",
-    fullDescription: "EUROCON Fan Sections are self-contained aerodynamic supply and exhaust modules designed for seamless integration into built-up HVAC air systems, custom plenums, and industrial processes. Built within high-rigidity extruded aluminum frameworks with 25mm / 50mm double-skin PUF insulated panels (40 kg/m³ density), Eurocon Fan Sections feature direct-drive backward curved aerofoil plug fans or DIDW centrifugal blowers statically and dynamically balanced to ISO 1940 Grade G2.5 for whisper-quiet vibration-free operation.",
-    heroBadge: "ISO 1940 Grade G2.5 Dynamic Balancing",
+    fullDescription: "EUROCON Fan Sections are self-contained aerodynamic supply and exhaust modules designed for seamless integration into built-up HVAC air systems, custom plenums, and industrial processes. Built within high-rigidity extruded aluminum frameworks with 25mm / 50mm double-skin PUF insulated panels (40 kg/m³ density), Eurocon Fan Sections feature direct-drive backward curved aerofoil plug fans or DIDW centrifugal blowers statically and dynamically balanced for whisper-quiet vibration-free operation.",
+    heroBadge: "High Efficiency Modular Blower",
     image: "/images/products/fan-sections.png",
     gallery: [
       "/images/products/fan-sections.png"
@@ -77,14 +77,14 @@ export const PRODUCTS_DATA: Product[] = [
     cfdImage: "/images/products/cfd-fan-section.jpg",
     schematicSvgType: "fansection",
     specs: {
-      airflowRange: "1,500 to 110,000 CFM (2,550 to 187,000 m³/h)",
-      staticPressure: "Up to 3,000 Pa (12.0 in. wg)",
+      airflowRange: "500 to 1,00,000 CFM",
+      staticPressure: "Up to 3,000 Pa",
       impellerDiameter: "280 mm to 1,600 mm",
       casingConstruction: "Acoustic Double-Skin 25mm / 50mm PUF Casing with Quick-Access Doors",
       driveType: "Direct-Drive Unhoused Plug Fan / Belt-Drive DIDW Centrifugal / EC Motor",
-      motorRating: "0.75 kW to 132 kW (IE3/IE4/EC Brushless Motor with VFD Integration)",
+      motorRating: "IE2, IE3, IE4, IE5, IE6",
       operatingTemp: "-20°C to +80°C (High-temperature rated options up to 250°C)",
-      standards: ["AMCA 210", "AMCA 300 Sound Tested", "ISO 1940 Grade G2.5", "ISO 5801"]
+      standards: ["AMCA 210", "AMCA 300 Sound Tested", "ISO 5801"]
     },
     keyFeatures: [
       "Unhoused direct-drive plug fans with backward-curved 3D aerofoil blades for maximum static efficiency",
