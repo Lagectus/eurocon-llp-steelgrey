@@ -113,7 +113,7 @@ export const PRODUCTS_DATA: Product[] = [
     ],
     customOptions: [
       { title: "Impeller Type", description: "Backward curved plug fan, aerofoil centrifugal, or forward curved double inlet blower.", badge: "Plug / DIDW" },
-      { title: "Motor Technology", description: "IE2, IE3, IE4, IE5, IE6 High Efficiency induction or EC Brushless motors.", badge: "IE2 - IE6" },
+      { title: "Motor Efficiency", description: "IE2, IE3, IE4, IE5, IE6 High Efficiency induction or EC Brushless motors.", badge: "IE2 - IE6" },
       { title: "Access Layout", description: "Left-hand or Right-hand quick-access inspection door with viewing window and marine light.", badge: "Custom Access" },
       { title: "Mounting Isolation", description: "Internal spring isolators with seismic restraints or external rubber-in-shear mounts.", badge: "Vibration Free" }
     ]
