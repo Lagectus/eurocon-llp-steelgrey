@@ -6,9 +6,9 @@ import MobileMenu from "@/components/layout/MobileMenu";
 import Footer from "@/components/layout/Footer";
 import QuoteModal from "@/components/ui/QuoteModal";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { ShieldCheck, Factory, Cpu, Award, CheckCircle2, ArrowRight, Wind } from "lucide-react";
+import { Factory, Cpu, CheckCircle2, ArrowRight, Wind } from "lucide-react";
 import Link from "next/link";
-import { COMPANY_INFO, METRIC_HIGHLIGHTS } from "@/data/euroconData";
+import { METRIC_HIGHLIGHTS } from "@/data/euroconData";
 
 export default function AboutPage() {
   const [isQuoteOpen, setIsQuoteOpen] = useState(false);
@@ -58,7 +58,7 @@ export default function AboutPage() {
                 Operating across the national industrial corridors, Eurocon manufactures customized heavy-duty centrifugal blowers, adjustable-pitch axial flow fans, emergency smoke exhaust units, SMACNA pre-fabricated ducts, and industrial wet scrubber systems.
               </p>
               <p>
-                Our equipment is designed and tested in strict accordance with global benchmarks including AMCA 210, EN 12101-3 high-temperature fire smoke ratings, and ISO 1940 Grade G2.5 dynamic balancing norms.
+                Our equipment is designed with exact engineering tolerances to maximize energy efficiency, ensure precise environmental control, and deliver dependable multi-decade lifecycle performance.
               </p>
 
               <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/10">
@@ -81,22 +81,71 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Certifications Matrix */}
-        <section className="py-16 bg-[#4B5563] border-y border-white/10">
+        {/* About Eurocon Strengths & Highlights */}
+        <section className="py-20 bg-[#4B5563] border-y border-white/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <SectionHeading
-              eyebrow="QUALITY & ACCREDITATIONS"
-              title="GLOBAL COMPLIANCE STANDARDS"
-              subtitle="Tested and certified to ensure flawless performance under continuous industrial operation and emergency fire scenarios."
+              eyebrow="WHY CHOOSE EUROCON"
+              title="ADVANCED HVAC & VENTILATION SOLUTIONS"
+              subtitle="From our modern manufacturing facility in Rohad, Bahadurgarh (Haryana) to critical installations across India, Eurocon System LLP delivers reliable, precision-engineered air management systems."
             />
 
-            <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {COMPANY_INFO.certifications.map((cert, idx) => (
-                <div key={idx} className="p-5 rounded-xl bg-[#374151] border border-white/12 flex items-start gap-3 shadow-xs">
-                  <ShieldCheck className="w-5 h-5 text-blue-400 shrink-0 mt-0.5" />
-                  <span className="text-xs sm:text-sm font-semibold text-white">{cert}</span>
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="p-6 rounded-2xl bg-[#374151] border border-white/12 shadow-sm hover:border-blue-400/40 transition-all flex flex-col justify-between group">
+                <div className="space-y-4">
+                  <div className="w-12 h-12 rounded-xl bg-blue-600/20 text-blue-400 flex items-center justify-center border border-blue-500/30 group-hover:scale-105 transition-transform">
+                    <Factory className="w-6 h-6" />
+                  </div>
+                  <h4 className="text-base font-bold text-white tracking-tight">
+                    Manufacturing Facility
+                  </h4>
+                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed font-light">
+                    Our dedicated production hub in Rohad, Bahadurgarh (Haryana) is equipped with advanced machinery for double-skin casings, dynamic balancing, and stringent assembly tolerances.
+                  </p>
                 </div>
-              ))}
+              </div>
+
+              <div className="p-6 rounded-2xl bg-[#374151] border border-white/12 shadow-sm hover:border-blue-400/40 transition-all flex flex-col justify-between group">
+                <div className="space-y-4">
+                  <div className="w-12 h-12 rounded-xl bg-blue-600/20 text-blue-400 flex items-center justify-center border border-blue-500/30 group-hover:scale-105 transition-transform">
+                    <Wind className="w-6 h-6" />
+                  </div>
+                  <h4 className="text-base font-bold text-white tracking-tight">
+                    Complete HVAC Portfolio
+                  </h4>
+                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed font-light">
+                    From Air Handling Units (AHU) and Fan Coil Units (FCU) to Air Washers, TFAs, Fan Sections, and Industrial Scrubbers, we deliver complete engineered ventilation solutions.
+                  </p>
+                </div>
+              </div>
+
+              <div className="p-6 rounded-2xl bg-[#374151] border border-white/12 shadow-sm hover:border-blue-400/40 transition-all flex flex-col justify-between group">
+                <div className="space-y-4">
+                  <div className="w-12 h-12 rounded-xl bg-blue-600/20 text-blue-400 flex items-center justify-center border border-blue-500/30 group-hover:scale-105 transition-transform">
+                    <Cpu className="w-6 h-6" />
+                  </div>
+                  <h4 className="text-base font-bold text-white tracking-tight">
+                    Engineering Excellence
+                  </h4>
+                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed font-light">
+                    Focused on maximizing energy efficiency and indoor air quality while minimizing power consumption and noise through aerodynamic design and thermal break construction.
+                  </p>
+                </div>
+              </div>
+
+              <div className="p-6 rounded-2xl bg-[#374151] border border-white/12 shadow-sm hover:border-blue-400/40 transition-all flex flex-col justify-between group">
+                <div className="space-y-4">
+                  <div className="w-12 h-12 rounded-xl bg-blue-600/20 text-blue-400 flex items-center justify-center border border-blue-500/30 group-hover:scale-105 transition-transform">
+                    <CheckCircle2 className="w-6 h-6" />
+                  </div>
+                  <h4 className="text-base font-bold text-white tracking-tight">
+                    Client-Focused Support
+                  </h4>
+                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed font-light">
+                    Backed by Ashok Dhull and our experienced technical engineering team, offering rapid quotation, sizing consultation, pan-India delivery, and lifecycle service.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
