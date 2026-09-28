@@ -590,17 +590,7 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
                   <div className="absolute top-3 left-3 right-3 flex items-center justify-between z-20 pointer-events-none">
                     <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/95 backdrop-blur-md border border-slate-200 text-[11px] font-mono text-[#334155] shadow-xs font-semibold">
                       <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
-                      <span>
-                        {product.slug === "ahu" && AHU_ANGLE_METADATA[showcasePhotoIndex]
-                          ? AHU_ANGLE_METADATA[showcasePhotoIndex].title
-                          : product.slug === "airwashers"
-                          ? "Industrial Airwasher Unit — High-Saturation Evaporative Cooling System"
-                          : product.slug === "fcu"
-                          ? "FCU (Fan Coil Unit) — Ultra-Slim Ceiling Concealed Chilled Water & DX Series"
-                          : product.slug === "tfa"
-                          ? "TFA (Treated Fresh Air Unit) — 100% Fresh Air & Energy Recovery DOAS"
-                          : `${product.name} — Industrial Build Specification`}
-                      </span>
+                      <span>PRECISION MANUFACTURED FOR RIGOROUS INDUSTRIAL PROCESSES</span>
                     </div>
 
                     <span className="hidden sm:inline-flex px-2.5 py-1.5 rounded-lg bg-white/95 backdrop-blur-md border border-slate-200 text-[10px] font-mono text-blue-700 font-bold shadow-xs">
@@ -674,7 +664,15 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
                 </div>
 
                 <h3 className="text-2xl sm:text-3xl font-black text-[#334155] tracking-tight leading-tight">
-                  PRECISION MANUFACTURED FOR RIGOROUS INDUSTRIAL PROCESSES
+                  {product.slug === "ahu" && AHU_ANGLE_METADATA[showcasePhotoIndex]
+                    ? AHU_ANGLE_METADATA[showcasePhotoIndex].title
+                    : product.slug === "airwashers"
+                    ? "Industrial Airwasher Unit — High-Saturation Evaporative Cooling System"
+                    : product.slug === "fcu"
+                    ? "FCU (Fan Coil Unit) — Ultra-Slim Ceiling Concealed Chilled Water & DX Series"
+                    : product.slug === "tfa"
+                    ? "TFA (Treated Fresh Air Unit) — 100% Fresh Air & Energy Recovery DOAS"
+                    : `${product.name} — Industrial Build Specification`}
                 </h3>
 
                 <p className="text-sm text-[#64748B] leading-relaxed font-normal">
