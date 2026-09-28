@@ -195,9 +195,9 @@ export const PRODUCTS_DATA: Product[] = [
     cfdImage: "/images/products/cfd-ahu.jpg",
     schematicSvgType: "ahu",
     specs: {
-      airflowRange: "1,000 to 75,000 CFM (1,700 to 127,500 m³/h)",
+      airflowRange: "400 to 40,000 CFM (680 to 68,000 m³/h)",
       staticPressure: "Up to 2,000 Pa (8.0 in. wg)",
-      coolingCapacity: "3.0 TR to 180 TR (Chilled Water / DX Direct Expansion)",
+      coolingCapacity: "1.0 TR to 100 TR (Chilled Water / DX Direct Expansion)",
       casingConstruction: "25mm / 50mm Double-Skin PUF Injected (40 kg/m³) with Thermal Break Profile",
       filtration: "EU4 Pre-Filter + EU7/EU9 Microvee + HEPA H13/H14 Optional",
       coilSpecs: "Copper Tubes with Hydrophilic Blue/Gold Aluminum Fins",
