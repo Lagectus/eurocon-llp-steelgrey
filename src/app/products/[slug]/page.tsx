@@ -276,10 +276,12 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
                 className="lg:col-span-7 space-y-6"
               >
                 <div className="flex flex-wrap items-center gap-2.5">
-                  <span className="inline-flex items-center gap-1.5 text-xs font-mono font-bold tracking-wider uppercase px-3 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-200 shadow-xs">
-                    <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
-                    <span>{product.heroBadge}</span>
-                  </span>
+                  {product.heroBadge && (
+                    <span className="inline-flex items-center gap-1.5 text-xs font-mono font-bold tracking-wider uppercase px-3 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-200 shadow-xs">
+                      <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
+                      <span>{product.heroBadge}</span>
+                    </span>
+                  )}
 
                   <span className="text-xs font-mono text-[#64748B] px-2.5 py-1 rounded-full bg-slate-50 border border-slate-200">
                     {product.subCategory || product.category}
@@ -453,7 +455,7 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
                           <div className="absolute top-2.5 left-2.5 px-2.5 py-1 rounded-md bg-white/95 backdrop-blur-md border border-slate-200 text-[10px] font-mono text-blue-700 font-bold flex items-center gap-1.5 shadow-xs">
                             <span className="w-1.5 h-1.5 rounded-full bg-blue-600 animate-pulse" />
                             <span>
-                              {product.heroBadge || product.name.toUpperCase()}
+                              {product.heroBadge || product.subCategory || product.name.toUpperCase()}
                             </span>
                           </div>
                         </motion.div>
@@ -757,7 +759,7 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
               ENGINEERING PARAMETERS & PERFORMANCE RATINGS
             </h2>
             <p className="text-sm text-[#64748B]">
-              Factory tested according to international HVAC engineering and performance testing codes (EN 1886, AHRI 410).
+              Factory tested according to international HVAC engineering and performance testing codes.
             </p>
           </div>
 

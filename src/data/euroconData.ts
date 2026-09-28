@@ -184,10 +184,9 @@ export const PRODUCTS_DATA: Product[] = [
     name: "Air Handling Unit (AHU)",
     category: "Air Handling Solutions",
     subCategory: "Modular Double-Skin Series",
-    tagline: "Custom modular & thermal-break double-skin AHUs with Eurovent/AHRI certified coils and plug fan efficiency.",
+    tagline: "Custom modular & thermal-break double-skin AHUs.",
     shortDescription: "Engineered modular Double-Skin Air Handling Units (AHUs) with thermal-break extruded aluminum profiles, EU4 to HEPA multi-stage filtration, and high-efficiency direct-drive EC/Plug fans.",
     fullDescription: "EUROCON Double Skin Air Handling Units (AHUs) are engineered to deliver conditioned, filtered, and precisely balanced air across commercial complexes, cleanroom facilities, pharmaceutical labs, data centers, and industrial facilities. Built with 25mm / 50mm injected PUF insulation (40 kg/m³ density) in thermal-break extruded aluminum profiles, Eurocon AHUs eliminate condensation and thermal bridging while ensuring whisper-quiet acoustic damping and Class L1/L2 casing air leakage compliance.",
-    heroBadge: "AHRI 410 & EN 1886 Thermal Break",
     image: "/images/products/AHU.png",
     gallery: [
       "/images/products/AHU.png"
@@ -234,7 +233,7 @@ export const PRODUCTS_DATA: Product[] = [
     customOptions: [
       { title: "Casing Thickness", description: "25mm standard or 50mm heavy-duty double-skin panels with thermal-break profiles.", badge: "25mm / 50mm" },
       { title: "Fan Technology", description: "Direct-drive EC motor plug fan array or belt-driven backward inclined DIDW blower.", badge: "EC / Plug" },
-      { title: "Coil Metallurgy", description: "Copper/Aluminum, Hydrophilic coated fins, or full Copper-Copper for corrosive environments.", badge: "AHRI Certified" },
+      { title: "Coil Metallurgy", description: "Copper/Aluminum, Hydrophilic coated fins, or full Copper-Copper for corrosive environments.", badge: "Hydrophilic Fins" },
       { title: "Airflow Monitoring", description: "Factory-calibrated differential pressure transmitters for automated VAV CFM feedback.", badge: "Smart VAV" }
     ]
   },
@@ -306,7 +305,7 @@ export const PRODUCTS_DATA: Product[] = [
     subCategory: "Dedicated Outdoor Air System (DOAS)",
     tagline: "100% Outdoor fresh air treatment units featuring total enthalpy heat recovery wheels, multi-tier filtration, and deep cooling coils.",
     shortDescription: "Engineered Treated Fresh Air Units (TFA) delivering 100% conditioned fresh air to commercial and healthcare facilities with energy recovery enthalpy wheels, EU4/EU7/EU9 filtration, and precision humidity control.",
-    fullDescription: "EUROCON Treated Fresh Air (TFA) Units are purpose-built to condition, dehumidify, and filter 100% outside ambient air for modern indoor air quality (IAQ) and ASHRAE 62.1 fresh air ventilation compliance. Designed with double-skin 25mm / 50mm injected PUF insulation and thermal-break aluminum extrusions, Eurocon TFAs incorporate rotary enthalpy heat recovery wheels (recovering up to 75% sensible and latent exhaust energy), multi-stage filtration tracks (EU4 Pre, EU7 Microvee, and optional H14 HEPA), and AHRI-certified deep cooling coils for maximum efficiency and fresh air purity.",
+    fullDescription: "EUROCON Treated Fresh Air (TFA) Units are purpose-built to condition, dehumidify, and filter 100% outside ambient air for modern indoor air quality (IAQ) and ASHRAE 62.1 fresh air ventilation compliance. Designed with double-skin 25mm / 50mm injected PUF insulation and thermal-break aluminum extrusions, Eurocon TFAs incorporate rotary enthalpy heat recovery wheels (recovering up to 75% sensible and latent exhaust energy), multi-stage filtration tracks (EU4 Pre, EU7 Microvee, and optional H14 HEPA), and high-efficiency deep cooling coils for maximum efficiency and fresh air purity.",
     heroBadge: "100% Fresh Air & Heat Recovery",
     image: "/images/products/tfa-unit.png",
     gallery: [

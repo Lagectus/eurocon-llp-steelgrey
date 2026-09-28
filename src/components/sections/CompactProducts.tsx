@@ -38,7 +38,7 @@ export default function CompactProducts({}: CompactProductsProps = {}) {
       name: "Air Handling Unit (AHU)",
       tagline: "An Air Handling Unit (AHU) is a major device used in HVAC systems to regulate and circulate clean air throughout large buildings.",
       schematicType: "ahu" as const,
-      badge: "AHRI 410 / TB2",
+      badge: "Thermal Break TB2",
       href: "/products/ahu",
       image: "/images/products/AHU.png",
     },
