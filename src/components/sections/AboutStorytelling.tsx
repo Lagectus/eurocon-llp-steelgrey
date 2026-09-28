@@ -181,10 +181,10 @@ export default function AboutStorytelling() {
                 <ArrowRight className="w-4 h-4 text-white" />
               </Link>
               <Link
-                href="/quality"
+                href="/contact"
                 className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/15 text-white font-bold text-sm tracking-wide border border-white/20 hover:border-blue-500 hover:text-blue-400 transition-all shadow-xs"
               >
-                <span>Quality Standards</span>
+                <span>Contact Engineers</span>
               </Link>
             </div>
           </div>

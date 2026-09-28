@@ -60,8 +60,13 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/quality" className="text-white/85 hover:text-blue-300 font-medium transition-colors">
-                  Quality
+                <Link href="/industries" className="text-white/85 hover:text-blue-300 font-medium transition-colors">
+                  Industries
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="text-white/85 hover:text-blue-300 font-medium transition-colors">
+                  Contact
                 </Link>
               </li>
             </ul>

@@ -22,7 +22,6 @@ export default function MobileMenu({
     { name: "Home", href: "/" },
     { name: "About Eurocon", href: "/about" },
     { name: "Industries Served", href: "/industries" },
-    { name: "Quality Assurance", href: "/quality" },
     { name: "Contact & Plant", href: "/contact" },
   ];
 

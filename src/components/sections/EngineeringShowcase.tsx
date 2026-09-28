@@ -171,10 +171,10 @@ export default function EngineeringShowcase() {
         {/* CTA */}
         <div ref={ctaRef} className="mt-8 sm:mt-10 text-center opacity-0">
           <Link
-            href="/quality"
+            href="/about"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-blue-600 hover:bg-blue-800 text-white font-bold text-sm tracking-wide transition-all shadow-md shadow-blue-600/25 hover:shadow-blue-600/40 hover:-translate-y-0.5"
           >
-            <span>Explore Quality & Testing Standards</span>
+            <span>Explore About Eurocon</span>
             <ArrowRight className="w-4 h-4 text-white" />
           </Link>
         </div>
