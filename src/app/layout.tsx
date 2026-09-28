@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     title: "Eurocon System LLP | Engineered Airflow. Built For Performance.",
     description:
       "Advanced air management, industrial ventilation, and HVAC engineering solutions engineered for peak aerodynamic efficiency and life-safety compliance.",
-    url: "https://euroconsystem.com",
+    url: "https://eurocon.in",
     siteName: "Eurocon System LLP",
     locale: "en_US",
     type: "website",

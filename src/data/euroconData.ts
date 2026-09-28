@@ -13,9 +13,9 @@ export const COMPANY_INFO = {
     address: "Kh no 118//2/2, Rohad Dehkora Road, Vill. Rohad",
     city: "Bahadurgarh, Haryana 124501, India",
     phone: "+91 98912 21991",
-    email: "solutions@euroconsystem.com",
-    salesEmail: "sales@euroconsystem.com",
-    supportEmail: "engineering@euroconsystem.com",
+    email: "sales@eurocon.in",
+    salesEmail: "sales@eurocon.in",
+    supportEmail: "sales@eurocon.in",
     workingHours: "Mon – Sat: 08:30 AM – 06:30 PM IST"
   },
   certifications: [
