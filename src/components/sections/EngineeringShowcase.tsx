@@ -16,28 +16,28 @@ export default function EngineeringShowcase() {
     {
       num: "01",
       title: "Precision Engineering",
-      desc: "Aerodynamic design, 3D CFD boundary layer simulation and application-focused engineering.",
+      desc: "Designing heating, ventilation, and air conditioning systems with exact tolerances to maximize energy efficiency.",
       icon: Cpu,
       direction: "left" as const,
     },
     {
       num: "02",
       title: "Advanced Manufacturing",
-      desc: "Modern CNC fiber laser cutting (±0.05mm), automated roll-forming, and robotic seam welding.",
+      desc: "Manufacturing high-performance HVAC equipment built with exact tolerances to eliminate energy loss.",
       icon: Factory,
       direction: "right" as const,
     },
     {
       num: "03",
       title: "Quality Focus",
-      desc: "ISO 1940 Grade G2.5 dynamic balancing, AMCA laboratory airflow rigs, and 100% FAT verification.",
+      desc: "Executing rigorous quality and performance testing to reliably control environments and thermal comfort.",
       icon: ShieldCheck,
       direction: "left" as const,
     },
     {
       num: "04",
       title: "Project Support",
-      desc: "Comprehensive engineering assistance from aerodynamic sizing through on-site commissioning.",
+      desc: "Comprehensive engineering assistance and execution support to ensure long-term reliability and peak lifecycle performance.",
       icon: Headphones,
       direction: "right" as const,
     },
@@ -126,6 +126,9 @@ export default function EngineeringShowcase() {
             <br />
             MEASURABLE PERFORMANCE.
           </h2>
+          <p className="mt-4 text-sm sm:text-base text-white/90 max-w-2xl mx-auto font-normal leading-relaxed">
+            Designing, manufacturing, and executing HVAC systems with exact tolerances to maximize energy efficiency, control environments, and ensure long-term reliability.
+          </p>
         </div>
 
         {/* 2x2 Grid */}
