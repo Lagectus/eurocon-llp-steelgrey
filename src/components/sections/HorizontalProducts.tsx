@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
-import { ArrowRight, ShieldCheck } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
@@ -273,49 +273,7 @@ export default function HorizontalProducts() {
             </Link>
           ))}
 
-          {/* 09 — Final Catalog Call-to-Action Card */}
-          <div className="product-card-hover group relative bg-gradient-to-br from-[#4B5563] via-[#374151] to-[#4B5563] text-white rounded-2xl border border-white/12 overflow-hidden flex-shrink-0 lg:w-[380px] xl:w-[420px] flex flex-col justify-between p-7 shadow-lg">
-            <div className="space-y-4">
-              <div className="flex items-center justify-between">
-                <span className="font-mono text-xs font-black text-blue-400">
-                  09 // CATALOG
-                </span>
-                <span className="inline-flex items-center gap-1 text-[10px] font-mono font-semibold px-2.5 py-0.5 rounded-full bg-blue-600/20 border border-blue-500/30 text-blue-400">
-                  Complete Portfolio
-                </span>
-              </div>
 
-              <div className="space-y-2 pt-2">
-                <h3 className="text-2xl font-black text-white leading-tight">
-                  Looking for Custom HVAC Solutions?
-                </h3>
-                <p className="text-xs text-white leading-relaxed font-normal">
-                  Explore our complete portfolio of 45+ specialized air handling units, smoke exhaust blowers, acoustic ventilation, and chemical scrubbing systems.
-                </p>
-              </div>
-
-              <div className="pt-2 space-y-2">
-                <div className="flex items-center gap-2 text-xs text-white font-mono">
-                  <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
-                  <span>AMCA 210 & EN 1886 Certified</span>
-                </div>
-                <div className="flex items-center gap-2 text-xs text-white font-mono">
-                  <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
-                  <span>Custom CFD & Aerodynamic Sizing</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="pt-6 border-t border-white/10 space-y-3">
-              <Link
-                href="/products"
-                className="w-full inline-flex items-center justify-center gap-2 py-3 px-5 rounded-xl bg-blue-600 hover:bg-blue-800 text-white font-bold text-xs tracking-wide transition-all shadow-md shadow-blue-600/25 hover:shadow-blue-600/40"
-              >
-                <span>Explore Complete Catalog</span>
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
-          </div>
         </div>
       </div>
 
