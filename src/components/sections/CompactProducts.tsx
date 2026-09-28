@@ -20,7 +20,7 @@ export default function CompactProducts({}: CompactProductsProps = {}) {
       schematicType: "fansection" as const,
       badge: "ISO 1940 G2.5",
       href: "/products/fan-section",
-      image: "/images/products/fan-sections.png",
+      image: "/images/products/fan-section1.png",
     },
     {
       id: "prod-airwashers",

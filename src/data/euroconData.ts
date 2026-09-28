@@ -70,9 +70,9 @@ export const PRODUCTS_DATA: Product[] = [
     shortDescription: "Modular Fan Sections housing direct-drive fans or DIDW backward curved blowers on vibration-isolated sub-bases, optimized for AHU retrofits, fresh air intake, and process exhaust.",
     fullDescription: "EUROCON Fan Sections are self-contained aerodynamic supply and exhaust modules designed for seamless integration into built-up HVAC air systems, custom plenums, and industrial processes. Built within high-rigidity extruded aluminum frameworks with 25mm / 50mm double-skin PUF insulated panels (40 kg/m³ density), Eurocon Fan Sections feature direct-drive backward curved aerofoil plug fans or DIDW centrifugal blowers statically and dynamically balanced for whisper-quiet vibration-free operation.",
     heroBadge: "High Efficiency Modular Blower",
-    image: "/images/products/fan-sections.png",
+    image: "/images/products/fan-section1.png",
     gallery: [
-      "/images/products/fan-sections.png"
+      "/images/products/fan-section1.png"
     ],
     cfdImage: "/images/products/cfd-fan-section.jpg",
     schematicSvgType: "fansection",

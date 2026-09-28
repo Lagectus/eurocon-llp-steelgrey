@@ -504,7 +504,7 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
                   <div className="p-4 bg-slate-50 border-t border-slate-200 flex items-center justify-between text-xs font-mono text-[#64748B]">
                     <span className="flex items-center gap-1.5">
                       <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                      <span>AMCA 210 / ISO 9001 VERIFIED</span>
+                      <span>FACTORY TESTED & VERIFIED</span>
                     </span>
                     <button
                       onClick={() => setIsQuoteOpen(true)}
