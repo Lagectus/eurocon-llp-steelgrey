@@ -27,21 +27,41 @@ export default function AboutPage() {
       />
 
       <main className="pt-24 pb-20">
-        {/* Page Hero */}
-        <section className="relative py-16 sm:py-24 bg-[#7B8290] border-b border-white/10">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl space-y-4">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-600/15 border border-blue-500/30 text-xs font-mono font-bold tracking-[0.2em] uppercase text-blue-400">
-                <span className="w-2 h-2 rounded-full bg-blue-500" />
+        {/* Page Hero Banner */}
+        <section className="relative min-h-[460px] sm:min-h-[520px] flex items-center bg-slate-950 border-b border-white/10 overflow-hidden">
+          {/* Background Factory Banner Image */}
+          <div className="absolute inset-0 z-0">
+            <img
+              src="/aboutus.png"
+              alt="Eurocon System LLP Manufacturing Plant & Facility"
+              className="w-full h-full object-cover object-center filter brightness-[0.5] contrast-105"
+            />
+            {/* Gradient Overlays for High Legibility */}
+            <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-900/80 to-slate-900/40" />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-tech-grid opacity-20 pointer-events-none" />
+          </div>
+
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-20 sm:py-28 w-full">
+            <div className="max-w-3xl space-y-5">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-600/30 backdrop-blur-md border border-blue-400/40 text-xs font-mono font-bold tracking-[0.2em] uppercase text-blue-300 shadow-lg">
+                <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
                 <span>ABOUT EUROCON SYSTEM LLP</span>
               </div>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.1]">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.1] drop-shadow-md">
                 ENGINEERED AIRFLOW. <br />
                 <span className="text-blue-400">BUILT FOR PERFORMANCE.</span>
               </h1>
-              <p className="text-base sm:text-lg text-white leading-relaxed font-normal">
+              <p className="text-base sm:text-lg text-slate-100 leading-relaxed font-normal max-w-2xl drop-shadow">
                 EUROCON SYSTEM LLP is an advanced industrial air management, ventilation, and HVAC engineering solutions provider dedicated to high aerodynamic efficiency, life-safety compliance, and multi-decade mechanical dependability.
               </p>
+
+              <div className="pt-2 flex flex-wrap items-center gap-3 text-xs font-mono text-slate-200">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900/80 backdrop-blur-md border border-white/20 shadow-sm">
+                  <Factory className="w-3.5 h-3.5 text-blue-400" />
+                  Manufacturing Facility: Rohad, Bahadurgarh (Haryana)
+                </span>
+              </div>
             </div>
           </div>
         </section>
@@ -73,9 +93,9 @@ export default function AboutPage() {
 
             <div className="lg:col-span-6 rounded-2xl overflow-hidden shadow-xl border border-white/15 bg-[#4B5563]">
               <img
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80"
-                alt="Eurocon Engineering Facility"
-                className="w-full h-96 object-cover object-center filter brightness-95"
+                src="/aboutus.png"
+                alt="Eurocon System LLP Plant in Rohad, Bahadurgarh (Haryana)"
+                className="w-full h-96 object-cover object-center"
               />
             </div>
           </div>

@@ -74,9 +74,9 @@ export default function AboutSection({ onOpenQuoteModal }: AboutSectionProps) {
               <div className="relative rounded-2xl overflow-hidden shadow-xl border border-slate-200 bg-white">
                 <div className="relative h-[380px] sm:h-[480px] w-full overflow-hidden group">
                   <img
-                    src="https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80"
-                    alt="Eurocon Engineering and Manufacturing Facility"
-                    className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700 filter brightness-95"
+                    src="/aboutus.png"
+                    alt="Eurocon Engineering and Manufacturing Facility in Rohad, Bahadurgarh"
+                    className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
 
