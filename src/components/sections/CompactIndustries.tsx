@@ -51,7 +51,7 @@ export default function CompactIndustries() {
       id: "ind-pharma",
       num: "06",
       name: "Pharma & Cleanrooms",
-      tagline: "ISO 14644 sterile suite HEPA filtration and positive pressure cascade control.",
+      tagline: "Sterile suite HEPA filtration and positive pressure cascade control.",
       icon: Hospital,
       image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80",
     },

@@ -75,7 +75,7 @@ export default function CompactEngineering() {
                     <span>AERODYNAMIC RIGOR</span>
                   </div>
                   <p className="text-xs font-semibold text-[#334155]">
-                    Validated under AMCA 210 / 300 & EN 12101-3 Fire Standards
+                    Validated under Heavy-Duty Fire & Aerodynamic Testing Standards
                   </p>
                 </div>
               </div>

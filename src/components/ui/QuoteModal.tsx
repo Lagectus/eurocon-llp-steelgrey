@@ -309,7 +309,7 @@ export default function QuoteModal({ isOpen, onClose, initialProduct = "" }: Quo
                         <option value="Standard HVAC" className="bg-white text-[#334155]">Standard HVAC / Ambient Air</option>
                         <option value="300C / 400C Fire Smoke Rated" className="bg-white text-[#334155]">300°C / 400°C Emergency Fire Rated</option>
                         <option value="Corrosive Chemical / Acid Fumes" className="bg-white text-[#334155]">Corrosive Chemical / Acid Fumes (PP/SS)</option>
-                        <option value="Spark-Proof ATEX" className="bg-white text-[#334155]">Spark-Proof / Hazardous Zone (AMCA Type A/B)</option>
+                        <option value="Spark-Proof ATEX" className="bg-white text-[#334155]">Spark-Proof / Hazardous Zone (Spark-Resistant Construction)</option>
                         <option value="High Humidity / Saturated" className="bg-white text-[#334155]">High Humidity / Wet Scrubber</option>
                       </select>
                     </div>

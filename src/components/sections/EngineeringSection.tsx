@@ -40,15 +40,15 @@ export default function EngineeringSection() {
       title: "Acoustic Attenuation & Sound Engineering",
       icon: Volume2,
       summary: "Low-frequency sound suppression through aerofoil blade profiles and double-wall acoustic dampening insulation.",
-      details: "Tested in AMCA 300 reverberant sound laboratories to ensure compliance with strict hospital, commercial tower, and auditorium NC-35 acoustic noise criteria.",
+      details: "Acoustically engineered and laboratory tested to ensure compliance with strict hospital, commercial tower, and auditorium NC-35 acoustic noise criteria.",
       metric: "< 62 dBA Noise Envelope",
     },
     {
       title: "Dual-Plane Digital Dynamic Balancing",
       icon: Activity,
-      summary: "Impellers undergo computer-guided balancing on dynamic balancing rigs to ISO 1940-1 Grade G2.5 standards.",
+      summary: "Impellers undergo computer-guided balancing on dual-plane dynamic balancing rigs for ultra-low vibration.",
       details: "Eliminates parasitic shaft vibration, protects motor bearings from radial stress, and extends operational lifecycle to over 100,000 continuous runtime hours.",
-      metric: "ISO 1940 Grade G2.5 Certified",
+      metric: "Computer Dynamic Balanced",
     },
     {
       title: "High-Efficiency IE3 / IE4 & EC Drives",
@@ -188,7 +188,7 @@ export default function EngineeringSection() {
 
               <div className="pt-2 text-[11px] font-mono text-slate-500 flex items-center gap-2">
                 <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
-                <span>Calculations derived using AMCA 210 standard air density equations.</span>
+                <span>Calculations derived using standard aerodynamic air density equations.</span>
               </div>
             </div>
 
@@ -209,7 +209,7 @@ export default function EngineeringSection() {
                 <div className="p-3.5 rounded-xl bg-white border border-slate-200 shadow-2xs">
                   <span className="block text-[11px] font-mono text-slate-500">TOTAL MECHANICAL EFF</span>
                   <span className="text-xl sm:text-2xl font-black text-emerald-600">{estimatedEfficiency}</span>
-                  <span className="block text-[10px] text-slate-500 mt-0.5">AMCA 210 Peak Zone</span>
+                  <span className="block text-[10px] text-slate-500 mt-0.5">Aerodynamic Peak Zone</span>
                 </div>
 
                 <div className="p-3.5 rounded-xl bg-white border border-slate-200 shadow-2xs">
@@ -221,7 +221,7 @@ export default function EngineeringSection() {
                 <div className="p-3.5 rounded-xl bg-white border border-slate-200 shadow-2xs">
                   <span className="block text-[11px] font-mono text-slate-500">DYNAMIC BALANCE GRADE</span>
                   <span className="text-xl sm:text-2xl font-black text-[#334155]">G 2.5</span>
-                  <span className="block text-[10px] text-slate-500 mt-0.5">ISO 1940 Computer Verified</span>
+                  <span className="block text-[10px] text-slate-500 mt-0.5">Computer Balanced & Verified</span>
                 </div>
               </div>
             </div>

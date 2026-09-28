@@ -19,10 +19,10 @@ export const COMPANY_INFO = {
     workingHours: "Mon – Sat: 08:30 AM – 06:30 PM IST"
   },
   certifications: [
-    "AMCA Standard 210 & 300 Aerodynamic & Acoustic Testing",
-    "EN 12101-3 Fire Smoke Certification (F300 / F400 Rating)",
-    "ISO 9001:2015 Quality Management System",
-    "ISO 14001:2015 Environmental Management Standard",
+    "Aerodynamic & Acoustic Laboratory Performance Testing",
+    "High-Temperature Fire Smoke Exhaust Engineering Standards",
+    "Total Quality Management & Factory Acceptance Testing",
+    "Environmental Safety Standards",
     "SMACNA HVAC Duct Construction Standards"
   ]
 };
@@ -84,7 +84,7 @@ export const PRODUCTS_DATA: Product[] = [
       driveType: "Direct-Drive Unhoused Plug Fan / Belt-Drive DIDW Centrifugal / EC Motor",
       motorRating: "IE2, IE3, IE4, IE5, IE6",
       operatingTemp: "-20°C to +80°C (High-temperature rated options up to 250°C)",
-      standards: ["AMCA 210", "AMCA 300 Sound Tested", "ISO 5801"]
+      standards: ["Aerodynamic Performance Tested", "Acoustic Noise Tested", "Factory Dynamic Balancing"]
     },
     keyFeatures: [
       "Unhoused direct-drive plug fans with backward-curved 3D aerofoil blades for maximum static efficiency",
@@ -143,7 +143,7 @@ export const PRODUCTS_DATA: Product[] = [
       driveType: "Direct-Drive EC Plug Fan / V-Belt DIDW Centrifugal Blower",
       motorRating: "1.5 kW to 90 kW (IE3 / IE4 / EC High Efficiency)",
       operatingTemp: "Ambient to +55°C",
-      standards: ["AMCA 210", "ISO 9001:2015", "ASHRAE Guideline 12"]
+      standards: ["High Saturation Efficiency", "ASHRAE Guideline 12", "Factory Run Tested"]
     },
     keyFeatures: [
       "High-efficiency cross-fluted Celdek 5090 / Munters evaporative cooling media with 90%+ saturation efficiency",
@@ -200,11 +200,11 @@ export const PRODUCTS_DATA: Product[] = [
       coolingCapacity: "3.0 TR to 180 TR (Chilled Water / DX Direct Expansion)",
       casingConstruction: "25mm / 50mm Double-Skin PUF Injected (40 kg/m³) with Thermal Break Profile",
       filtration: "EU4 Pre-Filter + EU7/EU9 Microvee + HEPA H13/H14 Optional",
-      coilSpecs: "AHRI 410 Certified Copper Tubes with Hydrophilic Blue/Gold Aluminum Fins",
+      coilSpecs: "Copper Tubes with Hydrophilic Blue/Gold Aluminum Fins",
       driveType: "Direct-Drive EC Motor / Backward Curved Plug Fan / V-Belt Centrifugal",
       motorRating: "1.5 kW to 90 kW (IE3 / IE4 / EC Brushless)",
       operatingTemp: "-15°C to +65°C Continuous",
-      standards: ["AHRI 410", "EN 1886:2007 (D1/L1/T2/TB2)", "AMCA 210", "ISO 9001:2015", "Eurovent"]
+      standards: ["Thermal Break Construction", "High Efficiency Plug Fan", "Factory Tested"]
     },
     keyFeatures: [
       "Thermal Break extruded aluminum profile framework preventing exterior surface condensation",
@@ -215,7 +215,7 @@ export const PRODUCTS_DATA: Product[] = [
       "Modular sectional design allowing easy on-site rigging, plant room transit, and custom assembly"
     ],
     applications: [
-      "Pharmaceutical Manufacturing & Sterile Cleanrooms (ISO Class 5-8)",
+      "Pharmaceutical Manufacturing & Sterile Cleanrooms (Class 100 - 100,000 Cleanrooms)",
       "Commercial IT Parks, Corporate Headquarters & High-Rise Towers",
       "Hospitals, Operation Theatres & Critical Healthcare Facilities",
       "Data Centers, Semiconductor Fabrication & Electronics Assembly",
@@ -263,7 +263,7 @@ export const PRODUCTS_DATA: Product[] = [
       driveType: "Direct Drive with 3-Speed PSC Motor or Continuous 0-10V EC Motor",
       motorRating: "35 W to 450 W (Energy Efficient Brushless DC / PSC)",
       operatingTemp: "Chilled Water 4°C - 12°C / Hot Water up to 80°C",
-      standards: ["AHRI 440", "Eurovent Certified Performance", "CE Compliance", "ISO 9001:2015"]
+      standards: ["Ultra-Quiet Acoustic Design", "CE Compliance", "Zero-Condensation Drain Pan"]
     },
     keyFeatures: [
       "Ultra-compact slim chassis height starting at just 220mm, ideal for restricted false ceiling heights",
@@ -320,11 +320,11 @@ export const PRODUCTS_DATA: Product[] = [
       coolingCapacity: "4.0 TR to 140 TR (Chilled Water / DX Coil)",
       casingConstruction: "25mm / 50mm Double-Skin PUF Injected (40 kg/m³) with Thermal Break Profile",
       filtration: "EU4 Pre-Filter + EU7/EU9 Fine Filter + Carbon / HEPA Optional",
-      coilSpecs: "AHRI 410 Certified 6-Row / 8-Row Copper Tubes with Hydrophilic Fins",
+      coilSpecs: "6-Row / 8-Row Copper Tubes with Hydrophilic Fins",
       driveType: "Direct-Drive EC Plug Fan / V-Belt Centrifugal",
       motorRating: "2.2 kW to 75 kW (IE3 / IE4 / EC High Efficiency)",
       operatingTemp: "-10°C to +55°C Ambient",
-      standards: ["ASHRAE 62.1", "AHRI 410", "EN 1886:2007 (TB2/T2)", "ISO 9001:2015"]
+      standards: ["ASHRAE 62.1 Ventilation", "Thermal Break Construction", "Enthalpy Energy Recovery"]
     },
     keyFeatures: [
       "100% Outdoor air conditioning with integrated rotary total enthalpy heat recovery wheel",
@@ -383,7 +383,7 @@ export const PRODUCTS_DATA: Product[] = [
       motorRating: "0.37 kW to 30 kW (Class F / Class H High-Temp Rated)",
       operatingTemp: "Continuous up to +70°C (Emergency smoke options up to 250°C / 2 hrs)",
       casingConstruction: "25mm Double-Skin Acoustic Insulated Panels with Internal Neoprene Gaskets",
-      standards: ["AMCA 210", "AMCA 300 Acoustic Standards", "ISO 9001:2015", "BS 7346"]
+      standards: ["Acoustic Sound Attenuated", "High-Temp Fire Smoke Exhaust", "BS 7346 Construction"]
     },
     keyFeatures: [
       "Acoustically lined double-skin panels with high-density mineral wool absorbing low and high-frequency blower noise",
@@ -498,7 +498,7 @@ export const PRODUCTS_DATA: Product[] = [
       motorRating: "0.37 kW to 18.5 kW, Class F / IP55 (IE3/IE4)",
       operatingTemp: "-20°C to +60°C Continuous",
       casingConstruction: "Galvanized Sheet Steel Double-Skin with Acoustic Insulation",
-      standards: ["AMCA 210", "ISO 1940 Grade G2.5", "ISO 9001:2015"]
+      standards: ["Low-Profile In-Line Design", "Acoustically Insulated", "Dynamic Balancing"]
     },
     keyFeatures: [
       "Compact rectangular in-line configuration fitting easily within shallow false ceiling spaces",
@@ -599,7 +599,7 @@ export const INDUSTRIES_DATA: Industry[] = [
       "Uniform downward air velocity across vehicle conveyor bodies"
     ],
     solutionsProvided: [
-      "ATEX / Spark-proof AMCA Type A centrifugal blowers",
+      "ATEX / Spark-resistant centrifugal blowers",
       "Laminar flow supply plenums with micro-filtration",
       "Thermal oxidizer / scrubber interface ducting",
       "Underfloor downdraft exhaust extraction networks"
@@ -670,7 +670,7 @@ export const INDUSTRIES_DATA: Industry[] = [
     name: "Pharma, Biotech & Cleanrooms",
     code: "PHA-06",
     tagline: "HEPA-integrated air handling and positive pressure cascade control.",
-    description: "Pharmaceutical cleanrooms and biotech labs demand strict ISO 14644 classification, precise relative humidity control, and positive/negative room pressure cascades to prevent cross-contamination.",
+    description: "Pharmaceutical cleanrooms and biotech labs demand strict air classification, precise relative humidity control, and positive/negative room pressure cascades to prevent cross-contamination.",
     keyChallenges: [
       "High static resistance across multi-stage HEPA/ULPA filters",
       "Preventing active pharmaceutical ingredient (API) fume cross-contamination",
@@ -687,7 +687,7 @@ export const INDUSTRIES_DATA: Industry[] = [
       "Scrubber Dry & Wet",
       "Air Handling Unit (AHU)"
     ],
-    stats: { label: "Cleanroom Class Support", value: "ISO 4 – 8" },
+    stats: { label: "Cleanroom Class Support", value: "Class 100 – 100K" },
     image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80",
     accentColor: "#10B981"
   },
@@ -752,7 +752,7 @@ export const QUALITY_STEPS: QualityStep[] = [
     title: "Aerodynamic Simulation & Computational Modeling",
     description: "Every impeller geometry and casing profile undergoes extensive Computational Fluid Dynamics (CFD) simulation to eliminate boundary separation, turbulence, and unnecessary vortex drag.",
     methodology: "ANSYS Fluent 3D Navier-Stokes numerical airflow modeling",
-    complianceStandard: "AMCA 210 Aerodynamic Rig Protocols",
+    complianceStandard: "Aerodynamic Simulation Rig Protocols",
     iconName: "Cpu"
   },
   {
@@ -770,7 +770,7 @@ export const QUALITY_STEPS: QualityStep[] = [
     title: "Precision CNC Laser Cutting & Automated Forming",
     description: "Components are cut on high-precision fiber laser tables and formed on multi-axis CNC press brakes, ensuring microscopic tolerances and perfect modular interchangeability.",
     methodology: "Fiber Laser 0.05mm tolerance nesting and robotic roll forming",
-    complianceStandard: "ISO 2768-m Precision Engineering Standards",
+    complianceStandard: "Precision Engineering Standards",
     iconName: "Settings"
   },
   {
@@ -779,7 +779,7 @@ export const QUALITY_STEPS: QualityStep[] = [
     title: "Dual-Plane Digital Dynamic Balancing",
     description: "Every assembled impeller undergoes dual-plane digital dynamic balancing on calibrated computerized balancing machines to ensure whisper-quiet rotation and extended bearing longevity.",
     methodology: "Two-plane dynamic balance correction at operating RPMs",
-    complianceStandard: "ISO 1940-1 Grade G2.5 / G1.0 Balance Grade",
+    complianceStandard: "Precision Dual-Plane Balance Grade",
     iconName: "Activity"
   },
   {
@@ -787,8 +787,8 @@ export const QUALITY_STEPS: QualityStep[] = [
     code: "RIG-TEST",
     title: "Full-Scale Aerodynamic & Acoustic Chamber Testing",
     description: "Finished fans are mounted onto automated multi-nozzle chamber test rigs to measure real CFM vs Static Pressure curves, motor power draw, and octave-band sound power levels.",
-    methodology: "Multi-nozzle AMCA chamber with precision pressure transducers",
-    complianceStandard: "AMCA 210 / AMCA 300 / ISO 5801 Laboratory Standards",
+    methodology: "Multi-nozzle aerodynamic test chamber with precision pressure transducers",
+    complianceStandard: "Airflow & Acoustic Laboratory Standards",
     iconName: "Sliders"
   },
   {
@@ -797,7 +797,7 @@ export const QUALITY_STEPS: QualityStep[] = [
     title: "Factory Acceptance Testing (FAT) & Dispatch Certification",
     description: "Before release, a comprehensive 2-hour continuous test run records vibration FFT spectrums, thermal motor winding rise, and paint film DFT thickness before tamper-evident crating.",
     methodology: "Full electrical, vibration, and dimensional sign-off report with traceable serial barcode",
-    complianceStandard: "ISO 9001:2015 Quality Dispatch Protocol",
+    complianceStandard: "Factory Acceptance Quality Dispatch Protocol",
     iconName: "CheckCircle2"
   }
 ];
@@ -829,7 +829,7 @@ export const PROJECT_CASE_STUDIES: ProjectCaseStudy[] = [
     scope: "Turnkey supply of ATEX spark-resistant centrifugal supply fans, laminar clean air plenums, and packed-bed acid fume scrubbing systems for a new robotic paint line.",
     airflowCapacity: "920,000 CFM Air Handling & VOC Neutralization",
     solutionsInstalled: [
-      "AMCA Spark-Proof Type A Centrifugal Fans with Backward Inclined Impellers",
+      "Spark-Resistant Centrifugal Fans with Backward Inclined Impellers",
       "PP/FRP Multi-Stage Chemical Scrubber Towers with Automated Dosing",
       "Stainless Steel SS304 Welded Ductwork"
     ],
@@ -926,7 +926,7 @@ export const WHY_EUROCON_PILLARS = [
     id: "pillar-safety",
     number: "02",
     title: "Certified Life-Safety Compliance",
-    description: "Our smoke management systems and high-temperature fans are certified to stringent EN 12101-3, AMCA 210, and NBC standards to ensure flawless emergency operation when lives depend on it.",
+    description: "Our smoke management systems and high-temperature fans are engineered in strict compliance with NBC and fire-safety ventilation standards to ensure dependable emergency operation.",
     stat: "400°C / 2h",
     statLabel: "Fire-Rated Extreme Certification"
   },
@@ -966,12 +966,12 @@ export const WHY_EUROCON_PILLARS = [
 
 export const FAQ_ITEMS = [
   {
-    question: "What standards and certifications do Eurocon System LLP products comply with?",
-    answer: "Our air management equipment is designed, manufactured, and tested in strict accordance with global benchmarks including AMCA 210 (Aerodynamic Laboratory Methods), AMCA 300 (Reverberant Room Sound Testing), EN 12101-3 (High-Temperature Smoke and Heat Exhaust F300/F400), ISO 1940-1 (Dynamic Balance Grade G2.5), and SMACNA HVAC Duct Construction Standards."
+    question: "What standards and specifications do Eurocon System LLP products comply with?",
+    answer: "Our air management equipment is designed, manufactured, and tested with precision engineering tolerances to ensure optimal aerodynamic performance, low acoustic signatures, dependable fire smoke exhaust, and rugged mechanical durability in compliance with SMACNA and national standards."
   },
   {
     question: "Can Eurocon custom-engineer fans for corrosive or hazardous chemical environments?",
-    answer: "Yes. We engineer customized industrial solutions utilizing SS304/SS316 stainless steel, Polypropylene/FRP dual laminates, and spark-resistant aluminum alloys complying with AMCA Type A, B, and C spark-proof construction norms, as well as ATEX hazardous area requirements."
+    answer: "Yes. We engineer customized industrial solutions utilizing SS304/SS316 stainless steel, Polypropylene/FRP dual laminates, and spark-resistant aluminum alloys complying with spark-resistant construction guidelines as well as ATEX hazardous area requirements."
   },
   {
     question: "How do Cabinet Inline and Exhaust units compare to open ventilation fans?",
@@ -993,10 +993,10 @@ export const CORE_EUROCON_NAV_PRODUCTS = [
     slug: "fan-section",
     shortName: "Fan Section",
     category: "Plenum & Blower Module",
-    desc: "Direct-drive fans & DIDW blower modules with ISO G2.5 balance",
+    desc: "Direct-drive fans & DIDW blower modules with dynamic balance",
     href: "/products/fan-section",
     schematicSvgType: "fansection" as const,
-    badge: "ISO 1940 G2.5"
+    badge: "Precision Balanced"
   },
   {
     name: "Air Washer",
@@ -1013,10 +1013,10 @@ export const CORE_EUROCON_NAV_PRODUCTS = [
     slug: "ahu",
     shortName: "AHU",
     category: "Modular Double-Skin AHU",
-    desc: "Thermal-break double-skin AHU with AHRI certified coils & plug fan",
+    desc: "Thermal-break double-skin AHU with cooling coils & plug fan",
     href: "/products/ahu",
     schematicSvgType: "ahu" as const,
-    badge: "AHRI 410 / EN 1886"
+    badge: "Thermal Break Design"
   },
   {
     name: "FCU (Fan Coil Unit)",

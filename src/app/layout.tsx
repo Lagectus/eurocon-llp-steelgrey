@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     "Scrubber Dry & Wet",
     "Cabinet Inline Unit",
     "HVAC Engineering Solutions",
-    "AMCA 210 Certified",
+    "Heavy Duty Airflow Systems",
     "EN 1886 Thermal Break",
   ],
   authors: [{ name: "Eurocon System LLP" }],

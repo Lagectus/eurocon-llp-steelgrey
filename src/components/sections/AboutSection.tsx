@@ -38,15 +38,15 @@ export default function AboutSection({ onOpenQuoteModal }: AboutSectionProps) {
       points: [
         "Fiber laser cutting up to 16mm plate thickness with 0.05mm precision",
         "Automated SMACNA compliant TDF/TDC lock-forming coil lines",
-        "Dual-plane ISO 1940 Grade G2.5 computer-guided balancing",
+        "Dual-plane computerized dynamic precision balancing",
       ],
     },
     compliance: {
-      title: "Global Standards & Life-Safety Certifications",
-      desc: "Every component is manufactured under stringent ISO 9001:2015 quality management procedures and tested according to AMCA 210/300, EN 12101-3 high-temp fire smoke ratings, and SMACNA leakage norms.",
+      title: "Global Standards & Life-Safety Engineering",
+      desc: "Every component is manufactured under stringent quality management procedures and tested according to aerodynamic performance standards, high-temp fire smoke ratings, and SMACNA leakage norms.",
       points: [
-        "EN 12101-3 certified emergency smoke spill fans (300°C & 400°C / 2 hrs)",
-        "AMCA 210 air performance and AMCA 300 sound reverberant test protocols",
+        "High-temperature emergency smoke spill fans (300°C & 400°C / 2 hrs)",
+        "Aerodynamic air performance and acoustic sound testing protocols",
         "100% factory acceptance run-testing (FAT) with vibration FFT records",
       ],
     },
@@ -93,7 +93,7 @@ export default function AboutSection({ onOpenQuoteModal }: AboutSectionProps) {
                   <div className="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-white/95 backdrop-blur-md border border-slate-200 text-[#334155] flex items-center justify-between shadow-lg">
                     <div className="space-y-0.5">
                       <span className="text-[10px] font-mono text-blue-600 uppercase font-bold">QUALITY ASSURANCE</span>
-                      <p className="text-xs font-semibold text-[#334155]">ISO 9001:2015 & AMCA 210 Lab Certified</p>
+                      <p className="text-xs font-semibold text-[#334155]">Quality Engineered & Factory Run-Tested</p>
                     </div>
                     <ShieldCheck className="w-6 h-6 text-blue-600 shrink-0" />
                   </div>

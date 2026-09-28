@@ -44,7 +44,7 @@ export default function Footer() {
             </p>
 
             <div className="text-[11px] font-mono text-white/80 font-semibold">
-              AMCA 210/300 • EN 1886 • AHRI 410 • ISO 9001:2015
+              Industrial Airflow • Heavy-Duty Ventilation • Precision Engineering
             </div>
           </div>
 

@@ -84,11 +84,11 @@ export default function CTASection({ onOpenQuoteModal }: CTASectionProps) {
         <div className="pt-8 border-t border-slate-200 flex flex-wrap items-center justify-center gap-8 text-xs font-mono text-[#64748B]">
           <div className="flex items-center gap-2">
             <ShieldCheck className="w-4 h-4 text-blue-600" />
-            <span>AMCA 210 & ISO 9001 Tested</span>
+            <span>Factory Acceptance Tested</span>
           </div>
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-emerald-500" />
-            <span>EN 12101-3 400°C/2hr Certified</span>
+            <span>High-Temperature Fire Rated Design</span>
           </div>
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-blue-600" />

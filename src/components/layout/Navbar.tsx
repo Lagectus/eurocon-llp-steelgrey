@@ -200,7 +200,7 @@ export default function Navbar({
 
                   <div className="mt-3 pt-3 border-t border-white/10 flex items-center justify-between px-2">
                     <span className="text-[10px] font-mono text-white/80">
-                      AHRI • EN 1886 • AMCA 210 • ISO 9001
+                      Industrial Grade • Aerodynamically Tested • High Efficiency
                     </span>
                     <Link
                       href="/products"

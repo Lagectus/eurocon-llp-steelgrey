@@ -112,15 +112,15 @@ export default function Hero({ onOpenQuoteModal }: HeroProps) {
             >
               <div className="flex items-center gap-1.5">
                 <ShieldCheck className="w-4 h-4 text-blue-600" />
-                <span>AMCA 210 Lab Certified</span>
+                <span>Aerodynamically Tested</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                <span>EN 12101-3 400°C/2h Fire Rated</span>
+                <span>High-Temperature Fire Rated Design</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <Wind className="w-4 h-4 text-blue-600" />
-                <span>ISO 1940 G2.5 Dynamic Balancing</span>
+                <span>Dual-Plane Dynamic Balancing</span>
               </div>
             </motion.div>
           </div>
@@ -168,7 +168,7 @@ export default function Hero({ onOpenQuoteModal }: HeroProps) {
                   <div className="absolute bottom-4 left-4 right-4 p-3.5 rounded-xl bg-white/95 backdrop-blur-md border border-slate-200 text-[#334155] flex items-center justify-between shadow-xl">
                     <div>
                       <span className="block text-[10px] font-mono text-blue-600 uppercase font-bold">
-                        CENTRIFUGAL SERIES // AMCA 210
+                        CENTRIFUGAL SERIES // HEAVY DUTY
                       </span>
                       <p className="text-xs font-semibold text-[#334155]">
                         Backward-curved aerofoil impeller for high static pressure

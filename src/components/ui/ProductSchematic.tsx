@@ -60,7 +60,7 @@ export default function ProductSchematic({
           })}
           {/* Airflow Velocity Vectors */}
           <path d="M 150 110 Q 200 80, 275 60" fill="none" stroke={strokeColor} strokeWidth="2" strokeDasharray="4 4" className="animate-airflow-line" />
-          <text x="210" y="180" fill={dimStroke} fontSize="9" fontFamily="monospace">AMCA 210 SCROLL</text>
+          <text x="210" y="180" fill={dimStroke} fontSize="9" fontFamily="monospace">AEROFOIL SCROLL</text>
         </svg>
       )}
 
@@ -293,7 +293,7 @@ export default function ProductSchematic({
           <path d="M 230 145 L 235 152 L 225 157 L 235 162 L 230 168" stroke={accentColor} strokeWidth="2.5" fill="none" />
           {/* Discharge Flexible Canvas Sleeve */}
           <rect x="275" y="65" width="15" height="65" rx="2" fill="none" stroke={accentColor} strokeWidth="2" />
-          <text x="60" y="185" fill={dimStroke} fontSize="8.5" fontFamily="monospace">ISO 1940 G2.5 BALANCED • SPRING AVM ISOLATION</text>
+          <text x="60" y="185" fill={dimStroke} fontSize="8.5" fontFamily="monospace">DYNAMICALLY BALANCED • SPRING AVM ISOLATION</text>
         </svg>
       )}
 

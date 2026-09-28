@@ -757,7 +757,7 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
               ENGINEERING PARAMETERS & PERFORMANCE RATINGS
             </h2>
             <p className="text-sm text-[#64748B]">
-              Factory tested according to international HVAC and aerodynamic testing codes (AMCA 210, EN 1886, AHRI 410, ISO 5801).
+              Factory tested according to international HVAC engineering and performance testing codes (EN 1886, AHRI 410).
             </p>
           </div>
 

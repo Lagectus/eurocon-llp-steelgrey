@@ -10,7 +10,7 @@ export interface ProductSpecification {
   casingConstruction?: string; // e.g. "25mm/50mm Double Skin PUF Injected (40 kg/m³)"
   coilSpecs?: string; // e.g. "Copper Tubes with Corrugated Hydrophilic Aluminum Fins"
   noiseLevel?: string; // e.g. "32 dBA - 58 dBA @ 1.5m"
-  standards?: string[]; // e.g. ["AMCA 210", "ISO 5801", "EN 12101-3", "AHRI 410", "EN 1886"]
+  standards?: string[]; // e.g. ["EN 1886", "AHRI 410", "CE", "ASHRAE"]
 }
 
 export interface Product {

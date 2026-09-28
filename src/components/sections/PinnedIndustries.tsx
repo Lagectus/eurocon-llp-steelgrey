@@ -63,13 +63,13 @@ export default function PinnedIndustries() {
       secondaryStatLabel: "Continuous Ambient",
       highlights: [
         { title: "Process Fume Scrubbing", desc: "Multi-stage wet scrubbers capturing acid mist and welding byproduct gases." },
-        { title: "Heavy-Gauge Impellers", desc: "Wear-resistant, dynamically balanced backward-curved fan wheels (ISO 1940 G2.5)." },
+        { title: "Heavy-Gauge Impellers", desc: "Wear-resistant, dynamically balanced backward-curved fan wheels." },
         { title: "Thermal Destratification", desc: "Large evaporative cooling units clearing intense machine heat pockets." }
       ],
       equipment: ["Industrial Fan Section", "Industrial Air Washer", "Wet Scrubbers"],
       icon: Factory,
       image: "/images/products/fan-section.png",
-      compliance: "OSHA Industrial Safety • ISO 14001 • AMCA 210"
+      compliance: "OSHA Industrial Safety • Heavy Duty Cycle • Aerodynamically Tested"
     },
     {
       id: "ind-auto",
@@ -79,7 +79,7 @@ export default function PinnedIndustries() {
       shortTitle: "Automotive",
       systemLabel: "Treated Fresh Air (TFA) DOAS Unit",
       tagline: "Laminar cleanroom airflow and explosion-proof VOC mist capture for robotic paint & assembly lines.",
-      statValue: "ISO Class 6",
+      statValue: "Class 1,000",
       statLabel: "Paint Shop Air Purity",
       secondaryStat: "0.3 m/s",
       secondaryStatLabel: "Uniform Downward Velocity",
@@ -91,7 +91,7 @@ export default function PinnedIndustries() {
       equipment: ["Treated Fresh Air (TFA)", "Direct-Drive Plug Fans", "Chemical Scrubbers"],
       icon: Car,
       image: "/images/products/tfa-unit.png",
-      compliance: "ATEX Zone 1/2 • ISO 9001:2015 • NFPA 33"
+      compliance: "ATEX Zone 1/2 • Spark-Resistant • NFPA 33"
     },
     {
       id: "ind-metro",
@@ -146,7 +146,7 @@ export default function PinnedIndustries() {
       systemLabel: "Precision Evaporative Air Washer Unit",
       tagline: "Aseptic cascade air pressurization, zero-microbial accumulation, and terminal HEPA filtration integration.",
       statValue: "Class 100",
-      statLabel: "Cleanliness Standard (ISO 5)",
+      statLabel: "Cleanliness Standard (Aseptic Grade)",
       secondaryStat: "15 Pa",
       secondaryStatLabel: "Room Pressure Cascade",
       highlights: [
@@ -157,7 +157,7 @@ export default function PinnedIndustries() {
       equipment: ["Hygienic Double-Skin AHU", "TFA Cleanroom Units", "Safe-Change Filter Boxes"],
       icon: Hospital,
       image: "/images/products/industrial-airwashers.png",
-      compliance: "US FDA cGMP • WHO GMP • ISO 14644-1"
+      compliance: "US FDA cGMP • WHO GMP Cleanroom Class"
     }
   ];
 

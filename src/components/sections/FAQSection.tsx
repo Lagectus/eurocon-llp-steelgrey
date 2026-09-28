@@ -20,7 +20,7 @@ export default function FAQSection() {
           alignment="center"
           eyebrow="FREQUENTLY ASKED QUESTIONS"
           title="TECHNICAL & COMMERCIAL CLARIFICATIONS"
-          subtitle="Answers to common questions regarding AMCA compliance, custom materials, lead times, and life-safety certifications."
+          subtitle="Answers to common questions regarding technical specifications, custom materials, lead times, and life-safety performance."
         />
 
         <div className="mt-12 space-y-4">

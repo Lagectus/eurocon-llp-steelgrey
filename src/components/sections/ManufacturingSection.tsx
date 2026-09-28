@@ -69,8 +69,8 @@ export default function ManufacturingSection({ onOpenQuoteModal }: Manufacturing
               <span className="block text-xs text-[#64748B] font-mono mt-1">Vibration FFT Verified</span>
             </div>
             <div className="p-4 rounded-xl bg-white/90 backdrop-blur-md border border-slate-200 shadow-sm col-span-2 sm:col-span-1">
-              <span className="block text-xl sm:text-2xl font-black text-blue-600">ISO 9001</span>
-              <span className="block text-xs text-[#64748B] font-mono mt-1">QMS Certified Plant</span>
+              <span className="block text-xl sm:text-2xl font-black text-blue-600">QA / QC</span>
+              <span className="block text-xs text-[#64748B] font-mono mt-1">Multi-Stage Quality Control</span>
             </div>
           </div>
 

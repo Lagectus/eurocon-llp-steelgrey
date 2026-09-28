@@ -18,7 +18,7 @@ export default function CompactProducts({}: CompactProductsProps = {}) {
       name: "Fan Section",
       tagline: "A fan section is a modular component in heating, ventilation, and air conditioning (HVAC) systems that houses a centrifugal or axial blower to circulate air through ducts.",
       schematicType: "fansection" as const,
-      badge: "ISO 1940 G2.5",
+      badge: "Dynamic Balanced",
       href: "/products/fan-section",
       image: "/images/products/fan-section1.png",
     },

@@ -41,7 +41,7 @@ export default function ProductSection({
           <SectionHeading
             eyebrow="OUR AIR MANAGEMENT SOLUTIONS"
             title="ENGINEERED PRODUCT PORTFOLIO"
-            subtitle="Industrial ventilation equipment, AMCA-tested impellers, and life-safety smoke exhaust units designed for optimal airflow and high static efficiency."
+            subtitle="Industrial ventilation equipment, precision-engineered impellers, and life-safety smoke exhaust units designed for optimal airflow and high static efficiency."
           />
 
           <button

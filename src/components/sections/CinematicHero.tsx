@@ -223,15 +223,15 @@ export default function CinematicHero({ onOpenQuoteModal }: CinematicHeroProps) 
           >
             <div className="flex items-center gap-1.5">
               <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#010A6D] shrink-0" />
-              <span>AMCA 210 Lab Certified</span>
+              <span>Aerodynamically Tested</span>
             </div>
             <div className="flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0" />
-              <span>EN 12101-3 400°C/2h Fire Rated</span>
+              <span>Heavy-Duty Fire Rated Design</span>
             </div>
             <div className="flex items-center gap-1.5">
               <Wind className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#010A6D] shrink-0" />
-              <span>ISO 1940 G2.5 Dynamic Balancing</span>
+              <span>Dual-Plane Dynamic Balancing</span>
             </div>
           </div>
         </div>
