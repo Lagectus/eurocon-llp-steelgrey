@@ -358,28 +358,18 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       {/* Box 1: DX AHU */}
                       <div className="p-3.5 rounded-xl bg-linear-to-r from-blue-600 to-blue-700 text-white shadow-md shadow-blue-600/20 border border-blue-500 flex items-center justify-between group hover:shadow-lg transition-all">
-                        <div className="flex items-center gap-3">
-                          <span className="w-7 h-7 rounded-lg bg-white/20 text-white font-mono text-xs font-black flex items-center justify-center shrink-0">
-                            1
-                          </span>
-                          <div>
-                            <span className="text-sm font-black tracking-wide block">DX AHU</span>
-                            <span className="text-[11px] text-blue-100 font-medium block">Direct Expansion System</span>
-                          </div>
+                        <div>
+                          <span className="text-sm font-black tracking-wide block">DX AHU</span>
+                          <span className="text-[11px] text-blue-100 font-medium block">Direct Expansion System</span>
                         </div>
                         <CheckCircle2 className="w-5 h-5 text-blue-200 shrink-0" />
                       </div>
 
                       {/* Box 2: CHILLED WATER AHU */}
                       <div className="p-3.5 rounded-xl bg-linear-to-r from-blue-600 to-blue-700 text-white shadow-md shadow-blue-600/20 border border-blue-500 flex items-center justify-between group hover:shadow-lg transition-all">
-                        <div className="flex items-center gap-3">
-                          <span className="w-7 h-7 rounded-lg bg-white/20 text-white font-mono text-xs font-black flex items-center justify-center shrink-0">
-                            2
-                          </span>
-                          <div>
-                            <span className="text-sm font-black tracking-wide block">CHILLED WATER AHU</span>
-                            <span className="text-[11px] text-blue-100 font-medium block">Chilled Water System</span>
-                          </div>
+                        <div>
+                          <span className="text-sm font-black tracking-wide block">CHILLED WATER AHU</span>
+                          <span className="text-[11px] text-blue-100 font-medium block">Chilled Water System</span>
                         </div>
                         <CheckCircle2 className="w-5 h-5 text-blue-200 shrink-0" />
                       </div>
