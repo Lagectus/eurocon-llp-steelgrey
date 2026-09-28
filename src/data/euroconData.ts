@@ -80,15 +80,15 @@ export const PRODUCTS_DATA: Product[] = [
       airflowRange: "500 to 1,00,000 CFM",
       staticPressure: "Up to 3,000 Pa",
       impellerDiameter: "280 mm to 1,600 mm",
-      casingConstruction: "Acoustic Double-Skin 25mm / 50mm PUF Casing with Quick-Access Doors",
+      casingConstruction: "Single or Double-Skin 25mm / 50mm PUF Casing with Quick-Access Doors",
       driveType: "Direct-Drive Unhoused Plug Fan / Belt-Drive DIDW Centrifugal / EC Motor",
-      motorRating: "IE2, IE3, IE4, IE5, IE6",
+      motorRating: "Motor Efficiency: IE2, IE3, IE4, IE5, IE6",
       operatingTemp: "-20°C to +80°C (High-temperature rated options up to 250°C)",
-      standards: ["Aerodynamic Performance Tested", "Acoustic Noise Tested", "Factory Dynamic Balancing"]
+      standards: ["Aerodynamic Performance Tested", "Factory Dynamic Balancing"]
     },
     keyFeatures: [
       "Unhoused direct-drive plug fans with backward-curved 3D aerofoil blades for maximum static efficiency",
-      "Double-skin 25mm/50mm acoustic insulated casing lined with acoustic glass wool / high-density PUF",
+      "Single or double-skin 25mm/50mm insulated casing lined with high-density PUF",
       "Heavy-duty spring anti-vibration mounts (AVMs) with 95%+ vibration isolation efficiency",
       "Flexible neoprene/canvas connection sleeves preventing mechanical vibration transmission into ductwork",
       "Quick-release hinged access doors with double-cam latches and acrylic inspection viewing ports",
@@ -113,7 +113,7 @@ export const PRODUCTS_DATA: Product[] = [
     ],
     customOptions: [
       { title: "Impeller Type", description: "Backward curved plug fan, aerofoil centrifugal, or forward curved double inlet blower.", badge: "Plug / DIDW" },
-      { title: "Motor Technology", description: "IE3 / IE4 Premium Efficiency induction motors or EC Brushless synchronous motors.", badge: "IE4 / EC" },
+      { title: "Motor Technology", description: "IE2, IE3, IE4, IE5, IE6 High Efficiency induction or EC Brushless motors.", badge: "IE2 - IE6" },
       { title: "Access Layout", description: "Left-hand or Right-hand quick-access inspection door with viewing window and marine light.", badge: "Custom Access" },
       { title: "Mounting Isolation", description: "Internal spring isolators with seismic restraints or external rubber-in-shear mounts.", badge: "Vibration Free" }
     ]
