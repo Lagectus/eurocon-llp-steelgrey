@@ -17,7 +17,7 @@ export default function CompactAbout() {
     },
     {
       title: "Customer-Focused Solutions",
-      desc: "Turnkey application engineering, custom metallurgy, and on-site testing support.",
+      desc: "Combine smart automation, energy efficiency, and tailored indoor air quality (IAQ) management to meet specific residential, commercial, or industrial needs.",
     },
   ];
 
