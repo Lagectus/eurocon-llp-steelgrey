@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
-import { ArrowRight, ShieldCheck, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
@@ -19,7 +19,6 @@ export default function CinematicCTA({ onOpenQuoteModal }: CinematicCTAProps) {
   const headingRef = useRef<HTMLHeadingElement>(null);
   const bodyRef = useRef<HTMLParagraphElement>(null);
   const buttonsRef = useRef<HTMLDivElement>(null);
-  const badgesRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -30,14 +29,13 @@ export default function CinematicCTA({ onOpenQuoteModal }: CinematicCTAProps) {
       if (headingRef.current) gsap.set(headingRef.current, { opacity: 1, y: 0 });
       if (bodyRef.current) gsap.set(bodyRef.current, { opacity: 1, y: 0 });
       if (buttonsRef.current) gsap.set(buttonsRef.current.children, { opacity: 1, y: 0 });
-      if (badgesRef.current) gsap.set(badgesRef.current, { opacity: 1 });
       return;
     }
 
     const ctx = gsap.context(() => {
       // If already in viewport on mount, display immediately
       if (sectionRef.current && ScrollTrigger.isInViewport(sectionRef.current)) {
-        gsap.set([containerRef.current, eyebrowRef.current, headingRef.current, bodyRef.current, badgesRef.current], { opacity: 1, y: 0 });
+        gsap.set([containerRef.current, eyebrowRef.current, headingRef.current, bodyRef.current], { opacity: 1, y: 0 });
         if (buttonsRef.current) gsap.set(buttonsRef.current.children, { opacity: 1, y: 0 });
         return;
       }
@@ -85,11 +83,6 @@ export default function CinematicCTA({ onOpenQuoteModal }: CinematicCTAProps) {
         { opacity: 0, y: 20 },
         { opacity: 1, y: 0, duration: 0.5, stagger: 0.1 },
         "-=0.3"
-      )
-      .fromTo(badgesRef.current,
-        { opacity: 0 },
-        { opacity: 1, duration: 0.5 },
-        1.0
       );
 
       ScrollTrigger.refresh();
@@ -167,21 +160,6 @@ export default function CinematicCTA({ onOpenQuoteModal }: CinematicCTAProps) {
                   <span>Contact Us</span>
                 </Link>
               </MagneticButton>
-            </div>
-
-            {/* Trust Badges */}
-            <div
-              ref={badgesRef}
-              className="pt-4 border-t border-slate-300/60 flex flex-wrap items-center justify-center lg:justify-start gap-5 text-xs font-mono text-slate-900 font-medium"
-            >
-              <div className="flex items-center gap-1.5">
-                <ShieldCheck className="w-4 h-4 text-[#010A6D]" />
-                <span>AMCA 210 / 300 & EN 12101-3 F400 Certified</span>
-              </div>
-              <div className="flex items-center gap-1.5">
-                <span className="w-2 h-2 rounded-full bg-emerald-600 animate-pulse" />
-                <span>Response within 24 Business Hours</span>
-              </div>
             </div>
           </div>
         </div>

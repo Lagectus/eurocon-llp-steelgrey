@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles, ShieldCheck } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 import Link from "next/link";
 import AirflowCanvas from "../ui/AirflowCanvas";
 import MagneticButton from "../ui/MagneticButton";
@@ -80,18 +80,6 @@ export default function CompactCTA({ onOpenQuoteModal }: CompactCTAProps) {
             </Link>
           </MagneticButton>
         </motion.div>
-
-        {/* Trust Note */}
-        <div className="pt-6 border-t border-slate-200 flex flex-wrap items-center justify-center gap-6 text-xs font-mono text-[#64748B]">
-          <div className="flex items-center gap-1.5">
-            <ShieldCheck className="w-4 h-4 text-blue-600" />
-            <span>AMCA 210 / 300 & EN 12101-3 F400 Certified</span>
-          </div>
-          <div className="flex items-center gap-1.5">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-            <span>Response within 24 Business Hours</span>
-          </div>
-        </div>
       </div>
     </section>
   );
