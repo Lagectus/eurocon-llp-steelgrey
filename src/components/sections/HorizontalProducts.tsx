@@ -235,10 +235,6 @@ export default function HorizontalProducts() {
                   <span className="font-mono text-xs font-black text-blue-600">
                     {product.num}
                   </span>
-                  <span className="inline-flex items-center gap-1 text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-white border border-gray-200 text-slate-900 shadow-xs">
-                    <ShieldCheck className="w-3 h-3 text-blue-600" />
-                    {product.badge}
-                  </span>
                 </div>
 
                 <div className="h-52 sm:h-60 lg:h-64 flex items-center justify-center p-4 relative z-10 overflow-hidden">

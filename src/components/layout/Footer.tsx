@@ -31,7 +31,7 @@ export default function Footer() {
               </div>
               <div>
                 <span className="font-extrabold text-lg text-white tracking-wider block">
-                  <span className="text-blue-400">EURO</span><span className="text-white">CON</span> <span className="text-white/90 font-normal">SYSTEM LLP</span>
+                  <span className="text-[#EB0311]">EURO</span><span className="text-[#010A6D]">CON</span> <span className="text-white/90 font-normal">SYSTEM LLP</span>
                 </span>
                 <span className="text-[9px] font-mono tracking-widest text-white/80 uppercase font-semibold">
                   HVAC & Industrial Air Solutions

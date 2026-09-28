@@ -9,11 +9,11 @@ export default function CompactAbout() {
   const highlights = [
     {
       title: "Engineering Excellence",
-      desc: "Computational Fluid Dynamics (CFD) aerodynamic optimization for high static efficiency.",
+      desc: "Focuses on maximizing energy efficiency, achieving maximum indoor air quality and thermal comfort while minimizing energy consumption and noise.",
     },
     {
       title: "Reliable Performance",
-      desc: "ISO 1940 Grade G2.5 precision dynamic balancing and certified emergency fire endurance.",
+      desc: "Delivers steady airflow, exact temperature control, and clean indoor air with minimal breakdowns and low energy use.",
     },
     {
       title: "Customer-Focused Solutions",
@@ -108,7 +108,7 @@ export default function CompactAbout() {
                       PRECISION AIR MANAGEMENT
                     </span>
                     <p className="text-xs font-semibold text-[#334155]">
-                      Modular Fan Section & Dynamic Balancing (ISO 1940 G2.5)
+                      Modular Fan Section & Dynamic Balancing
                     </p>
                   </div>
                   <ShieldCheck className="w-5 h-5 text-blue-600 shrink-0" />

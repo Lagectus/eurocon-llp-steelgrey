@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { ArrowRight, ShieldCheck } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import ProductSchematic from "../ui/ProductSchematic";
 import { Product } from "@/types";
@@ -134,10 +134,6 @@ export default function CompactProducts({}: CompactProductsProps = {}) {
                 <div className="flex items-center justify-between mb-3 relative z-10">
                   <span className="font-mono text-xs font-black text-blue-600 group-hover:translate-x-1 transition-transform">
                     {product.num}
-                  </span>
-                  <span className="inline-flex items-center gap-1 text-[10px] font-mono font-semibold px-2.5 py-0.5 rounded-full bg-white border border-slate-200 text-[#64748B] shadow-xs">
-                    <ShieldCheck className="w-3 h-3 text-blue-600" />
-                    {product.badge}
                   </span>
                 </div>
 

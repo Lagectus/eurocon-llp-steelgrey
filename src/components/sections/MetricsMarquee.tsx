@@ -1,86 +1,33 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { METRIC_HIGHLIGHTS } from "@/data/euroconData";
+import React from "react";
+
+const RUNNING_PHRASES = [
+  "PURE AIR — ENGINEERING COMFORT",
+  "SMART AIR SOLUTION",
+  "UNCOMPROMISING AIR PERFORMANCE",
+  "100% PAN INDIA SUPPORT",
+];
 
 export default function MetricsMarquee() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const numbersRef = useRef<(HTMLSpanElement | null)[]>([]);
-
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (prefersReducedMotion) return;
-
-    const ctx = gsap.context(() => {
-      // Animate numbers counting up on scroll
-      numbersRef.current.forEach((el, i) => {
-        if (!el) return;
-        const metric = METRIC_HIGHLIGHTS[i % METRIC_HIGHLIGHTS.length];
-        const target = metric.numericValue;
-
-        gsap.fromTo(el,
-          { innerText: "0" },
-          {
-            innerText: target,
-            duration: 2,
-            snap: { innerText: 1 },
-            scrollTrigger: {
-              trigger: sectionRef.current,
-              start: "top 85%",
-              end: "top 40%",
-              toggleActions: "play none none none",
-            },
-            onUpdate: function () {
-              if (el) {
-                const val = Math.round(Number(gsap.getProperty(el, "innerText")));
-                el.textContent = String(val);
-              }
-            },
-          }
-        );
-      });
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, []);
-
-  // Double the items for seamless infinite marquee
-  const allItems = [...METRIC_HIGHLIGHTS, ...METRIC_HIGHLIGHTS, ...METRIC_HIGHLIGHTS, ...METRIC_HIGHLIGHTS];
+  // Duplicate phrases to build two identical halves for a 100% seamless, infinite translateX(-50%) loop
+  const half = [...RUNNING_PHRASES, ...RUNNING_PHRASES, ...RUNNING_PHRASES];
+  const allItems = [...half, ...half];
 
   return (
-    <section
-      ref={sectionRef}
-      className="relative py-6 sm:py-8 bg-[#6A7380] border-y border-white/10 overflow-hidden"
-    >
-      {/* Fade edges */}
-      <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[#6A7380] to-transparent z-10 pointer-events-none" />
-      <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#6A7380] to-transparent z-10 pointer-events-none" />
+    <section className="relative py-4 sm:py-5 bg-[#6A7380] border-y border-white/10 overflow-hidden select-none">
+      {/* Edge gradient fade */}
+      <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-r from-[#6A7380] to-transparent z-10 pointer-events-none" />
+      <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-l from-[#6A7380] to-transparent z-10 pointer-events-none" />
 
       {/* Marquee Track */}
       <div className="animate-marquee flex items-center whitespace-nowrap will-change-transform">
-        {allItems.map((metric, i) => (
+        {allItems.map((phrase, i) => (
           <div key={i} className="flex items-center shrink-0">
-            {/* Metric Item */}
-            <div className="flex items-center gap-3 px-8 sm:px-12">
-              <span
-                ref={(el) => { if (i < METRIC_HIGHLIGHTS.length) numbersRef.current[i] = el; }}
-                className="text-3xl sm:text-4xl font-black text-white tabular-nums"
-              >
-                {metric.numericValue}
-              </span>
-              <span className="text-sm sm:text-base font-bold text-blue-400 tracking-wide">
-                {metric.suffix}
-              </span>
-              <span className="text-xs sm:text-sm text-white font-semibold max-w-[160px] leading-tight">
-                {metric.label}
-              </span>
-            </div>
-
-            {/* Separator */}
-            <div className="w-1.5 h-1.5 rounded-full bg-blue-400 shrink-0" />
+            <span className="px-6 sm:px-10 text-xs sm:text-sm md:text-base font-extrabold tracking-[0.18em] uppercase text-white flex items-center gap-2">
+              {phrase}
+            </span>
+            <div className="w-1.5 h-1.5 rounded-full bg-[#EB0311] shrink-0" />
           </div>
         ))}
       </div>
