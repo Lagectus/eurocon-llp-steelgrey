@@ -433,8 +433,8 @@ export const PRODUCTS_DATA: Product[] = [
     ],
     schematicSvgType: "scrubber",
     specs: {
-      airflowRange: "1,000 to 85,000 CFM (1,700 to 145,000 m³/h)",
-      staticPressure: "System pressure drop: 500 Pa to 3,500 Pa depending on bed depth",
+      airflowRange: "1,000 to 40,000 CFM (1,700 to 68,000 m³/h)",
+      staticPressure: "Up to 2,000 Pa",
       impellerDiameter: "Tower Diameters: 600 mm to 4,200 mm custom modular",
       driveType: "Corrosion-resistant PP/FRP centrifugal induction blower",
       motorRating: "Pump & Fan ratings tailored from 2.2 kW to 75 kW",
