@@ -639,7 +639,7 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
                 <div className="space-y-2.5 pt-2 text-xs font-mono text-[#64748B]">
                   <div className="flex items-center gap-2.5">
                     <Check className="w-4 h-4 text-emerald-600 shrink-0" />
-                    <span>Heavy-Gauge Anti-Corrosive Construction (IS 277 / SS304)</span>
+                    <span>Heavy-Gauge Anti-Corrosive Construction (Optional)</span>
                   </div>
                   <div className="flex items-center gap-2.5">
                     <Check className="w-4 h-4 text-emerald-600 shrink-0" />
@@ -647,7 +647,7 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
                   </div>
                   <div className="flex items-center gap-2.5">
                     <Check className="w-4 h-4 text-emerald-600 shrink-0" />
-                    <span>BMS Ready with 0-10V / Modbus / BACnet Modulation</span>
+                    <span>Constructed in Single or Double Skin Casing</span>
                   </div>
                 </div>
 
