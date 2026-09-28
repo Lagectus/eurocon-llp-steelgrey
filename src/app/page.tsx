@@ -12,7 +12,6 @@ import CinematicHero from "@/components/sections/CinematicHero";
 import MetricsMarquee from "@/components/sections/MetricsMarquee";
 import AboutStorytelling from "@/components/sections/AboutStorytelling";
 import HorizontalProducts from "@/components/sections/HorizontalProducts";
-import PinnedIndustries from "@/components/sections/PinnedIndustries";
 import EngineeringShowcase from "@/components/sections/EngineeringShowcase";
 import CinematicCTA from "@/components/sections/CinematicCTA";
 
@@ -72,10 +71,7 @@ export default function HomePage() {
         {/* 04 — HORIZONTAL PRODUCTS SCROLL */}
         <HorizontalProducts />
 
-        {/* 05 — PINNED INDUSTRIES SHOWCASE */}
-        <PinnedIndustries />
-
-        {/* 06 — ENGINEERING CAPABILITIES */}
+        {/* 05 — ENGINEERING CAPABILITIES */}
         <EngineeringShowcase />
 
         {/* 07 — CINEMATIC CTA */}
