@@ -107,10 +107,18 @@ export default function ContactSection() {
                 </div>
 
                 <div className="flex items-center gap-3">
+                  <User className="w-4 h-4 text-blue-600 shrink-0" />
+                  <div>
+                    <span className="text-slate-500 mr-1.5">Contact Person:</span>
+                    <span className="font-semibold text-[#334155]">{COMPANY_INFO.headquarters.contactPerson}</span>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-3">
                   <Phone className="w-4 h-4 text-blue-600 shrink-0" />
                   <div>
                     <a
-                      href={`tel:${COMPANY_INFO.headquarters.phone.split("/")[0].trim()}`}
+                      href={`tel:${COMPANY_INFO.headquarters.phone.replace(/\s+/g, "")}`}
                       className="font-semibold text-[#334155] hover:text-blue-600 transition-colors"
                     >
                       {COMPANY_INFO.headquarters.phone}

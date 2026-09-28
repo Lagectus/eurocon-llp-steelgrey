@@ -9,9 +9,10 @@ export const COMPANY_INFO = {
   cin: "LLP Identification: AAH-8942-IND",
   panIndiaPresence: "Presence across 14+ Regional Hubs & Industrial Corridors",
   headquarters: {
-    address: "Eurocon Industrial Hub, Sector 58, Phase II, Industrial Area",
-    city: "National Capital Region / Gurugram - 122001, India",
-    phone: "+91 (0124) 498-7200 / +91 98110 54321",
+    contactPerson: "Ashok Dhull",
+    address: "Kh no 118//2/2, Rohad Dehkora Road, Vill. Rohad",
+    city: "Bahadurgarh, Haryana 124501, India",
+    phone: "+91 98912 21991",
     email: "solutions@euroconsystem.com",
     salesEmail: "sales@euroconsystem.com",
     supportEmail: "engineering@euroconsystem.com",

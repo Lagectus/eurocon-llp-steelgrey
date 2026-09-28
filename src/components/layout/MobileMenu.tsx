@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ArrowRight, Phone, Mail, ChevronRight } from "lucide-react";
+import { X, ArrowRight, Phone, Mail, ChevronRight, User } from "lucide-react";
 import { COMPANY_INFO, CORE_EUROCON_NAV_PRODUCTS } from "@/data/euroconData";
 
 interface MobileMenuProps {
@@ -142,12 +142,20 @@ export default function MobileMenu({
 
               <div className="text-xs text-white/90 space-y-1.5 pt-2">
                 <div className="flex items-center gap-2">
-                  <Phone className="w-3.5 h-3.5 text-blue-400" />
-                  <span>{COMPANY_INFO.headquarters.phone.split("/")[0]}</span>
+                  <User className="w-3.5 h-3.5 text-blue-400 shrink-0" />
+                  <span>{COMPANY_INFO.headquarters.contactPerson}</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Mail className="w-3.5 h-3.5 text-blue-400" />
-                  <span>{COMPANY_INFO.headquarters.email}</span>
+                  <Phone className="w-3.5 h-3.5 text-blue-400 shrink-0" />
+                  <a href={`tel:${COMPANY_INFO.headquarters.phone.replace(/\s+/g, "")}`} className="hover:text-blue-300">
+                    {COMPANY_INFO.headquarters.phone}
+                  </a>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Mail className="w-3.5 h-3.5 text-blue-400 shrink-0" />
+                  <a href={`mailto:${COMPANY_INFO.headquarters.email}`} className="hover:text-blue-300">
+                    {COMPANY_INFO.headquarters.email}
+                  </a>
                 </div>
               </div>
             </div>

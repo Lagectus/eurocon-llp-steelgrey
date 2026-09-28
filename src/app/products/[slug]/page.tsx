@@ -351,7 +351,7 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
                   </button>
 
                   <a
-                    href={`tel:${COMPANY_INFO.headquarters.phone.split("/")[0].trim()}`}
+                    href={`tel:${COMPANY_INFO.headquarters.phone.replace(/\s+/g, "")}`}
                     className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white hover:bg-slate-50 text-[#334155] font-bold text-sm border border-slate-300 hover:border-blue-600 hover:text-blue-600 transition-all shadow-xs"
                   >
                     <Phone className="w-4 h-4 text-blue-600" />

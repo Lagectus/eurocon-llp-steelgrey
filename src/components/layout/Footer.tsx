@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Phone, Mail, MapPin, ArrowUp } from "lucide-react";
+import { Phone, Mail, MapPin, ArrowUp, User } from "lucide-react";
 import { COMPANY_INFO } from "@/data/euroconData";
 
 export default function Footer() {
@@ -127,9 +127,13 @@ export default function Footer() {
                 <span>{COMPANY_INFO.headquarters.address}, {COMPANY_INFO.headquarters.city}</span>
               </p>
               <p className="flex items-center gap-2">
+                <User className="w-4 h-4 text-blue-400 shrink-0" />
+                <span>Contact: {COMPANY_INFO.headquarters.contactPerson}</span>
+              </p>
+              <p className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-blue-400 shrink-0" />
-                <a href={`tel:${COMPANY_INFO.headquarters.phone.split("/")[0].trim()}`} className="hover:text-blue-300 transition-colors">
-                  {COMPANY_INFO.headquarters.phone.split("/")[0]}
+                <a href={`tel:${COMPANY_INFO.headquarters.phone.replace(/\s+/g, "")}`} className="hover:text-blue-300 transition-colors">
+                  {COMPANY_INFO.headquarters.phone}
                 </a>
               </p>
               <p className="flex items-center gap-2">
