@@ -54,7 +54,7 @@ export default function HorizontalProducts() {
       id: "prod-tfa",
       num: "05",
       name: "TFA (Treated Fresh Air Unit)",
-      tagline: "Designed exclusively to intake, process, and supply fresh outside air rather than recirculating indoor air, ensuring compliance with ventilation standards.",
+      tagline: "Designed exclusively to intake, process, and supply fresh outside air rather than recirculating indoor air, ensuring optimal ventilation performance.",
       badge: "78% Heat Recovery",
       href: "/products/tfa",
       image: "/images/products/tfa-unit.png",

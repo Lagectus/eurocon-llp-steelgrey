@@ -396,16 +396,16 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
                   </a>
                 </div>
 
-                {/* Compliance Standards Badges */}
+                {/* Engineering Benchmarks Badges */}
                 {product.specs.standards && (
                   <div className="pt-2 flex items-center gap-2 flex-wrap">
-                    <span className="text-xs font-mono text-[#64748B] mr-1">STANDARDS:</span>
+                    <span className="text-xs font-mono text-[#64748B] mr-1">DESIGN BENCHMARKS:</span>
                     {product.specs.standards.map((std, i) => (
                       <span
                         key={i}
                         className="inline-flex items-center gap-1 text-[11px] font-mono px-2.5 py-0.5 rounded-md bg-slate-50 border border-slate-200 text-[#64748B] shadow-xs font-semibold"
                       >
-                        <ShieldCheck className="w-3 h-3 text-blue-600" />
+                        <CheckCircle2 className="w-3 h-3 text-blue-600" />
                         {std}
                       </span>
                     ))}

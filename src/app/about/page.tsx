@@ -49,7 +49,7 @@ export default function AboutPage() {
                 <span className="text-[#010A6D]">BUILT FOR PERFORMANCE.</span>
               </h1>
               <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
-                <strong className="font-black text-slate-900 tracking-wide"><span className="text-[#EB0311]">EUR</span><span className="text-[#010A6D]">OCON</span> SYSTEM LLP</strong> is an advanced industrial air management, ventilation, and HVAC engineering solutions provider dedicated to high aerodynamic efficiency, life-safety compliance, and multi-decade mechanical dependability.
+                <strong className="font-black text-slate-900 tracking-wide"><span className="text-[#EB0311]">EUR</span><span className="text-[#010A6D]">OCON</span> SYSTEM LLP</strong> is an advanced industrial air management, ventilation, and HVAC engineering solutions provider dedicated to high aerodynamic efficiency, life-safety reliability, and multi-decade mechanical dependability.
               </p>
 
               <div className="pt-2 flex flex-wrap items-center gap-3 text-xs font-mono text-slate-700">
@@ -71,7 +71,7 @@ export default function AboutPage() {
                 title="HERITAGE OF AERODYNAMIC PRECISION"
               />
               <p>
-                Operating across the national industrial corridors, Eurocon manufactures customized heavy-duty centrifugal blowers, adjustable-pitch axial flow fans, emergency smoke exhaust units, SMACNA pre-fabricated ducts, and industrial wet scrubber systems.
+                Operating across the national industrial corridors, Eurocon manufactures customized heavy-duty centrifugal blowers, adjustable-pitch axial flow fans, emergency smoke exhaust units, pre-fabricated precision ducts, and industrial wet scrubber systems.
               </p>
               <p>
                 Our equipment is designed with exact engineering tolerances to maximize energy efficiency, ensure precise environmental control, and deliver dependable multi-decade lifecycle performance.

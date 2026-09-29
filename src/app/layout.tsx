@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     "Cabinet Inline Unit",
     "HVAC Engineering Solutions",
     "Heavy Duty Airflow Systems",
-    "EN 1886 Thermal Break",
+    "Thermal Break Profile Construction",
   ],
   authors: [{ name: "Eurocon System LLP" }],
   creator: "Eurocon System LLP",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Eurocon System LLP | Engineered Airflow. Built For Performance.",
     description:
-      "Advanced air management, industrial ventilation, and HVAC engineering solutions engineered for peak aerodynamic efficiency and life-safety compliance.",
+      "Advanced air management, industrial ventilation, and HVAC engineering solutions engineered for peak aerodynamic efficiency and life-safety reliability.",
     url: "https://eurocon.in",
     siteName: "Eurocon System LLP",
     locale: "en_US",

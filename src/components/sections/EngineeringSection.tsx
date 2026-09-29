@@ -40,7 +40,7 @@ export default function EngineeringSection() {
       title: "Acoustic Attenuation & Sound Engineering",
       icon: Volume2,
       summary: "Low-frequency sound suppression through aerofoil blade profiles and double-wall acoustic dampening insulation.",
-      details: "Acoustically engineered and laboratory tested to ensure compliance with strict hospital, commercial tower, and auditorium NC-35 acoustic noise criteria.",
+      details: "Acoustically engineered and laboratory tested to meet strict hospital, commercial tower, and auditorium NC-35 acoustic noise criteria.",
       metric: "< 62 dBA Noise Envelope",
     },
     {

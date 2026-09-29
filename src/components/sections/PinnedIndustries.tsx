@@ -42,12 +42,12 @@ export default function PinnedIndustries() {
       highlights: [
         { title: "Whisper-Quiet Acoustics", desc: "Internal sound-absorbing perforated casing meets strict tenant NC-35 sound levels." },
         { title: "DOAS Fresh Air Delivery", desc: "Dedicated outdoor air delivery with heat recovery wheels for continuous high IAQ." },
-        { title: "Life-Safety Pressurization", desc: "Automatic NBC-compliant stairwell & elevator shaft smoke containment blowers." }
+        { title: "Life-Safety Pressurization", desc: "Automatic stairwell & elevator shaft smoke containment blowers." }
       ],
       equipment: ["Modular AHU", "Cabinet Inline Units", "Acoustic Exhaust"],
       icon: Building2,
       image: "/images/products/AHU.png",
-      compliance: "NBC 2016 • ASHRAE 62.1 • LEED Gold"
+      compliance: "Indoor Air Quality (IAQ) & Acoustic Standards"
     },
     {
       id: "ind-mfg",
@@ -69,7 +69,7 @@ export default function PinnedIndustries() {
       equipment: ["Industrial Fan Section", "Industrial Air Washer", "Wet Scrubbers"],
       icon: Factory,
       image: "/images/products/fan-section.png",
-      compliance: "OSHA Industrial Safety • Heavy Duty Cycle • Aerodynamically Tested"
+      compliance: "Industrial Safety Standards • Heavy Duty Cycle • Aerodynamically Tested"
     },
     {
       id: "ind-auto",
@@ -85,13 +85,13 @@ export default function PinnedIndustries() {
       secondaryStatLabel: "Uniform Downward Velocity",
       highlights: [
         { title: "Zero-Particulate Downdraft", desc: "Diffusion ceiling plenums guarantee flawless paint adhesion on vehicle bodies." },
-        { title: "Spark-Proof ATEX Blowers", desc: "Non-sparking brass-lined housings prevent ignition of volatile solvent fumes." },
+        { title: "Spark-Resistant Blowers", desc: "Non-sparking brass-lined housings prevent ignition of volatile solvent fumes." },
         { title: "Exhaust Heat Recovery", desc: "Cross-flow plate exchangers reclaim energy from hot curing oven exhaust streams." }
       ],
       equipment: ["Treated Fresh Air (TFA)", "Direct-Drive Plug Fans", "Chemical Scrubbers"],
       icon: Car,
       image: "/images/products/tfa-unit.png",
-      compliance: "ATEX Zone 1/2 • Spark-Resistant • NFPA 33"
+      compliance: "Spark-Resistant Construction • Explosion-Safe Industrial Design"
     },
     {
       id: "ind-metro",
@@ -102,7 +102,7 @@ export default function PinnedIndustries() {
       systemLabel: "High-Temp Acoustic Cabinet Exhaust Unit",
       tagline: "High-thrust reversible tunnel ventilation and emergency smoke purge systems rated for extreme temperatures.",
       statValue: "400°C / 2h",
-      statLabel: "EN 12101-3 Fire Rating",
+      statLabel: "Emergency Fire Rating",
       secondaryStat: "100%",
       secondaryStatLabel: "Aerodynamic Reversibility",
       highlights: [
@@ -113,7 +113,7 @@ export default function PinnedIndustries() {
       equipment: ["Tunnel Jet Fans", "High-Temp Axial Fans", "Fire Damper Actuators"],
       icon: TrainFront,
       image: "/images/products/cabinet-exhaust.png",
-      compliance: "EN 12101-3 • NFPA 130 • RDSO Metro Standards"
+      compliance: "High-Temperature Smoke Extraction Standards"
     },
     {
       id: "ind-data",
@@ -135,7 +135,7 @@ export default function PinnedIndustries() {
       equipment: ["Fan Wall Plenums", "Precision AHUs", "In-Row Inline Boosters"],
       icon: Server,
       image: "/images/products/fan-sections.png",
-      compliance: "TIA-942 Tier IV • ASHRAE TC 9.9 • EC Efficiency"
+      compliance: "High-Density Thermal Management • EC Efficiency"
     },
     {
       id: "ind-pharma",
@@ -157,7 +157,7 @@ export default function PinnedIndustries() {
       equipment: ["Hygienic Double-Skin AHU", "TFA Cleanroom Units", "Safe-Change Filter Boxes"],
       icon: Hospital,
       image: "/images/products/industrial-airwashers.png",
-      compliance: "US FDA cGMP • WHO GMP Cleanroom Class"
+      compliance: "Aseptic Cleanroom & Controlled Atmosphere Protocols"
     }
   ];
 
@@ -290,7 +290,7 @@ export default function PinnedIndustries() {
                       {ind.systemLabel}
                     </p>
                     <div className="flex items-center gap-1.5 text-[10px] text-slate-900 font-mono font-semibold">
-                      <ShieldCheck className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                      <CheckCircle2 className="w-3.5 h-3.5 text-blue-600 shrink-0" />
                       <span className="truncate">{ind.compliance}</span>
                     </div>
                   </div>
@@ -340,8 +340,8 @@ export default function PinnedIndustries() {
                         </div>
 
                         <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-[11px] font-mono text-white shadow-xs">
-                          <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-                          <span>Standard Compliant</span>
+                          <CheckCircle2 className="w-3.5 h-3.5 text-blue-400" />
+                          <span>Industrial Grade</span>
                         </span>
                       </div>
 

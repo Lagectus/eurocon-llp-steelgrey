@@ -150,13 +150,13 @@ export default function ProductSchematic({
           <circle cx="150" cy="112" r="10" fill={strokeColor} />
           {/* Flame / High Temp Emblem */}
           <path d="M 150 45 Q 160 55, 150 70 Q 140 55, 150 45 Z" fill={accentColor} opacity="0.8" />
-          <text x="75" y="190" fill={dimStroke} fontSize="9" fontFamily="monospace">EN 12101-3 400°C / 2HR F400</text>
+          <text x="65" y="190" fill={dimStroke} fontSize="9" fontFamily="monospace">HIGH-TEMP 400°C / 2HR EMERGENCY SMOKE</text>
         </svg>
       )}
 
       {type === "duct" && (
         <svg viewBox="0 0 300 200" className="w-full h-full p-4 relative z-10">
-          {/* Spiral Duct Cylinder & Rectangular SMACNA section */}
+          {/* Spiral Duct Cylinder & Rectangular section */}
           <path d="M 40 60 L 160 60 L 160 140 L 40 140 Z" fill={fillColor} stroke={strokeColor} strokeWidth="2" />
           <ellipse cx="40" cy="100" rx="14" ry="40" fill={fillColor} stroke={strokeColor} strokeWidth="2" />
           {/* Spiral Reinforcing Ribs */}
@@ -166,7 +166,7 @@ export default function ProductSchematic({
           {/* Rectangular TDF Flange Transition */}
           <polygon points="160,60 250,45 250,155 160,140" fill={fillColor} stroke={strokeColor} strokeWidth="2" />
           <rect x="250" y="40" width="12" height="120" rx="2" fill="none" stroke={accentColor} strokeWidth="2" />
-          <text x="75" y="180" fill={dimStroke} fontSize="9" fontFamily="monospace">SMACNA CLASS A CNC FORMED</text>
+          <text x="75" y="180" fill={dimStroke} fontSize="9" fontFamily="monospace">PRECISION CNC FORMED DUCT</text>
         </svg>
       )}
 

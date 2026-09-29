@@ -75,7 +75,7 @@ export default function ContactSection() {
         <SectionHeading
           eyebrow="GET IN TOUCH WITH APPLICATION ENGINEERS"
           title="HAVE A PROJECT IN MIND?"
-          subtitle="Whether you require custom fan curve selections, high-temperature smoke exhaust compliance, or on-site duct air balancing, our engineering team is ready to assist."
+          subtitle="Whether you require custom fan curve selections, high-temperature smoke exhaust solutions, or on-site duct air balancing, our engineering team is ready to assist."
         />
 
         <div className="mt-14 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">

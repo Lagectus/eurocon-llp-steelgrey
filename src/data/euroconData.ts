@@ -136,7 +136,7 @@ export const PRODUCTS_DATA: Product[] = [
       driveType: "Direct-Drive EC Plug Fan / V-Belt DIDW Centrifugal Blower",
       motorRating: "1.5 kW to 90 kW (IE3 / IE4 / EC High Efficiency)",
       operatingTemp: "Ambient to +55°C",
-      standards: ["High Saturation Efficiency", "ASHRAE Guideline 12", "Factory Run Tested"]
+      standards: ["High Saturation Efficiency", "Hygienic Evaporative Design", "Factory Run Tested"]
     },
     keyFeatures: [
       "High-efficiency cross-fluted Celdek 5090 / Munters evaporative cooling media with 90%+ saturation efficiency",
@@ -179,7 +179,7 @@ export const PRODUCTS_DATA: Product[] = [
     subCategory: "Modular Double-Skin Series",
     tagline: "Custom modular & thermal-break double-skin AHUs.",
     shortDescription: "Engineered modular Double-Skin Air Handling Units (AHUs) with thermal-break extruded aluminum profiles, EU4 to HEPA multi-stage filtration, and high-efficiency direct-drive EC/Plug fans.",
-    fullDescription: "EUROCON Double Skin Air Handling Units (AHUs) are engineered to deliver conditioned, filtered, and precisely balanced air across commercial complexes, cleanroom facilities, pharmaceutical labs, data centers, and industrial facilities. Built with 25mm / 50mm injected PUF insulation (40 kg/m³ density) in thermal-break extruded aluminum profiles, Eurocon AHUs eliminate condensation and thermal bridging while ensuring whisper-quiet acoustic damping and Class L1/L2 casing air leakage compliance.",
+    fullDescription: "EUROCON Double Skin Air Handling Units (AHUs) are engineered to deliver conditioned, filtered, and precisely balanced air across commercial complexes, cleanroom facilities, pharmaceutical labs, data centers, and industrial facilities. Built with 25mm / 50mm injected PUF insulation (40 kg/m³ density) in thermal-break extruded aluminum profiles, Eurocon AHUs eliminate condensation and thermal bridging while ensuring whisper-quiet acoustic damping and minimal casing air leakage.",
     image: "/images/products/AHU.png",
     gallery: [
       "/images/products/AHU.png"
@@ -298,7 +298,7 @@ export const PRODUCTS_DATA: Product[] = [
     subCategory: "Dedicated Outdoor Air System (DOAS)",
     tagline: "100% Outdoor fresh air treatment units featuring total enthalpy heat recovery wheels, multi-tier filtration, and deep cooling coils.",
     shortDescription: "Engineered Treated Fresh Air Units (TFA) delivering 100% conditioned fresh air to commercial and healthcare facilities with energy recovery enthalpy wheels, EU4/EU7/EU9 filtration, and precision humidity control.",
-    fullDescription: "EUROCON Treated Fresh Air (TFA) Units are purpose-built to condition, dehumidify, and filter 100% outside ambient air for modern indoor air quality (IAQ) and ASHRAE 62.1 fresh air ventilation compliance. Designed with double-skin 25mm / 50mm injected PUF insulation and thermal-break aluminum extrusions, Eurocon TFAs incorporate rotary enthalpy heat recovery wheels (recovering up to 75% sensible and latent exhaust energy), multi-stage filtration tracks (EU4 Pre, EU7 Microvee, and optional H14 HEPA), and high-efficiency deep cooling coils for maximum efficiency and fresh air purity.",
+    fullDescription: "EUROCON Treated Fresh Air (TFA) Units are purpose-built to condition, dehumidify, and filter 100% outside ambient air for modern indoor air quality (IAQ) and fresh air ventilation performance. Designed with double-skin 25mm / 50mm injected PUF insulation and thermal-break aluminum extrusions, Eurocon TFAs incorporate rotary enthalpy heat recovery wheels (recovering up to 75% sensible and latent exhaust energy), multi-stage filtration tracks (EU4 Pre, EU7 Microvee, and optional H14 HEPA), and high-efficiency deep cooling coils for maximum efficiency and fresh air purity.",
     heroBadge: "100% Fresh Air & Heat Recovery",
     image: "/images/products/tfa-unit.png",
     gallery: [
@@ -316,7 +316,7 @@ export const PRODUCTS_DATA: Product[] = [
       driveType: "Direct-Drive EC Plug Fan / V-Belt Centrifugal",
       motorRating: "2.2 kW to 75 kW (IE3 / IE4 / EC High Efficiency)",
       operatingTemp: "-10°C to +55°C Ambient",
-      standards: ["ASHRAE 62.1 Ventilation", "Thermal Break Construction", "Enthalpy Energy Recovery"]
+      standards: ["Fresh Air Ventilation Design", "Thermal Break Construction", "Enthalpy Energy Recovery"]
     },
     keyFeatures: [
       "100% Outdoor air conditioning with integrated rotary total enthalpy heat recovery wheel",
@@ -327,7 +327,7 @@ export const PRODUCTS_DATA: Product[] = [
       "Acoustically lined casing ensuring whisper-quiet sound attenuation below 54 dBA"
     ],
     applications: [
-      "Commercial Office Complexes & IT Parks (ASHRAE 62.1 Fresh Air Compliance)",
+      "Commercial Office Complexes & IT Parks (Fresh Air Ventilation Standards)",
       "Hospitals, Surgical Theaters & Healthcare Isolation Wards",
       "Pharmaceutical Formulations & Cleanroom Conditioning",
       "Luxury Hotels, Banquet Halls & Convention Centers",
@@ -375,7 +375,7 @@ export const PRODUCTS_DATA: Product[] = [
       motorRating: "0.37 kW to 30 kW (Class F / Class H High-Temp Rated)",
       operatingTemp: "Continuous up to +70°C (Emergency smoke options up to 250°C / 2 hrs)",
       casingConstruction: "25mm Double-Skin Acoustic Insulated Panels with Internal Neoprene Gaskets",
-      standards: ["Acoustic Sound Attenuated", "High-Temp Fire Smoke Exhaust", "BS 7346 Construction"]
+      standards: ["Acoustic Sound Attenuated", "High-Temp Fire Smoke Exhaust", "Heavy-Duty Fire Rated Construction"]
     },
     keyFeatures: [
       "Acoustically lined double-skin panels with high-density mineral wool absorbing low and high-frequency blower noise",
@@ -383,7 +383,7 @@ export const PRODUCTS_DATA: Product[] = [
       "Flexible multi-orientation discharge configuration (Top discharge, Horizontal inline, or Side outlet)",
       "Motor mounted outside or inside airflow stream depending on grease/smoke temperature requirements",
       "Inspectable quick-access door panels with ergonomic cam latches for rapid cleaning and belt adjustment",
-      "Integrated grease-drain port and slope for commercial kitchen extraction compliance"
+      "Integrated grease-drain port and slope for commercial kitchen extraction"
     ],
     applications: [
       "Commercial Kitchen Canopy Hood Fume & Grease Extraction",
@@ -405,7 +405,7 @@ export const PRODUCTS_DATA: Product[] = [
     customOptions: [
       { title: "Drive Arrangement", description: "Belt-driven with external motor (kitchen hood rated) or compact direct-drive.", badge: "Internal / External" },
       { title: "Insulation Spec", description: "25mm polyurethane foam (PUF) or 50mm non-combustible high-density rockwool.", badge: "PUF / Rockwool" },
-      { title: "Inlet/Outlet Spigots", description: "Circular spigots with rubber lip seals or rectangular SMACNA flange connections.", badge: "Round / Square" },
+      { title: "Inlet/Outlet Spigots", description: "Circular spigots with rubber lip seals or rectangular flange connections.", badge: "Round / Square" },
       { title: "Grease Drain", description: "Bottom sloped SS drain tray with 1-inch BSP brass plug for kitchen grease extraction.", badge: "Kitchen Spec" }
     ]
   },
@@ -432,7 +432,7 @@ export const PRODUCTS_DATA: Product[] = [
       driveType: "Corrosion-resistant PP/FRP centrifugal induction blower",
       motorRating: "Pump & Fan ratings tailored from 2.2 kW to 75 kW",
       operatingTemp: "Up to 120°C (Special thermal PP/PVDF resins available)",
-      standards: ["CPCB Pollution Norms", "EPA Method 5 & 26 Compliant", "ASTM D3299"]
+      standards: ["High Mist Elimination Efficiency", "Industrial Acid Resistant", "Chemical Grade Dual Laminate"]
     },
     keyFeatures: [
       "Dual technology: Wet packed-bed absorption column or dry chemical adsorbent media stage",
@@ -536,11 +536,11 @@ export const INDUSTRIES_DATA: Industry[] = [
     keyChallenges: [
       "Strict noise criteria (NC 35 or lower) across occupied tenant zones",
       "Energy costs from 24/7 continuous air handling and fresh air pressurization",
-      "Stringent NBC fire and smoke compartmentalization codes"
+      "Fire and smoke compartmentalization engineering guidelines"
     ],
     solutionsProvided: [
       "Double-skin acoustic cabinet inline fans with EC modulation",
-      "SMACNA Class A sealed pre-insulated ducting networks",
+      "Sealed pre-insulated precision ducting networks",
       "Dedicated outdoor air systems (DOAS) with energy recovery wheels",
       "Emergency stairwell & elevator shaft fire pressurization blowers"
     ],
@@ -591,7 +591,7 @@ export const INDUSTRIES_DATA: Industry[] = [
       "Uniform downward air velocity across vehicle conveyor bodies"
     ],
     solutionsProvided: [
-      "ATEX / Spark-resistant centrifugal blowers",
+      "Spark-resistant industrial centrifugal blowers",
       "Laminar flow supply plenums with micro-filtration",
       "Thermal oxidizer / scrubber interface ducting",
       "Underfloor downdraft exhaust extraction networks"
@@ -614,7 +614,7 @@ export const INDUSTRIES_DATA: Industry[] = [
     keyChallenges: [
       "Overpressure and aerodynamic drag from high-speed train transit",
       "Confined underground spaces with limited egress routes",
-      "Extreme fire safety compliance requiring 300°C / 400°C high-temperature ventilation"
+      "Heavy-duty fire safety systems requiring 300°C / 400°C high-temperature ventilation"
     ],
     solutionsProvided: [
       "High-thrust reversible impulse and tunnel jet fans",
@@ -753,8 +753,8 @@ export const QUALITY_STEPS: QualityStep[] = [
     title: "Raw Material Metallurgy & Spectro Analysis",
     description: "Incoming sheet steel, structural channels, aluminum ingots, and stainless alloys are tested for tensile strength, elongation, and zinc coating thickness (GSM) before cutting.",
     methodology: "Optical emission spectroscopy & ultrasonic flaw detection",
-    complianceStandard: "IS 2062 / ASTM A653 / IS 277 Galvanizing Norms",
-    iconName: "ShieldCheck"
+    complianceStandard: "Industrial Metallurgical & Galvanizing Norms",
+    iconName: "CheckCircle2"
   },
   {
     step: "03",
@@ -803,12 +803,12 @@ export const PROJECT_CASE_STUDIES: ProjectCaseStudy[] = [
     scope: "Engineering, manufacture, and commissioning of high-thrust dual-speed reversible jet fans and tunnel overpressure dampers across 9 underground stations.",
     airflowCapacity: "1,850,000 CFM Combined Extraction Capacity",
     solutionsInstalled: [
-      "EN 12101-3 F300 Dual-Speed Induction Jet Fans (100% Reversible)",
+      "High-Temp F300 Dual-Speed Induction Jet Fans (100% Reversible)",
       "High-Capacity Trackway Exhaust (OTE) Heavy Duty Axial Blowers",
       "Aerodynamic Acoustic Silencer Splitter Banks"
     ],
     resultsAchieved: [
-      "Full NFPA 130 life-safety smoke clearance validation within 180 seconds during simulated fire trials",
+      "Rapid life-safety smoke clearance validation within 180 seconds during simulated fire trials",
       "Achieved station platform acoustic levels under 58 dBA during peak train transit"
     ],
     image: "https://images.unsplash.com/photo-1517649763962-0c623266ddc0?auto=format&fit=crop&w=1000&q=80"
@@ -818,7 +818,7 @@ export const PROJECT_CASE_STUDIES: ProjectCaseStudy[] = [
     title: "Automotive Paint Shop Cleanroom & VOC Scrubber Network",
     category: "Automotive & Heavy Mfg",
     location: "Automotive Manufacturing Corridor, Western Hub",
-    scope: "Turnkey supply of ATEX spark-resistant centrifugal supply fans, laminar clean air plenums, and packed-bed acid fume scrubbing systems for a new robotic paint line.",
+    scope: "Turnkey supply of spark-resistant centrifugal supply fans, laminar clean air plenums, and packed-bed acid fume scrubbing systems for a new robotic paint line.",
     airflowCapacity: "920,000 CFM Air Handling & VOC Neutralization",
     solutionsInstalled: [
       "Spark-Resistant Centrifugal Fans with Backward Inclined Impellers",
@@ -836,11 +836,11 @@ export const PROJECT_CASE_STUDIES: ProjectCaseStudy[] = [
     title: "Tier-IV Hyperscale Data Center Cold-Aisle Pressurization",
     category: "Data Centers",
     location: "Technology Special Economic Zone, Cyber Corridor",
-    scope: "Design and fabrication of high-static EC plug fan arrays, acoustic discharge plenums, and SMACNA Class A sealed underfloor distribution ducting for 24MW critical IT load.",
+    scope: "Design and fabrication of high-static EC plug fan arrays, acoustic discharge plenums, and sealed underfloor distribution ducting for 24MW critical IT load.",
     airflowCapacity: "1,450,000 CFM Precision Air Delivery",
     solutionsInstalled: [
       "EC-Driven Intelligent Variable Speed Cabinet Fans",
-      "SMACNA Heavy-Gauge Zinc-Coated Factory Pre-Fabricated Ducting",
+      "Heavy-Gauge Zinc-Coated Factory Pre-Fabricated Ducting",
       "Low-Resistance Acoustic Attenuator Modules"
     ],
     resultsAchieved: [
@@ -880,7 +880,7 @@ export const PROJECT_CASE_STUDIES: ProjectCaseStudy[] = [
       "High-Efficiency Venturi Wet Scrubbing Column"
     ],
     resultsAchieved: [
-      "Passed US-FDA and WHO-GMP cleanroom audit with zero airflow validation non-conformances",
+      "Achieved sterile cleanroom balance with zero airflow validation non-conformances",
       "Continuous positive pressure differential maintained across 32 individual sterile suites"
     ],
     image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80"
@@ -917,8 +917,8 @@ export const WHY_EUROCON_PILLARS = [
   {
     id: "pillar-safety",
     number: "02",
-    title: "Engineered Life-Safety Compliance",
-    description: "Our smoke management systems and high-temperature fans are engineered in strict compliance with NBC and fire-safety ventilation standards to ensure dependable emergency operation.",
+    title: "Engineered Life-Safety Reliability",
+    description: "Our smoke management systems and high-temperature fans are engineered according to stringent fire-safety ventilation standards to ensure dependable emergency operation.",
     stat: "400°C / 2h",
     statLabel: "Fire-Rated High-Temperature Rating"
   },
@@ -959,11 +959,11 @@ export const WHY_EUROCON_PILLARS = [
 export const FAQ_ITEMS = [
   {
     question: "What standards and specifications do Eurocon System LLP products comply with?",
-    answer: "Our air management equipment is designed, manufactured, and tested with precision engineering tolerances to ensure optimal aerodynamic performance, low acoustic signatures, dependable fire smoke exhaust, and rugged mechanical durability in compliance with SMACNA and national standards."
+    answer: "Our air management equipment is designed, manufactured, and tested with precision engineering tolerances to ensure optimal aerodynamic performance, low acoustic signatures, dependable fire smoke exhaust, and rugged mechanical durability in accordance with national and international engineering guidelines."
   },
   {
     question: "Can Eurocon custom-engineer fans for corrosive or hazardous chemical environments?",
-    answer: "Yes. We engineer customized industrial solutions utilizing SS304/SS316 stainless steel, Polypropylene/FRP dual laminates, and spark-resistant aluminum alloys complying with spark-resistant construction guidelines as well as ATEX hazardous area requirements."
+    answer: "Yes. We engineer customized industrial solutions utilizing SS304/SS316 stainless steel, Polypropylene/FRP dual laminates, and spark-resistant aluminum alloys complying with spark-resistant construction guidelines for hazardous operating environments."
   },
   {
     question: "How do Cabinet Inline and Exhaust units compare to open ventilation fans?",

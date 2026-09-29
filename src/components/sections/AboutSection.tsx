@@ -37,13 +37,13 @@ export default function AboutSection({ onOpenQuoteModal }: AboutSectionProps) {
       desc: "Fabricated in state-of-the-art manufacturing facilities equipped with automated fiber laser cutters, CNC press brakes, robot-assisted seam welding, and digital dual-plane dynamic balancing rigs.",
       points: [
         "Fiber laser cutting up to 16mm plate thickness with 0.05mm precision",
-        "Automated SMACNA compliant TDF/TDC lock-forming coil lines",
+        "Automated precision TDF/TDC lock-forming coil lines",
         "Dual-plane computerized dynamic precision balancing",
       ],
     },
     compliance: {
-      title: "Global Standards & Life-Safety Engineering",
-      desc: "Every component is manufactured under stringent quality management procedures and tested according to aerodynamic performance standards, high-temp fire smoke ratings, and SMACNA leakage norms.",
+      title: "Quality Standards & Life-Safety Engineering",
+      desc: "Every component is manufactured under stringent quality management procedures and tested according to aerodynamic performance standards, high-temp fire smoke ratings, and casing air leakage norms.",
       points: [
         "High-temperature emergency smoke spill fans (300°C & 400°C / 2 hrs)",
         "Aerodynamic air performance and acoustic sound testing protocols",
@@ -155,7 +155,7 @@ export default function AboutSection({ onOpenQuoteModal }: AboutSectionProps) {
                       : "text-slate-500 hover:text-[#334155]"
                   }`}
                 >
-                  03. Compliance
+                  03. Quality Testing
                   {activeTab === "compliance" && (
                     <motion.div
                       layoutId="activeTabIndicator"
