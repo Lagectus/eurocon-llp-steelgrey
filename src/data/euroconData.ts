@@ -247,9 +247,9 @@ export const PRODUCTS_DATA: Product[] = [
     ],
     schematicSvgType: "fcu",
     specs: {
-      airflowRange: "200 to 3,000 CFM (340 to 5,100 m³/h)",
-      staticPressure: "ESP 30 Pa (Standard) to 180 Pa (High Static Pressure Series)",
-      coolingCapacity: "0.5 TR to 7.5 TR (1.8 kW to 26 kW)",
+      airflowRange: "200 to 12,000 CFM",
+      staticPressure: "Up to 300 Pa",
+      coolingCapacity: "1.0 TR to 3.0 TR",
       coilSpecs: "2-Row / 3-Row / 4-Row Seamless Copper Tubes + Hydrophilic Corrugated Fins",
       noiseLevel: "28 dBA to 42 dBA (Ultra-Quiet Performance)",
       driveType: "Direct Drive with 3-Speed PSC Motor or Continuous 0-10V EC Motor",
@@ -284,7 +284,7 @@ export const PRODUCTS_DATA: Product[] = [
     ],
     customOptions: [
       { title: "System Type", description: "2-Pipe Cooling / Heating or 4-Pipe Independent Simultaneous System.", badge: "2-Pipe / 4-Pipe" },
-      { title: "Static Pressure Range", description: "Low Static (12-30 Pa) for direct discharge or High Static (50-180 Pa) for ducted distribution.", badge: "High ESP" },
+      { title: "Static Pressure Range", description: "Standard Static (30 Pa) for direct discharge or High Static (up to 300 Pa) for ducted distribution.", badge: "Up to 300 Pa" },
       { title: "Motor Option", description: "Standard 3-Speed PSC Motor or Smart 0-10V Modulating EC Brushless Motor.", badge: "EC Brushless" },
       { title: "Control Valve Integration", description: "Factory-fitted 2-way or 3-way motorized modulating valve package with smart thermostat.", badge: "Smart BMS" }
     ]
