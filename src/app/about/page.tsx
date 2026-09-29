@@ -122,9 +122,9 @@ export default function AboutPage() {
           {/* Page Hero Banner with Parallax Scroll & Entrance Animations */}
           <section
             ref={heroRef}
-            className="relative min-h-[640px] sm:min-h-[720px] lg:min-h-[800px] flex items-end bg-slate-900 border-b border-white/10 overflow-hidden"
+            className="relative min-h-[640px] sm:min-h-[720px] lg:min-h-[780px] flex items-end bg-slate-900 border-b border-white/10 overflow-hidden"
           >
-            {/* Background Factory Banner Image with Scroll Parallax - Framed to highlight company logo */}
+            {/* Background Factory Banner Image with Scroll Parallax - Framed at 20% to clearly show company logo */}
             <div
               ref={bgRef}
               className="absolute -inset-x-0 -top-16 -bottom-32 z-0 will-change-transform opacity-0 pointer-events-none"
@@ -132,12 +132,12 @@ export default function AboutPage() {
               <img
                 src="/aboutus.png"
                 alt="Eurocon System LLP Manufacturing Plant & Facility"
-                className="w-full h-full object-cover object-[center_18%] sm:object-[center_22%]"
+                className="w-full h-full object-cover object-[center_20%]"
               />
             </div>
 
-            {/* Content Container - Positioned low so factory signboard remains unobstructed */}
-            <div className="w-full max-w-7xl mr-auto ml-0 px-4 sm:px-8 lg:px-12 xl:px-16 relative z-10 pt-48 sm:pt-64 lg:pt-72 pb-6 sm:pb-8">
+            {/* Content Container - Raised by 20% with ample bottom padding so card never clips */}
+            <div className="w-full max-w-7xl mr-auto ml-0 px-4 sm:px-8 lg:px-12 xl:px-16 relative z-10 pt-28 sm:pt-36 lg:pt-40 pb-12 sm:pb-14 lg:pb-16">
               <div
                 ref={cardRef}
                 className="max-w-lg lg:max-w-xl rounded-2xl sm:rounded-3xl bg-white/25 sm:bg-white/30 backdrop-blur-md border border-white/60 shadow-[0_8px_32px_0_rgba(15,23,42,0.12),inset_0_1px_1px_0_rgba(255,255,255,0.9)] p-5 sm:p-7 space-y-3.5 opacity-0 will-change-transform relative overflow-hidden"
