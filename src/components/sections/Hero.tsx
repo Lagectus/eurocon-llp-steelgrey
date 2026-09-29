@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, ShieldCheck, Wind, Sparkles } from "lucide-react";
+import { ArrowRight, CheckCircle2, Wind, Sparkles } from "lucide-react";
 import Link from "next/link";
 import AirflowCanvas from "../ui/AirflowCanvas";
 import MagneticButton from "../ui/MagneticButton";
@@ -111,8 +111,8 @@ export default function Hero({ onOpenQuoteModal }: HeroProps) {
               className="pt-4 flex flex-wrap items-center gap-6 text-xs text-[#64748B] font-mono"
             >
               <div className="flex items-center gap-1.5">
-                <ShieldCheck className="w-4 h-4 text-blue-600" />
-                <span>Aerodynamically Tested</span>
+                <CheckCircle2 className="w-4 h-4 text-blue-600" />
+                <span>Aerodynamic Precision</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />

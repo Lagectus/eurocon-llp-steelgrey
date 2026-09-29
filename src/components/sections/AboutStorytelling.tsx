@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
-import { ArrowRight, CheckCircle2, ShieldCheck } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
@@ -138,7 +138,7 @@ export default function AboutStorytelling() {
                       Modular Fan Section & Dynamic Balancing
                     </p>
                   </div>
-                  <ShieldCheck className="w-5 h-5 text-blue-600 shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-blue-600 shrink-0" />
                 </div>
               </div>
             </div>

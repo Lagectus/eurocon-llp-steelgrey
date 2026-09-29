@@ -10,7 +10,6 @@ import {
   ChevronDown,
   ArrowRight,
   Wind,
-  ShieldCheck,
   Sparkles,
   Layers,
   Fan,
@@ -200,7 +199,7 @@ export default function Navbar({
 
                   <div className="mt-3 pt-3 border-t border-white/10 flex items-center justify-between px-2">
                     <span className="text-[10px] font-mono text-white/80">
-                      Industrial Grade • Aerodynamically Tested • High Efficiency
+                      Industrial Grade • Aerodynamic Precision • High Efficiency
                     </span>
                     <Link
                       href="/products"

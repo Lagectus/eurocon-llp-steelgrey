@@ -5,11 +5,9 @@ import { motion } from "framer-motion";
 import {
   CheckCircle2,
   ArrowRight,
-  ShieldCheck,
   Cpu,
   Layers,
   Sparkles,
-  Award,
   Factory,
 } from "lucide-react";
 import SectionHeading from "../ui/SectionHeading";
@@ -43,11 +41,11 @@ export default function AboutSection({ onOpenQuoteModal }: AboutSectionProps) {
     },
     compliance: {
       title: "Quality Standards & Life-Safety Engineering",
-      desc: "Every component is manufactured under stringent quality management procedures and tested according to aerodynamic performance standards, high-temp fire smoke ratings, and casing air leakage norms.",
+      desc: "Every component is manufactured under stringent quality management procedures according to aerodynamic performance standards, high-temp fire smoke ratings, and casing air leakage norms.",
       points: [
         "High-temperature emergency smoke spill fans (300°C & 400°C / 2 hrs)",
-        "Aerodynamic air performance and acoustic sound testing protocols",
-        "100% factory acceptance run-testing (FAT) with vibration FFT records",
+        "Aerodynamic air performance and acoustic attenuation modeling",
+        "Pre-dispatch quality inspection and precision vibration balancing",
       ],
     },
   };
@@ -93,9 +91,9 @@ export default function AboutSection({ onOpenQuoteModal }: AboutSectionProps) {
                   <div className="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-white/95 backdrop-blur-md border border-slate-200 text-[#334155] flex items-center justify-between shadow-lg">
                     <div className="space-y-0.5">
                       <span className="text-[10px] font-mono text-blue-600 uppercase font-bold">QUALITY ASSURANCE</span>
-                      <p className="text-xs font-semibold text-[#334155]">Quality Engineered & Factory Run-Tested</p>
+                      <p className="text-xs font-semibold text-[#334155]">Quality Engineered & Precision Built</p>
                     </div>
-                    <ShieldCheck className="w-6 h-6 text-blue-600 shrink-0" />
+                    <CheckCircle2 className="w-6 h-6 text-blue-600 shrink-0" />
                   </div>
                 </div>
               </div>
@@ -155,7 +153,7 @@ export default function AboutSection({ onOpenQuoteModal }: AboutSectionProps) {
                       : "text-slate-500 hover:text-[#334155]"
                   }`}
                 >
-                  03. Quality Testing
+                  03. Quality & Reliability
                   {activeTab === "compliance" && (
                     <motion.div
                       layoutId="activeTabIndicator"

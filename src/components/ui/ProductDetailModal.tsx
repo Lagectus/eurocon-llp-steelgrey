@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, CheckCircle2, Sliders, ShieldCheck, ArrowRight, FileText, Wind, Layers } from "lucide-react";
+import { X, CheckCircle2, Sliders, ArrowRight, FileText, Wind, Layers } from "lucide-react";
 import { Product } from "@/types";
 
 interface ProductDetailModalProps {
@@ -105,7 +105,7 @@ export default function ProductDetailModal({
                   </p>
                   <div className="flex items-center gap-2 pt-2">
                     <span className="inline-flex items-center gap-1 px-3 py-1 rounded-md bg-blue-50 text-blue-700 text-xs font-semibold border border-blue-200">
-                      <ShieldCheck className="w-3.5 h-3.5 text-blue-600" />
+                      <CheckCircle2 className="w-3.5 h-3.5 text-blue-600" />
                       {product.heroBadge}
                     </span>
                   </div>

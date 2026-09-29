@@ -9,7 +9,6 @@ import {
   TrainFront,
   Server,
   Hospital,
-  ShieldCheck,
   CheckCircle2,
   Gauge,
   Cpu,
@@ -69,7 +68,7 @@ export default function PinnedIndustries() {
       equipment: ["Industrial Fan Section", "Industrial Air Washer", "Wet Scrubbers"],
       icon: Factory,
       image: "/images/products/fan-section.png",
-      compliance: "Industrial Safety Standards • Heavy Duty Cycle • Aerodynamically Tested"
+      compliance: "Industrial Safety Standards • Heavy Duty Cycle • High Efficiency"
     },
     {
       id: "ind-auto",

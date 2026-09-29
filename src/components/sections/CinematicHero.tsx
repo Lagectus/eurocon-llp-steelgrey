@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
-import { ArrowRight, ShieldCheck, Wind } from "lucide-react";
+import { ArrowRight, CheckCircle2, Wind } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
@@ -222,8 +222,8 @@ export default function CinematicHero({ onOpenQuoteModal }: CinematicHeroProps) 
             className="flex flex-wrap items-center gap-3 sm:gap-5 text-[10px] sm:text-xs text-slate-950 font-mono font-medium opacity-0 pt-2 border-t border-slate-300/80"
           >
             <div className="flex items-center gap-1.5">
-              <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#010A6D] shrink-0" />
-              <span>Aerodynamically Tested</span>
+              <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#010A6D] shrink-0" />
+              <span>Aerodynamic Precision</span>
             </div>
             <div className="flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0" />

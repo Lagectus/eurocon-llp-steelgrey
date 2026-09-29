@@ -5,7 +5,6 @@ import Link from "next/link";
 import { motion, AnimatePresence, useScroll, useSpring, useMotionValueEvent, Variants } from "framer-motion";
 import {
   Wind,
-  ShieldCheck,
   ArrowRight,
   CheckCircle2,
   Sliders,
@@ -540,8 +539,8 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
                   {/* Visualizer Footer Details */}
                   <div className="p-4 bg-slate-50 border-t border-slate-200 flex items-center justify-between text-xs font-mono text-[#64748B]">
                     <span className="flex items-center gap-1.5">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                      <span>FACTORY TESTED & VERIFIED</span>
+                      <CheckCircle2 className="w-4 h-4 text-blue-600" />
+                      <span>PRECISION ENGINEERED ASSEMBLY</span>
                     </span>
                     <button
                       onClick={() => setIsQuoteOpen(true)}
@@ -668,7 +667,7 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
                 <p className="text-sm text-[#64748B] leading-relaxed font-normal">
                   {product.slug === "ahu" && AHU_ANGLE_METADATA[showcasePhotoIndex]
                     ? AHU_ANGLE_METADATA[showcasePhotoIndex].description
-                    : `Each ${product.name} is manufactured at Eurocon's state-of-the-art facility using CNC laser cutting, automated lock-forming, and multi-stage aerodynamic testing to ensure zero casing leakage and maximum lifecycle reliability.`}
+                    : `Each ${product.name} is manufactured at Eurocon's state-of-the-art facility using CNC laser cutting, automated lock-forming, and precision structural engineering to ensure minimal casing leakage and maximum lifecycle reliability.`}
                 </p>
 
                 <div className="space-y-2.5 pt-2 text-xs font-mono text-[#64748B]">
@@ -678,7 +677,7 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
                   </div>
                   <div className="flex items-center gap-2.5">
                     <Check className="w-4 h-4 text-emerald-600 shrink-0" />
-                    <span>100% Tested Prior To Site Dispatch & Rigging</span>
+                    <span>Pre-Inspected Prior To Site Dispatch & Rigging</span>
                   </div>
                   <div className="flex items-center gap-2.5">
                     <Check className="w-4 h-4 text-emerald-600 shrink-0" />
@@ -792,7 +791,7 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
               ENGINEERING PARAMETERS & PERFORMANCE RATINGS
             </h2>
             <p className="text-sm text-[#64748B]">
-              Factory tested according to international HVAC engineering and performance testing codes.
+              Engineered and manufactured according to international HVAC engineering best practices.
             </p>
           </div>
 
@@ -1020,7 +1019,7 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
                   <div className="space-y-2">
                     <div className="flex items-center justify-between text-[11px] font-mono text-blue-600">
                       <span>{p.category.toUpperCase()}</span>
-                      <ShieldCheck className="w-3.5 h-3.5" />
+                      <CheckCircle2 className="w-3.5 h-3.5" />
                     </div>
                     <h4 className="font-extrabold text-base text-[#334155] group-hover:text-blue-600 transition-colors">
                       {p.name}

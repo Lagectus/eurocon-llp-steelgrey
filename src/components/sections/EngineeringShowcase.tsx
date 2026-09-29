@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
-import { ArrowRight, Cpu, Factory, ShieldCheck, Headphones } from "lucide-react";
+import { ArrowRight, Cpu, Factory, CheckCircle2, Headphones } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
@@ -30,8 +30,8 @@ export default function EngineeringShowcase() {
     {
       num: "03",
       title: "Quality Focus",
-      desc: "Executing rigorous quality and performance testing to reliably control environments and thermal comfort.",
-      icon: ShieldCheck,
+      desc: "Executing rigorous quality control and engineering modeling to reliably control environments and thermal comfort.",
+      icon: CheckCircle2,
       direction: "left" as const,
     },
     {

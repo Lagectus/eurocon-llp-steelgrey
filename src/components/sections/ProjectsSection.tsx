@@ -8,7 +8,6 @@ import SectionHeading from "../ui/SectionHeading";
 import {
   MapPin,
   Wind,
-  ShieldCheck,
   CheckCircle2,
   ArrowRight,
   Sparkles,

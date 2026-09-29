@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle2, ShieldCheck, Sparkles, Award } from "lucide-react";
+import { ArrowRight, CheckCircle2, Sparkles } from "lucide-react";
 import Link from "next/link";
 
 export default function CompactAbout() {
@@ -111,7 +111,7 @@ export default function CompactAbout() {
                       Modular Fan Section & Dynamic Balancing
                     </p>
                   </div>
-                  <ShieldCheck className="w-5 h-5 text-blue-600 shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-blue-600 shrink-0" />
                 </div>
               </div>
             </motion.div>

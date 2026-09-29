@@ -9,7 +9,7 @@ import {
   Volume2,
   Zap,
   Activity,
-  ShieldCheck,
+  CheckCircle2,
   ArrowRight,
   Sparkles,
   Sliders,
@@ -40,7 +40,7 @@ export default function EngineeringSection() {
       title: "Acoustic Attenuation & Sound Engineering",
       icon: Volume2,
       summary: "Low-frequency sound suppression through aerofoil blade profiles and double-wall acoustic dampening insulation.",
-      details: "Acoustically engineered and laboratory tested to meet strict hospital, commercial tower, and auditorium NC-35 acoustic noise criteria.",
+      details: "Acoustically engineered and developed to meet strict hospital, commercial tower, and auditorium NC-35 acoustic noise criteria.",
       metric: "< 62 dBA Noise Envelope",
     },
     {
@@ -68,7 +68,7 @@ export default function EngineeringSection() {
         <SectionHeading
           eyebrow="PRECISION ENGINEERING. MEASURABLE PERFORMANCE."
           title="AERODYNAMIC SCIENCE & NUMERICAL MODELING"
-          subtitle="We combine computational fluid dynamics, dynamic vibration analysis, and advanced laboratory testing to produce the industry's most efficient air management systems."
+          subtitle="We combine computational fluid dynamics, dynamic vibration analysis, and advanced aerodynamic modeling to produce the industry's most efficient air management systems."
         />
 
         {/* 4 Core Engineering Pillars */}
@@ -187,7 +187,7 @@ export default function EngineeringSection() {
               </div>
 
               <div className="pt-2 text-[11px] font-mono text-slate-500 flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-blue-600 shrink-0" />
                 <span>Calculations derived using standard aerodynamic air density equations.</span>
               </div>
             </div>
@@ -221,7 +221,7 @@ export default function EngineeringSection() {
                 <div className="p-3.5 rounded-xl bg-white border border-slate-200 shadow-2xs">
                   <span className="block text-[11px] font-mono text-slate-500">DYNAMIC BALANCE GRADE</span>
                   <span className="text-xl sm:text-2xl font-black text-[#334155]">G 2.5</span>
-                  <span className="block text-[10px] text-slate-500 mt-0.5">Computer Balanced & Verified</span>
+                  <span className="block text-[10px] text-slate-500 mt-0.5">Computer Dynamically Balanced</span>
                 </div>
               </div>
             </div>

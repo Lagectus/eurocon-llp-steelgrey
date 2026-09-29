@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Cpu, Factory, ShieldCheck, Headphones, Sparkles } from "lucide-react";
+import { ArrowRight, Cpu, Factory, CheckCircle2, Headphones, Sparkles } from "lucide-react";
 import Link from "next/link";
 
 export default function CompactEngineering() {
@@ -22,8 +22,8 @@ export default function CompactEngineering() {
     {
       num: "03",
       title: "Quality Focus",
-      desc: "Executing rigorous quality and performance testing to reliably control environments and thermal comfort.",
-      icon: ShieldCheck,
+      desc: "Executing rigorous quality control and engineering modeling to reliably control environments and thermal comfort.",
+      icon: CheckCircle2,
     },
     {
       num: "04",
@@ -75,7 +75,7 @@ export default function CompactEngineering() {
                     <span>AERODYNAMIC RIGOR</span>
                   </div>
                   <p className="text-xs font-semibold text-[#334155]">
-                    Validated under Heavy-Duty Fire & Aerodynamic Testing Standards
+                    Engineered for Heavy-Duty Fire & Aerodynamic Reliability
                   </p>
                 </div>
               </div>

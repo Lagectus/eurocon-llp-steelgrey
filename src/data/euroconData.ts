@@ -77,7 +77,7 @@ export const PRODUCTS_DATA: Product[] = [
       driveType: "Direct-Drive Unhoused Plug Fan / Belt-Drive DIDW Centrifugal / EC Motor",
       motorRating: "Motor Efficiency: IE2, IE3, IE4, IE5, IE6",
       operatingTemp: "-20°C to +80°C (High-temperature rated options up to 250°C)",
-      standards: ["Aerodynamic Performance Tested", "Factory Dynamic Balancing"]
+      standards: ["High Aerodynamic Performance", "Dynamic Precision Balancing"]
     },
     keyFeatures: [
       "Unhoused direct-drive plug fans with backward-curved 3D aerofoil blades for maximum static efficiency",
@@ -136,7 +136,7 @@ export const PRODUCTS_DATA: Product[] = [
       driveType: "Direct-Drive EC Plug Fan / V-Belt DIDW Centrifugal Blower",
       motorRating: "1.5 kW to 90 kW (IE3 / IE4 / EC High Efficiency)",
       operatingTemp: "Ambient to +55°C",
-      standards: ["High Saturation Efficiency", "Hygienic Evaporative Design", "Factory Run Tested"]
+      standards: ["High Saturation Efficiency", "Hygienic Evaporative Design", "Dual-Drive Capability"]
     },
     keyFeatures: [
       "High-efficiency cross-fluted Celdek 5090 / Munters evaporative cooling media with 90%+ saturation efficiency",
@@ -196,7 +196,7 @@ export const PRODUCTS_DATA: Product[] = [
       driveType: "Direct-Drive EC Motor / Backward Curved Plug Fan / V-Belt Centrifugal",
       motorRating: "1.5 kW to 90 kW (IE3 / IE4 / EC Brushless)",
       operatingTemp: "-15°C to +65°C Continuous",
-      standards: ["Thermal Break Construction", "High Efficiency Plug Fan", "Factory Tested"]
+      standards: ["Thermal Break Construction", "High Efficiency Plug Fan", "Low Acoustic Profile"]
     },
     keyFeatures: [
       "Thermal Break extruded aluminum profile framework preventing exterior surface condensation",
@@ -255,7 +255,7 @@ export const PRODUCTS_DATA: Product[] = [
       driveType: "Direct Drive with 3-Speed PSC Motor or Continuous 0-10V EC Motor",
       motorRating: "35 W to 450 W (Energy Efficient Brushless DC / PSC)",
       operatingTemp: "Chilled Water 4°C - 12°C / Hot Water up to 80°C",
-      standards: ["Ultra-Quiet Acoustic Design", "Factory Run Tested", "Zero-Condensation Drain Pan"]
+      standards: ["Ultra-Quiet Acoustic Design", "Zero-Condensation Drain Pan", "Low-Profile Chassis"]
     },
     keyFeatures: [
       "Ultra-compact slim chassis height starting at just 220mm, ideal for restricted false ceiling heights",
@@ -751,7 +751,7 @@ export const QUALITY_STEPS: QualityStep[] = [
     step: "02",
     code: "MAT-QC",
     title: "Raw Material Metallurgy & Spectro Analysis",
-    description: "Incoming sheet steel, structural channels, aluminum ingots, and stainless alloys are tested for tensile strength, elongation, and zinc coating thickness (GSM) before cutting.",
+    description: "Incoming sheet steel, structural channels, aluminum ingots, and stainless alloys are inspected and evaluated for tensile strength, elongation, and zinc coating thickness (GSM) before cutting.",
     methodology: "Optical emission spectroscopy & ultrasonic flaw detection",
     complianceStandard: "Industrial Metallurgical & Galvanizing Norms",
     iconName: "CheckCircle2"
@@ -785,11 +785,11 @@ export const QUALITY_STEPS: QualityStep[] = [
   },
   {
     step: "06",
-    code: "FAT-DISP",
-    title: "Factory Acceptance Testing (FAT) & Quality Verification",
-    description: "Before release, a comprehensive 2-hour continuous test run records vibration FFT spectrums, thermal motor winding rise, and paint film DFT thickness before tamper-evident crating.",
-    methodology: "Full electrical, vibration, and dimensional sign-off report with traceable serial barcode",
-    complianceStandard: "Factory Acceptance Quality Dispatch Protocol",
+    code: "QC-DISP",
+    title: "Pre-Dispatch Inspection & Assembly Sign-Off",
+    description: "Before release, a comprehensive quality inspection confirms mechanical assembly, thermal isolation integrity, and dimensional tolerances before secure crating.",
+    methodology: "Full mechanical, electrical, and dimensional sign-off report with traceable serial identifier",
+    complianceStandard: "Factory Dispatch Quality Inspection Protocol",
     iconName: "CheckCircle2"
   }
 ];
@@ -959,7 +959,7 @@ export const WHY_EUROCON_PILLARS = [
 export const FAQ_ITEMS = [
   {
     question: "What standards and specifications do Eurocon System LLP products comply with?",
-    answer: "Our air management equipment is designed, manufactured, and tested with precision engineering tolerances to ensure optimal aerodynamic performance, low acoustic signatures, dependable fire smoke exhaust, and rugged mechanical durability in accordance with national and international engineering guidelines."
+    answer: "Our air management equipment is designed and manufactured with precision engineering tolerances to ensure optimal aerodynamic performance, low acoustic signatures, dependable fire smoke exhaust, and rugged mechanical durability in accordance with national and international engineering guidelines."
   },
   {
     question: "Can Eurocon custom-engineer fans for corrosive or hazardous chemical environments?",
@@ -975,7 +975,7 @@ export const FAQ_ITEMS = [
   },
   {
     question: "Does Eurocon offer on-site commissioning and air balancing services?",
-    answer: "Yes. Our qualified application engineering team provides comprehensive on-site support, including duct air balancing (TAB), vibration FFT spectrum analysis, on-site dynamic balancing, and acoustic sound level verification to ensure design parameters match real-world operation."
+    answer: "Yes. Our qualified application engineering team provides comprehensive on-site support, including duct air balancing (TAB), vibration FFT spectrum analysis, on-site dynamic balancing, and acoustic sound level analysis to ensure design parameters match real-world operation."
   }
 ];
 

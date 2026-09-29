@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Phone, Mail, Sparkles, ShieldCheck } from "lucide-react";
+import { ArrowRight, Phone, Mail, Sparkles } from "lucide-react";
 import AirflowCanvas from "../ui/AirflowCanvas";
 import MagneticButton from "../ui/MagneticButton";
 
@@ -83,8 +83,8 @@ export default function CTASection({ onOpenQuoteModal }: CTASectionProps) {
         {/* Trust Badges */}
         <div className="pt-8 border-t border-slate-200 flex flex-wrap items-center justify-center gap-8 text-xs font-mono text-[#64748B]">
           <div className="flex items-center gap-2">
-            <ShieldCheck className="w-4 h-4 text-blue-600" />
-            <span>Factory Acceptance Tested</span>
+            <span className="w-2 h-2 rounded-full bg-blue-600" />
+            <span>Precision Engineered & Built</span>
           </div>
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-emerald-500" />

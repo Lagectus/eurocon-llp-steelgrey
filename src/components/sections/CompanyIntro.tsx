@@ -82,7 +82,7 @@ export default function CompanyIntro() {
 
           <div className="mt-4 text-center">
             <span className="text-[11px] font-mono text-slate-500">
-              * Representative engineering metrics subject to specific project configurations and laboratory aerodynamic testing data.
+              * Representative engineering metrics subject to specific project configurations and aerodynamic design parameters.
             </span>
           </div>
         </div>

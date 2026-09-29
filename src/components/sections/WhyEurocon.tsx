@@ -12,7 +12,7 @@ import {
   Clock,
   Truck,
   ArrowRight,
-  ShieldCheck,
+  CheckCircle2,
 } from "lucide-react";
 
 export default function WhyEurocon() {
@@ -31,7 +31,7 @@ export default function WhyEurocon() {
       case "pillar-support":
         return <Truck className="w-6 h-6 text-slate-400" />;
       default:
-        return <ShieldCheck className="w-6 h-6 text-blue-500" />;
+        return <CheckCircle2 className="w-6 h-6 text-blue-500" />;
     }
   };
 

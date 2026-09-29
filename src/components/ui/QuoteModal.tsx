@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Send, CheckCircle2, ShieldCheck, Sparkles, Building2, Phone, Mail, User, SlidersHorizontal } from "lucide-react";
+import { X, Send, CheckCircle2, Sparkles, Building2, Phone, Mail, User, SlidersHorizontal } from "lucide-react";
 import confetti from "canvas-confetti";
 import { PRODUCTS_DATA, INDUSTRIES_DATA } from "@/data/euroconData";
 
@@ -156,7 +156,7 @@ export default function QuoteModal({ isOpen, onClose, initialProduct = "" }: Quo
                   </p>
                   <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-800 max-w-md mx-auto text-left space-y-1">
                     <p className="font-semibold text-black">What happens next?</p>
-                    <p>• Senior application engineer assigned to verify CFM & static pressure.</p>
+                    <p>• Senior application engineer assigned to review CFM & static pressure selections.</p>
                     <p>• Comprehensive technical proposal & fan curve dispatched to {formData.email}.</p>
                   </div>
                   <div className="pt-4">
@@ -332,7 +332,7 @@ export default function QuoteModal({ isOpen, onClose, initialProduct = "" }: Quo
                   {/* Submit Button */}
                   <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
                     <div className="flex items-center gap-1.5 text-xs text-slate-800 font-mono font-semibold">
-                      <ShieldCheck className="w-4 h-4 text-emerald-600" />
+                      <CheckCircle2 className="w-4 h-4 text-blue-600" />
                       <span>Confidential RFQ Evaluation</span>
                     </div>
 

@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { PRODUCTS_DATA } from "@/data/euroconData";
 import { Product } from "@/types";
 import SectionHeading from "../ui/SectionHeading";
-import { ChevronLeft, ChevronRight, ArrowRight, ShieldCheck, Wind, Sliders } from "lucide-react";
+import { ChevronLeft, ChevronRight, ArrowRight, Wind, Sliders } from "lucide-react";
 import ProductSchematic from "../ui/ProductSchematic";
 
 interface ProductShowcaseProps {

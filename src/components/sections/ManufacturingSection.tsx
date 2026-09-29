@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, ShieldCheck, Factory, Activity, Cpu, Sparkles } from "lucide-react";
+import { ArrowRight, Factory, Activity, Cpu, Sparkles } from "lucide-react";
 
 interface ManufacturingSectionProps {
   onOpenQuoteModal: () => void;
@@ -65,8 +65,8 @@ export default function ManufacturingSection({ onOpenQuoteModal }: Manufacturing
               <span className="block text-xs text-[#64748B] font-mono mt-1">Laser Cutting Precision</span>
             </div>
             <div className="p-4 rounded-xl bg-white/90 backdrop-blur-md border border-slate-200 shadow-sm">
-              <span className="block text-xl sm:text-2xl font-black text-[#334155]">100% FAT</span>
-              <span className="block text-xs text-[#64748B] font-mono mt-1">Vibration FFT Verified</span>
+              <span className="block text-xl sm:text-2xl font-black text-[#334155]">100%</span>
+              <span className="block text-xs text-[#64748B] font-mono mt-1">Pre-Dispatch Inspection</span>
             </div>
             <div className="p-4 rounded-xl bg-white/90 backdrop-blur-md border border-slate-200 shadow-sm col-span-2 sm:col-span-1">
               <span className="block text-xl sm:text-2xl font-black text-blue-600">QA / QC</span>

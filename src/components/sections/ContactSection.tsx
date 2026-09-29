@@ -11,7 +11,6 @@ import {
   CheckCircle2,
   Building2,
   User,
-  ShieldCheck,
   Sparkles,
 } from "lucide-react";
 import confetti from "canvas-confetti";
@@ -148,7 +147,7 @@ export default function ContactSection() {
             {/* Regional Network Note */}
             <div className="p-6 rounded-2xl bg-white text-[#334155] border border-slate-200 space-y-3 shadow-sm">
               <div className="flex items-center gap-2 text-xs font-mono text-blue-600">
-                <ShieldCheck className="w-4 h-4" />
+                <Building2 className="w-4 h-4" />
                 <span>PAN-INDIA DISTRIBUTION & SERVICE</span>
               </div>
               <h4 className="font-bold text-sm sm:text-base text-[#334155]">

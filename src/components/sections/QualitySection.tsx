@@ -6,7 +6,6 @@ import { QUALITY_STEPS } from "@/data/euroconData";
 import SectionHeading from "../ui/SectionHeading";
 import {
   Cpu,
-  ShieldCheck,
   Settings,
   Activity,
   Sliders,
@@ -20,7 +19,7 @@ export default function QualitySection() {
       case "Cpu":
         return <Cpu className="w-5 h-5" />;
       case "ShieldCheck":
-        return <ShieldCheck className="w-5 h-5" />;
+        return <CheckCircle2 className="w-5 h-5" />;
       case "Settings":
         return <Settings className="w-5 h-5" />;
       case "Activity":
@@ -85,7 +84,7 @@ export default function QualitySection() {
                   <span className="text-[#334155] font-medium">{step.methodology}</span>
                 </div>
                 <div className="text-blue-600 font-semibold flex items-center gap-1">
-                  <ShieldCheck className="w-3.5 h-3.5 text-blue-600 shrink-0" />
+                  <CheckCircle2 className="w-3.5 h-3.5 text-blue-600 shrink-0" />
                   <span>{step.complianceStandard}</span>
                 </div>
               </div>
