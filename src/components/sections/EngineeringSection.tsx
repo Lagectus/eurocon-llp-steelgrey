@@ -51,7 +51,7 @@ export default function EngineeringSection() {
       metric: "Computer Dynamic Balanced",
     },
     {
-      title: "High-Efficiency IE3 / IE4 & EC Drives",
+      title: "High-Efficiency IE3/IE4/IE5 & EC Drives",
       icon: Zap,
       summary: "Direct-drive permanent magnet synchronous motors (PMSM) and electronically commutated (EC) fans deliver steep energy savings.",
       details: "Integrated 0-10V / Modbus BMS control algorithms enable variable speed modulation, lowering kilowatt consumption during non-peak operating hours.",

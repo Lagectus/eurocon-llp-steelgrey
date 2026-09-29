@@ -325,7 +325,7 @@ export default function QuoteModal({ isOpen, onClose, initialProduct = "" }: Quo
                       rows={3}
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      placeholder="Please specify static pressure (Pa / in. wg), motor efficiency class (IE3/IE4), duct dimensions or project timeline..."
+                      placeholder="Please specify static pressure (Pa / in. wg), motor efficiency class (IE3/IE4/IE5), duct dimensions or project timeline..."
                       className="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 bg-slate-50 text-[#334155] placeholder:text-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white resize-none"
                     />
                   </div>

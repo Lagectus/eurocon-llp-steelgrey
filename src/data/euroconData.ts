@@ -75,7 +75,7 @@ export const PRODUCTS_DATA: Product[] = [
       impellerDiameter: "280 mm to 1,600 mm",
       casingConstruction: "Single or Double-Skin 25mm / 50mm PUF Casing with Quick-Access Doors",
       driveType: "Direct-Drive Unhoused Plug Fan / Belt-Drive DIDW Centrifugal / EC Motor",
-      motorRating: "Motor Efficiency: IE2, IE3, IE4, IE5, IE6",
+      motorRating: "Motor Efficiency: IE2/IE3/IE4/IE5/IE6",
       operatingTemp: "-20°C to +80°C (High-temperature rated options up to 250°C)",
       standards: ["High Aerodynamic Performance", "Dynamic Precision Balancing"]
     },
@@ -106,7 +106,7 @@ export const PRODUCTS_DATA: Product[] = [
     ],
     customOptions: [
       { title: "Impeller Type", description: "Backward curved plug fan, aerofoil centrifugal, or forward curved double inlet blower.", badge: "Plug / DIDW" },
-      { title: "Motor Efficiency", description: "IE2, IE3, IE4, IE5, IE6 High Efficiency induction or EC Brushless motors.", badge: "IE2 - IE6" },
+      { title: "Motor Efficiency", description: "IE2/IE3/IE4/IE5/IE6 High Efficiency induction or EC Brushless motors.", badge: "IE2 - IE6" },
       { title: "Access Layout", description: "Left-hand or Right-hand quick-access inspection door with viewing window and marine light.", badge: "Custom Access" },
       { title: "Mounting Isolation", description: "Internal spring isolators with seismic restraints or external rubber-in-shear mounts.", badge: "Vibration Free" }
     ]
@@ -134,7 +134,7 @@ export const PRODUCTS_DATA: Product[] = [
       casingConstruction: "25mm / 50mm Double-Skin PUF Injected (40 kg/m³) with SS304/SS316 Water Sump",
       filtration: "EU4 Pre-Filter + Celdek 5090 Evaporative Cooling / Scrubbing Media",
       driveType: "Direct-Drive EC Plug Fan / V-Belt DIDW Centrifugal Blower",
-      motorRating: "IE3 to IE5 (1.5 kW to 90 kW / EC High Efficiency)",
+      motorRating: "IE3/IE4/IE5 (1.5 kW to 90 kW / EC High Efficiency)",
       operatingTemp: "Ambient to +55°C",
       standards: ["High Saturation Efficiency", "Hygienic Evaporative Design", "Dual-Drive Capability"]
     },
@@ -194,7 +194,7 @@ export const PRODUCTS_DATA: Product[] = [
       filtration: "EU4 Pre-Filter + EU7/EU9 Microvee + HEPA H13/H14 Optional",
       coilSpecs: "Copper Tubes with Hydrophilic Blue/Gold Aluminum Fins",
       driveType: "Direct-Drive EC Motor / Backward Curved Plug Fan / V-Belt Centrifugal",
-      motorRating: "1.5 kW to 90 kW (IE3 / IE4 / EC Brushless)",
+      motorRating: "1.5 kW to 90 kW (IE3/IE4/IE5 / EC Brushless)",
       operatingTemp: "-15°C to +65°C Continuous",
       standards: ["Thermal Break Construction", "High Efficiency Plug Fan", "Low Acoustic Profile"]
     },
@@ -314,7 +314,7 @@ export const PRODUCTS_DATA: Product[] = [
       filtration: "EU4 Pre-Filter + EU7/EU9 Fine Filter + Carbon / HEPA Optional",
       coilSpecs: "6-Row / 8-Row Copper Tubes with Hydrophilic Fins",
       driveType: "Direct-Drive EC Plug Fan / V-Belt Centrifugal",
-      motorRating: "2.2 kW to 75 kW (IE3 / IE4 / EC High Efficiency)",
+      motorRating: "2.2 kW to 75 kW (IE3/IE4/IE5 / EC High Efficiency)",
       operatingTemp: "-10°C to +55°C Ambient",
       standards: ["Fresh Air Ventilation Design", "Thermal Break Construction", "Enthalpy Energy Recovery"]
     },
@@ -372,7 +372,7 @@ export const PRODUCTS_DATA: Product[] = [
       staticPressure: "Up to 2,000 Pa",
       noiseLevel: "34 dBA to 56 dBA @ 1.5m",
       driveType: "Direct-Drive Multi-Speed / V-Belt Driven Centrifugal DIDW Blower",
-      motorRating: "IE2 to IE5 (0.37 kW to 30 kW)",
+      motorRating: "IE2/IE3/IE4/IE5 (0.37 kW to 30 kW)",
       operatingTemp: "Continuous up to +70°C (Emergency smoke options up to 250°C / 2 hrs)",
       casingConstruction: "25mm Double-Skin Acoustic Insulated Panels with Internal Neoprene Gaskets",
       standards: ["Acoustic Sound Attenuated", "High-Temp Fire Smoke Exhaust", "Heavy-Duty Fire Rated Construction"]

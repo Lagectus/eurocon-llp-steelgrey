@@ -3,7 +3,7 @@ export interface ProductSpecification {
   staticPressure?: string; // e.g. "Up to 3,500 Pa"
   impellerDiameter?: string; // e.g. "250mm - 2,400mm"
   driveType?: string; // e.g. "Direct Drive / V-Belt"
-  motorRating?: string; // e.g. "0.37 kW to 250 kW, IE3/IE4"
+  motorRating?: string; // e.g. "0.37 kW to 250 kW, IE3/IE4/IE5"
   operatingTemp?: string; // e.g. "-20°C to +400°C (Fire Rated)"
   coolingCapacity?: string; // e.g. "1.0 TR to 120 TR"
   filtration?: string; // e.g. "EU4 Pre-filter + EU7 Microvee + HEPA (H13/H14)"
