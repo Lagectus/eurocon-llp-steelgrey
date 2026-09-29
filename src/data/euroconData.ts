@@ -129,12 +129,12 @@ export const PRODUCTS_DATA: Product[] = [
     cfdImage: "/images/products/cfd-airwashers.jpg",
     schematicSvgType: "airwasher",
     specs: {
-      airflowRange: "2,000 to 120,000 CFM (3,400 to 204,000 m³/h)",
+      airflowRange: "2,000 to 11,00,000 CFM",
       staticPressure: "Up to 1,500 Pa (6.0 in. wg)",
       casingConstruction: "25mm / 50mm Double-Skin PUF Injected (40 kg/m³) with SS304/SS316 Water Sump",
       filtration: "EU4 Pre-Filter + Celdek 5090 Evaporative Cooling / Scrubbing Media",
       driveType: "Direct-Drive EC Plug Fan / V-Belt DIDW Centrifugal Blower",
-      motorRating: "1.5 kW to 90 kW (IE3 to IE5 / EC High Efficiency)",
+      motorRating: "IE3 to IE5 (1.5 kW to 90 kW / EC High Efficiency)",
       operatingTemp: "Ambient to +55°C",
       standards: ["High Saturation Efficiency", "Hygienic Evaporative Design", "Dual-Drive Capability"]
     },
