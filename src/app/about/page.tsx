@@ -78,7 +78,7 @@ export default function AboutPage() {
 
       // Parallax scroll scrub on factory background image matching homepage
       gsap.to(bgRef.current, {
-        yPercent: 14,
+        yPercent: 12,
         ease: "none",
         scrollTrigger: {
           trigger: heroRef.current,
@@ -90,7 +90,7 @@ export default function AboutPage() {
 
       // Subtle upward parallax on foreground card for 3D multi-plane depth
       gsap.to(cardRef.current, {
-        yPercent: -10,
+        yPercent: -6,
         ease: "none",
         scrollTrigger: {
           trigger: heroRef.current,
@@ -122,9 +122,9 @@ export default function AboutPage() {
           {/* Page Hero Banner with Parallax Scroll & Entrance Animations */}
           <section
             ref={heroRef}
-            className="relative min-h-[540px] sm:min-h-[600px] lg:min-h-[660px] flex items-end bg-slate-900 border-b border-white/10 overflow-hidden"
+            className="relative min-h-[640px] sm:min-h-[720px] lg:min-h-[800px] flex items-end bg-slate-900 border-b border-white/10 overflow-hidden"
           >
-            {/* Background Factory Banner Image with Scroll Parallax */}
+            {/* Background Factory Banner Image with Scroll Parallax - Framed to highlight company logo */}
             <div
               ref={bgRef}
               className="absolute -inset-x-0 -top-16 -bottom-32 z-0 will-change-transform opacity-0 pointer-events-none"
@@ -132,26 +132,27 @@ export default function AboutPage() {
               <img
                 src="/aboutus.png"
                 alt="Eurocon System LLP Manufacturing Plant & Facility"
-                className="w-full h-full object-cover object-[center_35%]"
+                className="w-full h-full object-cover object-[center_18%] sm:object-[center_22%]"
               />
             </div>
 
-            <div className="w-full max-w-7xl mr-auto ml-0 px-4 sm:px-8 lg:px-12 xl:px-16 relative z-10 pt-32 sm:pt-44 pb-10 sm:pb-14">
+            {/* Content Container - Positioned low so factory signboard remains unobstructed */}
+            <div className="w-full max-w-7xl mr-auto ml-0 px-4 sm:px-8 lg:px-12 xl:px-16 relative z-10 pt-48 sm:pt-64 lg:pt-72 pb-6 sm:pb-8">
               <div
                 ref={cardRef}
-                className="max-w-xl lg:max-w-2xl rounded-2xl sm:rounded-3xl bg-white/85 backdrop-blur-md border border-white/60 shadow-[0_16px_48px_rgba(0,0,0,0.16)] p-6 sm:p-8 space-y-4 opacity-0 will-change-transform relative overflow-hidden"
+                className="max-w-lg lg:max-w-xl rounded-2xl sm:rounded-3xl bg-white/25 sm:bg-white/30 backdrop-blur-md border border-white/60 shadow-[0_8px_32px_0_rgba(15,23,42,0.12),inset_0_1px_1px_0_rgba(255,255,255,0.9)] p-5 sm:p-7 space-y-3.5 opacity-0 will-change-transform relative overflow-hidden"
               >
                 {/* Subtle top glass reflection highlight */}
                 <div className="absolute top-0 left-0 right-0 h-[1.5px] bg-gradient-to-r from-transparent via-white/80 to-transparent pointer-events-none" />
 
                 <div
                   ref={eyebrowRef}
-                  className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-sm border border-slate-200/80 text-xs font-mono font-bold tracking-[0.2em] uppercase text-slate-800 shadow-xs opacity-0"
+                  className="inline-flex items-center gap-2 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-white/50 backdrop-blur-md border border-white/60 text-xs font-mono font-bold tracking-[0.2em] uppercase text-slate-900 shadow-xs opacity-0"
                 >
                   <span className="w-2 h-2 rounded-full bg-[#EB0311] animate-pulse" />
                   <span>ABOUT <span className="text-[#EB0311] font-black">EUR</span><span className="text-[#010A6D] font-black">OCON</span> SYSTEM LLP</span>
                 </div>
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-[1.1]">
+                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-950 tracking-tight leading-[1.12]">
                   <span ref={headingLine1Ref} className="block opacity-0">
                     ENGINEERED AIRFLOW.
                   </span>
@@ -161,16 +162,16 @@ export default function AboutPage() {
                 </h1>
                 <p
                   ref={paragraphRef}
-                  className="text-sm sm:text-base text-slate-700 leading-relaxed font-normal opacity-0"
+                  className="text-xs sm:text-sm text-slate-950 leading-relaxed font-medium opacity-0"
                 >
-                  <strong className="font-black text-slate-900 tracking-wide"><span className="text-[#EB0311]">EUR</span><span className="text-[#010A6D]">OCON</span> SYSTEM LLP</strong> is an advanced industrial air management, ventilation, and HVAC engineering solutions provider dedicated to high aerodynamic efficiency, life-safety reliability, and multi-decade mechanical dependability.
+                  <strong className="font-black text-slate-950 tracking-wide"><span className="text-[#EB0311]">EUR</span><span className="text-[#010A6D]">OCON</span> SYSTEM LLP</strong> is an advanced industrial air management, ventilation, and HVAC engineering solutions provider dedicated to high aerodynamic efficiency, life-safety reliability, and multi-decade mechanical dependability.
                 </p>
 
                 <div
                   ref={facilityRef}
-                  className="pt-2 flex flex-wrap items-center gap-3 text-xs font-mono text-slate-700 opacity-0"
+                  className="pt-1 flex flex-wrap items-center gap-3 text-[11px] sm:text-xs font-mono text-slate-900 opacity-0"
                 >
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-100/90 backdrop-blur-sm border border-slate-200/80 shadow-2xs">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/50 backdrop-blur-md border border-white/60 shadow-2xs font-semibold">
                     <Factory className="w-3.5 h-3.5 text-[#010A6D]" />
                     Manufacturing Facility: Rohad, Bahadurgarh (Haryana)
                   </span>
