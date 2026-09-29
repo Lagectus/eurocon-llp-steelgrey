@@ -147,25 +147,11 @@ export default function IndustriesSection({ onOpenQuoteModal }: IndustriesSectio
                     {selectedIndustry.description}
                   </p>
 
-                  {/* Recommended Equipment & Quick RFQ Action */}
-                  <div className="pt-4 mt-3 border-t border-white/15 flex flex-wrap items-center justify-between gap-3">
-                    <div className="flex flex-wrap items-center gap-1.5">
-                      <span className="text-[10px] font-mono text-slate-300 uppercase font-semibold mr-1">
-                        Systems:
-                      </span>
-                      {selectedIndustry.recommendedProducts.map((p, i) => (
-                        <span
-                          key={i}
-                          className="px-2.5 py-1 rounded-md bg-white/15 backdrop-blur-md border border-white/20 text-white text-xs font-semibold"
-                        >
-                          {p}
-                        </span>
-                      ))}
-                    </div>
-
+                  {/* Quick RFQ Action */}
+                  <div className="pt-4 mt-3 border-t border-white/15 flex items-center justify-end">
                     <button
                       onClick={() => onOpenQuoteModal(`Industry Solution: ${selectedIndustry.name}`)}
-                      className="inline-flex items-center justify-center gap-2 px-5 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs transition-colors shadow-lg shadow-blue-600/30 cursor-pointer"
+                      className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs transition-colors shadow-lg shadow-blue-600/30 cursor-pointer"
                     >
                       <span>Request Sector RFQ</span>
                       <ArrowRight className="w-3.5 h-3.5" />
