@@ -8,7 +8,6 @@ import QuoteModal from "@/components/ui/QuoteModal";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { Factory, Cpu, CheckCircle2, ArrowRight, Wind } from "lucide-react";
 import Link from "next/link";
-import { METRIC_HIGHLIGHTS } from "@/data/euroconData";
 
 export default function AboutPage() {
   const [isQuoteOpen, setIsQuoteOpen] = useState(false);
@@ -76,15 +75,6 @@ export default function AboutPage() {
               <p>
                 Our equipment is designed with exact engineering tolerances to maximize energy efficiency, ensure precise environmental control, and deliver dependable multi-decade lifecycle performance.
               </p>
-
-              <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/10">
-                {METRIC_HIGHLIGHTS.slice(0, 2).map((m) => (
-                  <div key={m.label} className="p-4 rounded-xl bg-[#4B5563] border border-white/12 shadow-xs">
-                    <span className="text-2xl sm:text-3xl font-black text-white font-mono block">{m.value}</span>
-                    <span className="text-xs font-bold text-white/90 mt-1 block">{m.label}</span>
-                  </div>
-                ))}
-              </div>
             </div>
 
             <div className="lg:col-span-6 rounded-2xl overflow-hidden shadow-xl border border-white/15 bg-[#4B5563]">
