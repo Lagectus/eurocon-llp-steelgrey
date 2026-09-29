@@ -97,8 +97,8 @@ export default function Navbar({
 
           <div className="flex flex-col shrink-0 select-none">
             <div className="flex items-center text-lg sm:text-xl font-black tracking-wider leading-none">
-              <span className="text-[#EB0311]">EURO</span>
-              <span className="text-[#010A6D]">CON</span>
+              <span className="text-[#EB0311]">EUR</span>
+              <span className="text-[#010A6D]">OCON</span>
             </div>
             <span className="text-[9px] font-mono tracking-[0.22em] uppercase text-white/90 font-bold mt-1">
               HVAC & AIR SOLUTIONS LLP

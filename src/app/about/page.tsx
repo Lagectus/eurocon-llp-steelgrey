@@ -28,37 +28,33 @@ export default function AboutPage() {
 
       <main className="pt-24 pb-20">
         {/* Page Hero Banner */}
-        <section className="relative min-h-[460px] sm:min-h-[520px] flex items-center bg-slate-950 border-b border-white/10 overflow-hidden">
+        <section className="relative min-h-[520px] sm:min-h-[580px] lg:min-h-[640px] flex items-end bg-slate-900 border-b border-white/10 overflow-hidden">
           {/* Background Factory Banner Image */}
           <div className="absolute inset-0 z-0">
             <img
               src="/aboutus.png"
               alt="Eurocon System LLP Manufacturing Plant & Facility"
-              className="w-full h-full object-cover object-center filter brightness-[0.5] contrast-105"
+              className="w-full h-full object-cover object-[center_35%]"
             />
-            {/* Gradient Overlays for High Legibility */}
-            <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-900/80 to-slate-900/40" />
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent" />
-            <div className="absolute inset-0 bg-tech-grid opacity-20 pointer-events-none" />
           </div>
 
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-20 sm:py-28 w-full">
-            <div className="max-w-3xl space-y-5">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-600/30 backdrop-blur-md border border-blue-400/40 text-xs font-mono font-bold tracking-[0.2em] uppercase text-blue-300 shadow-lg">
-                <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
-                <span>ABOUT EUROCON SYSTEM LLP</span>
+          <div className="w-full max-w-7xl mr-auto ml-0 px-4 sm:px-8 lg:px-12 xl:px-16 relative z-10 pt-32 sm:pt-44 pb-10 sm:pb-14">
+            <div className="max-w-xl lg:max-w-2xl rounded-2xl sm:rounded-3xl bg-white/85 backdrop-blur-md border border-white/60 shadow-[0_16px_48px_rgba(0,0,0,0.16)] p-6 sm:p-8 space-y-4">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-sm border border-slate-200/80 text-xs font-mono font-bold tracking-[0.2em] uppercase text-slate-800 shadow-xs">
+                <span className="w-2 h-2 rounded-full bg-[#EB0311] animate-pulse" />
+                <span>ABOUT <span className="text-[#EB0311] font-black">EUR</span><span className="text-[#010A6D] font-black">OCON</span> SYSTEM LLP</span>
               </div>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.1] drop-shadow-md">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-[1.1]">
                 ENGINEERED AIRFLOW. <br />
-                <span className="text-blue-400">BUILT FOR PERFORMANCE.</span>
+                <span className="text-[#010A6D]">BUILT FOR PERFORMANCE.</span>
               </h1>
-              <p className="text-base sm:text-lg text-slate-100 leading-relaxed font-normal max-w-2xl drop-shadow">
-                EUROCON SYSTEM LLP is an advanced industrial air management, ventilation, and HVAC engineering solutions provider dedicated to high aerodynamic efficiency, life-safety compliance, and multi-decade mechanical dependability.
+              <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
+                <strong className="font-black text-slate-900 tracking-wide"><span className="text-[#EB0311]">EUR</span><span className="text-[#010A6D]">OCON</span> SYSTEM LLP</strong> is an advanced industrial air management, ventilation, and HVAC engineering solutions provider dedicated to high aerodynamic efficiency, life-safety compliance, and multi-decade mechanical dependability.
               </p>
 
-              <div className="pt-2 flex flex-wrap items-center gap-3 text-xs font-mono text-slate-200">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900/80 backdrop-blur-md border border-white/20 shadow-sm">
-                  <Factory className="w-3.5 h-3.5 text-blue-400" />
+              <div className="pt-2 flex flex-wrap items-center gap-3 text-xs font-mono text-slate-700">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-100/90 backdrop-blur-sm border border-slate-200/80 shadow-2xs">
+                  <Factory className="w-3.5 h-3.5 text-[#010A6D]" />
                   Manufacturing Facility: Rohad, Bahadurgarh (Haryana)
                 </span>
               </div>

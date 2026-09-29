@@ -65,7 +65,7 @@ export default function PageLoader() {
               className="space-y-1"
             >
               <h1 className="text-2xl sm:text-3xl font-extrabold tracking-wider text-white">
-                <span className="text-[#EB0311]">EURO</span><span className="text-[#010A6D]">CON</span> <span className="text-slate-400 font-light">SYSTEM LLP</span>
+                <span className="text-[#EB0311]">EUR</span><span className="text-[#010A6D]">OCON</span> <span className="text-slate-400 font-light">SYSTEM LLP</span>
               </h1>
               <p className="text-xs tracking-[0.25em] text-slate-400 uppercase">
                 Engineered Airflow Solutions

@@ -60,7 +60,7 @@ export default function MobileMenu({
                 </div>
                 <div>
                   <span className="font-black text-base tracking-wide block text-white leading-tight">
-                    <span className="text-[#EB0311]">EURO</span><span className="text-[#010A6D]">CON</span>
+                    <span className="text-[#EB0311]">EUR</span><span className="text-[#010A6D]">OCON</span>
                   </span>
                   <span className="text-[10px] text-white/80 font-mono tracking-widest uppercase font-bold">
                     SYSTEM LLP
