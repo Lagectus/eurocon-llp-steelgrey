@@ -485,13 +485,6 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
                             alt={`${product.name} - View ${selectedPhotoIndex + 1}`}
                             className="w-full h-full object-contain filter drop-shadow-sm transition-transform duration-500 group-hover:scale-105"
                           />
-                          {/* Floating Angle Badge */}
-                          <div className="absolute top-2.5 left-2.5 px-2.5 py-1 rounded-md bg-white/95 backdrop-blur-md border border-slate-200 text-[10px] font-mono text-blue-700 font-bold flex items-center gap-1.5 shadow-xs">
-                            <span className="w-1.5 h-1.5 rounded-full bg-blue-600 animate-pulse" />
-                            <span>
-                              {product.heroBadge || product.subCategory || product.name.toUpperCase()}
-                            </span>
-                          </div>
                         </motion.div>
                       )}
                     </AnimatePresence>
@@ -537,11 +530,7 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
                   </div>
 
                   {/* Visualizer Footer Details */}
-                  <div className="p-4 bg-slate-50 border-t border-slate-200 flex items-center justify-between text-xs font-mono text-[#64748B]">
-                    <span className="flex items-center gap-1.5">
-                      <CheckCircle2 className="w-4 h-4 text-blue-600" />
-                      <span>PRECISION ENGINEERED ASSEMBLY</span>
-                    </span>
+                  <div className="p-3.5 sm:p-4 bg-slate-50 border-t border-slate-200 flex items-center justify-end text-xs font-mono text-[#64748B]">
                     <button
                       onClick={() => setIsQuoteOpen(true)}
                       className="text-blue-600 font-bold hover:underline"
@@ -574,26 +563,6 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
                 <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-xs group bg-white">
                   {/* Subtle Tech Grid inside Showcase */}
                   <div className="absolute inset-0 bg-tech-grid opacity-30 pointer-events-none" />
-
-                  {/* Header Badge Strip inside Showcase */}
-                  <div className="absolute top-3 left-3 right-3 flex items-center justify-between z-20 pointer-events-none">
-                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/95 backdrop-blur-md border border-slate-200 text-[11px] font-mono text-[#334155] shadow-xs font-semibold">
-                      <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
-                      <span>PRECISION MANUFACTURED FOR RIGOROUS INDUSTRIAL PROCESSES</span>
-                    </div>
-
-                    <span className="hidden sm:inline-flex px-2.5 py-1.5 rounded-lg bg-white/95 backdrop-blur-md border border-slate-200 text-[10px] font-mono text-blue-700 font-bold shadow-xs">
-                      {product.slug === "ahu" && AHU_ANGLE_METADATA[showcasePhotoIndex]
-                        ? AHU_ANGLE_METADATA[showcasePhotoIndex].badge
-                        : product.slug === "airwashers"
-                        ? "90% Saturation / Celdek 5090"
-                        : product.slug === "fcu"
-                        ? "Ultra-Slim 220mm / 28 dBA"
-                        : product.slug === "tfa"
-                        ? "100% Fresh Air / Enthalpy Wheel"
-                        : product.heroBadge || "EUROCON OEM"}
-                    </span>
-                  </div>
 
                   {/* Main Showcase Image Display */}
                   <div className="relative h-80 sm:h-100 w-full p-6 sm:p-8 flex items-center justify-center">
