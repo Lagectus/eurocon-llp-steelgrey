@@ -576,7 +576,7 @@ export const INDUSTRIES_DATA: Industry[] = [
       "Scrubber Dry & Wet"
     ],
     stats: { label: "Shopfloor Air Turnover", value: "18+ ACH" },
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1000&q=80",
+    image: "/images/industries/2.jpg",
     accentColor: "#010A6D"
   },
   {
@@ -602,7 +602,7 @@ export const INDUSTRIES_DATA: Industry[] = [
       "Scrubber Dry & Wet"
     ],
     stats: { label: "Paint Booth Air Uniformity", value: "99.4%" },
-    image: "https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1000&q=80",
+    image: "/images/industries/3.jpg",
     accentColor: "#010A6D"
   },
   {
@@ -628,7 +628,7 @@ export const INDUSTRIES_DATA: Industry[] = [
       "Cabinet Exhaust Unit"
     ],
     stats: { label: "Emergency Thrust", value: "Up to 120 N" },
-    image: "https://images.unsplash.com/photo-1517649763962-0c623266ddc0?auto=format&fit=crop&w=1000&q=80",
+    image: "/images/industries/4.jpg",
     accentColor: "#010A6D"
   },
   {
@@ -654,7 +654,7 @@ export const INDUSTRIES_DATA: Industry[] = [
       "Fan Section"
     ],
     stats: { label: "PUE Efficiency Gain", value: "14% Avg" },
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1000&q=80",
+    image: "/images/industries/5.jpg",
     accentColor: "#010A6D"
   },
   {
@@ -680,7 +680,7 @@ export const INDUSTRIES_DATA: Industry[] = [
       "Air Handling Unit (AHU)"
     ],
     stats: { label: "Cleanroom Class Support", value: "Class 100 – 100K" },
-    image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80",
+    image: "/images/industries/6.jpg",
     accentColor: "#10B981"
   },
   {
@@ -706,7 +706,7 @@ export const INDUSTRIES_DATA: Industry[] = [
       "Cabinet Inline Unit"
     ],
     stats: { label: "Temperature Homogeneity", value: "±1.5°C" },
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1000&q=80",
+    image: "/images/industries/7.jpg",
     accentColor: "#F59E0B"
   },
   {
@@ -732,7 +732,7 @@ export const INDUSTRIES_DATA: Industry[] = [
       "Fan Section"
     ],
     stats: { label: "Passenger IAQ Rating", value: "Class A" },
-    image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1000&q=80",
+    image: "/images/industries/8.jpg",
     accentColor: "#010A6D"
   }
 ];
