@@ -266,13 +266,13 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
         {/* Section 1: Product Hero Section */}
         <section id="overview" className="py-12 sm:py-16 bg-white border-b border-slate-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
               {/* Left Column: Product Info & CTAs */}
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
-                className="lg:col-span-7 space-y-6"
+                className="lg:col-span-6 space-y-6"
               >
                 <div className="flex flex-wrap items-center gap-2.5">
                   {product.heroBadge && (
@@ -417,11 +417,11 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
                 initial={{ opacity: 0, x: 30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-                className="lg:col-span-5"
+                className="lg:col-span-6"
               >
                 <div className="bg-white rounded-2xl border border-slate-200 shadow-xl overflow-hidden">
                   {/* Visualizer Header Tabs */}
-                  <div className="p-3 bg-slate-50 text-[#334155] flex items-center justify-between border-b border-slate-200">
+                  <div className="p-3.5 bg-slate-50 text-[#334155] flex items-center justify-between border-b border-slate-200">
                     <div className="flex items-center gap-2">
                       <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
                       <span className="font-mono text-xs font-bold tracking-wider uppercase text-[#334155]">
@@ -432,7 +432,7 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
                     <div className="flex items-center bg-slate-100 rounded-lg p-0.5 border border-slate-200">
                       <button
                         onClick={() => setActiveTab("photo")}
-                        className={`px-3 py-1 rounded-md text-xs font-mono font-bold transition-colors ${
+                        className={`px-3 py-1.5 rounded-md text-xs font-mono font-bold transition-colors ${
                           activeTab === "photo"
                             ? "bg-blue-600 text-white shadow-xs"
                             : "text-[#64748B] hover:text-[#334155]"
@@ -442,7 +442,7 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
                       </button>
                       <button
                         onClick={() => setActiveTab("schematic")}
-                        className={`px-3 py-1 rounded-md text-xs font-mono font-bold transition-colors ${
+                        className={`px-3 py-1.5 rounded-md text-xs font-mono font-bold transition-colors ${
                           activeTab === "schematic"
                             ? "bg-blue-600 text-white shadow-xs"
                             : "text-[#64748B] hover:text-[#334155]"
@@ -454,7 +454,7 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
                   </div>
 
                   {/* Visualizer Display Area */}
-                  <div className="p-4 bg-slate-50/50 relative min-h-85 flex flex-col items-center justify-center overflow-hidden">
+                  <div className="p-4 sm:p-6 bg-slate-50/50 relative flex flex-col items-center justify-center overflow-hidden">
                     {/* Background Blueprint Grid */}
                     <div className="absolute inset-0 bg-tech-grid opacity-30 pointer-events-none" />
 
@@ -468,7 +468,7 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
                           transition={{ duration: 0.25 }}
                           className="w-full flex items-center justify-center relative z-10"
                         >
-                          <ProductSchematic type={product.schematicSvgType} isDark={false} className="w-full h-72" />
+                          <ProductSchematic type={product.schematicSvgType} isDark={false} className="w-full h-84 sm:h-[420px] lg:h-[480px]" />
                         </motion.div>
                       ) : (
                         <motion.div
@@ -477,13 +477,13 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
                           animate={{ opacity: 1, scale: 1 }}
                           exit={{ opacity: 0, scale: 0.95 }}
                           transition={{ duration: 0.25 }}
-                          className="w-full h-72 rounded-xl overflow-hidden relative z-10 border border-slate-200 bg-white p-3 flex items-center justify-center shadow-xs group"
+                          className="w-full h-84 sm:h-[420px] lg:h-[480px] rounded-xl overflow-hidden relative z-10 border border-slate-200 bg-white p-3 sm:p-5 flex items-center justify-center shadow-xs group"
                         >
                           {/* eslint-disable-next-line @next/next/no-img-element */}
                           <img
                             src={galleryImages[selectedPhotoIndex] || product.image}
                             alt={`${product.name} - View ${selectedPhotoIndex + 1}`}
-                            className="w-full h-full object-contain filter drop-shadow-sm transition-transform duration-500 group-hover:scale-105"
+                            className="w-full h-full object-contain filter drop-shadow-md transition-transform duration-500 group-hover:scale-105"
                           />
                         </motion.div>
                       )}
@@ -491,12 +491,12 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
 
                     {/* Multi-Photo Thumbnail Bar when in photo tab */}
                     {activeTab === "photo" && galleryImages.length > 1 && (
-                      <div className="w-full pt-3 mt-2 border-t border-slate-200 relative z-10 flex items-center justify-between gap-2">
+                      <div className="w-full pt-3.5 mt-3 border-t border-slate-200 relative z-10 flex items-center justify-between gap-2">
                         <span className="text-[10px] font-mono uppercase tracking-wider text-[#64748B] flex items-center gap-1">
-                          <Eye className="w-3 h-3 text-blue-600" />
+                          <Eye className="w-3.5 h-3.5 text-blue-600" />
                           <span>{galleryImages.length} VIEWS AVAILABLE:</span>
                         </span>
-                        <div className="flex items-center gap-1.5">
+                        <div className="flex items-center gap-2">
                           {galleryImages.map((imgUrl, idx) => {
                             const isSelected = selectedPhotoIndex === idx;
                             return (
@@ -504,7 +504,7 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
                                 key={idx}
                                 type="button"
                                 onClick={() => setSelectedPhotoIndex(idx)}
-                                className={`relative w-12 h-9 rounded-lg overflow-hidden border transition-all p-0.5 bg-white ${
+                                className={`relative w-14 h-10 rounded-lg overflow-hidden border transition-all p-0.5 bg-white ${
                                   isSelected
                                     ? "border-blue-600 ring-2 ring-blue-500/30 shadow-xs"
                                     : "border-slate-200 opacity-60 hover:opacity-100 hover:border-slate-400"
