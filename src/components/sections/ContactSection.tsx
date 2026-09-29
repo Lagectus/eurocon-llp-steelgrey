@@ -170,18 +170,31 @@ export default function ContactSection() {
                 <div className="w-16 h-16 bg-emerald-50 border border-emerald-300 rounded-full flex items-center justify-center mx-auto text-emerald-600">
                   <CheckCircle2 className="w-10 h-10" />
                 </div>
-                <h3 className="text-2xl font-bold text-[#334155]">
-                  Thank You For Reaching Out!
+                <h3 className="text-2xl sm:text-3xl font-extrabold text-[#334155]">
+                  Thank You!
                 </h3>
-                <p className="text-sm text-[#64748B] max-w-md mx-auto">
-                  Your project enquiry has been assigned to our Technical Support Team. An HVAC engineer will contact you shortly at <span className="font-semibold text-[#334155]">{formData.email}</span>.
+                <p className="text-base text-slate-700 max-w-md mx-auto font-medium leading-relaxed">
+                  Your form has been submitted successfully. We’ll get back to you shortly.
                 </p>
-                <button
-                  onClick={() => setIsSubmitted(false)}
-                  className="mt-4 px-6 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-800 text-white font-semibold text-sm transition-colors cursor-pointer"
-                >
-                  Send Another Message
-                </button>
+                <div className="pt-2">
+                  <button
+                    onClick={() => {
+                      setIsSubmitted(false);
+                      setFormData({
+                        fullName: "",
+                        companyName: "",
+                        email: "",
+                        phone: "",
+                        projectType: "Commercial & Corporate Towers",
+                        productInterest: "Air Handling Unit (AHU)",
+                        message: "",
+                      });
+                    }}
+                    className="px-6 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-800 text-white font-semibold text-sm transition-colors cursor-pointer shadow-sm"
+                  >
+                    Send Another Message
+                  </button>
+                </div>
               </motion.div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">

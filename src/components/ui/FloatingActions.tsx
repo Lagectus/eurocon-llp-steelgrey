@@ -6,419 +6,651 @@ import {
   Phone,
   Mail,
   ArrowUp,
-  MessageSquare,
   X,
   Send,
   CheckCircle2,
   Building2,
   User,
   SlidersHorizontal,
+  MessageSquare,
 } from "lucide-react";
+import confetti from "canvas-confetti";
 import { PRODUCTS_DATA, COMPANY_INFO } from "@/data/euroconData";
 
 export default function FloatingActions() {
   const [showScrollTop, setShowScrollTop] = useState(false);
-  const [isFormOpen, setIsFormOpen] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [activeModal, setActiveModal] = useState<"whatsapp" | "email" | null>(null);
 
-  const [formData, setFormData] = useState({
+  // 5a. WhatsApp Form State
+  const [waData, setWaData] = useState({
     name: "",
-    phone: "",
+    mobile: "",
+  });
+  const [waErrors, setWaErrors] = useState<Record<string, string>>({});
+  const [waSubmitting, setWaSubmitting] = useState(false);
+  const [waSubmitted, setWaSubmitted] = useState(false);
+
+  // 5b. Email Form State
+  const [emailData, setEmailData] = useState({
+    companyName: "",
+    name: "",
     email: "",
+    mobile: "",
     product: "Air Handling Unit (AHU)",
     message: "",
   });
-
-  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [emailErrors, setEmailErrors] = useState<Record<string, string>>({});
+  const [emailSubmitting, setEmailSubmitting] = useState(false);
+  const [emailSubmitted, setEmailSubmitted] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setShowScrollTop(window.scrollY > 300);
+      setShowScrollTop(window.scrollY > 250);
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Lock body scroll when a modal is open
+  useEffect(() => {
+    if (activeModal) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [activeModal]);
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-    if (errors[name]) {
-      setErrors((prev) => {
-        const next = { ...prev };
-        delete next[name];
-        return next;
-      });
-    }
+  const closeModal = () => {
+    setActiveModal(null);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // 5a. WhatsApp Form Submit
+  const handleWaSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const newErrors: Record<string, string> = {};
-
-    if (!formData.name.trim()) newErrors.name = "Name is required";
-    if (!formData.phone.trim()) newErrors.phone = "Phone / WhatsApp number is required";
-    if (!formData.email.trim() || !formData.email.includes("@")) {
-      newErrors.email = "Valid email is required";
+    const errors: Record<string, string> = {};
+    if (!waData.name.trim()) errors.name = "Please enter your name";
+    if (!waData.mobile.trim() || waData.mobile.trim().length < 8) {
+      errors.mobile = "Please enter a valid mobile number";
     }
 
-    if (Object.keys(newErrors).length > 0) {
-      setErrors(newErrors);
+    if (Object.keys(errors).length > 0) {
+      setWaErrors(errors);
       return;
     }
 
-    setIsSubmitting(true);
+    setWaSubmitting(true);
 
-    // Simulate instant lead dispatch
     setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
+      setWaSubmitting(false);
+      setWaSubmitted(true);
 
-      // Auto-open WhatsApp with prefilled message in a new tab if user chooses
-      const waText = encodeURIComponent(
-        `Hello Ashok ji / Eurocon Team,\n\nI have submitted an inquiry:\nName: ${formData.name}\nPhone: ${formData.phone}\nEmail: ${formData.email}\nProduct Requirement: ${formData.product}\nMessage: ${formData.message || "Looking for quotation & technical specs."}`
+      confetti({
+        particleCount: 50,
+        spread: 50,
+        origin: { y: 0.6 },
+        colors: ["#25D366", "#010A6D", "#EB0311"],
+      });
+
+      const messageText = encodeURIComponent(
+        `Hello Ashok ji / Eurocon Team,\n\nName: ${waData.name}\nMobile: ${waData.mobile}\n\nI want to inquire about Eurocon HVAC & ventilation systems.`
       );
-      const waUrl = `https://wa.me/919891221991?text=${waText}`;
-
-      // Open WhatsApp inquiry
+      const waUrl = `https://wa.me/919891221991?text=${messageText}`;
       window.open(waUrl, "_blank");
+    }, 500);
+  };
+
+  // 5b. Email Form Submit
+  const handleEmailSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const errors: Record<string, string> = {};
+    if (!emailData.companyName.trim()) errors.companyName = "Please enter your company name";
+    if (!emailData.name.trim()) errors.name = "Please enter your name";
+    if (!emailData.email.trim() || !/^\S+@\S+\.\S+$/.test(emailData.email)) {
+      errors.email = "Please enter a valid work email";
+    }
+    if (!emailData.mobile.trim() || emailData.mobile.trim().length < 8) {
+      errors.mobile = "Please enter a valid mobile number";
+    }
+    if (!emailData.message.trim()) {
+      errors.message = "Please enter your message or specifications";
+    }
+
+    if (Object.keys(errors).length > 0) {
+      setEmailErrors(errors);
+      return;
+    }
+
+    setEmailSubmitting(true);
+
+    setTimeout(() => {
+      setEmailSubmitting(false);
+      setEmailSubmitted(true);
+
+      confetti({
+        particleCount: 60,
+        spread: 60,
+        origin: { y: 0.6 },
+        colors: ["#EB0311", "#010A6D", "#0A1647"],
+      });
     }, 600);
   };
 
-  const resetForm = () => {
-    setFormData({
-      name: "",
-      phone: "",
-      email: "",
-      product: "Air Handling Unit (AHU)",
-      message: "",
-    });
-    setIsSubmitted(false);
-    setIsFormOpen(false);
-    setErrors({});
-  };
-
   return (
-    <div
-      aria-label="Floating Contact & Inquiry Widget"
-      className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col items-end pointer-events-auto select-none"
-    >
-      {/* Floating Quick Contact Form Modal */}
-      <AnimatePresence>
-        {isFormOpen && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.9, y: 20 }}
-            transition={{ duration: 0.25, ease: "easeOut" }}
-            className="w-[calc(100vw-32px)] max-w-[360px] sm:max-w-[390px] bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden mb-3 text-slate-800"
-          >
-            {/* Form Header */}
-            <div className="bg-gradient-to-r from-[#010A6D] to-[#0A1647] p-4 text-white flex items-center justify-between">
-              <div>
-                <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#EB0311] animate-pulse" />
-                  <span className="text-[10px] font-mono tracking-widest uppercase text-blue-200">
-                    EUROCON SYSTEM LLP
-                  </span>
-                </div>
-                <h3 className="font-bold text-base tracking-tight leading-tight mt-0.5">
-                  Quick Inquiry & Quotation
-                </h3>
-              </div>
-              <button
-                onClick={() => setIsFormOpen(false)}
-                aria-label="Close form"
-                className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors cursor-pointer"
-              >
-                <X className="w-4 h-4" />
-              </button>
-            </div>
+    <>
+      {/* ========================================================
+          RIGHT-SIDE FIXED / STICKY CONTACT ICONS
+          Matches media_1790681039184:
+          - Scroll to top (Dark slate)
+          - Mail (Eurocon Red)
+          - Phone (Eurocon Navy)
+          - WhatsApp (Vibrant green with halo glow)
+          ======================================================== */}
+      <div
+        aria-label="Right-Side Contact Options"
+        className="fixed bottom-5 right-4 sm:bottom-6 sm:right-6 z-40 flex flex-col items-center gap-3 pointer-events-auto select-none"
+      >
+        {/* Scroll to Top */}
+        <AnimatePresence>
+          {showScrollTop && (
+            <motion.button
+              initial={{ opacity: 0, scale: 0.7, y: 10 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.7, y: 10 }}
+              onClick={scrollToTop}
+              aria-label="Scroll to top"
+              title="Scroll to top"
+              className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#1e293b] hover:bg-[#334155] text-white flex items-center justify-center shadow-lg transition-transform hover:scale-110 active:scale-95 cursor-pointer"
+            >
+              <ArrowUp className="w-5 h-5" />
+            </motion.button>
+          )}
+        </AnimatePresence>
 
-            {/* Form Content */}
-            <div className="p-4 sm:p-5">
-              {isSubmitted ? (
-                <div className="py-6 text-center space-y-3">
-                  <div className="w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
-                    <CheckCircle2 className="w-6 h-6" />
+        {/* Mail / Email Icon -> Opens 5b Email Form UI Modal (Centered) */}
+        <button
+          onClick={() => {
+            setEmailSubmitted(false);
+            setActiveModal("email");
+          }}
+          aria-label="Send Email Inquiry"
+          title="Email Form Inquiry"
+          className="group relative w-12 h-12 sm:w-13 sm:h-13 rounded-full bg-[#EB0311] hover:bg-[#c9020e] text-white flex items-center justify-center shadow-xl transition-all duration-200 hover:scale-110 active:scale-95 cursor-pointer"
+        >
+          <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+          <span className="pointer-events-none absolute right-full mr-3 whitespace-nowrap rounded-lg bg-slate-900/95 backdrop-blur-xs px-3 py-1.5 text-xs font-semibold text-white shadow-md border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+            Email Inquiry
+          </span>
+        </button>
+
+        {/* Phone Call Icon -> Direct tel:+919891221991 */}
+        <a
+          href="tel:+919891221991"
+          aria-label="Call Eurocon: +91 98912 21991"
+          title="Call: +91 98912 21991"
+          className="group relative w-12 h-12 sm:w-13 sm:h-13 rounded-full bg-[#010A6D] hover:bg-[#010645] text-white flex items-center justify-center shadow-xl transition-all duration-200 hover:scale-110 active:scale-95 cursor-pointer"
+        >
+          <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+          <span className="pointer-events-none absolute right-full mr-3 whitespace-nowrap rounded-lg bg-slate-900/95 backdrop-blur-xs px-3 py-1.5 text-xs font-semibold text-white shadow-md border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+            Call: +91 98912 21991
+          </span>
+        </a>
+
+        {/* WhatsApp Icon -> Opens 5a WhatsApp Form UI Modal (Centered) with halo glow */}
+        <div className="relative flex items-center justify-center">
+          {/* Soft circular aura/halo background as seen in user reference image */}
+          <span className="absolute -inset-2.5 sm:-inset-3 rounded-full bg-[#25D366]/25 animate-pulse pointer-events-none" />
+
+          <button
+            onClick={() => {
+              setWaSubmitted(false);
+              setActiveModal("whatsapp");
+            }}
+            aria-label="WhatsApp Inquiry Form"
+            title="WhatsApp Inquiry Form"
+            className="group relative w-12 h-12 sm:w-13 sm:h-13 rounded-full bg-[#25D366] hover:bg-[#20ba5a] text-white flex items-center justify-center shadow-xl transition-all duration-200 hover:scale-110 active:scale-95 cursor-pointer z-10"
+          >
+            <svg
+              className="w-6 h-6 sm:w-7 sm:h-7 fill-current"
+              viewBox="0 0 24 24"
+            >
+              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+            </svg>
+            <span className="pointer-events-none absolute right-full mr-3 whitespace-nowrap rounded-lg bg-slate-900/95 backdrop-blur-xs px-3 py-1.5 text-xs font-semibold text-white shadow-md border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+              WhatsApp Inquiry
+            </span>
+          </button>
+        </div>
+      </div>
+
+      {/* ========================================================
+          5a. WHATSAPP FORM UI (APPEARS IN MIDDLE/CENTER OF PAGE)
+          Fields: Name, Mobile Number, Submit Button
+          Success Message:
+          Thank You!
+          Your form has been submitted successfully. We’ll get back to you shortly.
+          ======================================================== */}
+      <AnimatePresence>
+        {activeModal === "whatsapp" && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 overflow-y-auto">
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={closeModal}
+              className="fixed inset-0 bg-slate-950/70 backdrop-blur-md"
+            />
+
+            {/* Centered Modal Card */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.92, y: 15 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.92, y: 15 }}
+              transition={{ type: "spring", damping: 25, stiffness: 320 }}
+              className="relative w-full max-w-md bg-white rounded-2xl shadow-2xl overflow-hidden z-10 border border-slate-200 text-slate-800 my-auto"
+            >
+              {/* Header */}
+              <div className="bg-[#25D366] text-white p-5 flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
+                    <svg className="w-6 h-6 fill-current text-white" viewBox="0 0 24 24">
+                      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+                    </svg>
                   </div>
-                  <h4 className="font-bold text-lg text-slate-900">
-                    Inquiry Received!
-                  </h4>
-                  <p className="text-xs text-slate-600 leading-relaxed max-w-xs mx-auto">
-                    Thank you, <strong className="text-slate-900">{formData.name}</strong>. Our engineering team will review your specifications and contact you shortly.
-                  </p>
-                  <div className="pt-2 flex flex-col gap-2">
-                    <a
-                      href="https://wa.me/919891221991"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold text-xs transition-colors shadow-sm"
-                    >
-                      <span>Chat on WhatsApp Directly</span>
-                    </a>
-                    <button
-                      onClick={resetForm}
-                      className="text-xs text-slate-500 hover:text-slate-800 font-semibold underline underline-offset-2 py-1 cursor-pointer"
-                    >
-                      Submit Another Inquiry
-                    </button>
+                  <div>
+                    <h3 className="font-extrabold text-lg text-white leading-tight">
+                      WhatsApp Quick Inquiry
+                    </h3>
+                    <p className="text-xs text-white/90">
+                      Eurocon System LLP • Instant Response
+                    </p>
                   </div>
                 </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-3">
-                  {/* Name Input */}
-                  <div>
-                    <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1">
-                      Your Name *
-                    </label>
-                    <div className="relative">
-                      <User className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
+                <button
+                  onClick={closeModal}
+                  aria-label="Close"
+                  className="w-8 h-8 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center text-white transition-colors cursor-pointer"
+                >
+                  <X className="w-4 h-4" />
+                </button>
+              </div>
+
+              {/* Form Content */}
+              <div className="p-6">
+                {waSubmitted ? (
+                  <div className="py-8 text-center space-y-4">
+                    <div className="w-16 h-16 bg-emerald-50 border border-emerald-300 rounded-full flex items-center justify-center mx-auto text-emerald-600">
+                      <CheckCircle2 className="w-10 h-10" />
+                    </div>
+                    <h4 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
+                      Thank You!
+                    </h4>
+                    <p className="text-base text-slate-700 max-w-sm mx-auto font-medium leading-relaxed">
+                      Your form has been submitted successfully. We’ll get back to you shortly.
+                    </p>
+                    <div className="pt-4 flex flex-col gap-2.5">
+                      <a
+                        href={`https://wa.me/919891221991?text=${encodeURIComponent(
+                          `Hello Ashok ji / Eurocon Team, Name: ${waData.name}, Mobile: ${waData.mobile}`
+                        )}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full py-3 rounded-xl bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold text-sm flex items-center justify-center gap-2 transition-all shadow-md shadow-emerald-500/20"
+                      >
+                        <span>Open WhatsApp Chat Again</span>
+                      </a>
+                      <button
+                        onClick={closeModal}
+                        className="w-full py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs transition-colors cursor-pointer"
+                      >
+                        Close
+                      </button>
+                    </div>
+                  </div>
+                ) : (
+                  <form onSubmit={handleWaSubmit} className="space-y-4">
+                    {/* Name Field */}
+                    <div>
+                      <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
+                        <User className="w-3.5 h-3.5 text-[#25D366]" /> Name *
+                      </label>
                       <input
                         type="text"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        placeholder="e.g. Rajesh Sharma"
-                        className={`w-full pl-9 pr-3 py-2 text-xs rounded-xl bg-slate-50 border ${
-                          errors.name ? "border-red-500 bg-red-50/30" : "border-slate-200"
-                        } focus:outline-none focus:border-[#010A6D] text-slate-900 transition-colors`}
+                        value={waData.name}
+                        onChange={(e) => {
+                          setWaData({ ...waData, name: e.target.value });
+                          if (waErrors.name) setWaErrors({ ...waErrors, name: "" });
+                        }}
+                        placeholder="Enter your name"
+                        className={`w-full px-3.5 py-2.5 text-sm rounded-xl bg-slate-50 border ${
+                          waErrors.name ? "border-red-500 bg-red-50" : "border-slate-200"
+                        } focus:outline-none focus:border-[#25D366] text-slate-900 transition-colors`}
                       />
+                      {waErrors.name && (
+                        <p className="text-xs text-red-600 mt-1">{waErrors.name}</p>
+                      )}
                     </div>
-                    {errors.name && (
-                      <p className="text-[10px] text-red-600 mt-0.5">{errors.name}</p>
-                    )}
-                  </div>
 
-                  {/* Phone / WhatsApp Input */}
-                  <div>
-                    <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1">
-                      Phone / WhatsApp *
-                    </label>
-                    <div className="relative">
-                      <Phone className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
+                    {/* Mobile Number Field */}
+                    <div>
+                      <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
+                        <Phone className="w-3.5 h-3.5 text-[#25D366]" /> Mobile Number *
+                      </label>
                       <input
                         type="tel"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleInputChange}
+                        value={waData.mobile}
+                        onChange={(e) => {
+                          setWaData({ ...waData, mobile: e.target.value });
+                          if (waErrors.mobile) setWaErrors({ ...waErrors, mobile: "" });
+                        }}
                         placeholder="+91 98765 43210"
-                        className={`w-full pl-9 pr-3 py-2 text-xs rounded-xl bg-slate-50 border ${
-                          errors.phone ? "border-red-500 bg-red-50/30" : "border-slate-200"
+                        className={`w-full px-3.5 py-2.5 text-sm rounded-xl bg-slate-50 border ${
+                          waErrors.mobile ? "border-red-500 bg-red-50" : "border-slate-200"
+                        } focus:outline-none focus:border-[#25D366] text-slate-900 transition-colors`}
+                      />
+                      {waErrors.mobile && (
+                        <p className="text-xs text-red-600 mt-1">{waErrors.mobile}</p>
+                      )}
+                    </div>
+
+                    {/* Submit Button */}
+                    <button
+                      type="submit"
+                      disabled={waSubmitting}
+                      className="w-full py-3 rounded-xl bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold text-sm flex items-center justify-center gap-2 transition-all shadow-lg shadow-emerald-500/25 active:scale-[0.99] cursor-pointer disabled:opacity-70 mt-2"
+                    >
+                      {waSubmitting ? (
+                        <span className="inline-block w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                      ) : (
+                        <>
+                          <Send className="w-4 h-4" />
+                          <span>Submit & Connect on WhatsApp</span>
+                        </>
+                      )}
+                    </button>
+
+                    <div className="pt-2 text-center">
+                      <a
+                        href="https://wa.me/919891221991?text=Hello%20Ashok%20ji%2C%20Eurocon%20Inquiry"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs text-slate-500 hover:text-[#25D366] font-medium underline underline-offset-2 transition-colors"
+                      >
+                        Or directly chat on WhatsApp without form
+                      </a>
+                    </div>
+                  </form>
+                )}
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
+
+      {/* ========================================================
+          5b. EMAIL FORM UI (APPEARS IN MIDDLE/CENTER OF PAGE)
+          Fields: Company Name, Name, Email, Mobile, Products/Services, Message, Send Message button
+          Success Message:
+          Thank You!
+          Your form has been submitted successfully. We’ll get back to you shortly.
+          ======================================================== */}
+      <AnimatePresence>
+        {activeModal === "email" && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 overflow-y-auto">
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={closeModal}
+              className="fixed inset-0 bg-slate-950/70 backdrop-blur-md"
+            />
+
+            {/* Centered Modal Card */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.92, y: 15 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.92, y: 15 }}
+              transition={{ type: "spring", damping: 25, stiffness: 320 }}
+              className="relative w-full max-w-lg bg-white rounded-2xl shadow-2xl overflow-hidden z-10 border border-slate-200 text-slate-800 my-auto max-h-[90vh] flex flex-col"
+            >
+              {/* Header */}
+              <div className="bg-gradient-to-r from-[#010A6D] via-[#010A6D] to-[#EB0311] text-white p-5 flex items-center justify-between shrink-0">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
+                    <Mail className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-extrabold text-lg text-white leading-tight">
+                      Email Enquiry Form
+                    </h3>
+                    <p className="text-xs text-blue-100">
+                      Eurocon Technical Sales & Engineering Team
+                    </p>
+                  </div>
+                </div>
+                <button
+                  onClick={closeModal}
+                  aria-label="Close"
+                  className="w-8 h-8 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center text-white transition-colors cursor-pointer"
+                >
+                  <X className="w-4 h-4" />
+                </button>
+              </div>
+
+              {/* Form Content */}
+              <div className="p-6 overflow-y-auto">
+                {emailSubmitted ? (
+                  <div className="py-8 text-center space-y-4">
+                    <div className="w-16 h-16 bg-emerald-50 border border-emerald-300 rounded-full flex items-center justify-center mx-auto text-emerald-600">
+                      <CheckCircle2 className="w-10 h-10" />
+                    </div>
+                    <h4 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
+                      Thank You!
+                    </h4>
+                    <p className="text-base text-slate-700 max-w-sm mx-auto font-medium leading-relaxed">
+                      Your form has been submitted successfully. We’ll get back to you shortly.
+                    </p>
+                    <div className="pt-4 flex flex-col gap-2.5">
+                      <button
+                        onClick={() => {
+                          setEmailSubmitted(false);
+                          setEmailData({
+                            companyName: "",
+                            name: "",
+                            email: "",
+                            mobile: "",
+                            product: "Air Handling Unit (AHU)",
+                            message: "",
+                          });
+                        }}
+                        className="w-full py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-xs transition-colors cursor-pointer"
+                      >
+                        Submit Another Inquiry
+                      </button>
+                      <button
+                        onClick={closeModal}
+                        className="w-full py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-xs transition-colors cursor-pointer"
+                      >
+                        Close
+                      </button>
+                    </div>
+                  </div>
+                ) : (
+                  <form onSubmit={handleEmailSubmit} className="space-y-3.5">
+                    {/* Company Name */}
+                    <div>
+                      <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1 flex items-center gap-1.5">
+                        <Building2 className="w-3.5 h-3.5 text-[#010A6D]" /> Company Name *
+                      </label>
+                      <input
+                        type="text"
+                        value={emailData.companyName}
+                        onChange={(e) => {
+                          setEmailData({ ...emailData, companyName: e.target.value });
+                          if (emailErrors.companyName) setEmailErrors({ ...emailErrors, companyName: "" });
+                        }}
+                        placeholder="e.g. Acme Infra Tech"
+                        className={`w-full px-3.5 py-2 text-xs rounded-xl bg-slate-50 border ${
+                          emailErrors.companyName ? "border-red-500 bg-red-50" : "border-slate-200"
                         } focus:outline-none focus:border-[#010A6D] text-slate-900 transition-colors`}
                       />
+                      {emailErrors.companyName && (
+                        <p className="text-xs text-red-600 mt-0.5">{emailErrors.companyName}</p>
+                      )}
                     </div>
-                    {errors.phone && (
-                      <p className="text-[10px] text-red-600 mt-0.5">{errors.phone}</p>
-                    )}
-                  </div>
 
-                  {/* Email Input */}
-                  <div>
-                    <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1">
-                      Email Address *
-                    </label>
-                    <div className="relative">
-                      <Mail className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
+                    {/* Name & Mobile Grid */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                      <div>
+                        <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1 flex items-center gap-1.5">
+                          <User className="w-3.5 h-3.5 text-[#010A6D]" /> Name *
+                        </label>
+                        <input
+                          type="text"
+                          value={emailData.name}
+                          onChange={(e) => {
+                            setEmailData({ ...emailData, name: e.target.value });
+                            if (emailErrors.name) setEmailErrors({ ...emailErrors, name: "" });
+                          }}
+                          placeholder="Your full name"
+                          className={`w-full px-3.5 py-2 text-xs rounded-xl bg-slate-50 border ${
+                            emailErrors.name ? "border-red-500 bg-red-50" : "border-slate-200"
+                          } focus:outline-none focus:border-[#010A6D] text-slate-900 transition-colors`}
+                        />
+                        {emailErrors.name && (
+                          <p className="text-xs text-red-600 mt-0.5">{emailErrors.name}</p>
+                        )}
+                      </div>
+
+                      <div>
+                        <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1 flex items-center gap-1.5">
+                          <Phone className="w-3.5 h-3.5 text-[#010A6D]" /> Mobile *
+                        </label>
+                        <input
+                          type="tel"
+                          value={emailData.mobile}
+                          onChange={(e) => {
+                            setEmailData({ ...emailData, mobile: e.target.value });
+                            if (emailErrors.mobile) setEmailErrors({ ...emailErrors, mobile: "" });
+                          }}
+                          placeholder="+91 98765 43210"
+                          className={`w-full px-3.5 py-2 text-xs rounded-xl bg-slate-50 border ${
+                            emailErrors.mobile ? "border-red-500 bg-red-50" : "border-slate-200"
+                          } focus:outline-none focus:border-[#010A6D] text-slate-900 transition-colors`}
+                        />
+                        {emailErrors.mobile && (
+                          <p className="text-xs text-red-600 mt-0.5">{emailErrors.mobile}</p>
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Email */}
+                    <div>
+                      <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1 flex items-center gap-1.5">
+                        <Mail className="w-3.5 h-3.5 text-[#010A6D]" /> Email *
+                      </label>
                       <input
                         type="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        placeholder="rajesh@company.com"
-                        className={`w-full pl-9 pr-3 py-2 text-xs rounded-xl bg-slate-50 border ${
-                          errors.email ? "border-red-500 bg-red-50/30" : "border-slate-200"
+                        value={emailData.email}
+                        onChange={(e) => {
+                          setEmailData({ ...emailData, email: e.target.value });
+                          if (emailErrors.email) setEmailErrors({ ...emailErrors, email: "" });
+                        }}
+                        placeholder="you@company.com"
+                        className={`w-full px-3.5 py-2 text-xs rounded-xl bg-slate-50 border ${
+                          emailErrors.email ? "border-red-500 bg-red-50" : "border-slate-200"
                         } focus:outline-none focus:border-[#010A6D] text-slate-900 transition-colors`}
                       />
+                      {emailErrors.email && (
+                        <p className="text-xs text-red-600 mt-0.5">{emailErrors.email}</p>
+                      )}
                     </div>
-                    {errors.email && (
-                      <p className="text-[10px] text-red-600 mt-0.5">{errors.email}</p>
-                    )}
-                  </div>
 
-                  {/* Product Requirement */}
-                  <div>
-                    <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1">
-                      Required System / Equipment
-                    </label>
-                    <div className="relative">
-                      <SlidersHorizontal className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" />
+                    {/* Products/Services Dropdown */}
+                    <div>
+                      <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1 flex items-center gap-1.5">
+                        <SlidersHorizontal className="w-3.5 h-3.5 text-[#010A6D]" /> Products / Services *
+                      </label>
                       <select
-                        name="product"
-                        value={formData.product}
-                        onChange={handleInputChange}
-                        className="w-full pl-9 pr-3 py-2 text-xs rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:border-[#010A6D] text-slate-900 transition-colors appearance-none cursor-pointer"
+                        value={emailData.product}
+                        onChange={(e) => setEmailData({ ...emailData, product: e.target.value })}
+                        className="w-full px-3.5 py-2 text-xs rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:border-[#010A6D] text-slate-900 transition-colors cursor-pointer"
                       >
                         {PRODUCTS_DATA.map((p) => (
                           <option key={p.id} value={p.name}>
                             {p.name}
                           </option>
                         ))}
-                        <option value="Custom Ventilation Requirement">Custom Ventilation Requirement</option>
-                        <option value="General Technical Inquiry">General Technical Inquiry</option>
+                        <option value="Custom Ventilation Engineering">Custom Ventilation Engineering</option>
+                        <option value="Industrial Turnkey Airflow Solution">Industrial Turnkey Airflow Solution</option>
+                        <option value="General HVAC Project Consultation">General HVAC Project Consultation</option>
                       </select>
                     </div>
-                  </div>
 
-                  {/* Optional Message */}
-                  <div>
-                    <label className="block text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1">
-                      Requirement / Specs (Optional)
-                    </label>
-                    <textarea
-                      name="message"
-                      rows={2}
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      placeholder="CFM requirement, static pressure, or project location..."
-                      className="w-full px-3 py-2 text-xs rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:border-[#010A6D] text-slate-900 transition-colors resize-none"
-                    />
-                  </div>
+                    {/* Message */}
+                    <div>
+                      <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1 flex items-center gap-1.5">
+                        <MessageSquare className="w-3.5 h-3.5 text-[#010A6D]" /> Message *
+                      </label>
+                      <textarea
+                        rows={3}
+                        value={emailData.message}
+                        onChange={(e) => {
+                          setEmailData({ ...emailData, message: e.target.value });
+                          if (emailErrors.message) setEmailErrors({ ...emailErrors, message: "" });
+                        }}
+                        placeholder="CFM requirement, static pressure, application details or project location..."
+                        className={`w-full px-3.5 py-2 text-xs rounded-xl bg-slate-50 border ${
+                          emailErrors.message ? "border-red-500 bg-red-50" : "border-slate-200"
+                        } focus:outline-none focus:border-[#010A6D] text-slate-900 transition-colors resize-none`}
+                      />
+                      {emailErrors.message && (
+                        <p className="text-xs text-red-600 mt-0.5">{emailErrors.message}</p>
+                      )}
+                    </div>
 
-                  {/* Submit Button */}
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full mt-1 py-2.5 rounded-xl bg-[#010A6D] hover:bg-[#010645] text-white font-bold text-xs flex items-center justify-center gap-2 transition-all shadow-md shadow-blue-900/20 hover:shadow-blue-900/35 active:scale-[0.99] cursor-pointer disabled:opacity-70"
-                  >
-                    {isSubmitting ? (
-                      <span className="inline-block w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                    ) : (
-                      <>
-                        <Send className="w-3.5 h-3.5" />
-                        <span>Send Quick Inquiry</span>
-                      </>
-                    )}
-                  </button>
+                    {/* Send Message Button */}
+                    <button
+                      type="submit"
+                      disabled={emailSubmitting}
+                      className="w-full py-3 rounded-xl bg-gradient-to-r from-[#010A6D] to-[#0A1647] hover:from-[#010645] hover:to-[#010A6D] text-white font-bold text-sm flex items-center justify-center gap-2 transition-all shadow-lg shadow-blue-900/25 active:scale-[0.99] cursor-pointer disabled:opacity-70 mt-1"
+                    >
+                      {emailSubmitting ? (
+                        <span className="inline-block w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                      ) : (
+                        <>
+                          <Send className="w-4 h-4" />
+                          <span>Send Message</span>
+                        </>
+                      )}
+                    </button>
 
-                  {/* Quick Direct Links Inside Form */}
-                  <div className="pt-2 border-t border-slate-100 flex items-center justify-between text-[10px] text-slate-500">
-                    <span>Direct:</span>
-                    <a
-                      href="tel:+919891221991"
-                      className="hover:text-[#010A6D] font-semibold flex items-center gap-1"
-                    >
-                      <Phone className="w-3 h-3 text-[#010A6D]" /> Call
-                    </a>
-                    <span>•</span>
-                    <a
-                      href="https://wa.me/919891221991"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-emerald-600 font-semibold flex items-center gap-1"
-                    >
-                      <span className="w-2 h-2 rounded-full bg-[#25D366]" /> WhatsApp
-                    </a>
-                    <span>•</span>
-                    <a
-                      href="mailto:sales@eurocon.in"
-                      className="hover:text-[#EB0311] font-semibold flex items-center gap-1"
-                    >
-                      <Mail className="w-3 h-3 text-[#EB0311]" /> Email
-                    </a>
-                  </div>
-                </form>
-              )}
-            </div>
-          </motion.div>
+                    {/* Direct Contact Links */}
+                    <div className="pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
+                      <span>Direct:</span>
+                      <a href="tel:+919891221991" className="hover:text-[#010A6D] font-semibold flex items-center gap-1">
+                        <Phone className="w-3 h-3 text-[#010A6D]" /> +91 98912 21991
+                      </a>
+                      <span>•</span>
+                      <a href="mailto:sales@eurocon.in" className="hover:text-[#EB0311] font-semibold flex items-center gap-1">
+                        <Mail className="w-3 h-3 text-[#EB0311]" /> sales@eurocon.in
+                      </a>
+                    </div>
+                  </form>
+                )}
+              </div>
+            </motion.div>
+          </div>
         )}
       </AnimatePresence>
-
-      {/* Floating Action Buttons Column */}
-      <div className="flex flex-col items-end gap-2.5 sm:gap-3">
-        {/* Scroll to Top Button */}
-        {showScrollTop && (
-          <button
-            onClick={scrollToTop}
-            aria-label="Scroll to top"
-            title="Scroll to top"
-            className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#1e293b]/90 hover:bg-[#334155] text-white flex items-center justify-center shadow-lg border border-white/20 transition-all hover:scale-110 active:scale-95 cursor-pointer backdrop-blur-xs"
-          >
-            <ArrowUp className="w-4 h-4 sm:w-5 sm:h-5" />
-          </button>
-        )}
-
-        {/* Quick Inquiry Form Trigger Button */}
-        <button
-          onClick={() => setIsFormOpen((prev) => !prev)}
-          aria-label={isFormOpen ? "Close Inquiry Form" : "Open Quick Inquiry Form"}
-          title={isFormOpen ? "Close Form" : "Quick Inquiry / Quote"}
-          className={`group relative w-12 h-12 sm:w-13 sm:h-13 rounded-full flex items-center justify-center shadow-xl transition-all duration-200 hover:scale-110 active:scale-95 cursor-pointer ${
-            isFormOpen
-              ? "bg-slate-900 text-white border border-white/20"
-              : "bg-gradient-to-tr from-[#010A6D] to-[#0A1647] text-white border border-blue-400/50 shadow-blue-900/30"
-          }`}
-        >
-          {isFormOpen ? (
-            <X className="w-5 h-5 text-white" />
-          ) : (
-            <>
-              {/* Soft pulse notification ring */}
-              <span className="absolute -top-1 -right-1 w-3.5 h-3.5 rounded-full bg-[#EB0311] border-2 border-white animate-pulse" />
-              <MessageSquare className="w-5 h-5 text-white" />
-            </>
-          )}
-
-          <span className="pointer-events-none absolute right-full mr-3 whitespace-nowrap rounded-lg bg-slate-900/95 backdrop-blur-xs px-3 py-1.5 text-xs font-semibold text-white shadow-md border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-            {isFormOpen ? "Close Inquiry Form" : "Quick Inquiry Form"}
-          </span>
-        </button>
-
-        {/* Direct Email Button */}
-        <a
-          href="mailto:sales@eurocon.in?subject=Eurocon%20Inquiry%20from%20Website&body=Hello%20Eurocon%20Team%2C%0A%0AI%20would%20like%20to%20inquire%20about%20your%20HVAC%20and%20Airflow%20Solutions.%0A%0APlease%20get%20in%20touch%20with%20me.%0A%0AThank%20you."
-          aria-label="Email Eurocon Sales"
-          title="Email: sales@eurocon.in"
-          className="group relative w-12 h-12 sm:w-13 sm:h-13 rounded-full bg-[#EB0311] hover:bg-[#c9020e] text-white flex items-center justify-center shadow-xl border border-red-300/40 transition-all hover:scale-110 active:scale-95 cursor-pointer"
-        >
-          <Mail className="w-5 h-5 text-white" />
-          <span className="pointer-events-none absolute right-full mr-3 whitespace-nowrap rounded-lg bg-slate-900/95 backdrop-blur-xs px-3 py-1.5 text-xs font-semibold text-white shadow-md border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-            Email: sales@eurocon.in
-          </span>
-        </a>
-
-        {/* Direct Phone Call Button */}
-        <a
-          href="tel:+919891221991"
-          aria-label="Call Ashok Dhull"
-          title="Call Ashok Dhull: +91 98912 21991"
-          className="group relative w-12 h-12 sm:w-13 sm:h-13 rounded-full bg-[#010A6D] hover:bg-blue-950 text-white flex items-center justify-center shadow-xl border border-blue-400/40 transition-all hover:scale-110 active:scale-95 cursor-pointer"
-        >
-          <Phone className="w-5 h-5 text-white" />
-          <span className="pointer-events-none absolute right-full mr-3 whitespace-nowrap rounded-lg bg-slate-900/95 backdrop-blur-xs px-3 py-1.5 text-xs font-semibold text-white shadow-md border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-            Call: +91 98912 21991
-          </span>
-        </a>
-
-        {/* WhatsApp Chat Button */}
-        <a
-          href="https://wa.me/919891221991?text=Hello%20Ashok%20ji%20%2F%20Eurocon%20Team%2C%20I%20would%20like%20to%20inquire%20about%20your%20HVAC%20and%20Airflow%20Solutions."
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Chat with Ashok Dhull on WhatsApp"
-          title="Chat with Ashok Dhull on WhatsApp"
-          className="group relative w-12 h-12 sm:w-13 sm:h-13 rounded-full bg-[#25D366] hover:bg-[#20ba5a] text-white flex items-center justify-center shadow-xl transition-all hover:scale-110 active:scale-95 cursor-pointer"
-        >
-          {/* Pulse ring */}
-          <span className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-35 pointer-events-none" />
-          <svg
-            className="w-6 h-6 sm:w-7 sm:h-7 fill-current relative z-10"
-            viewBox="0 0 24 24"
-          >
-            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
-          </svg>
-          <span className="pointer-events-none absolute right-full mr-3 whitespace-nowrap rounded-lg bg-slate-900/95 backdrop-blur-xs px-3 py-1.5 text-xs font-semibold text-white shadow-md border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-            WhatsApp: Ashok Dhull
-          </span>
-        </a>
-      </div>
-    </div>
+    </>
   );
 }
-

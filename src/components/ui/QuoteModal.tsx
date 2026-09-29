@@ -148,21 +148,22 @@ export default function QuoteModal({ isOpen, onClose, initialProduct = "" }: Quo
                   <div className="w-16 h-16 bg-emerald-50 border border-emerald-200 rounded-full flex items-center justify-center mx-auto text-emerald-600">
                     <CheckCircle2 className="w-10 h-10" />
                   </div>
-                  <h4 className="text-2xl font-bold text-[#334155]">
-                    RFQ Specification Submitted Successfully!
+                  <h4 className="text-2xl sm:text-3xl font-extrabold text-[#334155]">
+                    Thank You!
                   </h4>
-                  <p className="text-sm text-slate-800 max-w-md mx-auto font-normal">
-                    Thank you, <span className="font-semibold text-black">{formData.fullName}</span>. Your RFQ inquiry for <span className="font-semibold text-blue-600">{formData.product}</span> has been logged under reference ticket <span className="font-mono font-bold text-black">#EUR-{ticketId}</span>.
+                  <p className="text-base text-slate-700 max-w-md mx-auto font-medium leading-relaxed">
+                    Your form has been submitted successfully. We’ll get back to you shortly.
                   </p>
                   <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-800 max-w-md mx-auto text-left space-y-1">
-                    <p className="font-semibold text-black">What happens next?</p>
-                    <p>• Senior application engineer assigned to review CFM & static pressure selections.</p>
-                    <p>• Comprehensive technical proposal & fan curve dispatched to {formData.email}.</p>
+                    <p className="font-semibold text-black">Reference Details:</p>
+                    <p>• Inquiry reference ticket: <span className="font-mono font-bold text-black">#EUR-{ticketId}</span></p>
+                    <p>• Product: <span className="font-semibold text-blue-700">{formData.product}</span></p>
+                    <p>• Assigned engineering team will review CFM & specifications.</p>
                   </div>
                   <div className="pt-4">
                     <button
                       onClick={onClose}
-                      className="px-6 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-800 text-white font-medium text-sm transition-colors"
+                      className="px-6 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-800 text-white font-semibold text-sm transition-colors cursor-pointer shadow-sm"
                     >
                       Return to Website
                     </button>

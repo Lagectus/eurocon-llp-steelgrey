@@ -41,6 +41,14 @@ export const metadata: Metadata = {
   authors: [{ name: "Eurocon System LLP" }],
   creator: "Eurocon System LLP",
   publisher: "Eurocon System LLP",
+  icons: {
+    icon: [
+      { url: "/logo.png", type: "image/png" },
+      { url: "/favicon.ico" },
+    ],
+    shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
   formatDetection: {
     email: false,
     address: false,
