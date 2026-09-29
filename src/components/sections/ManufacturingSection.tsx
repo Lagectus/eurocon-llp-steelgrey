@@ -55,7 +55,7 @@ export default function ManufacturingSection({ onOpenQuoteModal }: Manufacturing
             transition={{ duration: 0.7, delay: 0.1 }}
             className="text-base sm:text-lg text-[#64748B] font-light leading-relaxed max-w-2xl"
           >
-            Our dedicated fabrication facility integrates high-precision CNC fiber lasers, automated SMACNA lock-forming coil lines, certified robotic welding, and automated multi-nozzle aerodynamic test rigs.
+            Our dedicated fabrication facility integrates high-precision CNC fiber lasers, automated SMACNA lock-forming coil lines, precision robotic welding, and automated multi-nozzle aerodynamic test rigs.
           </motion.p>
 
           {/* Plant Capability Highlights */}

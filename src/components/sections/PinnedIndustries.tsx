@@ -34,7 +34,7 @@ export default function PinnedIndustries() {
       name: "Commercial & Corporate Towers",
       shortTitle: "Commercial",
       systemLabel: "Modular Double-Skin AHU System",
-      tagline: "Acoustic comfort, NC-35 noise criteria, and high-efficiency climate distribution for LEED-certified workplaces.",
+      tagline: "Acoustic comfort, NC-35 noise criteria, and high-efficiency climate distribution for modern workplaces.",
       statValue: "Up to 28%",
       statLabel: "Energy Reduction",
       secondaryStat: "NC-35",
@@ -152,7 +152,7 @@ export default function PinnedIndustries() {
       highlights: [
         { title: "Crevice-Free SS316 Casing", desc: "Smooth internal geometry prevents microbial growth and withstands sanitization." },
         { title: "Cascade Differential Pressure", desc: "Automated damper regulation prevents contaminated air backflow between zones." },
-        { title: "Multi-Tier HEPA Sealing", desc: "Gel-seal and mechanical gasket tracks certified for zero particulate bypass." }
+        { title: "Multi-Tier HEPA Sealing", desc: "Gel-seal and mechanical gasket tracks engineered for zero particulate bypass." }
       ],
       equipment: ["Hygienic Double-Skin AHU", "TFA Cleanroom Units", "Safe-Change Filter Boxes"],
       icon: Hospital,

@@ -192,7 +192,7 @@ export default function ProductDetailModal({
 
                 {product.specs.standards && (
                   <div className="mt-3 flex flex-wrap items-center gap-2">
-                    <span className="text-xs font-mono text-slate-900 font-semibold">Certified Benchmarks:</span>
+                    <span className="text-xs font-mono text-slate-900 font-semibold">Engineering Benchmarks:</span>
                     {product.specs.standards.map((std, i) => (
                       <span key={i} className="px-2 py-0.5 rounded bg-slate-100 text-[#334155] text-xs font-mono border border-slate-200">
                         {std}

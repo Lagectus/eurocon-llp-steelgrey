@@ -17,14 +17,7 @@ export const COMPANY_INFO = {
     salesEmail: "sales@eurocon.in",
     supportEmail: "sales@eurocon.in",
     workingHours: "Mon – Sat: 08:30 AM – 06:30 PM IST"
-  },
-  certifications: [
-    "Aerodynamic & Acoustic Laboratory Performance Testing",
-    "High-Temperature Fire Smoke Exhaust Engineering Standards",
-    "Total Quality Management & Factory Acceptance Testing",
-    "Environmental Safety Standards",
-    "SMACNA HVAC Duct Construction Standards"
-  ]
+  }
 };
 
 export const METRIC_HIGHLIGHTS: MetricHighlight[] = [
@@ -262,7 +255,7 @@ export const PRODUCTS_DATA: Product[] = [
       driveType: "Direct Drive with 3-Speed PSC Motor or Continuous 0-10V EC Motor",
       motorRating: "35 W to 450 W (Energy Efficient Brushless DC / PSC)",
       operatingTemp: "Chilled Water 4°C - 12°C / Hot Water up to 80°C",
-      standards: ["Ultra-Quiet Acoustic Design", "CE Compliance", "Zero-Condensation Drain Pan"]
+      standards: ["Ultra-Quiet Acoustic Design", "Factory Run Tested", "Zero-Condensation Drain Pan"]
     },
     keyFeatures: [
       "Ultra-compact slim chassis height starting at just 220mm, ideal for restricted false ceiling heights",
@@ -539,7 +532,7 @@ export const INDUSTRIES_DATA: Industry[] = [
     name: "Commercial & Corporate Towers",
     code: "COM-01",
     tagline: "Acoustic comfort, high IAQ and energy-efficient climate distribution.",
-    description: "Modern commercial headquarters and high-rise office towers demand whisper-quiet ventilation, ultra-reliable fresh air delivery, and intelligent demand-controlled HVAC integration for LEED/GRIHA certified building efficiency.",
+    description: "Modern commercial headquarters and high-rise office towers demand whisper-quiet ventilation, ultra-reliable fresh air delivery, and intelligent demand-controlled HVAC integration for high-performance energy-efficient building standards.",
     keyChallenges: [
       "Strict noise criteria (NC 35 or lower) across occupied tenant zones",
       "Energy costs from 24/7 continuous air handling and fresh air pressurization",
@@ -621,7 +614,7 @@ export const INDUSTRIES_DATA: Industry[] = [
     keyChallenges: [
       "Overpressure and aerodynamic drag from high-speed train transit",
       "Confined underground spaces with limited egress routes",
-      "Extreme fire safety compliance requiring 300°C / 400°C certified ventilation"
+      "Extreme fire safety compliance requiring 300°C / 400°C high-temperature ventilation"
     ],
     solutionsProvided: [
       "High-thrust reversible impulse and tunnel jet fans",
@@ -793,7 +786,7 @@ export const QUALITY_STEPS: QualityStep[] = [
   {
     step: "06",
     code: "FAT-DISP",
-    title: "Factory Acceptance Testing (FAT) & Dispatch Certification",
+    title: "Factory Acceptance Testing (FAT) & Quality Verification",
     description: "Before release, a comprehensive 2-hour continuous test run records vibration FFT spectrums, thermal motor winding rise, and paint film DFT thickness before tamper-evident crating.",
     methodology: "Full electrical, vibration, and dimensional sign-off report with traceable serial barcode",
     complianceStandard: "Factory Acceptance Quality Dispatch Protocol",
@@ -869,7 +862,7 @@ export const PROJECT_CASE_STUDIES: ProjectCaseStudy[] = [
       "Automated Modulating Pressure Relief Dampers"
     ],
     resultsAchieved: [
-      "Enabled project to secure LEED Platinum green building certification",
+      "Enabled project to achieve peak green building energy efficiency benchmarks",
       "Maintained constant 50 Pa positive stairwell pressurization across all 50 floors in simulated fire tests"
     ],
     image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=80"
@@ -924,10 +917,10 @@ export const WHY_EUROCON_PILLARS = [
   {
     id: "pillar-safety",
     number: "02",
-    title: "Certified Life-Safety Compliance",
+    title: "Engineered Life-Safety Compliance",
     description: "Our smoke management systems and high-temperature fans are engineered in strict compliance with NBC and fire-safety ventilation standards to ensure dependable emergency operation.",
     stat: "400°C / 2h",
-    statLabel: "Fire-Rated Extreme Certification"
+    statLabel: "Fire-Rated High-Temperature Rating"
   },
   {
     id: "pillar-manufacturing",

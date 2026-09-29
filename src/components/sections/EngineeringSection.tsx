@@ -68,7 +68,7 @@ export default function EngineeringSection() {
         <SectionHeading
           eyebrow="PRECISION ENGINEERING. MEASURABLE PERFORMANCE."
           title="AERODYNAMIC SCIENCE & NUMERICAL MODELING"
-          subtitle="We combine computational fluid dynamics, dynamic vibration analysis, and certified laboratory testing to produce the industry's most efficient air management systems."
+          subtitle="We combine computational fluid dynamics, dynamic vibration analysis, and advanced laboratory testing to produce the industry's most efficient air management systems."
         />
 
         {/* 4 Core Engineering Pillars */}

@@ -45,7 +45,7 @@ export default function WhyEurocon() {
         <SectionHeading
           eyebrow="THE EUROCON ADVANTAGE"
           title="WHY CHOOSE EUROCON SYSTEM LLP?"
-          subtitle="Engineering rigor, precision manufacturing, certified life-safety compliance, and comprehensive on-site commissioning."
+          subtitle="Engineering rigor, precision manufacturing, life-safety compliance, and comprehensive on-site commissioning."
         />
 
         {/* Modern Asymmetric Feature Grid */}
