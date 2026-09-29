@@ -26,7 +26,7 @@ export default function AboutPage() {
         onOpenQuoteModal={() => setIsQuoteOpen(true)}
       />
 
-      <main className="pt-24 pb-20">
+      <main className="pb-20">
         {/* Page Hero Banner */}
         <section className="relative min-h-[520px] sm:min-h-[580px] lg:min-h-[640px] flex items-end bg-slate-900 border-b border-white/10 overflow-hidden">
           {/* Background Factory Banner Image */}
