@@ -368,11 +368,11 @@ export const PRODUCTS_DATA: Product[] = [
     cfdImage: "/images/products/cfd-cabinet-exhaust.jpg",
     schematicSvgType: "cabinetexhaust",
     specs: {
-      airflowRange: "500 to 38,000 CFM (850 to 64,500 m³/h)",
-      staticPressure: "Up to 1,400 Pa (5.6 in. wg)",
+      airflowRange: "500 to 50,000 CFM",
+      staticPressure: "Up to 2,000 Pa",
       noiseLevel: "34 dBA to 56 dBA @ 1.5m",
       driveType: "Direct-Drive Multi-Speed / V-Belt Driven Centrifugal DIDW Blower",
-      motorRating: "0.37 kW to 30 kW (Class F / Class H High-Temp Rated)",
+      motorRating: "IE2 to IE5 (0.37 kW to 30 kW)",
       operatingTemp: "Continuous up to +70°C (Emergency smoke options up to 250°C / 2 hrs)",
       casingConstruction: "25mm Double-Skin Acoustic Insulated Panels with Internal Neoprene Gaskets",
       standards: ["Acoustic Sound Attenuated", "High-Temp Fire Smoke Exhaust", "Heavy-Duty Fire Rated Construction"]

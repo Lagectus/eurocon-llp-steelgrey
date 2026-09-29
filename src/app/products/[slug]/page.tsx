@@ -337,6 +337,8 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
                       <span className="text-xs sm:text-sm font-extrabold text-[#334155] mt-0.5 block truncate" title={product.specs.motorRating}>
                         {product.specs.motorRating.includes("IE3 to IE5")
                           ? "IE3 to IE5"
+                          : product.specs.motorRating.includes("IE2 to IE5")
+                          ? "IE2 to IE5"
                           : product.specs.motorRating}
                       </span>
                     </motion.div>
