@@ -124,7 +124,7 @@ export default function AboutPage() {
             ref={heroRef}
             className="relative min-h-[640px] sm:min-h-[720px] lg:min-h-[780px] flex items-end bg-slate-900 border-b border-white/10 overflow-hidden"
           >
-            {/* Background Factory Banner Image with Scroll Parallax - Framed at 20% to clearly show company logo */}
+            {/* Background Factory Banner Image with Scroll Parallax - Framed higher up to showcase full roof and company logo */}
             <div
               ref={bgRef}
               className="absolute -inset-x-0 -top-16 -bottom-32 z-0 will-change-transform opacity-0 pointer-events-none"
@@ -132,12 +132,12 @@ export default function AboutPage() {
               <img
                 src="/aboutus.png"
                 alt="Eurocon System LLP Manufacturing Plant & Facility"
-                className="w-full h-full object-cover object-[center_20%]"
+                className="w-full h-full object-cover object-[center_14%] sm:object-[center_15%]"
               />
             </div>
 
-            {/* Content Container - Raised by 20% with ample bottom padding so card never clips */}
-            <div className="w-full max-w-7xl mr-auto ml-0 px-4 sm:px-8 lg:px-12 xl:px-16 relative z-10 pt-28 sm:pt-36 lg:pt-40 pb-12 sm:pb-14 lg:pb-16">
+            {/* Content Container - Raised higher up with generous bottom clearance */}
+            <div className="w-full max-w-7xl mr-auto ml-0 px-4 sm:px-8 lg:px-12 xl:px-16 relative z-10 pt-20 sm:pt-24 lg:pt-28 pb-20 sm:pb-24 lg:pb-28">
               <div
                 ref={cardRef}
                 className="max-w-lg lg:max-w-xl rounded-2xl sm:rounded-3xl bg-white/25 sm:bg-white/30 backdrop-blur-md border border-white/60 shadow-[0_8px_32px_0_rgba(15,23,42,0.12),inset_0_1px_1px_0_rgba(255,255,255,0.9)] p-5 sm:p-7 space-y-3.5 opacity-0 will-change-transform relative overflow-hidden"
