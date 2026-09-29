@@ -134,7 +134,7 @@ export const PRODUCTS_DATA: Product[] = [
       casingConstruction: "25mm / 50mm Double-Skin PUF Injected (40 kg/m³) with SS304/SS316 Water Sump",
       filtration: "EU4 Pre-Filter + Celdek 5090 Evaporative Cooling / Scrubbing Media",
       driveType: "Direct-Drive EC Plug Fan / V-Belt DIDW Centrifugal Blower",
-      motorRating: "1.5 kW to 90 kW (IE3 / IE4 / EC High Efficiency)",
+      motorRating: "1.5 kW to 90 kW (IE3 to IE5 / EC High Efficiency)",
       operatingTemp: "Ambient to +55°C",
       standards: ["High Saturation Efficiency", "Hygienic Evaporative Design", "Dual-Drive Capability"]
     },
