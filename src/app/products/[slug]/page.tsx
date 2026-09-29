@@ -339,6 +339,8 @@ export default function ProductDetailPage({ params }: ProductPageProps) {
                           ? "IE3 to IE5"
                           : product.specs.motorRating.includes("IE2 to IE5")
                           ? "IE2 to IE5"
+                          : product.specs.motorRating.startsWith("IE1")
+                          ? "IE1"
                           : product.specs.motorRating}
                       </span>
                     </motion.div>

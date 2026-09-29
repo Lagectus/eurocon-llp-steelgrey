@@ -483,11 +483,11 @@ export const PRODUCTS_DATA: Product[] = [
     ],
     schematicSvgType: "inline",
     specs: {
-      airflowRange: "500 to 25,000 CFM (850 to 42,500 m³/h)",
-      staticPressure: "Up to 1,200 Pa (4.8 in. wg)",
+      airflowRange: "500 to 6,000 CFM",
+      staticPressure: "Up to 400 Pa",
       noiseLevel: "36 dBA to 52 dBA @ 1.5m",
       driveType: "Direct-Drive EC Motor / Belt Drive DIDW Blower",
-      motorRating: "0.37 kW to 18.5 kW, Class F / IP55 (IE3/IE4)",
+      motorRating: "IE1 (0.37 kW to 18.5 kW, Class F / IP55)",
       operatingTemp: "-20°C to +60°C Continuous",
       casingConstruction: "Galvanized Sheet Steel Double-Skin with Acoustic Insulation",
       standards: ["Low-Profile In-Line Design", "Acoustically Insulated", "Dynamic Balancing"]
