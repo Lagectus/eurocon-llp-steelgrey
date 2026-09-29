@@ -122,7 +122,7 @@ export default function AboutPage() {
           {/* Page Hero Banner with Parallax Scroll & Entrance Animations */}
           <section
             ref={heroRef}
-            className="relative min-h-[640px] sm:min-h-[720px] lg:min-h-[780px] flex items-end bg-slate-900 border-b border-white/10 overflow-hidden"
+            className="relative min-h-[640px] sm:min-h-[720px] lg:min-h-[780px] flex items-center bg-slate-900 border-b border-white/10 overflow-hidden"
           >
             {/* Background Factory Banner Image with Scroll Parallax - Framed higher up to showcase full roof and company logo */}
             <div
@@ -136,8 +136,8 @@ export default function AboutPage() {
               />
             </div>
 
-            {/* Content Container - Raised higher up with generous bottom clearance */}
-            <div className="w-full max-w-7xl mr-auto ml-0 px-4 sm:px-8 lg:px-12 xl:px-16 relative z-10 pt-20 sm:pt-24 lg:pt-28 pb-20 sm:pb-24 lg:pb-28">
+            {/* Content Container - Vertically centered and prominently raised */}
+            <div className="w-full max-w-7xl mr-auto ml-0 px-4 sm:px-8 lg:px-12 xl:px-16 relative z-10 pt-24 sm:pt-28 lg:pt-32 pb-12 sm:pb-16">
               <div
                 ref={cardRef}
                 className="max-w-lg lg:max-w-xl rounded-2xl sm:rounded-3xl bg-white/25 sm:bg-white/30 backdrop-blur-md border border-white/60 shadow-[0_8px_32px_0_rgba(15,23,42,0.12),inset_0_1px_1px_0_rgba(255,255,255,0.9)] p-5 sm:p-7 space-y-3.5 opacity-0 will-change-transform relative overflow-hidden"
