@@ -15,8 +15,6 @@ import {
   Warehouse,
   Plane,
   ArrowRight,
-  CheckCircle2,
-  AlertTriangle,
 } from "lucide-react";
 
 interface IndustriesSectionProps {
@@ -105,108 +103,74 @@ export default function IndustriesSection({ onOpenQuoteModal }: IndustriesSectio
             })}
           </div>
 
-          {/* Right Column: Dynamic Deep-Dive Feature Panel (7 Cols) */}
-          <div className="lg:col-span-7 bg-white rounded-2xl border border-slate-200 shadow-xl overflow-hidden p-6 sm:p-8 text-[#334155]">
+          {/* Right Column: Full-Bleed Industry Image Showcase (7 Cols) */}
+          <div className="lg:col-span-7 relative rounded-2xl sm:rounded-3xl border border-slate-200 shadow-xl overflow-hidden bg-slate-900 h-[500px] sm:h-[560px] lg:h-[620px] xl:h-[640px]">
             <AnimatePresence mode="wait">
               <motion.div
                 key={selectedIndustry.id}
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -15 }}
-                transition={{ duration: 0.3 }}
-                className="space-y-6"
+                initial={{ opacity: 0, scale: 1.03 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.98 }}
+                transition={{ duration: 0.35, ease: "easeOut" }}
+                className="relative w-full h-full"
               >
-                {/* Sector Header */}
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-200 pb-5">
-                  <div>
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className="px-2 py-0.5 rounded bg-blue-50 border border-blue-200 text-blue-700 text-xs font-mono font-bold">
-                        SECTOR: {selectedIndustry.code}
-                      </span>
-                      <span className="text-xs font-mono text-slate-900 font-semibold">
-                        EUROCON APPLICATION BLUEPRINT
-                      </span>
-                    </div>
-                    <h3 className="text-2xl font-black text-black">
-                      {selectedIndustry.name}
-                    </h3>
+                {/* Full-Bleed High-Definition Sector Image */}
+                <img
+                  src={selectedIndustry.image}
+                  alt={selectedIndustry.name}
+                  className="w-full h-full object-cover object-center select-none"
+                />
+
+                {/* Top Subtle Vignette Gradient */}
+                <div className="absolute top-0 inset-x-0 h-28 bg-gradient-to-b from-slate-950/70 via-slate-950/20 to-transparent pointer-events-none" />
+
+                {/* Top Floating Badges */}
+                <div className="absolute top-4 sm:top-6 inset-x-4 sm:inset-x-6 flex items-center justify-between gap-3 pointer-events-none">
+                  <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-950/70 backdrop-blur-md border border-white/20 text-white text-xs font-mono font-bold tracking-wider shadow-lg">
+                    <span className="w-2 h-2 rounded-full bg-[#EB0311] animate-pulse" />
+                    <span>{selectedIndustry.code}</span>
+                    <span className="text-white/40">•</span>
+                    <span>SECTOR APPLICATION</span>
                   </div>
 
-                  <div className="p-3 rounded-xl bg-slate-50 border border-slate-200 self-start sm:self-auto text-right">
-                    <span className="block text-[10px] font-mono text-blue-600 uppercase font-bold">
-                      {selectedIndustry.stats.label}
-                    </span>
-                    <span className="text-xl font-black text-black">
-                      {selectedIndustry.stats.value}
-                    </span>
+                  <div className="px-3.5 py-1.5 rounded-full bg-[#010A6D]/85 backdrop-blur-md border border-white/20 text-white text-xs font-mono font-bold shadow-lg">
+                    <span>{selectedIndustry.stats.label}: <strong>{selectedIndustry.stats.value}</strong></span>
                   </div>
                 </div>
 
-                {/* Sector Narrative */}
-                <p className="text-sm sm:text-base text-slate-900 leading-relaxed font-medium">
-                  {selectedIndustry.description}
-                </p>
+                {/* Bottom Gradient Overlay & Caption */}
+                <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950/95 via-slate-950/70 to-transparent pt-28 pb-6 sm:pb-8 px-6 sm:px-8">
+                  <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight leading-tight">
+                    {selectedIndustry.name}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-200 font-medium leading-relaxed mt-2 max-w-xl line-clamp-2">
+                    {selectedIndustry.description}
+                  </p>
 
-                {/* Grid of Challenges & Solutions */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 pt-2">
-                  {/* Key Engineering Challenges */}
-                  <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-3">
-                    <h4 className="text-xs font-bold font-mono uppercase text-black flex items-center gap-1.5">
-                      <AlertTriangle className="w-4 h-4 text-amber-500" />
-                      Critical Project Challenges
-                    </h4>
-                    <ul className="space-y-2">
-                      {selectedIndustry.keyChallenges.map((ch, i) => (
-                        <li key={i} className="text-xs text-slate-900 flex items-start gap-2 font-medium">
-                          <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-1.5 shrink-0" />
-                          <span>{ch}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Engineered Solutions */}
-                  <div className="p-4 rounded-xl bg-blue-50/70 border border-blue-200 space-y-3">
-                    <h4 className="text-xs font-bold font-mono uppercase text-blue-800 flex items-center gap-1.5">
-                      <CheckCircle2 className="w-4 h-4 text-blue-600" />
-                      Eurocon Engineered Solutions
-                    </h4>
-                    <ul className="space-y-2">
-                      {selectedIndustry.solutionsProvided.map((sol, i) => (
-                        <li key={i} className="text-xs text-slate-900 flex items-start gap-2 font-medium">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-blue-600 mt-0.5 shrink-0" />
-                          <span>{sol}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-
-                {/* Recommended Equipment & Quote Action */}
-                <div className="pt-4 border-t border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                  <div>
-                    <span className="block text-[11px] font-mono text-slate-900 uppercase font-semibold">
-                      Recommended System Family:
-                    </span>
-                    <div className="flex flex-wrap gap-1.5 mt-1">
+                  {/* Recommended Equipment & Quick RFQ Action */}
+                  <div className="pt-4 mt-3 border-t border-white/15 flex flex-wrap items-center justify-between gap-3">
+                    <div className="flex flex-wrap items-center gap-1.5">
+                      <span className="text-[10px] font-mono text-slate-300 uppercase font-semibold mr-1">
+                        Systems:
+                      </span>
                       {selectedIndustry.recommendedProducts.map((p, i) => (
                         <span
                           key={i}
-                          className="px-2.5 py-1 rounded-md bg-slate-50 text-slate-900 border border-slate-200 text-xs font-bold"
+                          className="px-2.5 py-1 rounded-md bg-white/15 backdrop-blur-md border border-white/20 text-white text-xs font-semibold"
                         >
                           {p}
                         </span>
                       ))}
                     </div>
-                  </div>
 
-                  <button
-                    onClick={() => onOpenQuoteModal(`Industry Solution: ${selectedIndustry.name}`)}
-                    className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-800 text-white font-bold text-xs transition-colors shadow-md shrink-0 cursor-pointer"
-                  >
-                    <span>Request Sector RFQ</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </button>
+                    <button
+                      onClick={() => onOpenQuoteModal(`Industry Solution: ${selectedIndustry.name}`)}
+                      className="inline-flex items-center justify-center gap-2 px-5 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs transition-colors shadow-lg shadow-blue-600/30 cursor-pointer"
+                    >
+                      <span>Request Sector RFQ</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
                 </div>
               </motion.div>
             </AnimatePresence>
