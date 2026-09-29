@@ -70,12 +70,12 @@ export const PRODUCTS_DATA: Product[] = [
     cfdImage: "/images/products/cfd-fan-section.jpg",
     schematicSvgType: "fansection",
     specs: {
-      airflowRange: "2,000 to 11,00,000 CFM",
+      airflowRange: "500 to 1,00,000 CFM",
       staticPressure: "Up to 3,000 Pa",
       impellerDiameter: "280 mm to 1,600 mm",
       casingConstruction: "Single or Double-Skin 25mm / 50mm PUF Casing with Quick-Access Doors",
       driveType: "Direct-Drive Unhoused Plug Fan / Belt-Drive DIDW Centrifugal / EC Motor",
-      motorRating: "IE3 to IE5",
+      motorRating: "Motor Efficiency: IE2, IE3, IE4, IE5, IE6",
       operatingTemp: "-20°C to +80°C (High-temperature rated options up to 250°C)",
       standards: ["High Aerodynamic Performance", "Dynamic Precision Balancing"]
     },
@@ -106,7 +106,7 @@ export const PRODUCTS_DATA: Product[] = [
     ],
     customOptions: [
       { title: "Impeller Type", description: "Backward curved plug fan, aerofoil centrifugal, or forward curved double inlet blower.", badge: "Plug / DIDW" },
-      { title: "Motor Efficiency", description: "IE3, IE4, IE5 High Efficiency induction or EC Brushless motors.", badge: "IE3 - IE5" },
+      { title: "Motor Efficiency", description: "IE2, IE3, IE4, IE5, IE6 High Efficiency induction or EC Brushless motors.", badge: "IE2 - IE6" },
       { title: "Access Layout", description: "Left-hand or Right-hand quick-access inspection door with viewing window and marine light.", badge: "Custom Access" },
       { title: "Mounting Isolation", description: "Internal spring isolators with seismic restraints or external rubber-in-shear mounts.", badge: "Vibration Free" }
     ]
