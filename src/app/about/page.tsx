@@ -1,6 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import SmoothScroll from "@/components/layout/SmoothScroll";
+import ScrollProgress from "@/components/layout/ScrollProgress";
 import Navbar from "@/components/layout/Navbar";
 import MobileMenu from "@/components/layout/MobileMenu";
 import Footer from "@/components/layout/Footer";
@@ -8,58 +10,174 @@ import QuoteModal from "@/components/ui/QuoteModal";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { Factory, Cpu, CheckCircle2, ArrowRight, Wind } from "lucide-react";
 import Link from "next/link";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function AboutPage() {
   const [isQuoteOpen, setIsQuoteOpen] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
+  const heroRef = useRef<HTMLElement>(null);
+  const bgRef = useRef<HTMLDivElement>(null);
+  const cardRef = useRef<HTMLDivElement>(null);
+  const eyebrowRef = useRef<HTMLDivElement>(null);
+  const headingLine1Ref = useRef<HTMLSpanElement>(null);
+  const headingLine2Ref = useRef<HTMLSpanElement>(null);
+  const paragraphRef = useRef<HTMLParagraphElement>(null);
+  const facilityRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (prefersReducedMotion) {
+      [cardRef, eyebrowRef, headingLine1Ref, headingLine2Ref, paragraphRef, facilityRef].forEach(ref => {
+        if (ref.current) {
+          gsap.set(ref.current, { opacity: 1, y: 0, clipPath: "inset(0 0% 0 0)" });
+        }
+      });
+      if (bgRef.current) gsap.set(bgRef.current, { opacity: 1 });
+      return;
+    }
+
+    const ctx = gsap.context(() => {
+      // Entrance timeline matching homepage hero
+      const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+
+      tl.fromTo(bgRef.current, { opacity: 0 }, { opacity: 1, duration: 1.2, ease: "power2.out" })
+        .fromTo(cardRef.current,
+          { opacity: 0, y: 30 },
+          { opacity: 1, y: 0, duration: 0.9, ease: "power3.out" },
+          0.2
+        )
+        .fromTo(eyebrowRef.current,
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: 0.6 },
+          0.4
+        )
+        .fromTo(headingLine1Ref.current,
+          { clipPath: "inset(0 100% 0 0)", opacity: 0 },
+          { clipPath: "inset(0 0% 0 0)", opacity: 1, duration: 0.9, ease: "power4.inOut" },
+          0.7
+        )
+        .fromTo(headingLine2Ref.current,
+          { clipPath: "inset(0 100% 0 0)", opacity: 0 },
+          { clipPath: "inset(0 0% 0 0)", opacity: 1, duration: 0.9, ease: "power4.inOut" },
+          0.9
+        )
+        .fromTo(paragraphRef.current,
+          { opacity: 0, y: 25 },
+          { opacity: 1, y: 0, duration: 0.7 },
+          1.1
+        )
+        .fromTo(facilityRef.current,
+          { opacity: 0, y: 15 },
+          { opacity: 1, y: 0, duration: 0.6 },
+          1.3
+        );
+
+      // Parallax scroll scrub on factory background image matching homepage
+      gsap.to(bgRef.current, {
+        yPercent: 14,
+        ease: "none",
+        scrollTrigger: {
+          trigger: heroRef.current,
+          start: "top top",
+          end: "bottom top",
+          scrub: 1,
+        },
+      });
+
+      // Subtle upward parallax on foreground card for 3D multi-plane depth
+      gsap.to(cardRef.current, {
+        yPercent: -10,
+        ease: "none",
+        scrollTrigger: {
+          trigger: heroRef.current,
+          start: "top top",
+          end: "bottom top",
+          scrub: 1,
+        },
+      });
+    }, heroRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <div className="min-h-screen bg-[#7B8290] text-white flex flex-col justify-between">
-      <Navbar
-        onOpenQuoteModal={() => setIsQuoteOpen(true)}
-        onOpenMobileMenu={() => setIsMobileOpen(true)}
-      />
-      <MobileMenu
-        isOpen={isMobileOpen}
-        onClose={() => setIsMobileOpen(false)}
-        onOpenQuoteModal={() => setIsQuoteOpen(true)}
-      />
+    <SmoothScroll>
+      <ScrollProgress />
+      <div className="min-h-screen bg-[#7B8290] text-white flex flex-col justify-between">
+        <Navbar
+          onOpenQuoteModal={() => setIsQuoteOpen(true)}
+          onOpenMobileMenu={() => setIsMobileOpen(true)}
+        />
+        <MobileMenu
+          isOpen={isMobileOpen}
+          onClose={() => setIsMobileOpen(false)}
+          onOpenQuoteModal={() => setIsQuoteOpen(true)}
+        />
 
-      <main className="pb-20">
-        {/* Page Hero Banner */}
-        <section className="relative min-h-[520px] sm:min-h-[580px] lg:min-h-[640px] flex items-end bg-slate-900 border-b border-white/10 overflow-hidden">
-          {/* Background Factory Banner Image */}
-          <div className="absolute inset-0 z-0">
-            <img
-              src="/aboutus.png"
-              alt="Eurocon System LLP Manufacturing Plant & Facility"
-              className="w-full h-full object-cover object-[center_35%]"
-            />
-          </div>
+        <main className="pb-20">
+          {/* Page Hero Banner with Parallax Scroll & Entrance Animations */}
+          <section
+            ref={heroRef}
+            className="relative min-h-[540px] sm:min-h-[600px] lg:min-h-[660px] flex items-end bg-slate-900 border-b border-white/10 overflow-hidden"
+          >
+            {/* Background Factory Banner Image with Scroll Parallax */}
+            <div
+              ref={bgRef}
+              className="absolute -inset-x-0 -top-16 -bottom-32 z-0 will-change-transform opacity-0 pointer-events-none"
+            >
+              <img
+                src="/aboutus.png"
+                alt="Eurocon System LLP Manufacturing Plant & Facility"
+                className="w-full h-full object-cover object-[center_35%]"
+              />
+            </div>
 
-          <div className="w-full max-w-7xl mr-auto ml-0 px-4 sm:px-8 lg:px-12 xl:px-16 relative z-10 pt-32 sm:pt-44 pb-10 sm:pb-14">
-            <div className="max-w-xl lg:max-w-2xl rounded-2xl sm:rounded-3xl bg-white/85 backdrop-blur-md border border-white/60 shadow-[0_16px_48px_rgba(0,0,0,0.16)] p-6 sm:p-8 space-y-4">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-sm border border-slate-200/80 text-xs font-mono font-bold tracking-[0.2em] uppercase text-slate-800 shadow-xs">
-                <span className="w-2 h-2 rounded-full bg-[#EB0311] animate-pulse" />
-                <span>ABOUT <span className="text-[#EB0311] font-black">EUR</span><span className="text-[#010A6D] font-black">OCON</span> SYSTEM LLP</span>
-              </div>
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-[1.1]">
-                ENGINEERED AIRFLOW. <br />
-                <span className="text-[#010A6D]">BUILT FOR PERFORMANCE.</span>
-              </h1>
-              <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
-                <strong className="font-black text-slate-900 tracking-wide"><span className="text-[#EB0311]">EUR</span><span className="text-[#010A6D]">OCON</span> SYSTEM LLP</strong> is an advanced industrial air management, ventilation, and HVAC engineering solutions provider dedicated to high aerodynamic efficiency, life-safety reliability, and multi-decade mechanical dependability.
-              </p>
+            <div className="w-full max-w-7xl mr-auto ml-0 px-4 sm:px-8 lg:px-12 xl:px-16 relative z-10 pt-32 sm:pt-44 pb-10 sm:pb-14">
+              <div
+                ref={cardRef}
+                className="max-w-xl lg:max-w-2xl rounded-2xl sm:rounded-3xl bg-white/85 backdrop-blur-md border border-white/60 shadow-[0_16px_48px_rgba(0,0,0,0.16)] p-6 sm:p-8 space-y-4 opacity-0 will-change-transform relative overflow-hidden"
+              >
+                {/* Subtle top glass reflection highlight */}
+                <div className="absolute top-0 left-0 right-0 h-[1.5px] bg-gradient-to-r from-transparent via-white/80 to-transparent pointer-events-none" />
 
-              <div className="pt-2 flex flex-wrap items-center gap-3 text-xs font-mono text-slate-700">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-100/90 backdrop-blur-sm border border-slate-200/80 shadow-2xs">
-                  <Factory className="w-3.5 h-3.5 text-[#010A6D]" />
-                  Manufacturing Facility: Rohad, Bahadurgarh (Haryana)
-                </span>
+                <div
+                  ref={eyebrowRef}
+                  className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-sm border border-slate-200/80 text-xs font-mono font-bold tracking-[0.2em] uppercase text-slate-800 shadow-xs opacity-0"
+                >
+                  <span className="w-2 h-2 rounded-full bg-[#EB0311] animate-pulse" />
+                  <span>ABOUT <span className="text-[#EB0311] font-black">EUR</span><span className="text-[#010A6D] font-black">OCON</span> SYSTEM LLP</span>
+                </div>
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-[1.1]">
+                  <span ref={headingLine1Ref} className="block opacity-0">
+                    ENGINEERED AIRFLOW.
+                  </span>
+                  <span ref={headingLine2Ref} className="block text-[#010A6D] opacity-0">
+                    BUILT FOR PERFORMANCE.
+                  </span>
+                </h1>
+                <p
+                  ref={paragraphRef}
+                  className="text-sm sm:text-base text-slate-700 leading-relaxed font-normal opacity-0"
+                >
+                  <strong className="font-black text-slate-900 tracking-wide"><span className="text-[#EB0311]">EUR</span><span className="text-[#010A6D]">OCON</span> SYSTEM LLP</strong> is an advanced industrial air management, ventilation, and HVAC engineering solutions provider dedicated to high aerodynamic efficiency, life-safety reliability, and multi-decade mechanical dependability.
+                </p>
+
+                <div
+                  ref={facilityRef}
+                  className="pt-2 flex flex-wrap items-center gap-3 text-xs font-mono text-slate-700 opacity-0"
+                >
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-100/90 backdrop-blur-sm border border-slate-200/80 shadow-2xs">
+                    <Factory className="w-3.5 h-3.5 text-[#010A6D]" />
+                    Manufacturing Facility: Rohad, Bahadurgarh (Haryana)
+                  </span>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
         {/* Corporate Profile & Philosophy */}
         <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -187,5 +305,6 @@ export default function AboutPage() {
 
       <QuoteModal isOpen={isQuoteOpen} onClose={() => setIsQuoteOpen(false)} />
     </div>
+  </SmoothScroll>
   );
 }
