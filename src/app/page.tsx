@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
+import { useScroll, useMotionValueEvent } from "framer-motion";
 import SmoothScroll from "@/components/layout/SmoothScroll";
 import ScrollProgress from "@/components/layout/ScrollProgress";
 import Navbar from "@/components/layout/Navbar";
@@ -30,10 +31,67 @@ export default function HomePage() {
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const handleOpenQuoteModal = (productName?: string) => {
+  // Prevent multiple popups once auto-opened in session
+  const hasAutoOpenedRef = useRef(false);
+
+  const handleOpenQuoteModal = useCallback((productName?: string) => {
     setQuoteInitialProduct(productName || "");
     setIsQuoteModalOpen(true);
-  };
+  }, []);
+
+  const triggerScrollModal = useCallback(() => {
+    if (hasAutoOpenedRef.current) return;
+    try {
+      if (typeof window !== "undefined" && sessionStorage.getItem("eurocon_quote_auto_opened") === "true") {
+        hasAutoOpenedRef.current = true;
+        return;
+      }
+      sessionStorage.setItem("eurocon_quote_auto_opened", "true");
+    } catch {
+      // Ignore storage errors
+    }
+    hasAutoOpenedRef.current = true;
+    handleOpenQuoteModal("Eurocon Industrial Airflow Consultation");
+  }, [handleOpenQuoteModal]);
+
+  // Framer Motion useScroll hook (tracks scroll progress 0 -> 1)
+  const { scrollYProgress } = useScroll();
+
+  useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    if (latest >= 0.2 && !hasAutoOpenedRef.current) {
+      triggerScrollModal();
+    }
+  });
+
+  // Secondary native scroll listener fallback (for Lenis & direct browser scrolling)
+  useEffect(() => {
+    try {
+      if (typeof window !== "undefined" && sessionStorage.getItem("eurocon_quote_auto_opened") === "true") {
+        hasAutoOpenedRef.current = true;
+        return;
+      }
+    } catch {
+      // Ignore storage errors
+    }
+
+    const handleScroll = () => {
+      if (hasAutoOpenedRef.current) return;
+
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+      if (scrollHeight > 0 && scrollTop / scrollHeight >= 0.2) {
+        triggerScrollModal();
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [triggerScrollModal]);
 
   const handleSelectProduct = (product: Product) => {
     setSelectedProduct(product);
